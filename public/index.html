@@ -79,10 +79,22 @@
     .tags {
       padding: 10px 24px;
       display: flex;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
+      align-items: center;
       background: #0e0e0e;
       border-bottom: 1px solid #1a1a1a;
+    }
+    .tag-group-label {
+      font-size: 11px;
+      color: #555;
+      margin-right: 2px;
+      white-space: nowrap;
+    }
+    .tag-group-label:not(:first-child) {
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px solid #2a2a2a;
     }
     .tag {
       padding: 4px 12px;
@@ -95,6 +107,8 @@
       transition: all .2s;
     }
     .tag:hover { background: #252525; color: #fff; border-color: #4f9cf7; }
+    .tag.award { border-color: #3a3020; color: #c9a84c; }
+    .tag.award:hover { background: #2a2518; border-color: #c9a84c; color: #f0d060; }
 
     /* Welcome / Landing */
     .welcome {
@@ -234,6 +248,7 @@
     <img src="/avatar.jpg" alt="Ian" class="header-avatar" id="headerAvatar">
   </div>
   <div class="tags">
+    <span class="tag-group-label">趨勢</span>
     <span class="tag" onclick="quickSearch('數位學習')">數位學習</span>
     <span class="tag" onclick="quickSearch('教育科技 EdTech')">EdTech</span>
     <span class="tag" onclick="quickSearch('AI 教育')">AI 教育</span>
@@ -242,6 +257,17 @@
     <span class="tag" onclick="quickSearch('自主學習')">自主學習</span>
     <span class="tag" onclick="quickSearch('教育 AI 生成式')">生成式 AI</span>
     <span class="tag" onclick="quickSearch('遠距教學')">遠距教學</span>
+    <span class="tag-group-label">獎項</span>
+    <span class="tag award" onclick="quickSearch('ISTE Award 教育科技')">ISTE Awards</span>
+    <span class="tag award" onclick="quickSearch('EdTech Awards EdTech Digest')">EdTech Awards</span>
+    <span class="tag award" onclick="quickSearch('BETT Awards education')">BETT Awards</span>
+    <span class="tag award" onclick="quickSearch('Global EdTech Startup Awards')">GESA</span>
+    <span class="tag award" onclick="quickSearch('QS Reimagine Education Awards')">QS Education</span>
+    <span class="tag award" onclick="quickSearch('UNESCO ICT Education Prize')">UNESCO ICT</span>
+    <span class="tag award" onclick="quickSearch('教育部 數位學習獎')">數位學習獎</span>
+    <span class="tag award" onclick="quickSearch('資訊月 百大創新產品獎')">資訊月百大</span>
+    <span class="tag award" onclick="quickSearch('親子天下 教育創新100')">教育創新100</span>
+    <span class="tag award" onclick="quickSearch('HolonIQ EdTech 150 Asia')">HolonIQ 150</span>
   </div>
 
   <!-- Welcome screen (shown before any search) -->
