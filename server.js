@@ -1,3 +1,13 @@
+// Load .env for local development
+const fs = require('fs');
+const envPath = require('path').join(__dirname, '.env');
+if (fs.existsSync(envPath)) {
+  fs.readFileSync(envPath, 'utf-8').split('\n').forEach(line => {
+    const m = line.match(/^([^=]+)=(.*)$/);
+    if (m) process.env[m[1].trim()] = m[2].trim();
+  });
+}
+
 const express = require('express');
 const path = require('path');
 const { searchNews } = require('./lib/news');
@@ -5,7 +15,7 @@ const { fetchArticle } = require('./lib/scraper');
 const { summarize } = require('./lib/ollama');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
@@ -38,6 +48,12 @@ app.post('/api/summarize', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`EdTech News running at http://localhost:${PORT}`);
-});
+// Local dev
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`EdTech News running at http://localhost:${PORT}`);
+  });
+}
+
+// Vercel serverless export
+module.exports = app;
