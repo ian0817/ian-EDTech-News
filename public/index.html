@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ian's EdTech News</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      background: #111;
+      border-bottom: 1px solid #222;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .header h1 span { color: #4f9cf7; }
+    .search-box {
+      flex: 1;
+      max-width: 500px;
+      display: flex;
+      gap: 8px;
+    }
+    .search-box input {
+      flex: 1;
+      padding: 8px 14px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      font-size: 14px;
+      outline: none;
+    }
+    .search-box input:focus { border-color: #4f9cf7; }
+    .search-box button {
+      padding: 8px 18px;
+      background: #4f9cf7;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .search-box button:hover { background: #3a8ae5; }
+    .search-box button:disabled { background: #555; cursor: wait; }
+
+    /* Quick tags */
+    .tags {
+      padding: 10px 24px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      background: #0e0e0e;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .tag {
+      padding: 4px 12px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      font-size: 12px;
+      color: #aaa;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .tag:hover { background: #252525; color: #fff; border-color: #4f9cf7; }
+
+    /* Status bar */
+    .status {
+      padding: 10px 24px;
+      font-size: 13px;
+      color: #666;
+    }
+    .status.loading { color: #4f9cf7; }
+
+    /* Article grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+      padding: 16px 24px;
+    }
+
+    /* Card */
+    .card {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color .2s;
+    }
+    .card:hover { border-color: #333; }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #666;
+    }
+    .card-source {
+      background: #1e2a3a;
+      color: #4f9cf7;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #eee;
+      line-height: 1.4;
+    }
+    .card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card-title a:hover { color: #4f9cf7; }
+    .card-snippet {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    /* Summary section */
+    .card-summary {
+      background: #1a1f2e;
+      border-left: 3px solid #4f9cf7;
+      padding: 12px;
+      border-radius: 0 6px 6px 0;
+      font-size: 13px;
+      color: #c0c8d8;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    .card-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-summary {
+      padding: 5px 12px;
+      background: #1e2a3a;
+      color: #4f9cf7;
+      border: 1px solid #2a3a5a;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all .2s;
+    }
+    .btn-summary:hover { background: #253550; }
+    .btn-summary:disabled { color: #555; cursor: wait; }
+    .btn-summary.loading::after {
+      content: '';
+      display: inline-block;
+      width: 10px; height: 10px;
+      border: 2px solid #4f9cf7;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin .6s linear infinite;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Empty state */
+    .empty {
+      text-align: center;
+      padding: 60px 24px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      margin-top: 40px;
+      border-top: 1px solid #222;
+      color: #555;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>ian's <span>EdTech News</span></h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜尋教育科技新聞..." value="數位學習 教育科技">
+      <button id="searchBtn" onclick="doSearch()">搜尋</button>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag" onclick="quickSearch('數位學習')">數位學習</span>
+    <span class="tag" onclick="quickSearch('教育科技 EdTech')">EdTech</span>
+    <span class="tag" onclick="quickSearch('AI 教育')">AI 教育</span>
+    <span class="tag" onclick="quickSearch('線上課程 平台')">線上課程</span>
+    <span class="tag" onclick="quickSearch('教育部 數位')">教育政策</span>
+    <span class="tag" onclick="quickSearch('自主學習')">自主學習</span>
+    <span class="tag" onclick="quickSearch('教育 AI 生成式')">生成式 AI</span>
+    <span class="tag" onclick="quickSearch('遠距教學')">遠距教學</span>
+  </div>
+  <div class="status" id="status"></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty">輸入關鍵字搜尋教育科技相關新聞</div>
+  <div class="footer">新創小任 2026</div>
+
+  <script>
+    const grid = document.getElementById('grid');
+    const status = document.getElementById('status');
+    const empty = document.getElementById('empty');
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+
+    searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+
+    async function doSearch() {
+      const q = searchInput.value.trim();
+      if (!q) return;
+      searchBtn.disabled = true;
+      status.className = 'status loading';
+      status.textContent = '搜尋中...';
+      grid.innerHTML = '';
+      empty.style.display = 'none';
+
+      try {
+        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
+        const data = await res.json();
+        if (!data.ok || data.articles.length === 0) {
+          empty.style.display = 'block';
+          empty.textContent = data.error || '找不到相關新聞';
+          status.textContent = '';
+          return;
+        }
+        status.className = 'status';
+        status.textContent = `找到 ${data.articles.length} 篇新聞`;
+        renderArticles(data.articles);
+      } catch (err) {
+        status.className = 'status';
+        status.textContent = '搜尋失敗: ' + err.message;
+      } finally {
+        searchBtn.disabled = false;
+      }
+    }
+
+    function quickSearch(q) {
+      searchInput.value = q;
+      doSearch();
+    }
+
+    function renderArticles(articles) {
+      grid.innerHTML = '';
+      articles.forEach((a, i) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        const timeAgo = formatDate(a.pubDate);
+        card.innerHTML = `
+          <div class="card-meta">
+            <span class="card-source">${esc(a.source)}</span>
+            <span>${timeAgo}</span>
+          </div>
+          <div class="card-title"><a href="${esc(a.link)}" target="_blank" rel="noopener">${esc(a.title)}</a></div>
+          ${a.snippet ? `<div class="card-snippet">${esc(a.snippet)}</div>` : ''}
+          <div class="card-actions">
+            <button class="btn-summary" id="btn-${i}" onclick="doSummarize(${i}, this)">AI 摘要</button>
+          </div>
+          <div class="card-summary" id="summary-${i}" style="display:none"></div>
+        `;
+        card.dataset.url = a.link;
+        card.dataset.title = a.title;
+        grid.appendChild(card);
+      });
+    }
+
+    async function doSummarize(idx, btn) {
+      const card = btn.closest('.card');
+      const summaryEl = document.getElementById(`summary-${idx}`);
+      if (summaryEl.style.display !== 'none') {
+        summaryEl.style.display = 'none';
+        return;
+      }
+      btn.disabled = true;
+      btn.classList.add('loading');
+      btn.textContent = '生成中';
+      summaryEl.style.display = 'block';
+      summaryEl.textContent = '正在爬取原文並生成摘要，約需 15~30 秒...';
+
+      try {
+        const res = await fetch('/api/summarize', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url: card.dataset.url, title: card.dataset.title }),
+        });
+        const data = await res.json();
+        if (data.ok) {
+          summaryEl.textContent = data.summary;
+        } else {
+          summaryEl.textContent = '摘要失敗: ' + data.error;
+        }
+      } catch (err) {
+        summaryEl.textContent = '錯誤: ' + err.message;
+      } finally {
+        btn.disabled = false;
+        btn.classList.remove('loading');
+        btn.textContent = 'AI 摘要';
+      }
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const d = new Date(dateStr);
+      const now = new Date();
+      const diffH = Math.round((now - d) / 3600000);
+      if (diffH < 1) return '剛剛';
+      if (diffH < 24) return `${diffH} 小時前`;
+      const diffD = Math.round(diffH / 24);
+      if (diffD < 7) return `${diffD} 天前`;
+      return d.toLocaleDateString('zh-TW');
+    }
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s || '';
+      return d.innerHTML;
+    }
+  </script>
+</body>
+</html>
