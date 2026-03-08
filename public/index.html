@@ -71,7 +71,6 @@
       border: 2px solid #4f9cf7;
       object-fit: cover;
       display: none;
-      margin-left: auto;
       flex-shrink: 0;
     }
     .header-avatar.visible { display: block; }
@@ -85,6 +84,9 @@
       align-items: center;
       background: #0e0e0e;
       border-bottom: 1px solid #1a1a1a;
+      position: sticky;
+      top: 56px;
+      z-index: 9;
     }
     .tag-group-label {
       font-size: 11px;
@@ -161,6 +163,143 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Editorial */
+    .editorial {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 20px;
+      animation: fadeIn .6s ease;
+    }
+    .editorial.hidden { display: none; }
+    .editorial-card {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 28px 28px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+    .editorial-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #4f9cf7, #9c4ff7, #f7854f);
+    }
+    .editorial-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #4f9cf7;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+    .editorial-label .dot {
+      width: 6px; height: 6px;
+      background: #4f9cf7;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    .editorial-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+    .editorial-body {
+      font-size: 15px;
+      color: #bbb;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+    .editorial-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid #1a1a1a;
+    }
+    .editorial-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .editorial-author img {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      border: 1.5px solid #4f9cf7;
+      object-fit: cover;
+    }
+    .editorial-author-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #eee;
+    }
+    .editorial-author-role {
+      font-size: 11px;
+      color: #666;
+    }
+    .editorial-time {
+      font-size: 12px;
+      color: #555;
+      margin-left: auto;
+    }
+    .editorial-sources {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #1a1a1a;
+    }
+    .editorial-sources-title {
+      font-size: 11px;
+      color: #555;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .editorial-sources a {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      text-decoration: none;
+      padding: 2px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .editorial-sources a:hover { color: #4f9cf7; }
+    .editorial-reflection {
+      margin-top: 16px;
+      padding: 16px 20px;
+      background: #1a1a2a;
+      border: 1px solid #2a2a3a;
+      border-left: 3px solid #9c4ff7;
+      border-radius: 8px;
+    }
+    .editorial-reflection-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #9c4ff7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .editorial-reflection-text {
+      font-size: 15px;
+      color: #ddd;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .editorial-loading {
+      text-align: center;
+      padding: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+
     /* Status bar */
     .status {
       padding: 10px 24px;
@@ -220,6 +359,84 @@
       line-height: 1.5;
     }
 
+    /* Exam preview */
+    .exam-preview {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 30px;
+    }
+    .exam-preview.hidden { display: none; }
+    .exam-preview-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .exam-preview-title h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #888;
+    }
+    .exam-preview-title a {
+      font-size: 12px;
+      color: #4f9cf7;
+      text-decoration: none;
+    }
+    .exam-preview-title a:hover { text-decoration: underline; }
+    .exam-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 10px;
+    }
+    .exam-mini {
+      background: #141414;
+      border: 1px solid #222;
+      border-left: 3px solid var(--cat-color, #4f9cf7);
+      border-radius: 8px;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .exam-mini:hover { border-color: #333; border-left-color: var(--cat-color, #4f9cf7); }
+    .exam-mini-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #eee;
+      margin-bottom: 6px;
+    }
+    .exam-mini-date {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .exam-mini-countdown {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+    .exam-mini-countdown .days {
+      font-size: 22px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .exam-mini-countdown .days.urgent { color: #f74f4f; }
+    .exam-mini-countdown .days.soon { color: #f7d74f; }
+    .exam-mini-countdown .days.normal { color: #4f9cf7; }
+    .exam-mini-countdown .unit {
+      font-size: 12px;
+      color: #666;
+    }
+    .exam-mini-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+    .mini-badge-open { background: #2a2a1a; color: #f7d74f; }
+    .mini-badge-exam { background: #2a1a1a; color: #f74f4f; }
+
     /* Empty state */
     .empty {
       text-align: center;
@@ -241,11 +458,16 @@
 </head>
 <body>
   <div class="header">
-    <h1>ian's <span>EdTech News</span></h1>
-    <div class="search-box">
+    <h1><a href="/" style="color:inherit;text-decoration:none;">ian's <span>EdTech News</span></a></h1>
+    <div class="search-box" style="display:none;">
       <input type="text" id="searchInput" placeholder="搜尋教育科技新聞..." value="數位學習 教育科技">
       <button id="searchBtn" onclick="doSearch()">搜尋</button>
     </div>
+    <nav style="display:flex;gap:6px;margin-left:auto;flex-shrink:0;align-items:center;">
+      <a href="/" style="padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;color:#4f9cf7;background:#1a2a3a;text-decoration:none;">新聞</a>
+      <a href="/calendar.html" style="padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;color:#aaa;text-decoration:none;">考試行事曆</a>
+      <span style="padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;color:#555;cursor:default;position:relative;">學習區<sup style="font-size:9px;color:#f7d74f;margin-left:2px;">coming soon</sup></span>
+    </nav>
     <img src="/avatar.jpg" alt="Ian" class="header-avatar" id="headerAvatar">
   </div>
   <div class="tags">
@@ -274,10 +496,24 @@
     </div>
   </div>
 
+  <!-- Editorial -->
+  <div class="editorial" id="editorial">
+    <div class="editorial-loading">主編正在撰寫今日評論...</div>
+  </div>
+
+  <!-- Exam preview on homepage -->
+  <div class="exam-preview" id="examPreview">
+    <div class="exam-preview-title">
+      <h3>近期考試</h3>
+      <a href="/calendar.html">查看完整行事曆 &rarr;</a>
+    </div>
+    <div class="exam-preview-grid" id="examPreviewGrid"></div>
+  </div>
+
   <div class="status" id="status"></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" style="display:none">找不到相關新聞</div>
-  <div class="footer">新創小任 2026</div>
+  <div class="footer">新創小任 2026 · <a href="https://vercel.com/ian0817s-projects/ian-edtech-news/analytics" target="_blank" rel="noopener" style="color:#4f9cf7;text-decoration:none;">Analytics</a> · <span id="appVersion"></span></div>
 
   <script>
     const grid = document.getElementById('grid');
@@ -288,7 +524,122 @@
     const searchInput = document.getElementById('searchInput');
     const searchBtn = document.getElementById('searchBtn');
 
+    const editorialEl = document.getElementById('editorial');
+    const examPreview = document.getElementById('examPreview');
+    const examPreviewGrid = document.getElementById('examPreviewGrid');
+
     searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+
+    // Load editorial
+    (async function loadEditorial() {
+      try {
+        const res = await fetch('/api/editorial');
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error);
+        const e = data.editorial;
+        const time = new Date(e.generatedAt);
+        const timeStr = time.toLocaleString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+
+        let reflectionHtml = '';
+        if (e.reflection) {
+          reflectionHtml = `<div class="editorial-reflection">
+            <div class="editorial-reflection-label">反思</div>
+            <div class="editorial-reflection-text">${esc(e.reflection)}</div>
+          </div>`;
+        }
+
+        let sourcesHtml = '';
+        if (e.headlines && e.headlines.length) {
+          sourcesHtml = `<div class="editorial-sources">
+            <div class="editorial-sources-title">相關新聞</div>
+            ${e.headlines.map(h => `<a href="${esc(h.link)}" target="_blank" rel="noopener">${esc(h.source ? h.source + '：' : '')}${esc(h.title)}</a>`).join('')}
+          </div>`;
+        }
+
+        editorialEl.innerHTML = `
+          <div class="editorial-card">
+            <div class="editorial-label"><span class="dot"></span>主編評論</div>
+            <div class="editorial-title">${esc(e.title)}</div>
+            <div class="editorial-body">${esc(e.body)}</div>
+            <div class="editorial-meta">
+              <div class="editorial-author">
+                <img src="/avatar.jpg" alt="Ian">
+                <div>
+                  <div class="editorial-author-name">Ian</div>
+                  <div class="editorial-author-role">主編</div>
+                </div>
+              </div>
+              <div class="editorial-time">${timeStr}</div>
+            </div>
+            ${reflectionHtml}
+            ${sourcesHtml}
+          </div>`;
+      } catch (err) {
+        editorialEl.innerHTML = `<div class="editorial-loading" style="color:#555;">評論載入失敗：${err.message}</div>`;
+      }
+    })();
+
+    // Load exam preview
+    (async function loadExamPreview() {
+      try {
+        const res = await fetch('/api/exams');
+        const data = await res.json();
+        if (!data.ok) return;
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
+        const cats = data.categories;
+
+        // Filter: only upcoming exams (not ended), sorted by exam date, take top 6
+        const upcoming = data.exams
+          .filter(e => {
+            const examEnd = new Date(e.dates.exam.end);
+            examEnd.setHours(23, 59, 59);
+            return now <= examEnd;
+          })
+          .sort((a, b) => new Date(a.dates.exam.start) - new Date(b.dates.exam.start))
+          .slice(0, 6);
+
+        if (!upcoming.length) { examPreview.classList.add('hidden'); return; }
+
+        examPreviewGrid.innerHTML = upcoming.map(exam => {
+          const cat = cats[exam.category] || { color: '#4f9cf7' };
+          const examStart = new Date(exam.dates.exam.start);
+          const days = Math.ceil((examStart - now) / 86400000);
+          const urgency = days <= 14 ? 'urgent' : days <= 30 ? 'soon' : 'normal';
+
+          // Badge
+          let badge = '';
+          if (exam.dates.registration) {
+            const regEnd = new Date(exam.dates.registration.end);
+            regEnd.setHours(23, 59, 59);
+            const regStart = new Date(exam.dates.registration.start);
+            if (now >= regStart && now <= regEnd) {
+              const regDays = Math.ceil((regEnd - now) / 86400000);
+              badge = `<span class="exam-mini-badge mini-badge-open">報名中（剩 ${regDays} 天）</span>`;
+            }
+          }
+          if (days <= 14 && days > 0) {
+            badge = `<span class="exam-mini-badge mini-badge-exam">即將考試</span>`;
+          }
+
+          const weekdays = ['日','一','二','三','四','五','六'];
+          const d = examStart;
+          const dateStr = `${d.getFullYear()-1911}/${d.getMonth()+1}/${d.getDate()}（${weekdays[d.getDay()]}）`;
+
+          return `<div class="exam-mini" style="--cat-color:${cat.color}" onclick="location.href='/calendar.html'">
+            <div class="exam-mini-name">${exam.name}</div>
+            <div class="exam-mini-date">考試：${dateStr}</div>
+            <div class="exam-mini-countdown">
+              <span class="days ${urgency}">${days}</span>
+              <span class="unit">天後考試</span>
+            </div>
+            ${badge}
+          </div>`;
+        }).join('');
+      } catch (e) {
+        examPreview.classList.add('hidden');
+      }
+    })();
 
     async function doSearch() {
       const q = searchInput.value.trim();
@@ -299,8 +650,10 @@
       grid.innerHTML = '';
       empty.style.display = 'none';
 
-      // Hide welcome, show mini avatar
+      // Hide welcome + editorial + exam preview, show mini avatar
       welcome.classList.add('hidden');
+      editorialEl.classList.add('hidden');
+      examPreview.classList.add('hidden');
       headerAvatar.classList.add('visible');
 
       try {
@@ -364,5 +717,7 @@
       return d.innerHTML;
     }
   </script>
+  <script>fetch('/api/version').then(r=>r.json()).then(d=>{document.getElementById('appVersion').textContent='v'+d.version}).catch(()=>{})</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

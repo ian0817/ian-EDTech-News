@@ -1,0 +1,154 @@
+{
+  "lastUpdated": "2026-03-08",
+  "academicYear": "115",
+  "exams": [
+    {
+      "id": "sat-115",
+      "name": "學科能力測驗（學測）",
+      "category": "college",
+      "icon": "graduation",
+      "dates": {
+        "registration": { "start": "2025-10-28", "end": "2025-11-11" },
+        "exam": { "start": "2026-01-17", "end": "2026-01-18" },
+        "results": "2026-02-25"
+      },
+      "officialUrl": "https://www.ceec.edu.tw",
+      "note": "115 學年度學科能力測驗"
+    },
+    {
+      "id": "ast-115",
+      "name": "分科測驗",
+      "category": "college",
+      "icon": "graduation",
+      "dates": {
+        "registration": { "start": "2026-05-06", "end": "2026-05-19" },
+        "exam": { "start": "2026-07-11", "end": "2026-07-12" },
+        "results": "2026-07-28"
+      },
+      "officialUrl": "https://www.ceec.edu.tw",
+      "note": "115 學年度分科測驗"
+    },
+    {
+      "id": "cap-115",
+      "name": "國中教育會考",
+      "category": "junior",
+      "icon": "school",
+      "dates": {
+        "exam": { "start": "2026-05-16", "end": "2026-05-17" },
+        "results": "2026-06-05"
+      },
+      "officialUrl": "https://cap.rcpet.edu.tw",
+      "note": "115 年國中教育會考"
+    },
+    {
+      "id": "tcte-115",
+      "name": "四技二專統一入學測驗（統測）",
+      "category": "vocational",
+      "icon": "tools",
+      "dates": {
+        "registration": { "start": "2025-12-01", "end": "2025-12-17" },
+        "exam": { "start": "2026-04-25", "end": "2026-04-26" },
+        "results": "2026-05-14"
+      },
+      "officialUrl": "https://www.tcte.edu.tw",
+      "note": "115 學年度四技二專統一入學測驗"
+    },
+    {
+      "id": "gept-elementary-2026s1",
+      "name": "全民英檢 — 初級初試",
+      "category": "english",
+      "icon": "language",
+      "dates": {
+        "registration": { "start": "2025-12-12", "end": "2026-01-06" },
+        "exam": { "start": "2026-03-15", "end": "2026-03-15" },
+        "results": "2026-04-10"
+      },
+      "officialUrl": "https://www.gept.org.tw",
+      "note": "2026 年第一次初級初試"
+    },
+    {
+      "id": "gept-intermediate-2026s1",
+      "name": "全民英檢 — 中級初試",
+      "category": "english",
+      "icon": "language",
+      "dates": {
+        "registration": { "start": "2025-12-26", "end": "2026-01-20" },
+        "exam": { "start": "2026-04-12", "end": "2026-04-12" },
+        "results": "2026-05-08"
+      },
+      "officialUrl": "https://www.gept.org.tw",
+      "note": "2026 年第一次中級初試"
+    },
+    {
+      "id": "gept-high-intermediate-2026s1",
+      "name": "全民英檢 — 中高級初試",
+      "category": "english",
+      "icon": "language",
+      "dates": {
+        "registration": { "start": "2026-03-06", "end": "2026-03-31" },
+        "exam": { "start": "2026-05-31", "end": "2026-05-31" },
+        "results": "2026-06-26"
+      },
+      "officialUrl": "https://www.gept.org.tw",
+      "note": "2026 年第一次中高級初試"
+    },
+    {
+      "id": "toeic-lr-202604",
+      "name": "多益聽力與閱讀測驗",
+      "category": "english",
+      "icon": "language",
+      "dates": {
+        "registration": { "start": "2026-02-01", "end": "2026-03-10" },
+        "exam": { "start": "2026-04-19", "end": "2026-04-19" },
+        "results": "2026-05-11"
+      },
+      "officialUrl": "https://www.toeic.com.tw/toeic/listening-reading/registration/test-dates/",
+      "note": "2026 年 4 月場次（多場次之一）"
+    },
+    {
+      "id": "toeic-lr-202605",
+      "name": "多益聽力與閱讀測驗",
+      "category": "english",
+      "icon": "language",
+      "dates": {
+        "registration": { "start": "2026-03-01", "end": "2026-04-07" },
+        "exam": { "start": "2026-05-17", "end": "2026-05-17" },
+        "results": "2026-06-08"
+      },
+      "officialUrl": "https://www.toeic.com.tw/toeic/listening-reading/registration/test-dates/",
+      "note": "2026 年 5 月場次（多場次之一）"
+    },
+    {
+      "id": "englisten-115",
+      "name": "高中英語聽力測驗（第一次）",
+      "category": "college",
+      "icon": "headphones",
+      "dates": {
+        "registration": { "start": "2025-09-02", "end": "2025-09-15" },
+        "exam": { "start": "2025-10-18", "end": "2025-10-18" },
+        "results": "2025-11-06"
+      },
+      "officialUrl": "https://ap.ceec.edu.tw/RegExam/ExamInfo/C2",
+      "note": "115 學年度高中英語聽力測驗第一次考試"
+    },
+    {
+      "id": "englisten2-115",
+      "name": "高中英語聯力測驗（第二次）",
+      "category": "college",
+      "icon": "headphones",
+      "dates": {
+        "registration": { "start": "2025-11-11", "end": "2025-11-24" },
+        "exam": { "start": "2025-12-13", "end": "2025-12-13" },
+        "results": "2026-01-02"
+      },
+      "officialUrl": "https://ap.ceec.edu.tw/RegExam/ExamInfo/C2",
+      "note": "115 學年度高中英語聽力測驗第二次考試"
+    }
+  ],
+  "categories": {
+    "college": { "label": "大學入學", "color": "#4f9cf7" },
+    "junior": { "label": "國中升學", "color": "#f7854f" },
+    "vocational": { "label": "技職升學", "color": "#9c4ff7" },
+    "english": { "label": "英語檢定", "color": "#4ff79c" }
+  }
+}

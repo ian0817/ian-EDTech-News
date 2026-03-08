@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>考試行事曆 — ian's EdTech</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      background: #111;
+      border-bottom: 1px solid #222;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .header h1 span { color: #4f9cf7; }
+    .nav {
+      display: flex;
+      gap: 6px;
+      margin-left: auto;
+    }
+    .nav a {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #aaa;
+      text-decoration: none;
+      transition: all .2s;
+    }
+    .nav a:hover { color: #fff; background: #1a1a1a; }
+    .nav a.active { color: #4f9cf7; background: #1a2a3a; }
+
+    /* Filter tabs */
+    .filters {
+      padding: 12px 24px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      background: #0e0e0e;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .filter-btn {
+      padding: 6px 16px;
+      border-radius: 16px;
+      border: 1px solid #2a2a2a;
+      background: #1a1a1a;
+      color: #aaa;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .filter-btn:hover { color: #fff; border-color: #444; }
+    .filter-btn.active { border-color: var(--cat-color, #4f9cf7); color: var(--cat-color, #4f9cf7); background: #111; }
+
+    /* Content */
+    .content { padding: 20px 24px; max-width: 900px; margin: 0 auto; }
+
+    /* Section */
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 28px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .section-title:first-child { margin-top: 0; }
+
+    /* Exam card */
+    .exam-card {
+      background: #141414;
+      border: 1px solid #222;
+      border-left: 4px solid var(--cat-color, #4f9cf7);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      transition: border-color .2s;
+    }
+    .exam-card:hover { border-color: #333; border-left-color: var(--cat-color, #4f9cf7); }
+    .exam-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .exam-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #eee;
+    }
+    .exam-badge {
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .badge-upcoming { background: #1a2a1a; color: #4ff79c; }
+    .badge-open { background: #2a2a1a; color: #f7d74f; animation: glow 2s infinite; }
+    .badge-exam-soon { background: #2a1a1a; color: #f74f4f; animation: glow 1.5s infinite; }
+    .badge-ended { background: #1a1a1a; color: #666; }
+
+    @keyframes glow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .exam-dates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .date-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .date-label {
+      font-size: 11px;
+      color: #666;
+      font-weight: 600;
+    }
+    .date-value {
+      font-size: 14px;
+      color: #ccc;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Countdown */
+    .countdown {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .countdown-label {
+      font-size: 12px;
+      color: #888;
+    }
+    .countdown-value {
+      font-size: 20px;
+      font-weight: 800;
+      color: #4f9cf7;
+      font-variant-numeric: tabular-nums;
+    }
+    .countdown-unit {
+      font-size: 12px;
+      color: #666;
+      margin-left: -4px;
+    }
+    .countdown.urgent .countdown-value { color: #f74f4f; }
+    .countdown.registering .countdown-value { color: #f7d74f; }
+
+    .exam-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #1a1a1a;
+    }
+    .exam-note {
+      font-size: 12px;
+      color: #666;
+    }
+    .exam-link {
+      font-size: 12px;
+      color: #4f9cf7;
+      text-decoration: none;
+    }
+    .exam-link:hover { text-decoration: underline; }
+
+    /* Last updated */
+    .updated-info {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #444;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      margin-top: 20px;
+      border-top: 1px solid #222;
+      color: #555;
+      font-size: 13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header { flex-wrap: wrap; }
+      .nav { width: 100%; justify-content: center; }
+      .exam-dates { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="/" style="color:inherit;text-decoration:none;">ian's <span>EdTech</span></a></h1>
+    <nav class="nav">
+      <a href="/">新聞</a>
+      <a href="/calendar.html" class="active">考試行事曆</a>
+      <span style="padding:6px 14px;font-size:13px;font-weight:600;color:#555;cursor:default;position:relative;">學習區<sup style="font-size:9px;color:#f7d74f;margin-left:2px;">coming soon</sup></span>
+    </nav>
+  </div>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="content" id="content">
+    <div style="text-align:center;padding:60px;color:#666;">載入中...</div>
+  </div>
+
+  <div class="updated-info" id="updatedInfo"></div>
+  <div class="footer">新創小任 2026 · <a href="https://vercel.com/ian0817s-projects/ian-edtech-news/analytics" target="_blank" rel="noopener" style="color:#4f9cf7;text-decoration:none;">Analytics</a> · <span id="appVersion"></span></div>
+
+  <script>
+    let allExams = [];
+    let categories = {};
+    let activeFilter = 'all';
+
+    async function init() {
+      try {
+        const res = await fetch('/api/exams');
+        const data = await res.json();
+        if (!data.ok) throw new Error('API error');
+        allExams = data.exams;
+        categories = data.categories;
+        document.getElementById('updatedInfo').textContent = `資料更新時間：${data.lastUpdated}（${data.academicYear} 學年度）`;
+        renderFilters();
+        renderExams();
+      } catch (err) {
+        document.getElementById('content').innerHTML = `<div style="text-align:center;padding:60px;color:#f74f4f;">載入失敗: ${err.message}</div>`;
+      }
+    }
+
+    function renderFilters() {
+      const filtersEl = document.getElementById('filters');
+      let html = `<button class="filter-btn active" onclick="setFilter('all')">全部</button>`;
+      for (const [key, cat] of Object.entries(categories)) {
+        html += `<button class="filter-btn" data-cat="${key}" style="--cat-color:${cat.color}" onclick="setFilter('${key}')">${cat.label}</button>`;
+      }
+      filtersEl.innerHTML = html;
+    }
+
+    function setFilter(cat) {
+      activeFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.cat === cat || (cat === 'all' && !btn.dataset.cat));
+      });
+      renderExams();
+    }
+
+    function renderExams() {
+      const content = document.getElementById('content');
+      const now = new Date();
+      now.setHours(0, 0, 0, 0);
+
+      let exams = activeFilter === 'all' ? allExams : allExams.filter(e => e.category === activeFilter);
+
+      // Group by status
+      const groups = { registering: [], upcoming: [], examSoon: [], ended: [] };
+      exams.forEach(exam => {
+        const status = getStatus(exam, now);
+        exam._status = status;
+        exam._sortDate = getNextKeyDate(exam);
+        groups[status.key].push(exam);
+      });
+
+      // Sort each group by next key date
+      Object.values(groups).forEach(g => g.sort((a, b) => new Date(a._sortDate) - new Date(b._sortDate)));
+
+      let html = '';
+
+      if (groups.registering.length) {
+        html += `<div class="section-title">報名中</div>`;
+        groups.registering.forEach(e => html += renderCard(e, now));
+      }
+      if (groups.examSoon.length) {
+        html += `<div class="section-title">即將考試</div>`;
+        groups.examSoon.forEach(e => html += renderCard(e, now));
+      }
+      if (groups.upcoming.length) {
+        html += `<div class="section-title">即將到來</div>`;
+        groups.upcoming.forEach(e => html += renderCard(e, now));
+      }
+      if (groups.ended.length) {
+        html += `<div class="section-title">已結束</div>`;
+        groups.ended.forEach(e => html += renderCard(e, now));
+      }
+
+      if (!html) html = `<div style="text-align:center;padding:60px;color:#555;">沒有符合條件的考試</div>`;
+      content.innerHTML = html;
+    }
+
+    function getStatus(exam, now) {
+      const d = exam.dates;
+      const examStart = new Date(d.exam.start);
+      const examEnd = new Date(d.exam.end);
+      examEnd.setHours(23, 59, 59);
+
+      if (now > examEnd) {
+        if (d.results) {
+          const results = new Date(d.results);
+          if (now <= results) return { key: 'upcoming', label: '等待放榜', badge: 'badge-upcoming' };
+        }
+        return { key: 'ended', label: '已結束', badge: 'badge-ended' };
+      }
+
+      const daysToExam = Math.ceil((examStart - now) / 86400000);
+      if (daysToExam <= 14) return { key: 'examSoon', label: `考試倒數 ${daysToExam} 天`, badge: 'badge-exam-soon' };
+
+      if (d.registration) {
+        const regStart = new Date(d.registration.start);
+        const regEnd = new Date(d.registration.end);
+        regEnd.setHours(23, 59, 59);
+        if (now >= regStart && now <= regEnd) {
+          const daysLeft = Math.ceil((regEnd - now) / 86400000);
+          return { key: 'registering', label: `報名中（剩 ${daysLeft} 天）`, badge: 'badge-open' };
+        }
+        if (now < regStart) return { key: 'upcoming', label: '尚未開放報名', badge: 'badge-upcoming' };
+      }
+
+      return { key: 'upcoming', label: '即將到來', badge: 'badge-upcoming' };
+    }
+
+    function getNextKeyDate(exam) {
+      const d = exam.dates;
+      const now = new Date();
+      if (d.registration && new Date(d.registration.end) >= now) return d.registration.end;
+      if (new Date(d.exam.start) >= now) return d.exam.start;
+      if (d.results && new Date(d.results) >= now) return d.results;
+      return d.exam.start;
+    }
+
+    function renderCard(exam, now) {
+      const d = exam.dates;
+      const cat = categories[exam.category] || { color: '#4f9cf7' };
+      const status = exam._status;
+
+      // Countdown
+      let countdownHtml = '';
+      const examStart = new Date(d.exam.start);
+      if (now < examStart) {
+        const days = Math.ceil((examStart - now) / 86400000);
+        const urgencyClass = days <= 14 ? 'urgent' : days <= 30 ? 'registering' : '';
+        countdownHtml = `
+          <div class="countdown ${urgencyClass}">
+            <span class="countdown-label">距離考試</span>
+            <span class="countdown-value">${days}</span>
+            <span class="countdown-unit">天</span>
+          </div>`;
+      } else if (d.results) {
+        const results = new Date(d.results);
+        if (now < results) {
+          const days = Math.ceil((results - now) / 86400000);
+          countdownHtml = `
+            <div class="countdown">
+              <span class="countdown-label">距離放榜</span>
+              <span class="countdown-value">${days}</span>
+              <span class="countdown-unit">天</span>
+            </div>`;
+        }
+      }
+
+      return `
+        <div class="exam-card" style="--cat-color:${cat.color}">
+          <div class="exam-card-header">
+            <div class="exam-name">${exam.name}</div>
+            <span class="exam-badge ${status.badge}">${status.label}</span>
+          </div>
+          <div class="exam-dates">
+            ${d.registration ? `
+              <div class="date-item">
+                <span class="date-label">報名期間</span>
+                <span class="date-value">${fmtDate(d.registration.start)} ~ ${fmtDate(d.registration.end)}</span>
+              </div>` : ''}
+            <div class="date-item">
+              <span class="date-label">考試日期</span>
+              <span class="date-value">${fmtDate(d.exam.start)}${d.exam.start !== d.exam.end ? ' ~ ' + fmtDate(d.exam.end) : ''}</span>
+            </div>
+            ${d.results ? `
+              <div class="date-item">
+                <span class="date-label">成績公布</span>
+                <span class="date-value">${fmtDate(d.results)}</span>
+              </div>` : ''}
+          </div>
+          ${countdownHtml}
+          <div class="exam-footer">
+            <span class="exam-note">${exam.note || ''}</span>
+            <a class="exam-link" href="${exam.officialUrl}" target="_blank" rel="noopener">官方網站 &rarr;</a>
+          </div>
+        </div>`;
+    }
+
+    function fmtDate(dateStr) {
+      const d = new Date(dateStr);
+      const y = d.getFullYear() - 1911;
+      const m = d.getMonth() + 1;
+      const day = d.getDate();
+      const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+      return `${y}/${m}/${day}（${weekdays[d.getDay()]}）`;
+    }
+
+    init();
+  </script>
+  <script>fetch('/api/version').then(r=>r.json()).then(d=>{document.getElementById('appVersion').textContent='v'+d.version}).catch(()=>{})</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
