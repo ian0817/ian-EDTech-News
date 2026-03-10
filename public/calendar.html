@@ -33,10 +33,13 @@
       white-space: nowrap;
     }
     .header h1 span { color: #4f9cf7; }
+    .header h1 a { color: inherit; text-decoration: none; }
     .nav {
       display: flex;
       gap: 6px;
       margin-left: auto;
+      flex-shrink: 0;
+      align-items: center;
     }
     .nav a {
       padding: 6px 14px;
@@ -49,6 +52,13 @@
     }
     .nav a:hover { color: #fff; background: #1a1a1a; }
     .nav a.active { color: #4f9cf7; background: #1a2a3a; }
+    .nav-soon {
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      cursor: default;
+    }
 
     /* Filter tabs */
     .filters {
@@ -90,15 +100,15 @@
 
     /* Exam card */
     .exam-card {
-      background: #141414;
-      border: 1px solid #222;
+      background: #1e1e1e;
+      border: 1px solid #333;
       border-left: 4px solid var(--cat-color, #4f9cf7);
       border-radius: 10px;
       padding: 18px 20px;
       margin-bottom: 12px;
       transition: border-color .2s;
     }
-    .exam-card:hover { border-color: #333; border-left-color: var(--cat-color, #4f9cf7); }
+    .exam-card:hover { border-color: #4f9cf7; border-left-color: var(--cat-color, #4f9cf7); }
     .exam-card-header {
       display: flex;
       align-items: flex-start;
@@ -223,11 +233,12 @@
 </head>
 <body>
   <div class="header">
-    <h1><a href="/" style="color:inherit;text-decoration:none;">ian's <span>EdTech</span></a></h1>
+    <h1><a href="/">ian's <span>EdTech</span></a></h1>
     <nav class="nav">
       <a href="/">新聞</a>
       <a href="/calendar.html" class="active">考試行事曆</a>
-      <span style="padding:6px 14px;font-size:13px;font-weight:600;color:#555;cursor:default;position:relative;">學習區<sup style="font-size:9px;color:#f7d74f;margin-left:2px;">coming soon</sup></span>
+      <a href="/conferences.html">學術活動</a>
+      <span class="nav-soon">學習區 coming soon</span>
     </nav>
   </div>
 

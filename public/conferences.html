@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>學術活動 - ian's EdTech News</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+    .header {
+      background: #111;
+      border-bottom: 1px solid #222;
+      padding: 16px 24px;
+      display: flex; align-items: center; gap: 16px;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .header h1 { font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap; }
+    .header h1 span { color: #4f9cf7; }
+    .header h1 a { color: inherit; text-decoration: none; }
+    .nav {
+      display: flex; gap: 6px; margin-left: auto;
+      flex-shrink: 0; align-items: center;
+    }
+    .nav a {
+      padding: 6px 14px; border-radius: 6px;
+      font-size: 13px; font-weight: 600;
+      color: #aaa; text-decoration: none; transition: all .2s;
+    }
+    .nav a:hover { color: #fff; background: #1a1a1a; }
+    .nav a.active { color: #4f9cf7; background: #1a2a3a; }
+    .nav-soon {
+      padding: 6px 14px;
+      font-size: 13px; font-weight: 600;
+      color: #555; cursor: default;
+    }
+
+    .content { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+    /* Tags filter bar */
+    .filter-bar {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      margin-bottom: 20px; align-items: center;
+    }
+    .filter-label {
+      font-size: 11px; color: #555; margin-right: 2px; white-space: nowrap;
+    }
+    .filter-label:not(:first-child) {
+      margin-left: 10px; padding-left: 10px;
+      border-left: 1px solid #2a2a2a;
+    }
+    .ftag {
+      padding: 4px 12px; border-radius: 14px;
+      font-size: 12px; font-weight: 600;
+      border: 1px solid #2a2a2a; background: #1a1a1a;
+      color: #aaa; cursor: pointer; transition: all .2s;
+      user-select: none;
+    }
+    .ftag:hover { border-color: #4f9cf7; color: #fff; }
+    .ftag.active { background: #1a2a3a; border-color: #4f9cf7; color: #4f9cf7; }
+    .ftag.conf-color.active { background: #1a2a2a; border-color: #4fce7f; color: #4fce7f; }
+    .ftag.expo-color.active { background: #2a2a1a; border-color: #f7d74f; color: #f7d74f; }
+    .ftag.country-color.active { background: #1a1a2a; border-color: #9c9cf7; color: #9c9cf7; }
+
+    /* Summary bar */
+    .summary {
+      display: flex; gap: 16px; margin-bottom: 20px;
+      flex-wrap: wrap; align-items: center;
+    }
+    .summary-stat {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: #888;
+    }
+    .summary-stat .num {
+      font-size: 22px; font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .summary-stat .num.upcoming { color: #4f9cf7; }
+    .summary-stat .num.past { color: #666; }
+    .summary-updated { margin-left: auto; font-size: 11px; color: #555; }
+
+    /* Section */
+    .section-title {
+      font-size: 15px; font-weight: 700; color: #888;
+      margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .section-title .dot.green { background: #4fce7f; }
+
+    /* Card */
+    .conf-card {
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 10px; padding: 18px 20px;
+      margin-bottom: 10px;
+      display: flex; align-items: flex-start; gap: 16px;
+      transition: border-color .2s;
+    }
+    .conf-card:hover { border-color: #4f9cf7; }
+    .conf-card.past-card { opacity: 0.6; }
+    .conf-card.past-card:hover { opacity: 0.85; }
+    .conf-date-box {
+      flex-shrink: 0; width: 56px; text-align: center;
+      padding: 8px 0; border-radius: 8px;
+      background: #252525; border: 1px solid #333;
+    }
+    .conf-date-box .month { font-size: 11px; font-weight: 700; color: #4f9cf7; }
+    .conf-date-box .day { font-size: 22px; font-weight: 800; color: #fff; line-height: 1.2; }
+    .conf-date-box .year { font-size: 10px; color: #555; }
+    .conf-date-box.no-date .day { font-size: 12px; color: #555; }
+    .conf-info { flex: 1; min-width: 0; }
+    .conf-title {
+      font-size: 15px; font-weight: 600; color: #eee;
+      line-height: 1.5; margin-bottom: 6px;
+    }
+    .conf-title a { color: inherit; text-decoration: none; }
+    .conf-title a:hover { color: #4f9cf7; }
+    .conf-desc { font-size: 12px; color: #777; line-height: 1.5; margin-bottom: 8px; }
+    .conf-meta {
+      display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+    }
+    .conf-badge {
+      padding: 2px 8px; border-radius: 4px;
+      font-size: 11px; font-weight: 600;
+    }
+    .conf-badge.conf-type { background: #1a2a2a; color: #4fce7f; }
+    .conf-badge.expo-type { background: #2a2a1a; color: #f7d74f; }
+    .conf-country {
+      padding: 2px 8px; border-radius: 4px;
+      font-size: 11px; font-weight: 600;
+      background: #1a1a2a; color: #9c9cf7;
+    }
+    .conf-countdown { font-size: 12px; font-weight: 600; }
+    .conf-countdown.urgent { color: #f74f4f; }
+    .conf-countdown.soon { color: #f7d74f; }
+    .conf-countdown.normal { color: #4f9cf7; }
+    .conf-countdown.ended { color: #555; }
+    .conf-date-range { font-size: 11px; color: #666; }
+
+    /* Past section toggle */
+    .past-toggle {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 0; margin-top: 24px; margin-bottom: 14px;
+      cursor: pointer; user-select: none;
+    }
+    .past-toggle:hover .past-toggle-text { color: #fff; }
+    .past-toggle-arrow { font-size: 12px; color: #555; transition: transform .2s; }
+    .past-toggle-arrow.open { transform: rotate(90deg); }
+    .past-toggle-text { font-size: 14px; font-weight: 600; color: #666; transition: color .2s; }
+    .past-list { display: none; }
+    .past-list.open { display: block; }
+
+    @media (max-width: 600px) {
+      .header { flex-wrap: wrap; }
+      .nav { width: 100%; justify-content: center; }
+    }
+    .loading { text-align: center; padding: 60px; color: #555; font-size: 14px; }
+    .empty-msg { text-align: center; padding: 40px; color: #555; font-size: 14px; }
+    .footer {
+      text-align: center; padding: 24px; margin-top: 40px;
+      border-top: 1px solid #222; color: #555; font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="/">ian's <span>EdTech</span></a></h1>
+    <nav class="nav">
+      <a href="/">新聞</a>
+      <a href="/calendar.html">考試行事曆</a>
+      <a href="/conferences.html" class="active">學術活動</a>
+      <span class="nav-soon">學習區 coming soon</span>
+    </nav>
+  </div>
+
+  <div class="content">
+    <div class="filter-bar" id="filterBar"></div>
+    <div id="content">
+      <div class="loading">載入學術活動資料中...</div>
+    </div>
+  </div>
+
+  <div class="footer">新創小任 2026 · <a href="https://vercel.com/ian0817s-projects/ian-edtech-news/analytics" target="_blank" rel="noopener" style="color:#4f9cf7;text-decoration:none;">Analytics</a> · <span id="appVersion"></span></div>
+
+  <script>
+    const contentEl = document.getElementById('content');
+    const filterBar = document.getElementById('filterBar');
+    let allItems = []; // unified list
+    let activeFilters = { type: 'all', country: 'all' };
+
+    const FLAG = {
+      TW:'🇹🇼', HK:'🇭🇰', CN:'🇨🇳', KR:'🇰🇷', JP:'🇯🇵',
+      GB:'🇬🇧', US:'🇺🇸', ES:'🇪🇸', AE:'🇦🇪',
+    };
+
+    async function init() {
+      // Fetch both sources in parallel
+      const [confRes, expoRes] = await Promise.all([
+        fetch('/api/conferences').then(r => r.json()).catch(() => ({ ok: false })),
+        fetch('/api/exhibitions').then(r => r.json()).catch(() => ({ ok: false })),
+      ]);
+
+      // Normalize conferences into unified format
+      if (confRes.ok) {
+        for (const c of confRes.conferences || []) {
+          allItems.push({
+            type: 'conference',
+            title: c.title,
+            date: c.date || '',
+            endDate: '',
+            country: 'TW',
+            countryName: '台灣',
+            city: '',
+            url: c.url,
+            description: '',
+            source: c.source === 'NSTC' ? '國科會' : '臺東大學',
+          });
+        }
+      }
+
+      // Normalize exhibitions
+      if (expoRes.ok) {
+        for (const e of expoRes.exhibitions || []) {
+          allItems.push({
+            type: 'exhibition',
+            title: e.name,
+            date: e.date,
+            endDate: e.endDate || '',
+            country: e.country,
+            countryName: e.countryName,
+            city: e.city,
+            url: e.url,
+            description: e.description,
+            source: e.recurring || '',
+          });
+        }
+      }
+
+      buildFilters();
+      render();
+    }
+
+    function buildFilters() {
+      // Collect unique countries
+      const countries = [];
+      const seen = new Set();
+      for (const item of allItems) {
+        if (!seen.has(item.country)) {
+          seen.add(item.country);
+          countries.push({ code: item.country, name: item.countryName });
+        }
+      }
+      // Sort: TW first, then alphabetical
+      countries.sort((a, b) => {
+        if (a.code === 'TW') return -1;
+        if (b.code === 'TW') return 1;
+        return a.name.localeCompare(b.name);
+      });
+
+      let html = '';
+      // Type filters
+      html += '<span class="filter-label">類型</span>';
+      html += '<span class="ftag active" onclick="setFilter(\'type\',\'all\',this)">全部</span>';
+      html += '<span class="ftag conf-color" onclick="setFilter(\'type\',\'conference\',this)">研討會</span>';
+      html += '<span class="ftag expo-color" onclick="setFilter(\'type\',\'exhibition\',this)">展覽</span>';
+
+      // Country filters
+      html += '<span class="filter-label">地區</span>';
+      html += '<span class="ftag active" onclick="setFilter(\'country\',\'all\',this)">全部</span>';
+      for (const c of countries) {
+        const flag = FLAG[c.code] || '🌐';
+        html += '<span class="ftag country-color" onclick="setFilter(\'country\',\'' + c.code + '\',this)">' + flag + ' ' + esc(c.name) + '</span>';
+      }
+
+      filterBar.innerHTML = html;
+    }
+
+    function setFilter(dimension, value, el) {
+      activeFilters[dimension] = value;
+      // Update active state within same dimension
+      const label = dimension === 'type' ? '類型' : '地區';
+      let inGroup = false;
+      filterBar.querySelectorAll('.filter-label, .ftag').forEach(node => {
+        if (node.classList.contains('filter-label')) {
+          inGroup = node.textContent === label;
+          return;
+        }
+        if (inGroup) node.classList.remove('active');
+      });
+      if (el) el.classList.add('active');
+      render();
+    }
+
+    function render() {
+      const now = new Date(); now.setHours(0,0,0,0);
+
+      const filtered = allItems.filter(item => {
+        if (activeFilters.type !== 'all' && item.type !== activeFilters.type) return false;
+        if (activeFilters.country !== 'all' && item.country !== activeFilters.country) return false;
+        return true;
+      });
+
+      const upcoming = filtered
+        .filter(item => item.date && new Date(item.endDate || item.date) >= now)
+        .sort((a, b) => a.date.localeCompare(b.date));
+
+      const past = filtered
+        .filter(item => !item.date || new Date(item.endDate || item.date) < now)
+        .sort((a, b) => {
+          if (!a.date) return 1; if (!b.date) return -1;
+          return b.date.localeCompare(a.date);
+        });
+
+      let html = `
+        <div class="summary">
+          <div class="summary-stat"><span class="num upcoming">${upcoming.length}</span> 場即將到來</div>
+          <div class="summary-stat"><span class="num past">${past.length}</span> 場已結束</div>
+        </div>`;
+
+      html += '<div class="section-title"><span class="dot green"></span>即將到來</div>';
+      if (!upcoming.length) {
+        html += '<div class="empty-msg">目前沒有符合篩選的即將到來活動</div>';
+      } else {
+        html += upcoming.map(item => renderCard(item, now, false)).join('');
+      }
+
+      if (past.length) {
+        html += `
+          <div class="past-toggle" onclick="togglePast()">
+            <span class="past-toggle-arrow" id="pastArrow">▶</span>
+            <span class="past-toggle-text">已結束 (${past.length})</span>
+          </div>
+          <div class="past-list" id="pastList">
+            ${past.map(item => renderCard(item, now, true)).join('')}
+          </div>`;
+      }
+
+      contentEl.innerHTML = html;
+    }
+
+    function renderCard(item, now, isPast) {
+      const dateBox = item.date
+        ? makeDateBox(item.date)
+        : '<div class="conf-date-box no-date"><div class="day">日期<br>未定</div></div>';
+
+      const effectiveDate = item.date || '';
+      const countdown = effectiveDate ? makeCountdown(effectiveDate, now) : '';
+
+      const flag = FLAG[item.country] || '🌐';
+      const typeBadge = item.type === 'exhibition'
+        ? '<span class="conf-badge expo-type">展覽</span>'
+        : '<span class="conf-badge conf-type">研討會</span>';
+
+      const locationText = item.city
+        ? flag + ' ' + esc(item.countryName) + ' · ' + esc(item.city)
+        : flag + ' ' + esc(item.countryName);
+
+      const dateRange = item.endDate ? formatDateRange(item.date, item.endDate) : '';
+
+      const descHtml = item.description
+        ? '<div class="conf-desc">' + esc(item.description) + '</div>'
+        : '';
+
+      const sourceHtml = item.source
+        ? '<span class="conf-date-range">' + esc(item.source) + '</span>'
+        : '';
+
+      return `
+        <div class="conf-card ${isPast ? 'past-card' : ''}">
+          ${dateBox}
+          <div class="conf-info">
+            <div class="conf-title"><a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a></div>
+            ${descHtml}
+            <div class="conf-meta">
+              ${typeBadge}
+              <span class="conf-country">${locationText}</span>
+              ${sourceHtml}
+              ${dateRange ? '<span class="conf-date-range">' + dateRange + '</span>' : ''}
+              ${countdown}
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function makeDateBox(dateStr) {
+      const d = new Date(dateStr);
+      const months = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+      return '<div class="conf-date-box">' +
+        '<div class="month">' + months[d.getMonth()] + '</div>' +
+        '<div class="day">' + d.getDate() + '</div>' +
+        '<div class="year">' + d.getFullYear() + '</div>' +
+        '</div>';
+    }
+
+    function makeCountdown(dateStr, now) {
+      const d = new Date(dateStr);
+      const diff = Math.ceil((d - now) / 86400000);
+      if (diff < 0) return '<span class="conf-countdown ended">已結束</span>';
+      if (diff === 0) return '<span class="conf-countdown urgent">今天</span>';
+      if (diff <= 7) return '<span class="conf-countdown urgent">' + diff + ' 天後</span>';
+      if (diff <= 30) return '<span class="conf-countdown soon">' + diff + ' 天後</span>';
+      return '<span class="conf-countdown normal">' + diff + ' 天後</span>';
+    }
+
+    function formatDateRange(start, end) {
+      if (!end || start === end) return '';
+      const s = new Date(start), e = new Date(end);
+      return (s.getMonth()+1) + '/' + s.getDate() + ' - ' + (e.getMonth()+1) + '/' + e.getDate();
+    }
+
+    function togglePast() {
+      const list = document.getElementById('pastList');
+      const arrow = document.getElementById('pastArrow');
+      if (list) { list.classList.toggle('open'); arrow.classList.toggle('open'); }
+    }
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s || '';
+      return d.innerHTML;
+    }
+
+    init();
+  </script>
+  <script>fetch('/api/version').then(r=>r.json()).then(d=>{document.getElementById('appVersion').textContent='v'+d.version}).catch(()=>{})</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

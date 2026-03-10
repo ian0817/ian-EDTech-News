@@ -33,6 +33,32 @@
       white-space: nowrap;
     }
     .header h1 span { color: #4f9cf7; }
+    .header h1 a { color: inherit; text-decoration: none; }
+    .nav {
+      display: flex;
+      gap: 6px;
+      margin-left: auto;
+      flex-shrink: 0;
+      align-items: center;
+    }
+    .nav a {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #aaa;
+      text-decoration: none;
+      transition: all .2s;
+    }
+    .nav a:hover { color: #fff; background: #1a1a1a; }
+    .nav a.active { color: #4f9cf7; background: #1a2a3a; }
+    .nav-soon {
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      cursor: default;
+    }
     .search-box {
       flex: 1;
       max-width: 500px;
@@ -172,13 +198,14 @@
     }
     .editorial.hidden { display: none; }
     .editorial-card {
-      background: #141414;
-      border: 1px solid #222;
+      background: #1e1e1e;
+      border: 1px solid #333;
       border-radius: 12px;
       padding: 28px 28px 22px;
       position: relative;
       overflow: hidden;
     }
+    .editorial-card:hover { border-color: #4f9cf7; }
     .editorial-card::before {
       content: '';
       position: absolute;
@@ -299,6 +326,95 @@
       color: #555;
       font-size: 14px;
     }
+    .editorial-history-toggle {
+      text-align: center;
+      margin-top: 14px;
+      cursor: pointer;
+      font-size: 13px;
+      color: #555;
+      transition: color .2s;
+      user-select: none;
+    }
+    .editorial-history-toggle:hover { color: #4f9cf7; }
+
+    /* Editorial history dialog */
+    .eh-dialog {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 14px;
+      color: #e0e0e0;
+      padding: 0;
+      width: min(560px, 92vw);
+      max-height: 80vh;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    }
+    .eh-dialog::backdrop { background: rgba(0,0,0,.65); }
+    .eh-dialog-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 22px; border-bottom: 1px solid #222;
+      position: sticky; top: 0; background: #1e1e1e; z-index: 1;
+    }
+    .eh-dialog-title { font-size: 16px; font-weight: 700; color: #fff; }
+    .eh-dialog-close {
+      background: none; border: none; color: #555; font-size: 20px;
+      cursor: pointer; padding: 4px 8px; border-radius: 6px;
+      transition: all .2s; line-height: 1;
+    }
+    .eh-dialog-close:hover { color: #fff; background: #222; }
+    .eh-dialog-body { overflow-y: auto; max-height: calc(80vh - 60px); }
+
+    /* List view */
+    .eh-list { padding: 8px 12px; }
+    .eh-list-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px; border-radius: 8px;
+      cursor: pointer; transition: background .15s;
+    }
+    .eh-list-item:hover { background: #1a1a1a; }
+    .eh-list-item .eh-date {
+      flex-shrink: 0; font-size: 12px; color: #555;
+      font-variant-numeric: tabular-nums; white-space: nowrap;
+    }
+    .eh-list-item .eh-title {
+      font-size: 14px; font-weight: 600; color: #ddd;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .eh-list-item .eh-arrow { flex-shrink: 0; color: #444; font-size: 12px; margin-left: auto; }
+    .eh-list-sep {
+      height: 1px; background: #1a1a1a; margin: 0 16px;
+    }
+
+    /* Detail view */
+    .eh-detail { padding: 22px; }
+    .eh-back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; color: #4f9cf7; cursor: pointer;
+      margin-bottom: 16px; padding: 4px 0;
+      background: none; border: none; transition: opacity .2s;
+    }
+    .eh-back:hover { opacity: .7; }
+    .eh-detail-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .eh-detail-date { font-size: 12px; color: #555; margin-bottom: 18px; }
+    .eh-detail-body {
+      font-size: 14px; color: #ccc; line-height: 1.8;
+      white-space: pre-line; margin-bottom: 18px;
+    }
+    .eh-detail-reflection {
+      background: #1a1a2a; border-left: 3px solid #4f9cf7;
+      border-radius: 0 8px 8px 0; padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+    .eh-detail-reflection-label { font-size: 11px; font-weight: 700; color: #4f9cf7; margin-bottom: 6px; }
+    .eh-detail-reflection-text { font-size: 13px; color: #9cb3d6; line-height: 1.6; }
+    .eh-detail-sources { margin-top: 16px; }
+    .eh-detail-sources-title { font-size: 11px; font-weight: 700; color: #555; margin-bottom: 8px; }
+    .eh-detail-sources a {
+      display: block; font-size: 12px; color: #888;
+      text-decoration: none; padding: 3px 0;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .eh-detail-sources a:hover { color: #4f9cf7; }
 
     /* Status bar */
     .status {
@@ -318,8 +434,8 @@
 
     /* Card */
     .card {
-      background: #141414;
-      border: 1px solid #222;
+      background: #1e1e1e;
+      border: 1px solid #333;
       border-radius: 10px;
       padding: 18px;
       display: flex;
@@ -327,7 +443,7 @@
       gap: 10px;
       transition: border-color .2s;
     }
-    .card:hover { border-color: #333; }
+    .card:hover { border-color: #4f9cf7; }
     .card-meta {
       display: flex;
       justify-content: space-between;
@@ -389,15 +505,15 @@
       gap: 10px;
     }
     .exam-mini {
-      background: #141414;
-      border: 1px solid #222;
+      background: #1e1e1e;
+      border: 1px solid #333;
       border-left: 3px solid var(--cat-color, #4f9cf7);
       border-radius: 8px;
       padding: 14px 16px;
       cursor: pointer;
       transition: border-color .2s;
     }
-    .exam-mini:hover { border-color: #333; border-left-color: var(--cat-color, #4f9cf7); }
+    .exam-mini:hover { border-color: #4f9cf7; border-left-color: var(--cat-color, #4f9cf7); }
     .exam-mini-name {
       font-size: 14px;
       font-weight: 600;
@@ -454,19 +570,24 @@
       color: #555;
       font-size: 13px;
     }
+    @media (max-width: 600px) {
+      .header { flex-wrap: wrap; }
+      .nav { width: 100%; justify-content: center; }
+    }
   </style>
 </head>
 <body>
   <div class="header">
-    <h1><a href="/" style="color:inherit;text-decoration:none;">ian's <span>EdTech News</span></a></h1>
+    <h1><a href="/">ian's <span>EdTech</span></a></h1>
     <div class="search-box" style="display:none;">
       <input type="text" id="searchInput" placeholder="搜尋教育科技新聞..." value="數位學習 教育科技">
       <button id="searchBtn" onclick="doSearch()">搜尋</button>
     </div>
-    <nav style="display:flex;gap:6px;margin-left:auto;flex-shrink:0;align-items:center;">
-      <a href="/" style="padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;color:#4f9cf7;background:#1a2a3a;text-decoration:none;">新聞</a>
-      <a href="/calendar.html" style="padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;color:#aaa;text-decoration:none;">考試行事曆</a>
-      <span style="padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;color:#555;cursor:default;position:relative;">學習區<sup style="font-size:9px;color:#f7d74f;margin-left:2px;">coming soon</sup></span>
+    <nav class="nav">
+      <a href="/" class="active">新聞</a>
+      <a href="/calendar.html">考試行事曆</a>
+      <a href="/conferences.html">學術活動</a>
+      <span class="nav-soon">學習區 coming soon</span>
     </nav>
     <img src="/avatar.jpg" alt="Ian" class="header-avatar" id="headerAvatar">
   </div>
@@ -513,6 +634,15 @@
   <div class="status" id="status"></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" style="display:none">找不到相關新聞</div>
+  <!-- Editorial History Dialog -->
+  <dialog id="ehDialog" class="eh-dialog" onclick="if(event.target===this)this.close()">
+    <div class="eh-dialog-header">
+      <span class="eh-dialog-title">過往評論</span>
+      <button class="eh-dialog-close" onclick="document.getElementById('ehDialog').close()">&times;</button>
+    </div>
+    <div class="eh-dialog-body"></div>
+  </dialog>
+
   <div class="footer">新創小任 2026 · <a href="https://vercel.com/ian0817s-projects/ian-edtech-news/analytics" target="_blank" rel="noopener" style="color:#4f9cf7;text-decoration:none;">Analytics</a> · <span id="appVersion"></span></div>
 
   <script>
@@ -573,11 +703,83 @@
             </div>
             ${reflectionHtml}
             ${sourcesHtml}
-          </div>`;
+          </div>
+          <div class="editorial-history-toggle" onclick="openHistoryDialog()">▼ 查看過往評論</div>`;
       } catch (err) {
         editorialEl.innerHTML = `<div class="editorial-loading" style="color:#555;">評論載入失敗：${err.message}</div>`;
       }
     })();
+
+    let historyData = null;
+    async function openHistoryDialog() {
+      const dialog = document.getElementById('ehDialog');
+      dialog.showModal();
+      if (historyData) { renderHistoryList(); return; }
+      const body = dialog.querySelector('.eh-dialog-body');
+      body.innerHTML = '<div style="text-align:center;padding:40px;color:#555;font-size:13px;">載入中...</div>';
+      try {
+        const res = await fetch('/api/editorial/history?limit=30');
+        const data = await res.json();
+        if (!data.ok || !data.history.length) {
+          body.innerHTML = '<div style="text-align:center;padding:40px;color:#555;font-size:13px;">尚無歷史評論</div>';
+          return;
+        }
+        historyData = data.history;
+        renderHistoryList();
+      } catch {
+        body.innerHTML = '<div style="text-align:center;padding:40px;color:#555;font-size:13px;">載入失敗</div>';
+      }
+    }
+
+    function renderHistoryList() {
+      const body = document.querySelector('#ehDialog .eh-dialog-body');
+      const title = document.querySelector('#ehDialog .eh-dialog-title');
+      title.textContent = '過往評論';
+      let html = '<div class="eh-list">';
+      historyData.forEach((e, i) => {
+        const t = new Date(e.generatedAt).toLocaleString('zh-TW', { month:'2-digit', day:'2-digit' });
+        html += `<div class="eh-list-item" onclick="renderHistoryDetail(${i})">
+          <span class="eh-date">${t}</span>
+          <span class="eh-title">${esc(e.title)}</span>
+          <span class="eh-arrow">›</span>
+        </div>`;
+        if (i < historyData.length - 1) html += '<div class="eh-list-sep"></div>';
+      });
+      html += '</div>';
+      body.innerHTML = html;
+      body.scrollTop = 0;
+    }
+
+    function renderHistoryDetail(idx) {
+      const e = historyData[idx];
+      const body = document.querySelector('#ehDialog .eh-dialog-body');
+      const title = document.querySelector('#ehDialog .eh-dialog-title');
+      title.textContent = '評論詳情';
+      const t = new Date(e.generatedAt).toLocaleString('zh-TW', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' });
+      let reflectionHtml = '';
+      if (e.reflection) {
+        reflectionHtml = `<div class="eh-detail-reflection">
+          <div class="eh-detail-reflection-label">反思</div>
+          <div class="eh-detail-reflection-text">${esc(e.reflection)}</div>
+        </div>`;
+      }
+      let sourcesHtml = '';
+      if (e.headlines && e.headlines.length) {
+        sourcesHtml = `<div class="eh-detail-sources">
+          <div class="eh-detail-sources-title">相關新聞</div>
+          ${e.headlines.map(h => `<a href="${esc(h.link)}" target="_blank" rel="noopener">${esc(h.title)}</a>`).join('')}
+        </div>`;
+      }
+      body.innerHTML = `<div class="eh-detail">
+        <button class="eh-back" onclick="renderHistoryList()">← 返回列表</button>
+        <div class="eh-detail-title">${esc(e.title)}</div>
+        <div class="eh-detail-date">${t}</div>
+        <div class="eh-detail-body">${esc(e.body)}</div>
+        ${reflectionHtml}
+        ${sourcesHtml}
+      </div>`;
+      body.scrollTop = 0;
+    }
 
     // Load exam preview
     (async function loadExamPreview() {

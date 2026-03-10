@@ -16,7 +16,9 @@ const { summarize } = require('./lib/ollama');
 const examData = require('./data/exams.json');
 const { version } = require('./package.json');
 const { trackPageView, generateReport, reportToMarkdown } = require('./lib/tracker');
-const { generateEditorial } = require('./lib/editorial');
+const { generateEditorial, readHistory } = require('./lib/editorial');
+const { getConferences, refreshConferences } = require('./lib/conferences');
+const exhibitionData = require('./data/exhibitions.json');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -71,6 +73,42 @@ app.get('/api/editorial', async (req, res) => {
   } catch (err) {
     res.json({ ok: false, error: err.message });
   }
+});
+
+// Editorial history API
+app.get('/api/editorial/history', (req, res) => {
+  const limit = parseInt(req.query.limit) || 50;
+  const history = readHistory().slice(0, limit);
+  res.json({ ok: true, history });
+});
+
+// Conferences API
+app.get('/api/conferences', async (req, res) => {
+  try {
+    const data = await getConferences();
+    res.json({ ok: true, ...data });
+  } catch (err) {
+    res.json({ ok: false, error: err.message, conferences: [] });
+  }
+});
+
+// Conferences refresh (protected)
+app.get('/api/conferences/refresh', async (req, res) => {
+  const token = req.query.token;
+  if (token !== process.env.VERCEL_TOKEN) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    const data = await refreshConferences();
+    res.json({ ok: true, ...data });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
+  }
+});
+
+// Exhibitions API
+app.get('/api/exhibitions', (req, res) => {
+  res.json({ ok: true, ...exhibitionData });
 });
 
 // Version API
