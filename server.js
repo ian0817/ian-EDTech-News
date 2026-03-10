@@ -19,6 +19,7 @@ const { trackPageView, generateReport, reportToMarkdown } = require('./lib/track
 const { generateEditorial, readHistory } = require('./lib/editorial');
 const { getConferences, refreshConferences } = require('./lib/conferences');
 const exhibitionData = require('./data/exhibitions.json');
+const { fetchTrends } = require('./lib/trends');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -109,6 +110,16 @@ app.get('/api/conferences/refresh', async (req, res) => {
 // Exhibitions API
 app.get('/api/exhibitions', (req, res) => {
   res.json({ ok: true, ...exhibitionData });
+});
+
+// Trends API
+app.get('/api/trends', async (req, res) => {
+  try {
+    const data = await fetchTrends();
+    res.json({ ok: true, ...data });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
+  }
 });
 
 // Version API

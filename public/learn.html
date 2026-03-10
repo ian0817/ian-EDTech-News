@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>學習區 — ian's EdTech</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+    .header {
+      background: #111;
+      border-bottom: 1px solid #222;
+      padding: 16px 24px;
+      display: flex; align-items: center; gap: 16px;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .header h1 { font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap; }
+    .header h1 span { color: #4f9cf7; }
+    .header h1 a { color: inherit; text-decoration: none; }
+    .nav {
+      display: flex; gap: 6px; margin-left: auto;
+      flex-shrink: 0; align-items: center;
+    }
+    .nav a {
+      padding: 6px 14px; border-radius: 6px;
+      font-size: 13px; font-weight: 600;
+      color: #aaa; text-decoration: none; transition: all .2s;
+    }
+    .nav a:hover { color: #fff; background: #1a1a1a; }
+    .nav a.active { color: #4f9cf7; background: #1a2a3a; }
+    .nav-soon {
+      padding: 6px 14px; font-size: 13px; font-weight: 600;
+      color: #555; cursor: default;
+    }
+
+    .content { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+    /* Page title */
+    .page-title {
+      font-size: 22px; font-weight: 800; color: #fff;
+      margin-bottom: 6px;
+    }
+    .page-subtitle {
+      font-size: 13px; color: #666; margin-bottom: 28px;
+    }
+
+    /* Top Keywords */
+    .top-section { margin-bottom: 36px; }
+    .section-label {
+      font-size: 12px; font-weight: 700; color: #555;
+      text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    .top-list { display: flex; flex-direction: column; gap: 8px; }
+    .top-item {
+      display: flex; align-items: center; gap: 14px;
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 10px; padding: 14px 18px;
+      transition: border-color .2s;
+    }
+    .top-item:hover { border-color: #4f9cf7; }
+    .top-rank {
+      font-size: 24px; font-weight: 900; width: 36px; text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .top-rank.r1 { color: #f7d74f; }
+    .top-rank.r2 { color: #c0c0c0; }
+    .top-rank.r3 { color: #cd7f32; }
+    .top-rank.r4, .top-rank.r5 { color: #555; }
+    .top-info { flex: 1; }
+    .top-label { font-size: 16px; font-weight: 700; color: #eee; }
+    .top-count { font-size: 12px; color: #888; margin-top: 2px; }
+    .top-trend {
+      font-size: 18px; width: 32px; text-align: center;
+    }
+    .trend-up { color: #4fce7f; }
+    .trend-down { color: #f74f4f; }
+    .trend-flat { color: #666; }
+    .top-bar-wrap {
+      flex: 1; max-width: 200px; height: 8px;
+      background: #111; border-radius: 4px; overflow: hidden;
+    }
+    .top-bar {
+      height: 100%; border-radius: 4px;
+      background: linear-gradient(90deg, #4f9cf7, #9c4ff7);
+      transition: width .6s ease;
+    }
+
+    /* Keyword detail cards */
+    .kw-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .kw-card {
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 10px; padding: 18px 20px;
+      transition: border-color .2s;
+    }
+    .kw-card:hover { border-color: #4f9cf7; }
+    .kw-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .kw-label { font-size: 15px; font-weight: 700; color: #eee; }
+    .kw-total { font-size: 12px; color: #888; }
+    .kw-trend-badge {
+      padding: 2px 8px; border-radius: 4px;
+      font-size: 11px; font-weight: 700;
+    }
+    .kw-trend-badge.up { background: #1a2a1a; color: #4fce7f; }
+    .kw-trend-badge.down { background: #2a1a1a; color: #f74f4f; }
+    .kw-trend-badge.flat { background: #1a1a1a; color: #666; }
+
+    /* Mini bar chart */
+    .kw-chart {
+      display: flex; align-items: flex-end; gap: 4px;
+      height: 60px; margin-bottom: 8px;
+    }
+    .kw-bar-col {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-end; height: 100%;
+    }
+    .kw-bar {
+      width: 100%; border-radius: 3px 3px 0 0;
+      background: #4f9cf7; min-height: 2px;
+      transition: height .4s ease;
+    }
+    .kw-bar.zero { background: #222; }
+    .kw-day-labels {
+      display: flex; gap: 4px;
+    }
+    .kw-day-label {
+      flex: 1; text-align: center;
+      font-size: 10px; color: #555;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Updated info */
+    .updated-info {
+      text-align: center; padding: 20px;
+      font-size: 12px; color: #444;
+    }
+
+    .footer {
+      text-align: center; padding: 24px; margin-top: 20px;
+      border-top: 1px solid #222; color: #555; font-size: 13px;
+    }
+    .loading { text-align: center; padding: 60px; color: #555; font-size: 14px; }
+
+    @media (max-width: 600px) {
+      .header { flex-wrap: wrap; }
+      .nav { width: 100%; justify-content: center; }
+      .top-bar-wrap { display: none; }
+      .kw-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="/">ian's <span>EdTech</span></a></h1>
+    <nav class="nav">
+      <a href="/">新聞</a>
+      <a href="/calendar.html">考試行事曆</a>
+      <a href="/conferences.html">學術活動</a>
+      <a href="/learn.html" class="active">學習區</a>
+    </nav>
+  </div>
+
+  <div class="content">
+    <div class="page-title">EdTech 趨勢儀表板</div>
+    <div class="page-subtitle">追蹤教育科技關鍵字的新聞熱度，每 6 小時自動更新</div>
+
+    <div id="main">
+      <div class="loading">分析趨勢資料中...</div>
+    </div>
+  </div>
+
+  <div class="updated-info" id="updatedInfo"></div>
+  <div class="footer">新創小任 2026 · <a href="https://vercel.com/ian0817s-projects/ian-edtech-news/analytics" target="_blank" rel="noopener" style="color:#4f9cf7;text-decoration:none;">Analytics</a> · <span id="appVersion"></span></div>
+
+  <script>
+    const mainEl = document.getElementById('main');
+
+    async function init() {
+      try {
+        const res = await fetch('/api/trends');
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error || 'API error');
+        render(data);
+      } catch (err) {
+        mainEl.innerHTML = `<div class="loading" style="color:#f74f4f;">載入失敗: ${esc(err.message)}</div>`;
+      }
+    }
+
+    function render(data) {
+      const { keywords, days, topKeywords, generatedAt } = data;
+      const maxTotal = Math.max(...keywords.map(k => k.total), 1);
+
+      // Updated info
+      const time = new Date(generatedAt);
+      const timeStr = time.toLocaleString('zh-TW', { month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' });
+      document.getElementById('updatedInfo').textContent = `資料更新時間：${timeStr}`;
+
+      let html = '';
+
+      // Top 5
+      html += '<div class="top-section">';
+      html += '<div class="section-label">本週熱門關鍵字 Top 5</div>';
+      html += '<div class="top-list">';
+      topKeywords.forEach(kw => {
+        const pct = maxTotal > 0 ? Math.round(kw.total / maxTotal * 100) : 0;
+        const trendIcon = kw.trend === 'up' ? '↑' : kw.trend === 'down' ? '↓' : '→';
+        const trendClass = 'trend-' + kw.trend;
+        html += `
+          <div class="top-item">
+            <span class="top-rank r${kw.rank}">${kw.rank}</span>
+            <div class="top-info">
+              <div class="top-label">${esc(kw.label)}</div>
+              <div class="top-count">${kw.total} 篇報導</div>
+            </div>
+            <div class="top-bar-wrap"><div class="top-bar" style="width:${pct}%"></div></div>
+            <span class="top-trend ${trendClass}">${trendIcon}</span>
+          </div>`;
+      });
+      html += '</div></div>';
+
+      // Keyword detail cards
+      html += '<div class="section-label">各關鍵字 7 日趨勢</div>';
+      html += '<div class="kw-grid">';
+      keywords.forEach(kw => {
+        const maxCount = Math.max(...kw.counts, 1);
+        const trendLabel = kw.trend === 'up' ? '上升' : kw.trend === 'down' ? '下降' : '持平';
+
+        html += `<div class="kw-card">
+          <div class="kw-header">
+            <div>
+              <span class="kw-label">${esc(kw.label)}</span>
+              <span class="kw-total">${kw.total} 篇</span>
+            </div>
+            <span class="kw-trend-badge ${kw.trend}">${trendLabel}</span>
+          </div>
+          <div class="kw-chart">`;
+
+        kw.counts.forEach(c => {
+          const h = Math.max(Math.round(c / maxCount * 52), 2);
+          html += `<div class="kw-bar-col"><div class="kw-bar${c === 0 ? ' zero' : ''}" style="height:${h}px" title="${c} 篇"></div></div>`;
+        });
+
+        html += '</div><div class="kw-day-labels">';
+        days.forEach(d => {
+          const parts = d.split('-');
+          html += `<span class="kw-day-label">${parseInt(parts[1])}/${parseInt(parts[2])}</span>`;
+        });
+        html += '</div></div>';
+      });
+      html += '</div>';
+
+      mainEl.innerHTML = html;
+    }
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s || '';
+      return d.innerHTML;
+    }
+
+    init();
+  </script>
+  <script>fetch('/api/version').then(r=>r.json()).then(d=>{document.getElementById('appVersion').textContent='v'+d.version}).catch(()=>{})</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
