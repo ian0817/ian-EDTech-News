@@ -136,8 +136,10 @@
       transition: all .2s;
     }
     .tag:hover { background: #252525; color: #fff; border-color: #4f9cf7; }
+    .tag.active { background: #1a2a3a; color: #4f9cf7; border-color: #4f9cf7; }
     .tag.award { border-color: #3a3020; color: #c9a84c; }
     .tag.award:hover { background: #2a2518; border-color: #c9a84c; color: #f0d060; }
+    .tag.award.active { background: #2a2518; border-color: #c9a84c; color: #f0d060; }
 
     /* Welcome / Landing */
     .welcome {
@@ -593,16 +595,16 @@
   </div>
   <div class="tags">
     <span class="tag-group-label">趨勢</span>
-    <span class="tag" onclick="quickSearch('數位學習')">數位學習</span>
-    <span class="tag" onclick="quickSearch('教育科技 EdTech')">EdTech</span>
-    <span class="tag" onclick="quickSearch('AI 教育')">AI 教育</span>
-    <span class="tag" onclick="quickSearch('線上課程 平台')">線上課程</span>
-    <span class="tag" onclick="quickSearch('教育部 數位')">教育政策</span>
-    <span class="tag" onclick="quickSearch('自主學習')">自主學習</span>
-    <span class="tag" onclick="quickSearch('教育 AI 生成式')">生成式 AI</span>
-    <span class="tag" onclick="quickSearch('遠距教學')">遠距教學</span>
+    <span class="tag" onclick="quickSearch('數位學習',this)">數位學習</span>
+    <span class="tag" onclick="quickSearch('教育科技 EdTech',this)">EdTech</span>
+    <span class="tag" onclick="quickSearch('AI 教育',this)">AI 教育</span>
+    <span class="tag" onclick="quickSearch('線上課程 平台',this)">線上課程</span>
+    <span class="tag" onclick="quickSearch('教育部 數位',this)">教育政策</span>
+    <span class="tag" onclick="quickSearch('自主學習',this)">自主學習</span>
+    <span class="tag" onclick="quickSearch('教育 AI 生成式',this)">生成式 AI</span>
+    <span class="tag" onclick="quickSearch('遠距教學',this)">遠距教學</span>
     <span class="tag-group-label">獎項</span>
-    <span class="tag award" onclick="quickSearch('教育 科技 獎項 得獎 創新')">EdTech 得獎</span>
+    <span class="tag award" onclick="quickSearch('教育 科技 獎項 得獎 創新',this)">EdTech 得獎</span>
   </div>
 
   <!-- Welcome screen (shown before any search) -->
@@ -878,7 +880,9 @@
       }
     }
 
-    function quickSearch(q) {
+    function quickSearch(q, el) {
+      document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+      if (el) el.classList.add('active');
       searchInput.value = q;
       doSearch();
     }
