@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <title>學習區 — ian's EdTech</title>
+  <title>新靈感 — ian's EdTech</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -53,8 +53,7 @@
     /* Top Keywords */
     .top-section { margin-bottom: 36px; }
     .section-label {
-      font-size: 12px; font-weight: 700; color: #555;
-      text-transform: uppercase; letter-spacing: 1px;
+      font-size: 15px; font-weight: 700; color: #888;
       margin-bottom: 14px;
     }
     .top-list { display: flex; flex-direction: column; gap: 8px; }
@@ -143,6 +142,145 @@
       font-variant-numeric: tabular-nums;
     }
 
+    /* ===== Micro-learning ===== */
+    .micro-section { margin-top: 8px; margin-bottom: 36px; }
+
+    /* Flip card */
+    .flip-container {
+      perspective: 800px;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+    .flip-card {
+      position: relative;
+      width: 100%; min-height: 200px;
+      transition: transform .6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped { transform: rotateY(180deg); }
+    .flip-front, .flip-back {
+      position: absolute; top: 0; left: 0; width: 100%; min-height: 200px;
+      backface-visibility: hidden;
+      border-radius: 14px; padding: 28px 30px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .flip-front {
+      background: linear-gradient(135deg, #1a2a3a, #1e1e1e);
+      border: 1px solid #333;
+    }
+    .flip-back {
+      background: #1e1e1e; border: 1px solid #333;
+      transform: rotateY(180deg);
+    }
+    .flip-topic {
+      font-size: 11px; font-weight: 700; color: #4f9cf7;
+      margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .flip-question {
+      font-size: 20px; font-weight: 800; color: #fff;
+      line-height: 1.5; margin-bottom: 16px;
+    }
+    .flip-hint {
+      font-size: 12px; color: #555;
+    }
+    .flip-answer {
+      font-size: 15px; color: #ccc; line-height: 1.8;
+      margin-bottom: 14px; white-space: pre-line;
+    }
+    .flip-further {
+      font-size: 12px; color: #4f9cf7; line-height: 1.5;
+      padding-top: 10px; border-top: 1px solid #2a2a2a;
+    }
+    .flip-back-hint {
+      font-size: 11px; color: #444; margin-top: 12px;
+    }
+
+    /* History cards */
+    .micro-history { margin-top: 20px; }
+    .micro-history-title {
+      font-size: 13px; font-weight: 600; color: #666;
+      margin-bottom: 10px; cursor: pointer; user-select: none;
+      transition: color .2s;
+    }
+    .micro-history-title:hover { color: #4f9cf7; }
+    .mh-list { display: none; }
+    .mh-list.open { display: block; }
+    .mh-item {
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 8px; padding: 14px 16px;
+      margin-bottom: 8px; cursor: pointer;
+      transition: border-color .2s;
+    }
+    .mh-item:hover { border-color: #4f9cf7; }
+    .mh-item-topic { font-size: 11px; color: #4f9cf7; font-weight: 600; margin-bottom: 4px; }
+    .mh-item-q { font-size: 14px; color: #ddd; font-weight: 600; }
+    .mh-item-date { font-size: 11px; color: #555; margin-top: 4px; }
+    .mh-item-answer {
+      display: none; font-size: 13px; color: #999;
+      line-height: 1.6; margin-top: 10px; padding-top: 10px;
+      border-top: 1px solid #222; white-space: pre-line;
+    }
+    .mh-item.expanded .mh-item-answer { display: block; }
+
+    /* ===== AI Teaching Assistant ===== */
+    .ai-section { margin-bottom: 36px; }
+    .ai-templates {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .ai-tpl {
+      padding: 8px 16px; border-radius: 8px;
+      border: 1px solid #333; background: #1e1e1e;
+      color: #ccc; font-size: 13px; cursor: pointer;
+      transition: all .2s; user-select: none;
+    }
+    .ai-tpl:hover { border-color: #4f9cf7; color: #fff; }
+    .ai-tpl.active { border-color: #4f9cf7; color: #4f9cf7; background: #1a2a3a; }
+    .ai-input-wrap {
+      display: flex; gap: 10px; margin-bottom: 16px;
+    }
+    .ai-input {
+      flex: 1; padding: 12px 16px; border-radius: 10px;
+      border: 1px solid #333; background: #1a1a1a;
+      color: #e0e0e0; font-size: 14px; outline: none;
+      font-family: inherit; resize: none; min-height: 48px;
+    }
+    .ai-input:focus { border-color: #4f9cf7; }
+    .ai-input::placeholder { color: #555; }
+    .ai-submit {
+      padding: 12px 24px; border-radius: 10px;
+      border: none; background: #4f9cf7; color: #fff;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      white-space: nowrap; transition: background .2s;
+      flex-shrink: 0; align-self: flex-end;
+    }
+    .ai-submit:hover { background: #3a8ae5; }
+    .ai-submit:disabled { background: #333; color: #666; cursor: wait; }
+    .ai-result {
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 12px; padding: 22px 24px;
+      display: none; position: relative;
+    }
+    .ai-result.visible { display: block; }
+    .ai-result-text {
+      font-size: 14px; color: #ccc; line-height: 1.8;
+      white-space: pre-line;
+    }
+    .ai-result-actions {
+      display: flex; gap: 8px; margin-top: 14px;
+      padding-top: 12px; border-top: 1px solid #222;
+    }
+    .ai-copy {
+      padding: 6px 14px; border-radius: 6px;
+      border: 1px solid #333; background: transparent;
+      color: #888; font-size: 12px; cursor: pointer;
+      transition: all .2s;
+    }
+    .ai-copy:hover { border-color: #4f9cf7; color: #4f9cf7; }
+    .ai-error {
+      color: #f74f4f; font-size: 13px; padding: 16px;
+      text-align: center;
+    }
+
     /* Updated info */
     .updated-info {
       text-align: center; padding: 20px;
@@ -170,7 +308,8 @@
       <a href="/">新聞</a>
       <a href="/calendar.html">考試行事曆</a>
       <a href="/conferences.html">學術活動</a>
-      <a href="/learn.html" class="active">學習區</a>
+      <a href="/learn.html" class="active">新靈感</a>
+      <span class="nav-soon">教育應用 coming soon</span>
     </nav>
   </div>
 
@@ -178,6 +317,32 @@
     <div class="page-title">EdTech 趨勢儀表板</div>
     <div class="page-subtitle">追蹤教育科技關鍵字的新聞熱度，每 6 小時自動更新</div>
 
+    <!-- Micro-learning -->
+    <div class="micro-section" id="microSection" style="display:none;"></div>
+
+    <!-- AI Teaching Assistant -->
+    <div class="ai-section">
+      <div class="section-label">AI 教學助手</div>
+      <div class="ai-templates">
+        <span class="ai-tpl" onclick="fillTemplate(this, '幫我出 5 題{subject}的選擇題，適合{grade}學生，含答案與解析')">出題</span>
+        <span class="ai-tpl" onclick="fillTemplate(this, '把以下內容改寫成{grade}學生能理解的版本：\n\n')">改寫</span>
+        <span class="ai-tpl" onclick="fillTemplate(this, '設計一份 40 分鐘的{subject}教案，使用翻轉教室策略，適合{grade}')">教案設計</span>
+        <span class="ai-tpl" onclick="fillTemplate(this, '列出 5 個適合教{subject}的免費數位工具，簡述各工具的特色與使用情境')">工具推薦</span>
+        <span class="ai-tpl" onclick="fillTemplate(this, '針對{subject}這個單元，設計 3 個促進高層次思考的課堂提問')">提問設計</span>
+      </div>
+      <div class="ai-input-wrap">
+        <textarea class="ai-input" id="aiInput" rows="2" placeholder="輸入你的教學需求，或點選上方模板..."></textarea>
+        <button class="ai-submit" id="aiSubmit" onclick="submitAI()">生成</button>
+      </div>
+      <div class="ai-result" id="aiResult">
+        <div class="ai-result-text" id="aiResultText"></div>
+        <div class="ai-result-actions">
+          <button class="ai-copy" onclick="copyResult()">複製內容</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trends -->
     <div id="main">
       <div class="loading">分析趨勢資料中...</div>
     </div>
@@ -271,6 +436,115 @@
       d.textContent = s || '';
       return d.innerHTML;
     }
+
+    // AI Teaching Assistant
+    const aiInput = document.getElementById('aiInput');
+    const aiSubmit = document.getElementById('aiSubmit');
+    const aiResult = document.getElementById('aiResult');
+    const aiResultText = document.getElementById('aiResultText');
+
+    function fillTemplate(el, tpl) {
+      document.querySelectorAll('.ai-tpl').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      aiInput.value = tpl;
+      aiInput.focus();
+      // Select first placeholder
+      const m = tpl.match(/\{[^}]+\}/);
+      if (m) {
+        const start = tpl.indexOf(m[0]);
+        aiInput.setSelectionRange(start, start + m[0].length);
+      }
+    }
+
+    async function submitAI() {
+      const prompt = aiInput.value.trim();
+      if (!prompt) return;
+      aiSubmit.disabled = true;
+      aiSubmit.textContent = '生成中...';
+      aiResult.classList.add('visible');
+      aiResultText.textContent = '思考中...';
+
+      try {
+        const res = await fetch('/api/teach-assist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt }),
+        });
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error);
+        aiResultText.textContent = data.result;
+      } catch (err) {
+        aiResultText.innerHTML = '<span class="ai-error">生成失敗：' + esc(err.message) + '</span>';
+      } finally {
+        aiSubmit.disabled = false;
+        aiSubmit.textContent = '生成';
+      }
+    }
+
+    function copyResult() {
+      const text = aiResultText.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.ai-copy');
+        btn.textContent = '已複製！';
+        setTimeout(() => btn.textContent = '複製內容', 1500);
+      });
+    }
+
+
+    // Micro-learning
+    (async function loadMicroLearn() {
+      const section = document.getElementById('microSection');
+      try {
+        const res = await fetch('/api/microlearn');
+        const data = await res.json();
+        if (!data.ok) return;
+        section.style.display = 'block';
+        const card = data.card;
+        const history = data.history || [];
+
+        let html = '<div class="section-label">每日啟發</div>';
+
+        // Flip card
+        html += `
+          <div class="flip-container" onclick="this.querySelector('.flip-card').classList.toggle('flipped')">
+            <div class="flip-card">
+              <div class="flip-front">
+                <div class="flip-topic">${esc(card.topic)}</div>
+                <div class="flip-question">${esc(card.question)}</div>
+                <div class="flip-hint">點擊翻面查看答案</div>
+              </div>
+              <div class="flip-back">
+                <div class="flip-topic">${esc(card.topic)}</div>
+                <div class="flip-answer">${esc(card.answer)}</div>
+                ${card.further ? '<div class="flip-further">' + esc(card.further) + '</div>' : ''}
+                <div class="flip-back-hint">再次點擊翻回正面</div>
+              </div>
+            </div>
+          </div>`;
+
+        // History
+        if (history.length) {
+          html += `
+            <div class="micro-history">
+              <div class="micro-history-title" onclick="document.getElementById('mhList').classList.toggle('open');this.textContent=document.getElementById('mhList').classList.contains('open')?'▲ 收合過往知識卡':'▼ 過往知識卡 (${history.length})'">▼ 過往知識卡 (${history.length})</div>
+              <div class="mh-list" id="mhList">`;
+          history.forEach(h => {
+            const d = new Date(h.generatedAt);
+            const ds = (d.getMonth()+1) + '/' + d.getDate();
+            html += `
+              <div class="mh-item" onclick="this.classList.toggle('expanded')">
+                <div class="mh-item-topic">${esc(h.topic)}</div>
+                <div class="mh-item-q">${esc(h.question)}</div>
+                <div class="mh-item-date">${ds}</div>
+                <div class="mh-item-answer">${esc(h.answer)}${h.further ? '\n\n📚 ' + esc(h.further) : ''}</div>
+              </div>`;
+          });
+          html += '</div></div>';
+        }
+
+        section.innerHTML = html;
+      } catch {}
+    })();
 
     init();
   </script>

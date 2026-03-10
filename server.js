@@ -20,6 +20,7 @@ const { generateEditorial, readHistory } = require('./lib/editorial');
 const { getConferences, refreshConferences } = require('./lib/conferences');
 const exhibitionData = require('./data/exhibitions.json');
 const { fetchTrends } = require('./lib/trends');
+const { generateCard, readHistory: readMicroHistory } = require('./lib/microlearn');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -117,6 +118,77 @@ app.get('/api/trends', async (req, res) => {
   try {
     const data = await fetchTrends();
     res.json({ ok: true, ...data });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
+  }
+});
+
+// Micro-learning API
+app.get('/api/microlearn', async (req, res) => {
+  try {
+    const card = await generateCard();
+    const history = readMicroHistory().slice(0, 10);
+    res.json({ ok: true, card, history });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
+  }
+});
+
+// AI Teaching Assistant API
+app.post('/api/teach-assist', async (req, res) => {
+  const { prompt } = req.body;
+  if (!prompt) return res.json({ ok: false, error: 'Missing prompt' });
+  if (prompt.length > 500) return res.json({ ok: false, error: '輸入不可超過 500 字' });
+
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) return res.json({ ok: false, error: 'API key not configured' });
+
+  try {
+    const https = require('https');
+    const body = JSON.stringify({
+      model: 'llama-3.3-70b-versatile',
+      messages: [
+        {
+          role: 'system',
+          content: `你是一位專業的台灣教育科技助手，協助老師完成各種教學任務。
+- 使用繁體中文
+- 回覆要實用、可直接使用
+- 格式清晰，善用條列和標題
+- 回覆控制在 400 字以內`
+        },
+        { role: 'user', content: prompt }
+      ],
+      temperature: 0.7,
+      max_tokens: 600,
+    });
+
+    const result = await new Promise((resolve, reject) => {
+      const url = new URL('https://api.groq.com/openai/v1/chat/completions');
+      const r = https.request({
+        hostname: url.hostname, path: url.pathname, method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Length': Buffer.byteLength(body),
+        },
+        timeout: 30000,
+      }, (resp) => {
+        const chunks = [];
+        resp.on('data', c => chunks.push(c));
+        resp.on('end', () => {
+          const data = JSON.parse(Buffer.concat(chunks).toString('utf-8'));
+          if (data.choices && data.choices[0]) resolve(data.choices[0].message.content);
+          else reject(new Error(data.error?.message || 'Groq error'));
+        });
+        resp.on('error', reject);
+      });
+      r.on('error', reject);
+      r.on('timeout', () => { r.destroy(); reject(new Error('Timeout')); });
+      r.write(body);
+      r.end();
+    });
+
+    res.json({ ok: true, result });
   } catch (err) {
     res.json({ ok: false, error: err.message });
   }
