@@ -78,10 +78,26 @@ app.get('/api/editorial', async (req, res) => {
 });
 
 // Editorial history API
-app.get('/api/editorial/history', (req, res) => {
+app.get('/api/editorial/history', async (req, res) => {
   const limit = parseInt(req.query.limit) || 50;
-  const history = readHistory().slice(0, limit);
+  const history = (await readHistory()).slice(0, limit);
   res.json({ ok: true, history });
+});
+
+// Cron: auto-generate editorial every 6 hours
+app.get('/api/cron/editorial', async (req, res) => {
+  // Vercel Cron sends this header; also allow manual trigger with token
+  const isVercelCron = req.headers['authorization'] === `Bearer ${process.env.CRON_SECRET}`;
+  const isTokenAuth = req.query.token === process.env.VERCEL_TOKEN;
+  if (!isVercelCron && !isTokenAuth) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    const editorial = await generateEditorial();
+    res.json({ ok: true, editorial: { title: editorial.title, generatedAt: editorial.generatedAt } });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
 });
 
 // Conferences API

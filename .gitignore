@@ -9,3 +9,4 @@ data/conferences-cache.json
 data/trends-cache.json
 data/microlearn-cache.json
 data/microlearn-history.json
+.env*.local
