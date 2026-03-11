@@ -143,10 +143,25 @@ app.get('/api/trends', async (req, res) => {
 app.get('/api/microlearn', async (req, res) => {
   try {
     const card = await generateCard();
-    const history = readMicroHistory().slice(0, 10);
+    const history = (await readMicroHistory()).slice(0, 10);
     res.json({ ok: true, card, history });
   } catch (err) {
     res.json({ ok: false, error: err.message });
+  }
+});
+
+// Cron: auto-generate microlearn card daily
+app.get('/api/cron/microlearn', async (req, res) => {
+  const isVercelCron = req.headers['authorization'] === `Bearer ${process.env.CRON_SECRET}`;
+  const isTokenAuth = req.query.token === process.env.VERCEL_TOKEN;
+  if (!isVercelCron && !isTokenAuth) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    const card = await generateCard(true);
+    res.json({ ok: true, card: { topic: card.topic, generatedAt: card.generatedAt } });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
   }
 });
 
