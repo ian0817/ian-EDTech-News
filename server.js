@@ -84,7 +84,7 @@ app.get('/api/editorial/history', async (req, res) => {
   res.json({ ok: true, history });
 });
 
-// Cron: auto-generate editorial every 6 hours
+// Cron: auto-generate editorial daily (force refresh, ignores cache)
 app.get('/api/cron/editorial', async (req, res) => {
   // Vercel Cron sends this header; also allow manual trigger with token
   const isVercelCron = req.headers['authorization'] === `Bearer ${process.env.CRON_SECRET}`;
@@ -93,7 +93,7 @@ app.get('/api/cron/editorial', async (req, res) => {
     return res.status(401).json({ ok: false, error: 'Unauthorized' });
   }
   try {
-    const editorial = await generateEditorial();
+    const editorial = await generateEditorial(true);
     res.json({ ok: true, editorial: { title: editorial.title, generatedAt: editorial.generatedAt } });
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });
