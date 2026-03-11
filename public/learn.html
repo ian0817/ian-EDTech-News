@@ -195,32 +195,92 @@
       font-size: 11px; color: #444; margin-top: 12px;
     }
 
-    /* History cards */
-    .micro-history { margin-top: 20px; }
-    .micro-history-title {
+    /* History toggle button */
+    .micro-history-toggle {
       font-size: 13px; font-weight: 600; color: #666;
-      margin-bottom: 10px; cursor: pointer; user-select: none;
+      margin-top: 20px; cursor: pointer; user-select: none;
       transition: color .2s;
     }
-    .micro-history-title:hover { color: #4f9cf7; }
-    .mh-list { display: none; }
-    .mh-list.open { display: block; }
-    .mh-item {
-      background: #1e1e1e; border: 1px solid #333;
-      border-radius: 8px; padding: 14px 16px;
-      margin-bottom: 8px; cursor: pointer;
-      transition: border-color .2s;
+    .micro-history-toggle:hover { color: #4f9cf7; }
+
+    /* Micro-history dialog */
+    .mh-dialog {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 14px;
+      color: #e0e0e0;
+      padding: 0;
+      width: min(560px, 92vw);
+      max-height: 80vh;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.6);
+      margin: auto;
     }
-    .mh-item:hover { border-color: #4f9cf7; }
-    .mh-item-topic { font-size: 11px; color: #4f9cf7; font-weight: 600; margin-bottom: 4px; }
-    .mh-item-q { font-size: 14px; color: #ddd; font-weight: 600; }
-    .mh-item-date { font-size: 11px; color: #555; margin-top: 4px; }
-    .mh-item-answer {
-      display: none; font-size: 13px; color: #999;
-      line-height: 1.6; margin-top: 10px; padding-top: 10px;
-      border-top: 1px solid #222; white-space: pre-line;
+    .mh-dialog::backdrop { background: rgba(0,0,0,.65); }
+    .mh-dialog-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 22px; border-bottom: 1px solid #222;
+      position: sticky; top: 0; background: #1e1e1e; z-index: 1;
     }
-    .mh-item.expanded .mh-item-answer { display: block; }
+    .mh-dialog-title { font-size: 16px; font-weight: 700; color: #fff; }
+    .mh-dialog-close {
+      background: none; border: none; color: #555; font-size: 20px;
+      cursor: pointer; padding: 4px 8px; border-radius: 6px;
+      transition: all .2s; line-height: 1;
+    }
+    .mh-dialog-close:hover { color: #fff; background: #222; }
+    .mh-dialog-body { overflow-y: auto; max-height: calc(80vh - 60px); }
+
+    /* List view */
+    .mh-list { padding: 8px 12px; }
+    .mh-list-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px; border-radius: 8px;
+      cursor: pointer; transition: background .15s;
+    }
+    .mh-list-item:hover { background: #1a1a1a; }
+    .mh-list-item .mh-date {
+      flex-shrink: 0; font-size: 12px; color: #555;
+      font-variant-numeric: tabular-nums; white-space: nowrap;
+    }
+    .mh-list-item .mh-topic {
+      font-size: 14px; font-weight: 600; color: #ddd;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .mh-list-item .mh-arrow { flex-shrink: 0; color: #444; font-size: 12px; margin-left: auto; }
+    .mh-list-sep { height: 1px; background: #1a1a1a; margin: 0 16px; }
+
+    /* Detail view */
+    .mh-detail { padding: 22px; }
+    .mh-back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; color: #4f9cf7; cursor: pointer;
+      margin-bottom: 16px; padding: 4px 0;
+      background: none; border: none; transition: opacity .2s;
+    }
+    .mh-back:hover { opacity: .7; }
+    .mh-detail-topic { font-size: 12px; color: #4f9cf7; font-weight: 600; margin-bottom: 6px; }
+    .mh-detail-question { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .mh-detail-date { font-size: 12px; color: #555; margin-bottom: 18px; }
+    .mh-detail-answer { font-size: 14px; color: #bbb; line-height: 1.8; white-space: pre-line; }
+    .mh-detail-further {
+      margin-top: 16px; padding: 14px 18px;
+      background: #1a2a3a; border-radius: 10px;
+      font-size: 13px; color: #4f9cf7; line-height: 1.6;
+    }
+
+    /* Pagination */
+    .mh-pagination {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px; border-top: 1px solid #222;
+    }
+    .mh-pagination button {
+      background: #1a1a1a; border: 1px solid #333; color: #4f9cf7;
+      padding: 6px 14px; border-radius: 6px; cursor: pointer;
+      font-size: 13px; transition: all .2s;
+    }
+    .mh-pagination button:hover { background: #222; border-color: #4f9cf7; }
+    .mh-page-info { font-size: 12px; color: #555; }
 
     /* ===== AI Teaching Assistant ===== */
     .ai-section { margin-bottom: 36px; }
@@ -522,32 +582,93 @@
             </div>
           </div>`;
 
-        // History
+        // History toggle button
         if (history.length) {
-          html += `
-            <div class="micro-history">
-              <div class="micro-history-title" onclick="document.getElementById('mhList').classList.toggle('open');this.textContent=document.getElementById('mhList').classList.contains('open')?'▲ 收合過往知識卡':'▼ 過往知識卡 (${history.length})'">▼ 過往知識卡 (${history.length})</div>
-              <div class="mh-list" id="mhList">`;
-          history.forEach(h => {
-            const d = new Date(h.generatedAt);
-            const ds = (d.getMonth()+1) + '/' + d.getDate();
-            html += `
-              <div class="mh-item" onclick="this.classList.toggle('expanded')">
-                <div class="mh-item-topic">${esc(h.topic)}</div>
-                <div class="mh-item-q">${esc(h.question)}</div>
-                <div class="mh-item-date">${ds}</div>
-                <div class="mh-item-answer">${esc(h.answer)}${h.further ? '\n\n📚 ' + esc(h.further) : ''}</div>
-              </div>`;
-          });
-          html += '</div></div>';
+          html += `<div class="micro-history-toggle" onclick="openMicroHistoryDialog()">📚 過往知識卡 (${history.length})</div>`;
         }
 
         section.innerHTML = html;
       } catch {}
     })();
 
+    // Micro-history dialog
+    let mhData = [];
+    let mhPage = 0;
+    const MH_PER_PAGE = 20;
+
+    async function openMicroHistoryDialog() {
+      try {
+        const res = await fetch('/api/microlearn/history?limit=200');
+        const data = await res.json();
+        if (!data.ok) return;
+        mhData = data.history || [];
+        mhPage = 0;
+        renderMicroHistoryList();
+        document.getElementById('mhDialog').showModal();
+      } catch {}
+    }
+
+    function renderMicroHistoryList() {
+      const body = document.querySelector('#mhDialog .mh-dialog-body');
+      const title = document.querySelector('#mhDialog .mh-dialog-title');
+      const totalPages = Math.ceil(mhData.length / MH_PER_PAGE);
+      title.textContent = totalPages > 1 ? `過往知識卡（${mhPage+1}/${totalPages}）` : '過往知識卡';
+      const start = mhPage * MH_PER_PAGE;
+      const pageData = mhData.slice(start, start + MH_PER_PAGE);
+
+      let html = '<div class="mh-list">';
+      pageData.forEach((h, i) => {
+        const d = new Date(h.generatedAt);
+        const ds = (d.getMonth()+1) + '/' + d.getDate();
+        if (i > 0) html += '<div class="mh-list-sep"></div>';
+        html += `<div class="mh-list-item" onclick="renderMicroHistoryDetail(${start + i})">
+          <span class="mh-date">${ds}</span>
+          <span class="mh-topic">${esc(h.topic)} — ${esc(h.question)}</span>
+          <span class="mh-arrow">›</span>
+        </div>`;
+      });
+      html += '</div>';
+
+      if (totalPages > 1) {
+        html += `<div class="mh-pagination">
+          <button onclick="mhPage--;renderMicroHistoryList()" ${mhPage === 0 ? 'disabled style="visibility:hidden"' : ''}>‹ 上一頁</button>
+          <span class="mh-page-info">${mhPage+1} / ${totalPages}</span>
+          <button onclick="mhPage++;renderMicroHistoryList()" ${mhPage >= totalPages-1 ? 'disabled style="visibility:hidden"' : ''}>下一頁 ›</button>
+        </div>`;
+      }
+      body.innerHTML = html;
+      body.scrollTop = 0;
+    }
+
+    function renderMicroHistoryDetail(idx) {
+      const h = mhData[idx];
+      if (!h) return;
+      const body = document.querySelector('#mhDialog .mh-dialog-body');
+      const d = new Date(h.generatedAt);
+      const ds = d.getFullYear() + '/' + (d.getMonth()+1) + '/' + d.getDate();
+
+      let html = `<div class="mh-detail">
+        <button class="mh-back" onclick="renderMicroHistoryList()">← 返回列表</button>
+        <div class="mh-detail-topic">${esc(h.topic)}</div>
+        <div class="mh-detail-question">${esc(h.question)}</div>
+        <div class="mh-detail-date">${ds}</div>
+        <div class="mh-detail-answer">${esc(h.answer)}</div>
+        ${h.further ? '<div class="mh-detail-further">' + esc(h.further) + '</div>' : ''}
+      </div>`;
+      body.innerHTML = html;
+      body.scrollTop = 0;
+    }
+
     init();
   </script>
+  <dialog id="mhDialog" class="mh-dialog">
+    <div class="mh-dialog-header">
+      <span class="mh-dialog-title">過往知識卡</span>
+      <button class="mh-dialog-close" onclick="document.getElementById('mhDialog').close()">&times;</button>
+    </div>
+    <div class="mh-dialog-body"></div>
+  </dialog>
+
   <script>fetch('/api/version').then(r=>r.json()).then(d=>{document.getElementById('appVersion').textContent='v'+d.version}).catch(()=>{})</script>
   <script defer src="/_vercel/insights/script.js"></script>
 </body>

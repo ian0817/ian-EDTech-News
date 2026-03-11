@@ -366,6 +366,17 @@
     }
     .eh-dialog-close:hover { color: #fff; background: #222; }
     .eh-dialog-body { overflow-y: auto; max-height: calc(80vh - 60px); }
+    .eh-pagination {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px; border-top: 1px solid #222;
+    }
+    .eh-pagination button {
+      background: #1a1a1a; border: 1px solid #333; color: #4f9cf7;
+      padding: 6px 14px; border-radius: 6px; cursor: pointer;
+      font-size: 13px; transition: all .2s;
+    }
+    .eh-pagination button:hover { background: #222; border-color: #4f9cf7; }
+    .eh-page-info { font-size: 12px; color: #555; }
 
     /* List view */
     .eh-list { padding: 8px 12px; }
@@ -798,6 +809,8 @@
     })();
 
     let historyData = null;
+    let ehPage = 0;
+    const EH_PER_PAGE = 20;
     async function openHistoryDialog() {
       const dialog = document.getElementById('ehDialog');
       dialog.showModal();
@@ -805,13 +818,14 @@
       const body = dialog.querySelector('.eh-dialog-body');
       body.innerHTML = '<div style="text-align:center;padding:40px;color:#555;font-size:13px;">載入中...</div>';
       try {
-        const res = await fetch('/api/editorial/history?limit=30');
+        const res = await fetch('/api/editorial/history?limit=50');
         const data = await res.json();
         if (!data.ok || !data.history.length) {
           body.innerHTML = '<div style="text-align:center;padding:40px;color:#555;font-size:13px;">尚無歷史評論</div>';
           return;
         }
         historyData = data.history;
+        ehPage = 0;
         renderHistoryList();
       } catch {
         body.innerHTML = '<div style="text-align:center;padding:40px;color:#555;font-size:13px;">載入失敗</div>';
@@ -821,18 +835,29 @@
     function renderHistoryList() {
       const body = document.querySelector('#ehDialog .eh-dialog-body');
       const title = document.querySelector('#ehDialog .eh-dialog-title');
-      title.textContent = '過往評論';
+      const totalPages = Math.ceil(historyData.length / EH_PER_PAGE);
+      title.textContent = totalPages > 1 ? `過往評論（${ehPage+1}/${totalPages}）` : '過往評論';
+      const start = ehPage * EH_PER_PAGE;
+      const pageData = historyData.slice(start, start + EH_PER_PAGE);
       let html = '<div class="eh-list">';
-      historyData.forEach((e, i) => {
+      pageData.forEach((e, i) => {
+        const idx = start + i;
         const t = new Date(e.generatedAt).toLocaleString('zh-TW', { month:'2-digit', day:'2-digit' });
-        html += `<div class="eh-list-item" onclick="renderHistoryDetail(${i})">
+        html += `<div class="eh-list-item" onclick="renderHistoryDetail(${idx})">
           <span class="eh-date">${t}</span>
           <span class="eh-title">${esc(e.title)}</span>
           <span class="eh-arrow">›</span>
         </div>`;
-        if (i < historyData.length - 1) html += '<div class="eh-list-sep"></div>';
+        if (i < pageData.length - 1) html += '<div class="eh-list-sep"></div>';
       });
       html += '</div>';
+      if (totalPages > 1) {
+        html += '<div class="eh-pagination">';
+        html += ehPage > 0 ? '<button onclick="ehPage--;renderHistoryList()">← 上一頁</button>' : '<span></span>';
+        html += `<span class="eh-page-info">${ehPage+1} / ${totalPages}</span>`;
+        html += ehPage < totalPages - 1 ? '<button onclick="ehPage++;renderHistoryList()">下一頁 →</button>' : '<span></span>';
+        html += '</div>';
+      }
       body.innerHTML = html;
       body.scrollTop = 0;
     }

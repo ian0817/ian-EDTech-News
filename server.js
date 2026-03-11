@@ -67,6 +67,13 @@ app.get('/api/exams', (req, res) => {
   res.json({ ok: true, ...examData, exams });
 });
 
+// Editorial history API (must be before /api/editorial for Express 5)
+app.get('/api/editorial/history', async (req, res) => {
+  const limit = parseInt(req.query.limit) || 50;
+  const history = (await readHistory()).slice(0, limit);
+  res.json({ ok: true, history });
+});
+
 // Editorial API
 app.get('/api/editorial', async (req, res) => {
   try {
@@ -75,13 +82,6 @@ app.get('/api/editorial', async (req, res) => {
   } catch (err) {
     res.json({ ok: false, error: err.message });
   }
-});
-
-// Editorial history API
-app.get('/api/editorial/history', async (req, res) => {
-  const limit = parseInt(req.query.limit) || 50;
-  const history = (await readHistory()).slice(0, limit);
-  res.json({ ok: true, history });
 });
 
 // Cron: auto-generate editorial daily (force refresh, ignores cache)
@@ -137,6 +137,13 @@ app.get('/api/trends', async (req, res) => {
   } catch (err) {
     res.json({ ok: false, error: err.message });
   }
+});
+
+// Micro-learning history API (must be before /api/microlearn to avoid Express 5 matching)
+app.get('/api/microlearn/history', async (req, res) => {
+  const limit = parseInt(req.query.limit) || 30;
+  const history = (await readMicroHistory()).slice(0, limit);
+  res.json({ ok: true, history });
 });
 
 // Micro-learning API
