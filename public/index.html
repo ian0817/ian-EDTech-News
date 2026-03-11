@@ -556,6 +556,78 @@
     .mini-badge-open { background: #2a2a1a; color: #f7d74f; }
     .mini-badge-exam { background: #2a1a1a; color: #f74f4f; }
 
+    /* Event (conferences + exhibitions) preview */
+    .event-preview {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 30px;
+    }
+    .event-preview.hidden { display: none; }
+    .event-preview-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .event-preview-title h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #888;
+    }
+    .event-preview-title a {
+      font-size: 12px;
+      color: #4f9cf7;
+      text-decoration: none;
+    }
+    .event-preview-title a:hover { text-decoration: underline; }
+    .event-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 10px;
+    }
+    .event-mini {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-left: 3px solid var(--evt-color, #4f9cf7);
+      border-radius: 8px;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .event-mini:hover { border-color: #4f9cf7; border-left-color: var(--evt-color, #4f9cf7); }
+    .event-mini-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #eee;
+      margin-bottom: 6px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .event-mini-source {
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .event-mini-countdown {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+    .event-mini-countdown .days {
+      font-size: 22px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .event-mini-countdown .days.urgent { color: #f74f4f; }
+    .event-mini-countdown .days.soon { color: #f7d74f; }
+    .event-mini-countdown .days.normal { color: #4f9cf7; }
+    .event-mini-countdown .unit {
+      font-size: 12px;
+      color: #666;
+    }
+
     /* Empty state */
     .empty {
       text-align: center;
@@ -635,6 +707,15 @@
     <div class="exam-preview-grid" id="examPreviewGrid"></div>
   </div>
 
+  <!-- Event preview on homepage -->
+  <div class="event-preview" id="eventPreview">
+    <div class="event-preview-title">
+      <h3>最近活動</h3>
+      <a href="/conferences.html">查看完整學術活動 &rarr;</a>
+    </div>
+    <div class="event-preview-grid" id="eventPreviewGrid"></div>
+  </div>
+
   <div class="status" id="status"></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" style="display:none">找不到相關新聞</div>
@@ -661,6 +742,8 @@
     const editorialEl = document.getElementById('editorial');
     const examPreview = document.getElementById('examPreview');
     const examPreviewGrid = document.getElementById('examPreviewGrid');
+    const eventPreview = document.getElementById('eventPreview');
+    const eventPreviewGrid = document.getElementById('eventPreviewGrid');
 
     searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
 
@@ -847,6 +930,85 @@
       }
     })();
 
+    (async function loadEventPreview() {
+      try {
+        const [confRes, exhRes] = await Promise.all([
+          fetch('/api/conferences'),
+          fetch('/api/exhibitions')
+        ]);
+        const confData = await confRes.json();
+        const exhData = await exhRes.json();
+
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
+
+        // Normalize conferences + exhibitions into unified format
+        const events = [];
+        if (confData.ok && confData.conferences) {
+          confData.conferences.forEach(c => {
+            events.push({
+              name: c.title,
+              date: c.date,
+              endDate: null,
+              source: c.source === 'NSTC' ? '國科會' : '臺東大學',
+              url: c.url,
+              type: '研討會',
+              color: '#4f9cf7'
+            });
+          });
+        }
+        if (exhData.ok && exhData.exhibitions) {
+          exhData.exhibitions.forEach(e => {
+            events.push({
+              name: e.name,
+              date: e.date,
+              endDate: e.endDate || null,
+              source: e.countryName + ' · ' + e.city,
+              url: e.url,
+              type: '展覽',
+              color: '#f7d74f'
+            });
+          });
+        }
+
+        // Filter upcoming (not ended), sort by date, take top 6
+        const upcoming = events
+          .filter(e => {
+            if (!e.date) return false;
+            const end = new Date(e.endDate || e.date);
+            end.setHours(23, 59, 59);
+            return end >= now;
+          })
+          .sort((a, b) => new Date(a.date) - new Date(b.date))
+          .slice(0, 6);
+
+        if (!upcoming.length) { eventPreview.classList.add('hidden'); return; }
+
+        eventPreviewGrid.innerHTML = upcoming.map(evt => {
+          const evtDate = new Date(evt.date);
+          const days = Math.ceil((evtDate - now) / 86400000);
+          const urgency = days <= 0 ? 'urgent' : days <= 14 ? 'soon' : 'normal';
+          const daysLabel = days <= 0 ? '進行中' : `${days} 天後`;
+
+          const weekdays = ['日','一','二','三','四','五','六'];
+          const d = evtDate;
+          const dateStr = `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}（${weekdays[d.getDay()]}）`;
+
+          return `<div class="event-mini" style="--evt-color:${evt.color}" onclick="window.open('${evt.url}','_blank')">
+            <div class="event-mini-name">${evt.name}</div>
+            <div class="event-mini-source">${evt.type} · ${evt.source}</div>
+            <div style="font-size:12px;color:#888;margin-bottom:6px">${dateStr}</div>
+            <div class="event-mini-countdown">
+              <span class="days ${urgency}">${days <= 0 ? '!' : days}</span>
+              <span class="unit">${daysLabel}</span>
+            </div>
+          </div>`;
+        }).join('');
+      } catch (e) {
+        eventPreview.classList.add('hidden');
+      }
+    })();
+
     async function doSearch() {
       const q = searchInput.value.trim();
       if (!q) return;
@@ -856,10 +1018,11 @@
       grid.innerHTML = '';
       empty.style.display = 'none';
 
-      // Hide welcome + editorial + exam preview, show mini avatar
+      // Hide welcome + editorial + exam preview + event preview, show mini avatar
       welcome.classList.add('hidden');
       editorialEl.classList.add('hidden');
       examPreview.classList.add('hidden');
+      eventPreview.classList.add('hidden');
       headerAvatar.classList.add('visible');
 
       try {
