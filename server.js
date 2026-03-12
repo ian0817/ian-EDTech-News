@@ -21,6 +21,7 @@ const { getConferences, refreshConferences } = require('./lib/conferences');
 const exhibitionData = require('./data/exhibitions.json');
 const { fetchTrends } = require('./lib/trends');
 const { generateCard, readHistory: readMicroHistory } = require('./lib/microlearn');
+const { generateSummary, getSummaries, cronGenerateSummaries } = require('./lib/conference-summary');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -84,7 +85,7 @@ app.get('/api/editorial', async (req, res) => {
   }
 });
 
-// Cron: auto-generate editorial daily (force refresh, ignores cache)
+// Cron: auto-generate editorial daily + conference summaries (force refresh, ignores cache)
 app.get('/api/cron/editorial', async (req, res) => {
   // Vercel Cron sends this header; also allow manual trigger with token
   const isVercelCron = req.headers['authorization'] === `Bearer ${process.env.CRON_SECRET}`;
@@ -94,9 +95,53 @@ app.get('/api/cron/editorial', async (req, res) => {
   }
   try {
     const editorial = await generateEditorial(true);
-    res.json({ ok: true, editorial: { title: editorial.title, generatedAt: editorial.generatedAt } });
+
+    // Also generate conference summaries for ended activities
+    let summaryResult = { generated: 0 };
+    try {
+      // Gather all activities (conferences + exhibitions)
+      const confData = await getConferences();
+      const conferences = (confData.conferences || []).map(c => ({
+        id: c.id, title: c.title, date: c.date || '', endDate: '', type: 'conference',
+      }));
+      const exhibitions = (exhibitionData.exhibitions || []).map(e => ({
+        id: e.id, title: e.name, date: e.date, endDate: e.endDate || '', type: 'exhibition',
+      }));
+      summaryResult = await cronGenerateSummaries([...conferences, ...exhibitions]);
+    } catch (err) {
+      console.error('Conference summary cron error:', err.message);
+    }
+
+    res.json({
+      ok: true,
+      editorial: { title: editorial.title, generatedAt: editorial.generatedAt },
+      conferenceSummaries: { generated: summaryResult.generated },
+    });
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+// Conference summaries API
+app.get('/api/conferences/summaries', async (req, res) => {
+  try {
+    const summaries = await getSummaries();
+    res.json({ ok: true, summaries });
+  } catch (err) {
+    res.json({ ok: false, error: err.message, summaries: [] });
+  }
+});
+
+// Generate/regenerate summary for a specific activity
+app.post('/api/conferences/summary', async (req, res) => {
+  const { id, title, date, type } = req.body;
+  if (!id || !title) return res.json({ ok: false, error: 'Missing id or title' });
+  try {
+    const result = await generateSummary({ id, title, date: date || '', type: type || 'conference' });
+    if (!result) return res.json({ ok: false, error: '找不到相關新聞報導，無法生成摘要' });
+    res.json({ ok: true, summary: result });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
   }
 });
 

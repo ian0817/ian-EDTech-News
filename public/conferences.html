@@ -102,8 +102,9 @@
       transition: border-color .2s;
     }
     .conf-card:hover { border-color: #4f9cf7; }
-    .conf-card.past-card { opacity: 0.6; }
-    .conf-card.past-card:hover { opacity: 0.85; }
+    .conf-card.past-card { opacity: 0.65; }
+    .conf-card.past-card:hover { opacity: 0.9; }
+    .conf-card.past-card .summary-btn { opacity: 1.5; filter: brightness(1.5); }
     .conf-date-box {
       flex-shrink: 0; width: 56px; text-align: center;
       padding: 8px 0; border-radius: 8px;
@@ -165,6 +166,78 @@
       text-align: center; padding: 24px; margin-top: 40px;
       border-top: 1px solid #222; color: #555; font-size: 13px;
     }
+
+    /* Summary button */
+    .summary-btn {
+      padding: 3px 10px; border-radius: 4px;
+      font-size: 11px; font-weight: 600;
+      background: #1a2a3a; color: #4f9cf7;
+      border: 1px solid #2a3a4a; cursor: pointer;
+      transition: all .2s;
+    }
+    .summary-btn:hover { background: #2a3a5a; border-color: #4f9cf7; }
+    .summary-btn.generating {
+      opacity: 0.6; cursor: wait;
+    }
+
+    /* Summary dialog */
+    .summary-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.7); z-index: 100;
+      justify-content: center; align-items: center;
+    }
+    .summary-overlay.open { display: flex; }
+    .summary-dialog {
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 12px; padding: 28px;
+      max-width: 600px; width: 90%; max-height: 80vh;
+      overflow-y: auto; position: relative;
+    }
+    .summary-dialog-title {
+      font-size: 16px; font-weight: 700; color: #fff;
+      margin-bottom: 6px; line-height: 1.4;
+    }
+    .summary-dialog-date {
+      font-size: 12px; color: #666; margin-bottom: 16px;
+    }
+    .summary-dialog-body {
+      font-size: 14px; color: #ccc; line-height: 1.8;
+      white-space: pre-wrap; margin-bottom: 16px;
+    }
+    .summary-dialog-sources {
+      border-top: 1px solid #2a2a2a; padding-top: 12px;
+      margin-bottom: 16px;
+    }
+    .summary-dialog-sources-title {
+      font-size: 12px; color: #666; margin-bottom: 8px;
+    }
+    .summary-dialog-sources a {
+      display: block; font-size: 12px; color: #4f9cf7;
+      text-decoration: none; margin-bottom: 4px;
+      line-height: 1.5; overflow: hidden;
+      text-overflow: ellipsis; white-space: nowrap;
+    }
+    .summary-dialog-sources a:hover { text-decoration: underline; }
+    .summary-dialog-footer {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .summary-dialog-time { font-size: 11px; color: #555; }
+    .summary-dialog-actions { display: flex; gap: 8px; }
+    .summary-close-btn {
+      padding: 6px 16px; border-radius: 6px;
+      font-size: 13px; font-weight: 600;
+      background: #333; color: #ccc; border: none;
+      cursor: pointer; transition: all .2s;
+    }
+    .summary-close-btn:hover { background: #444; color: #fff; }
+    .summary-regen-btn {
+      padding: 6px 16px; border-radius: 6px;
+      font-size: 13px; font-weight: 600;
+      background: #1a2a3a; color: #4f9cf7; border: 1px solid #2a3a4a;
+      cursor: pointer; transition: all .2s;
+    }
+    .summary-regen-btn:hover { background: #2a3a5a; }
+    .summary-regen-btn.generating { opacity: 0.6; cursor: wait; }
   </style>
 </head>
 <body>
@@ -186,12 +259,31 @@
     </div>
   </div>
 
+  <!-- Summary Dialog -->
+  <div class="summary-overlay" id="summaryOverlay" onclick="if(event.target===this)closeSummaryDialog()">
+    <div class="summary-dialog">
+      <div class="summary-dialog-title" id="summaryDialogTitle"></div>
+      <div class="summary-dialog-date" id="summaryDialogDate"></div>
+      <div class="summary-dialog-body" id="summaryDialogBody"></div>
+      <div class="summary-dialog-sources" id="summaryDialogSources"></div>
+      <div class="summary-dialog-footer">
+        <span class="summary-dialog-time" id="summaryDialogTime"></span>
+        <div class="summary-dialog-actions">
+          <button class="summary-regen-btn" id="summaryRegenBtn" onclick="regenSummary()">重新生成</button>
+          <button class="summary-close-btn" onclick="closeSummaryDialog()">關閉</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="footer">新創小任 2026 · <a href="https://vercel.com/ian0817s-projects/ian-edtech-news/analytics" target="_blank" rel="noopener" style="color:#4f9cf7;text-decoration:none;">Analytics</a> · <span id="appVersion"></span></div>
 
   <script>
     const contentEl = document.getElementById('content');
     const filterBar = document.getElementById('filterBar');
     let allItems = []; // unified list
+    let summaryMap = {}; // activityId -> summary data
+    let currentSummaryActivity = null; // for regen
     let activeFilters = { type: 'all', country: 'all' };
 
     const FLAG = {
@@ -200,7 +292,7 @@
     };
 
     async function init() {
-      // Fetch both sources in parallel
+      // Fetch conferences + exhibitions first (summaries loaded in background)
       const [confRes, expoRes] = await Promise.all([
         fetch('/api/conferences').then(r => r.json()).catch(() => ({ ok: false })),
         fetch('/api/exhibitions').then(r => r.json()).catch(() => ({ ok: false })),
@@ -210,6 +302,7 @@
       if (confRes.ok) {
         for (const c of confRes.conferences || []) {
           allItems.push({
+            id: c.id,
             type: 'conference',
             title: c.title,
             date: c.date || '',
@@ -228,6 +321,7 @@
       if (expoRes.ok) {
         for (const e of expoRes.exhibitions || []) {
           allItems.push({
+            id: e.id,
             type: 'exhibition',
             title: e.name,
             date: e.date,
@@ -244,6 +338,16 @@
 
       buildFilters();
       render();
+
+      // Load summaries in background, then re-render to show buttons
+      fetch('/api/conferences/summaries').then(r => r.json()).then(sumRes => {
+        if (sumRes.ok && sumRes.summaries) {
+          for (const s of sumRes.summaries) {
+            summaryMap[s.activityId] = s;
+          }
+          render(); // re-render to add summary buttons
+        }
+      }).catch(() => {});
     }
 
     function buildFilters() {
@@ -341,7 +445,14 @@
           </div>`;
       }
 
+      // Preserve past-list open state across re-renders
+      const pastListWasOpen = document.getElementById('pastList')?.classList.contains('open');
       contentEl.innerHTML = html;
+      if (pastListWasOpen) {
+        const list = document.getElementById('pastList');
+        const arrow = document.getElementById('pastArrow');
+        if (list) { list.classList.add('open'); arrow?.classList.add('open'); }
+      }
     }
 
     function renderCard(item, now, isPast) {
@@ -371,6 +482,12 @@
         ? '<span class="conf-date-range">' + esc(item.source) + '</span>'
         : '';
 
+      // Summary button: only show for past activities from 2026+ that have a summary
+      let summaryBtn = '';
+      if (isPast && item.id && item.date >= '2026-01-01' && summaryMap[item.id]) {
+        summaryBtn = '<button class="summary-btn" onclick="event.stopPropagation();openSummaryDialog(\'' + esc(item.id) + '\')">查看摘要</button>';
+      }
+
       return `
         <div class="conf-card ${isPast ? 'past-card' : ''}">
           ${dateBox}
@@ -383,6 +500,7 @@
               ${sourceHtml}
               ${dateRange ? '<span class="conf-date-range">' + dateRange + '</span>' : ''}
               ${countdown}
+              ${summaryBtn}
             </div>
           </div>
         </div>`;
@@ -425,6 +543,70 @@
       d.textContent = s || '';
       return d.innerHTML;
     }
+
+    // --- Summary dialog functions ---
+    function openSummaryDialog(activityId) {
+      const s = summaryMap[activityId];
+      if (!s) return;
+      currentSummaryActivity = allItems.find(i => i.id === activityId) || null;
+
+      document.getElementById('summaryDialogTitle').textContent = s.activityTitle;
+      document.getElementById('summaryDialogDate').textContent = '活動日期：' + s.activityDate;
+      document.getElementById('summaryDialogBody').textContent = s.summary;
+
+      let srcHtml = '';
+      if (s.articles && s.articles.length) {
+        srcHtml = '<div class="summary-dialog-sources-title">參考來源</div>';
+        srcHtml += s.articles.map(a =>
+          '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + esc(a.title) + (a.source ? ' (' + esc(a.source) + ')' : '') + '</a>'
+        ).join('');
+      }
+      document.getElementById('summaryDialogSources').innerHTML = srcHtml;
+      document.getElementById('summaryDialogTime').textContent = '生成於 ' + new Date(s.generatedAt).toLocaleString('zh-TW');
+      document.getElementById('summaryRegenBtn').classList.remove('generating');
+      document.getElementById('summaryRegenBtn').textContent = '重新生成';
+      document.getElementById('summaryOverlay').classList.add('open');
+    }
+
+    function closeSummaryDialog() {
+      document.getElementById('summaryOverlay').classList.remove('open');
+      currentSummaryActivity = null;
+    }
+
+    async function regenSummary() {
+      if (!currentSummaryActivity) return;
+      const btn = document.getElementById('summaryRegenBtn');
+      if (btn.classList.contains('generating')) return;
+      btn.classList.add('generating');
+      btn.textContent = '生成中...';
+
+      try {
+        const res = await fetch('/api/conferences/summary', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            id: currentSummaryActivity.id,
+            title: currentSummaryActivity.title,
+            date: currentSummaryActivity.date,
+            type: currentSummaryActivity.type,
+          }),
+        }).then(r => r.json());
+
+        if (res.ok && res.summary) {
+          summaryMap[res.summary.activityId] = res.summary;
+          openSummaryDialog(res.summary.activityId);
+        } else {
+          btn.textContent = res.error || '生成失敗';
+          setTimeout(() => { btn.textContent = '重新生成'; btn.classList.remove('generating'); }, 2000);
+        }
+      } catch {
+        btn.textContent = '生成失敗';
+        setTimeout(() => { btn.textContent = '重新生成'; btn.classList.remove('generating'); }, 2000);
+      }
+    }
+
+    // Close dialog on Escape key
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSummaryDialog(); });
 
     init();
   </script>
