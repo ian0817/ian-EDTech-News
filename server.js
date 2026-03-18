@@ -217,6 +217,26 @@ app.get('/api/cron/microlearn', async (req, res) => {
   }
 });
 
+// Cron: auto-refresh conferences + trends daily
+app.get('/api/cron/conferences', async (req, res) => {
+  const isVercelCron = req.headers['authorization'] === `Bearer ${process.env.CRON_SECRET}`;
+  const isTokenAuth = req.query.token === process.env.VERCEL_TOKEN;
+  if (!isVercelCron && !isTokenAuth) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    const data = await refreshConferences();
+    const trends = await fetchTrends(true);
+    res.json({
+      ok: true,
+      conferences: { total: data.total, sources: data.sources },
+      trends: { keywords: trends.keywords.length, generatedAt: trends.generatedAt },
+    });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
 // AI Teaching Assistant API
 app.post('/api/teach-assist', async (req, res) => {
   const { prompt } = req.body;
