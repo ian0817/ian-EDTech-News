@@ -1,0 +1,16 @@
+{
+  "name": "ian's EdTech News",
+  "short_name": "EdTech News",
+  "description": "教育科技新聞平台 — AI 即時爬取 + 智慧摘要",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#4f9cf7",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

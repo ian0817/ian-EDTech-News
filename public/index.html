@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <title>ian's EdTech News</title>
+  <title>ian's EdTech News — 教育科技新聞平台</title>
+  <meta name="description" content="AI 即時爬取 + 智慧摘要，掌握數位學習、EdTech、AI 教育等教育科技最新動態。">
+  <meta property="og:title" content="ian's EdTech News — 教育科技新聞平台">
+  <meta property="og:description" content="AI 即時爬取 + 智慧摘要，掌握教育科技最新動態。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://edtech-news.vercel.app/">
+  <link rel="manifest" href="/manifest.json">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -639,6 +645,26 @@
       color: #666;
     }
 
+    /* Skeleton loading */
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    .skeleton {
+      background: linear-gradient(90deg, #1e1e1e 25%, #2a2a2a 50%, #1e1e1e 75%);
+      background-size: 800px 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 6px;
+    }
+    .skeleton-line { height: 14px; margin-bottom: 10px; }
+    .skeleton-line.short { width: 40%; }
+    .skeleton-line.medium { width: 70%; }
+    .skeleton-title { height: 20px; width: 60%; margin-bottom: 16px; }
+    .skeleton-card {
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 10px; padding: 18px; margin-bottom: 10px;
+    }
+
     /* Empty state */
     .empty {
       text-align: center;
@@ -706,7 +732,13 @@
 
   <!-- Editorial -->
   <div class="editorial" id="editorial">
-    <div class="editorial-loading">主編正在撰寫今日評論...</div>
+    <div class="editorial-card">
+      <div class="skeleton skeleton-line short" style="height:11px;width:100px;margin-bottom:14px"></div>
+      <div class="skeleton skeleton-title"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line medium"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
   </div>
 
   <!-- Exam preview on homepage -->
@@ -758,8 +790,10 @@
 
     searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
 
-    // Load editorial
-    (async function loadEditorial() {
+    // Load all sections in parallel
+    Promise.all([loadEditorial(), loadExamPreview(), loadEventPreview()]);
+
+    async function loadEditorial() {
       try {
         const res = await fetch('/api/editorial');
         const data = await res.json();
@@ -806,7 +840,7 @@
       } catch (err) {
         editorialEl.innerHTML = `<div class="editorial-loading" style="color:#555;">評論載入失敗：${err.message}</div>`;
       }
-    })();
+    }
 
     let historyData = null;
     let ehPage = 0;
@@ -893,8 +927,7 @@
       body.scrollTop = 0;
     }
 
-    // Load exam preview
-    (async function loadExamPreview() {
+    async function loadExamPreview() {
       try {
         const res = await fetch('/api/exams');
         const data = await res.json();
@@ -953,9 +986,9 @@
       } catch (e) {
         examPreview.classList.add('hidden');
       }
-    })();
+    }
 
-    (async function loadEventPreview() {
+    async function loadEventPreview() {
       try {
         const [confRes, exhRes] = await Promise.all([
           fetch('/api/conferences'),
@@ -1032,7 +1065,7 @@
       } catch (e) {
         eventPreview.classList.add('hidden');
       }
-    })();
+    }
 
     async function doSearch() {
       const q = searchInput.value.trim();

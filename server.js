@@ -27,8 +27,34 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(trackPageView);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: '7d' }));
 app.use(express.json());
+
+// Simple in-memory rate limiter for AI endpoints
+const rateLimitMap = new Map();
+function rateLimit(windowMs, maxReqs) {
+  return (req, res, next) => {
+    const ip = req.headers['x-forwarded-for'] || req.ip || 'unknown';
+    const now = Date.now();
+    const entry = rateLimitMap.get(ip);
+    if (!entry || now - entry.start > windowMs) {
+      rateLimitMap.set(ip, { start: now, count: 1 });
+      return next();
+    }
+    entry.count++;
+    if (entry.count > maxReqs) {
+      return res.status(429).json({ ok: false, error: '請求過於頻繁，請稍後再試' });
+    }
+    next();
+  };
+}
+// Clean up stale entries every 10 minutes
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, entry] of rateLimitMap) {
+    if (now - entry.start > 600000) rateLimitMap.delete(ip);
+  }
+}, 600000);
 
 // Search news
 app.get('/api/search', async (req, res) => {
@@ -42,9 +68,10 @@ app.get('/api/search', async (req, res) => {
 });
 
 // Fetch full article + summarize
-app.post('/api/summarize', async (req, res) => {
+app.post('/api/summarize', rateLimit(60000, 10), async (req, res) => {
   const { url, title } = req.body;
   if (!url) return res.json({ ok: false, error: 'Missing url' });
+  if (!/^https?:\/\//i.test(url)) return res.json({ ok: false, error: 'Invalid URL' });
 
   try {
     const content = await fetchArticle(url);
@@ -237,8 +264,8 @@ app.get('/api/cron/conferences', async (req, res) => {
   }
 });
 
-// AI Teaching Assistant API
-app.post('/api/teach-assist', async (req, res) => {
+// AI Teaching Assistant API (rate limited: 10 req/min per IP)
+app.post('/api/teach-assist', rateLimit(60000, 10), async (req, res) => {
   const { prompt } = req.body;
   if (!prompt) return res.json({ ok: false, error: 'Missing prompt' });
   if (prompt.length > 500) return res.json({ ok: false, error: '輸入不可超過 500 字' });

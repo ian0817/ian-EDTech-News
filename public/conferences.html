@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <title>學術活動 - ian's EdTech News</title>
+  <title>學術活動 — ian's EdTech News</title>
+  <meta name="description" content="教育科技相關研討會與展覽活動資訊，含國科會、臺東大學及國際展覽。">
+  <meta property="og:title" content="學術活動 — ian's EdTech News">
+  <meta property="og:description" content="教育科技相關研討會與展覽活動資訊。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://edtech-news.vercel.app/conferences.html">
+  <link rel="manifest" href="/manifest.json">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -161,6 +167,20 @@
       .nav { width: 100%; justify-content: center; }
     }
     .loading { text-align: center; padding: 60px; color: #555; font-size: 14px; }
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    .skeleton {
+      background: linear-gradient(90deg, #1e1e1e 25%, #2a2a2a 50%, #1e1e1e 75%);
+      background-size: 800px 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 6px;
+    }
+    .skeleton-card {
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 10px; padding: 18px; height: 90px; margin-bottom: 10px;
+    }
     .empty-msg { text-align: center; padding: 40px; color: #555; font-size: 14px; }
     .footer {
       text-align: center; padding: 24px; margin-top: 40px;
@@ -255,7 +275,9 @@
   <div class="content">
     <div class="filter-bar" id="filterBar"></div>
     <div id="content">
-      <div class="loading">載入學術活動資料中...</div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
     </div>
   </div>
 

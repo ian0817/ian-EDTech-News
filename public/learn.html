@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title>新靈感 — ian's EdTech</title>
+  <meta name="description" content="EdTech 趨勢儀表板、每日知識卡、AI 教學助手，追蹤教育科技關鍵字熱度。">
+  <meta property="og:title" content="新靈感 — ian's EdTech">
+  <meta property="og:description" content="EdTech 趨勢儀表板、每日知識卡、AI 教學助手。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://edtech-news.vercel.app/learn.html">
+  <link rel="manifest" href="/manifest.json">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -352,6 +358,22 @@
       border-top: 1px solid #222; color: #555; font-size: 13px;
     }
     .loading { text-align: center; padding: 60px; color: #555; font-size: 14px; }
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    .skeleton {
+      background: linear-gradient(90deg, #1e1e1e 25%, #2a2a2a 50%, #1e1e1e 75%);
+      background-size: 800px 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 6px;
+    }
+    .skeleton-line { height: 14px; margin-bottom: 10px; }
+    .skeleton-line.short { width: 40%; }
+    .skeleton-card {
+      background: #1e1e1e; border: 1px solid #333;
+      border-radius: 10px; padding: 18px; height: 160px; margin-bottom: 10px;
+    }
 
     @media (max-width: 600px) {
       .header { flex-wrap: wrap; }
@@ -404,7 +426,10 @@
 
     <!-- Trends -->
     <div id="main">
-      <div class="loading">分析趨勢資料中...</div>
+      <div class="section-label" style="margin-bottom:14px">本週熱門關鍵字 Top 5</div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
     </div>
   </div>
 
