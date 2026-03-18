@@ -1084,9 +1084,14 @@
       headerAvatar.classList.add('visible');
 
       try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
-        const data = await res.json();
-        if (!data.ok || data.articles.length === 0) {
+        let data = await fetch(`/api/search?q=${encodeURIComponent(q)}`).then(r => r.json());
+        // Auto-retry once if empty (Bing cold start can return empty)
+        if ((!data.ok || !data.articles || data.articles.length === 0) && !data.error) {
+          status.textContent = '重新搜尋中...';
+          await new Promise(r => setTimeout(r, 1500));
+          data = await fetch(`/api/search?q=${encodeURIComponent(q)}`).then(r => r.json());
+        }
+        if (!data.ok || !data.articles || data.articles.length === 0) {
           empty.style.display = 'block';
           empty.textContent = data.error || '找不到相關新聞';
           status.textContent = '';
