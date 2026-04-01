@@ -18,6 +18,10 @@
     {
       "path": "/api/cron/conferences",
       "schedule": "0 17 * * *"
+    },
+    {
+      "path": "/api/cron/patents",
+      "schedule": "0 12 * * 1"
     }
   ]
 }

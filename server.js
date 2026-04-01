@@ -22,6 +22,7 @@ const exhibitionData = require('./data/exhibitions.json');
 const { fetchTrends } = require('./lib/trends');
 const { generateCard, readHistory: readMicroHistory } = require('./lib/microlearn');
 const { generateSummary, getSummaries, cronGenerateSummaries } = require('./lib/conference-summary');
+const { getPatents, refreshPatents } = require('./lib/patents');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -193,6 +194,56 @@ app.get('/api/conferences/refresh', async (req, res) => {
     res.json({ ok: true, ...data });
   } catch (err) {
     res.json({ ok: false, error: err.message });
+  }
+});
+
+// Patents API
+app.get('/api/patents', async (req, res) => {
+  try {
+    const data = await getPatents();
+    res.json({ ok: true, ...data });
+  } catch (err) {
+    res.json({ ok: false, error: err.message, patents: [] });
+  }
+});
+
+// Patents refresh (protected)
+app.get('/api/patents/refresh', async (req, res) => {
+  const token = req.query.token;
+  if (token !== process.env.VERCEL_TOKEN) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    const data = await refreshPatents();
+    res.json({ ok: true, ...data });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
+  }
+});
+
+// Cron: auto-refresh patents weekly
+app.get('/api/cron/patents', async (req, res) => {
+  const isVercelCron = req.headers['authorization'] === `Bearer ${process.env.CRON_SECRET}`;
+  const isTokenAuth = req.query.token === process.env.VERCEL_TOKEN;
+  if (!isVercelCron && !isTokenAuth) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    // Self-limiting: skip if cache is less than 6 days old
+    const cached = await getPatents();
+    if (cached && cached.updatedAt) {
+      const age = Date.now() - new Date(cached.updatedAt).getTime();
+      if (age < 6 * 24 * 60 * 60 * 1000) {
+        return res.json({ ok: true, skipped: true, reason: 'Cache still fresh', total: cached.total });
+      }
+    }
+    const data = await refreshPatents();
+    res.json({
+      ok: true,
+      patents: { total: data.total, sources: data.sources },
+    });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
   }
 });
 
