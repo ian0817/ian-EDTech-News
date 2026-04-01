@@ -1,0 +1,737 @@
+{
+  "patents": [
+    {
+      "id": "tipo-I918112",
+      "title": "學校錄取預測系統與學校錄取預測方法\nSCHOOL ADMISSION PREDICTION SYSTEM AND METHOD",
+      "patentNumber": "I918112",
+      "filingDate": "2024-08-30",
+      "publicationDate": "2026-03-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I918112",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "夏至賢",
+        "吳柏翰",
+        "柯良頴",
+        "司徒百倍",
+        "蕭安廷"
+      ],
+      "abstract": "一種學校錄取預測系統和方法，此系統包含一使用者介面，用於接收申請者的個人資料，其包括學術和活動資料。連接到使用者介面的資料獲取模組獲取這些個人資料。連接到資料獲取模組的資料預處理模組對學術和活動資料進行預處理。連接到資料預處理模組的屬性選擇模組從預處理後的資料中提取多個屬性。機器學習模型基於提取的屬性生成一評估報告，包括對申請者是否被學校錄取的預測。該系統還包括一損失計算模組，用於評估機器學習模型的性能並根據評估結果調整其參數。本發明的方法和系統提供了一種可靠和高效的方式來預測學校錄取，幫助申請者更好地準備他們的申請。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教育科技"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:01.824Z",
+      "insight": "高中生可以使用這個系統來預測自己是否能夠被心儀的大學錄取，系統會根據學生的學術和活動資料提供預測結果，幫助學生更好地準備大學申請。"
+    },
+    {
+      "id": "tipo-M680643",
+      "title": "動態語言學習系統及其平台",
+      "patentNumber": "M680643",
+      "filingDate": "2025-10-07",
+      "publicationDate": "2026-03-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M680643",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "王冠程"
+      ],
+      "abstract": "本創作提供一種動態語言學習系統及其平台，其中，該系統係運作於一伺服主機，包含:一介面模組，用以提供一操作介面，使一學習者可選擇地經由該操作介面傳輸一學習內容；一搜尋模組，與該介面模組訊號連接，用以根據該學習內容於一資料庫搜尋，以獲得並傳輸相應之一學習影音列表；及一輸出模組，與該介面模組訊號連接，當該學習者經由該操作介面點選該學習影音列表其中之一學習影音時，顯示並播放該學習影音，藉此，該平台係包含上述系統，以供學習者可經由該平台獲取與學習內容相應的學習影音，以此，使學習者可獲得與學習內容相關的實際使用情境，提高學習效率。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:11.192Z",
+      "insight": "學生可以使用這個動態語言學習系統來學習語言，系統可以根據學生的需求提供相關的學習影音和內容，讓學生可以在實際使用情境中學習和提高語言能力。"
+    },
+    {
+      "id": "tipo-I917296",
+      "title": "分類測驗系統及分類測驗分法",
+      "patentNumber": "I917296",
+      "filingDate": "2025-09-24",
+      "publicationDate": "2026-03-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I917296",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "陳槿唐"
+      ],
+      "abstract": "一種分類測驗系統，能作為一語根測驗系統，其包含一輸出單元、一輸入單元、一儲存單元及一處理單元，該儲存單元儲存有一預定題庫及一決勝題庫，於一常規階段，該處理單元自該預定題庫，以自適應的方式，選出題目。該處理單元於一決勝階段，自該決勝題庫選出題目。該處理單元根據已接收到的答覆及對應的權重計算多個分別對應於多個預定類別的單題傾向分數，並根據該等單題傾向分數計算多個分別對應於該等預定類別的累計傾向分數。該處理單元根據該等累計傾向分數產生一測驗結果，並經由該輸出單元輸出該測驗結果。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "考試評測"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:41:49.436Z",
+      "insight": "在一個線上測驗系統中，學生可以參加分類測驗，系統會根據學生的回答，計算出他們在不同類別中的傾向分數，最終產生一個測驗結果，幫助學生了解自己的強項和弱項。"
+    },
+    {
+      "id": "tipo-M680368",
+      "title": "寫作能力測驗評分系統及裝置\nWRITING ABILITY ASSESSMENT SCORING SYSTEM AND APPARATUS",
+      "patentNumber": "M680368",
+      "filingDate": "2025-10-03",
+      "publicationDate": "2026-02-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M680368",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "何敬欽",
+        "李姿蓉",
+        "許瀞文",
+        "徐豪億",
+        "張望蘭",
+        "邱愉婷",
+        "賴祈為"
+      ],
+      "abstract": "一種寫作能力測驗評分系統，包含：人工智慧批改模組，用以分析考題以生成批閱指引，並根據批閱指引分析寫作內容，以推論各評量分項之分項分數；以及分數評估模組，用以加總計算複數個評量分項之多個分項分數之加總分數，並將加總分數與根據評分上限規則所獲得之上限分數進行比對，以獲得初判分數，再根據評分細項規則所獲得之調整分數對初判分數進行調整，以獲得終判分數。所述寫作能力測驗評分系統可提升作文評分之一致性與效率，並降低人工批閱之負擔。一種寫作能力測驗評分裝置，其包含所述寫作能力測驗評分系統。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "考試評測"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:11.192Z",
+      "insight": "老師可以用這個系統批改學生的作文，讓批改的結果更公平、更快捷，也能減少老師的工作量。"
+    },
+    {
+      "id": "tipo-I914224",
+      "title": "一種擴增實境寵物照護教學系統\nAN AUGMENTED REALITY PET CARE TEACHING SYSTEM",
+      "patentNumber": "I914224",
+      "filingDate": "2025-03-31",
+      "publicationDate": "2026-02-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I914224",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蔡奇謚",
+        "李庭睿"
+      ],
+      "abstract": "本發明係一種擴增實境寵物照護教學系統，尤指一種利用擴增實境技術讓學習者在實際的環境中與虛擬的對象進行互動，以達到學習如何照護寵物的教學系統。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:39:59.223Z",
+      "insight": "寵物主人可以透過擴增實境技術，在家中或其他實際環境中，與虛擬的寵物互動，學習如何照顧寵物。"
+    },
+    {
+      "id": "tipo-M679714",
+      "title": "基於Whisper微調模型開發的輕量化聽障生輔助教學語音辨識系統",
+      "patentNumber": "M679714",
+      "filingDate": "2025-10-07",
+      "publicationDate": "2026-02-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M679714",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "曾建維",
+        "李加安",
+        "莊智勛",
+        "吳思翰",
+        "葉家榕",
+        "陳宥軒"
+      ],
+      "abstract": "本創作係有關於一種輕量化聽障生輔助教學語音辨識系統，係包括語音收音單元、智慧電子設備、字幕顯示單元；其中，智慧電子設備包含有語音自動辨識單元與微調單元，該語音自動辨識單元係採用已預訓練完成之Whisper模型對輸入之語音進行文字轉換，微調單元則利用專業領域中專屬語料對該語音自動辨識單元進一步再訓練，以提升該語音自動辨識單元於專業場景之辨識準確度；據此，俾以語音收音單元對現場語音音訊或影片語音音訊進行收音並將之傳送至智慧電子設備，經智慧電子設備的語音自動辨識單元以及微調單元的自動語音辨識技術將語音準確的轉錄為文字，並將文字顯示於字幕顯示單元上，提供一種輕量化部署、建構成本低、高效能語音轉文字字幕的系統。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教育科技"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:01.824Z",
+      "insight": "聽障學生可以使用這個語音辨識系統來幫助自己更好地聽懂老師的課堂講解，系統可以將語音轉換成文字，並顯示在字幕上，讓學生更容易跟上課堂進度。"
+    },
+    {
+      "id": "tipo-I913212",
+      "title": "互動式教學系統及以該系統實施之學習導引雙向溝通方法\nINTERACTIVE TEACHING SYSTEM AND THE LEARNING GUIDANCE AND TWO-WAY COMMUNICATION METHOD IMPLEMENTED BY THIS SYSTEM",
+      "patentNumber": "I913212",
+      "filingDate": "2025-10-27",
+      "publicationDate": "2026-01-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I913212",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "許冠文"
+      ],
+      "abstract": "一種互動式影音教學系統，用於提供一學習者使用，一資料輸入介面提供輸入一教學來源資料及一教學目標資料，並儲存於一資料儲存模組中，一知識分析模組對該資料儲存模組中儲存之教學來源資料進行分析，以理解資料語意和定義內容結構並生成一教學知識資料，一教材產生模組依據該教學目標資料至該教學知識資料中取樣以生成一學習指南教材，一互動控制模組執行該學習指南教材，並利用一教學互動介面與該學習者互動，以使該學習者能夠學習該學習指南教材中之資料，一狀態感知模組取得該學習者之一學習偵測資料並儲存於該狀態儲存模組中。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:04.874Z",
+      "insight": "教師可以使用這個互動式教學系統來創建個性化的學習指南和教材，讓學生可以在互動的環境中學習和練習，同時也可以監控學生的學習進度和成績。"
+    },
+    {
+      "id": "tipo-M679310",
+      "title": "一種學習兼遊戲訓練用的筷子及其輔助用具",
+      "patentNumber": "M679310",
+      "filingDate": "2025-06-06",
+      "publicationDate": "2026-01-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M679310",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "吳增榮"
+      ],
+      "abstract": "一種學習兼遊戲訓練用的筷子及其輔助用具，該筷子包含一定筷及一動筷，該定筷的後端供固定於使用者手部的虎口與拇指之間，且該定筷前端則抵靠於無名指第一關節前凹部，該動筷靠近其後端約1/3處設有一擋止凸起，該擋止凸起的下緣包含一斜夾壓部，該斜夾壓部供使用者拇指抵壓以形成該動筷相對於該定筷樞轉運動的轉軸，使用者可藉由食指及中指抵壓在該動筷上來操作該動筷，此設計引導使用者掌握正確的握筷姿勢及施力方式；其中該輔助用具包含數個尺寸由大至小的套環，能供使用者在寓教於樂的過程中，促進對筷子文化的理解、學習與傳承。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:11.192Z",
+      "insight": "小朋友可以用這雙特殊的筷子來學習正確的握筷方式和使用方法，還可以透過遊戲來了解筷子的文化。"
+    },
+    {
+      "id": "tipo-I910816",
+      "title": "摺疊式兒童學習塔\nFOLDABLE CHILDREN LEARNING TOWER",
+      "patentNumber": "I910816",
+      "filingDate": "2024-09-11",
+      "publicationDate": "2026-01-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I910816",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "余乃玄"
+      ],
+      "abstract": "一種創新的摺疊式兒童學習塔，包括前腳總成、後腳總成及學習平台。前腳總成與後腳總成以樞接機構樞連，學習平台跨接於前腳架與後腳架之間。樞接機構包括二差軸轉桿、設於前腳架上的二第一樞部及設於後腳架上的二第二樞部。二差軸轉桿具有第三樞部及第四樞部。二差軸轉桿的第三樞部與相對應的二第一樞部樞接而構成第一軸心，且其第四樞部與相對應的二第二樞部樞接而構成第二軸心，使前腳架與後腳架同步地以第一軸心及第二軸心為轉軸，而於一收合位置與一展開位置之間相對旋轉。藉以達到簡便操作、縮小材積及增進美觀之目的。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:11.192Z",
+      "insight": "父母可以為孩子購買這個摺疊式學習塔，讓孩子有個舒適的學習空間，還可以輕易地收納和攜帶。"
+    },
+    {
+      "id": "tipo-M677930",
+      "title": "語言循環學習系統及其平台\nLanguage cyclic learning system and platform thereof",
+      "patentNumber": "M677930",
+      "filingDate": "2025-06-25",
+      "publicationDate": "2025-12-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M677930",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "王冠程"
+      ],
+      "abstract": "本創作提供一種語言循環學習系統及其平台，學習者可透過語言循環學習平台，於應用程式介面進行學習互動，學習者可選擇地根據需求進行測驗，以此，在測驗過程中，知識點蒸餾模型可以根據測驗結果給予學習者對應的互動資訊，同時，可以根據學習者給予的回饋資訊重新進行運算分析，以協助學習者釐清在學習過程中所遇到的困難點，並以此加強學習者不理解之處，達到快速及高效率的學習目的。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:11.192Z",
+      "insight": "學生可以透過這個語言循環學習系統來學習語言，系統會根據學生的需求和進度提供適合的學習內容和互動。"
+    },
+    {
+      "id": "tipo-M676840",
+      "title": "社區情境教學系統\nCommunity-based situational learning system",
+      "patentNumber": "M676840",
+      "filingDate": "2025-08-28",
+      "publicationDate": "2025-11-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M676840",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "蕭秋月"
+      ],
+      "abstract": "本創作揭露一種社區情境教學系統，其包含一雲端伺服器以及一情境教學應用程式。雲端伺服器可用以儲存複數個街景照片。情境教學應用程式係安裝於一電子裝置中，且此情境教學應用程式可包含一社區尋寶任務，當使用者進入此社區尋寶任務並選擇一城鎮區域時，此情境教學應用程式係透過網際網路自雲端伺服器下載屬於此城鎮區域之該些街景照片，並將該些街景照片之其中之一呈現於電子裝置之一顯示螢幕中。透過本創作，可提升使用者的地理認知與學習興趣。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:39:59.225Z",
+      "insight": "學生可以透過手機或平板電腦，進行社區尋寶任務，探索不同城鎮的街景，提升地理認知和學習興趣。"
+    },
+    {
+      "id": "tipo-I901426",
+      "title": "葉克膜混成學習系統\nEXTRACORPOREAL MEMBRANE OXYGENATION BLENDED LEARNING SYSTEM",
+      "patentNumber": "I901426",
+      "filingDate": "2024-11-04",
+      "publicationDate": "2025-10-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I901426",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "廖珮宏",
+        "賴韋良",
+        "李彥志"
+      ],
+      "abstract": "本發明關於一種葉克膜混成學習系統，包含：葉克膜混成學習資料庫；系統伺服器，其包含後端控制程式，該後端控制程式經配置以存取該葉克膜混成學習資料庫；以及葉克膜線上學習裝置，其與該系統伺服器分離配置並通訊連結，並包含葉克膜混成學習應用程式，且提供給使用者操作；以及葉克膜實體學習輔助計算裝置。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:39:59.225Z",
+      "insight": "學生可以透過葉克膜混成學習系統，線上或線下學習，使用葉克膜混成學習資料庫和實體學習輔助計算裝置，提升學習效果。"
+    },
+    {
+      "id": "tipo-202538707",
+      "title": "ＡＩ教育學習系統及其方法\nAI-based educational learning system and method thereof",
+      "patentNumber": "202538707",
+      "filingDate": "2024-03-29",
+      "publicationDate": "2025-10-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^202538707",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蕭勻",
+        "楊雯琪"
+      ],
+      "abstract": "本發明為有關一種AI教育學習系統及其方法，主要由指揮機器人從主題儲存件處取得主題任務，並根據主題任務由資訊機器人從載體儲存裝置處取得任務載體、任務配件及移動指令，以讓擁護機器人根據移動指令在任務載體上移動，接著由檢查機器人根據檢查資料庫比對任務載體及任務配件是否正確，再由分析機器人根據分析資料庫判斷移動路徑是否正確，若檢查結果或分析結果不正確，則由協調機器人針對不正確之部分進行標示，供使用者重新選擇。藉此，將AI的機器學習動作基礎拆分至六個機器人，讓學生操作每個機器人進行分工合作，以簡單有效的將AI認知教育結合於遊戲中。\nThe present invention relates to an AI-based educational learning system and a method thereof. The system primarily involves a command robot retrieving a theme task from a theme storage unit. Based on the theme task, an information robot retrieves a task carrier, task accessories, and movement instructions from a carrier storage device, so that a support robot then moves along the task carrier according to the movement instructions. Subsequently, an inspection robot compares the task carrier and task accessories against an inspection database to determine correctness. An analysis robot then determines the correctness of the movement path based on an analysis database. If the inspection result or analysis result is incorrect, a coordination robot marks the erroneous portions for the user to reselect. In this way, the system divides the foundational AI machine learning actions into six robots, allowing students to operate each robot in a division and cooperation manner to simply and effectively integrate AI cognitive education into gaming.",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "未審查/公開\n\n\n\n未審查/公開",
+      "scrapedAt": "2026-04-01T09:40:13.598Z",
+      "insight": "一個AI教育系統可以讓學生通過操作六個機器人，分別負責不同的任務，來學習AI的基礎知識，例如機器學習和問題解決，讓學生在遊戲中體驗AI的應用。"
+    },
+    {
+      "id": "tipo-I898858",
+      "title": "具有自適應提示的學習系統\nLEARNING SYSTEM WITH ADAPTIVE HINT",
+      "patentNumber": "I898858",
+      "filingDate": "2024-10-07",
+      "publicationDate": "2025-09-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I898858",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "簡立仁",
+        "簡廷軒"
+      ],
+      "abstract": "一種具有自適應提示的學習系統，用以解決習知學習系統只能提供單一提示資訊的問題。係包含：使用者資料庫儲存學習指標；評鑑模組將學習指標中的一者或多者分別乘上其對應的權重並加總來計算出評鑑分數；或者根據特定分數區間將評鑑分數區分為對應的評鑑等級；及答案提示模組接收評鑑分數或評鑑等級，並在預設狀態下，根據評鑑分數或評鑑等級給予對應的提示資訊；提示資訊與題目的標準正確解答的相似度與評鑑分數高低或評鑑等級高低呈負相關。本發明可以提升使用者學習成效的功效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:01.824Z",
+      "insight": "學生可以使用這個學習系統來獲得個性化的提示和反饋，系統會根據學生的學習情況提供適合的提示，幫助學生更好地學習和理解知識。"
+    },
+    {
+      "id": "tipo-M672818",
+      "title": "程式語言學習系統\nProgramming language learning system",
+      "patentNumber": "M672818",
+      "filingDate": "2025-04-28",
+      "publicationDate": "2025-07-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M672818",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "賴慶霖"
+      ],
+      "abstract": "本創作揭露一種程式語言學習系統，其係由一伺服器，透過一網際網路與一使用者端裝置進行資訊連結後組成，操作時，藉由使用者端裝置啟用應用程式並以一掃碼模組對一、或複數張實體卡牌上的二維條碼進行掃碼，使一資料解析模組可分析取得一識別資料，識別資料再於程式詞彙資料庫中進行比對，以擷取相應的一程式詞彙並回傳至應用程式中，接續以一使用者介面呈現畫面內容，藉由本創作，可供不同年齡層能以最適當方式進行學習，並將程式語言進行詞彙拆解，同時藉由圖案、動畫、解說等多媒體內容輔助，以增進使用者的學習效率、及記憶效果。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:04.874Z",
+      "insight": "程式設計的初學者可以使用這個程式語言學習系統來學習程式設計的基礎知識，透過掃描二維條碼和互動式的教學內容，讓學習更加有趣和容易。"
+    },
+    {
+      "id": "tipo-I888613",
+      "title": "線上學習系統、程式、及記錄媒體\nONLINE LEARNING SYSTEM, PROGRAM, AND RECORDING MEDIUM",
+      "patentNumber": "I888613",
+      "filingDate": "2021-07-30",
+      "publicationDate": "2025-07-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I888613",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "菊池参"
+      ],
+      "abstract": "本發明係提供一種可保證本人從頭至尾聽講以線上學習提供之講課的線上學習系統。        線上學習系統100具備：發佈控制部15，其受理來自聽講者終端301之發佈請求，發佈記憶於講課資料記憶部之講課動畫；認證處理部14，其基於由聽講者終端拍攝之圖像，於播放講課動畫之過程中進行聽講者之臉部認證；及聽講進度管理部12，其若於講課動畫之播放過程中聽講者之臉部認證持續失敗超過特定條件時，設為上述聽講者對該講課動畫之聽講未修畢。認證處理部14基於由上述聽講者終端301拍攝之圖像中以辨識框規定之範圍內的圖像而進行臉部辨識。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:39:59.225Z",
+      "insight": "老師可以透過線上學習系統，確保學生完整地聽完課程，系統會拍攝學生的臉部，進行認證，若學生未完成課程，系統會記錄未完成。"
+    },
+    {
+      "id": "tipo-M670651",
+      "title": "具靈活教材匯出功能之雲端命題系統\nOn demand cloud-based question generating system with export function",
+      "patentNumber": "M670651",
+      "filingDate": "2025-02-13",
+      "publicationDate": "2025-05-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M670651",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "廖雅平",
+        "謝欣陵",
+        "翟成傑"
+      ],
+      "abstract": "本創作提出了一種具靈活教材匯出功能之雲端命題系統，包括以下模組：一題庫模組，用於儲存複數種類型的題目，並提供與該題目相關的一題目來源與一屬性標註；一篩選模組，與該題庫模組連接，用於根據一篩選條件從該題庫模組中選取題目；一格式化處理模組，與該篩選模組連接，用於根據一排版規則將所選取的題目進行格式化；以及一匯出模組，與該格式化處理模組連接，用於將格式化處理的題目匯出為複數種教材文件格式。藉由本創作之雲端命題系統實現篩選精準化、排版一致化及輸出靈活化的技術優勢，特別是支援輸出為PPT格式，使教師能快速生成適合教學展示的教材，提升教學準備效率，達成智能化教學輔助的目標。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教育科技"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:01.824Z",
+      "insight": "老師可以使用這個雲端命題系統來快速生成教材，系統可以根據老師的需求篩選和格式化題目，並匯出為不同的文件格式，讓老師更容易準備教學材料。"
+    },
+    {
+      "id": "tipo-M670353",
+      "title": "數位學習輔助系統\nDigital learning assistance system",
+      "patentNumber": "M670353",
+      "filingDate": "2025-02-12",
+      "publicationDate": "2025-05-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M670353",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "劉嬑青",
+        "林瑞合",
+        "林佳寶",
+        "黃泰餘",
+        "賴儀聿",
+        "許家綺",
+        "蔡豐澤",
+        "李國駿"
+      ],
+      "abstract": "一種數位學習輔助系統包含一處理模組，和分別與該處理模組電連接的一通訊模組及一儲存模組。該儲存模組儲存一點數存摺、一獎品兌換表和一點數兌換獎品程式。該處理模組透過該通訊模組收到一終端裝置傳來的一包含一指定獎品的兌換請求時，根據該獎品兌換表判斷出該點數存摺的一總點數值大於或等於與該指定獎品相符的多個獎品其中的一第一獎品所對應的多個兌換點數值其中的一第一兌換點數值後，執行該點數兌換獎品程式以將該點數存摺的該總點數值扣除該第一兌換點數值，並產生且提供一兌換結果給該終端裝置。",
+      "classifications": [],
+      "matchedKeywords": [
+        "數位學習"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:39:59.225Z",
+      "insight": "學生可以透過數位學習輔助系統，累積點數，兌換獎品，系統會根據點數存摺和獎品兌換表，判斷是否可以兌換指定獎品。"
+    },
+    {
+      "id": "tipo-M670163",
+      "title": "多功能互動線上教育平台管理系統\nMultifunctional interactive online education platform management system",
+      "patentNumber": "M670163",
+      "filingDate": "2024-11-15",
+      "publicationDate": "2025-05-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M670163",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "蘇冠融"
+      ],
+      "abstract": "本創作提供一種多功能互動線上教育平台管理系統，該系統包括至少一伺服器，設置以複數個終端裝置的至少其中之一進行通訊，該伺服器包括：一識別模組，耦接該等複數個終端裝置，設置以根據該等複數個終端裝置的至少其中之一識別與其相應的族群類型；以及一學習資源模組，耦接該識別模組，設置以接收所識別的終端裝置的請求，並根據該請求以及該族群類型提供與其相應的教育服務。",
+      "classifications": [],
+      "matchedKeywords": [
+        "數位學習"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:39:59.225Z",
+      "insight": "老師和學生可以在這個線上教育平台上進行互動，老師可以根據學生的不同需求提供個性化的教育服務，讓學生更好地學習。"
+    },
+    {
+      "id": "tipo-M669853",
+      "title": "AI教務管理與教學輔助平台\nAI educational management and teaching assistance platform",
+      "patentNumber": "M669853",
+      "filingDate": "2024-12-05",
+      "publicationDate": "2025-05-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M669853",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "周維元"
+      ],
+      "abstract": "本新型公開了一種基於人工智慧的教務管理與教學輔助平台，旨在簡化教育機構內的教務任務並提升教學效能。該AI教務管理與教學輔助平台整合了先進的AI技術，包括機器學習演算法和自然語言處理，提供全面的教務管理和教學支援解決方案。該AI教務管理與教學輔助平台包括一個教務管理模組，具備自動排程、使用生物識別系統的出席追蹤及智能文件管理功能。此外，該AI教務管理與教學輔助平台還包括一教學輔助模組，以提供課程規劃、自訂評量生成和自動評分與抄襲檢測功能。該AI教務管理與教學輔助平台還整合了AI驅動的聊天機器人，用於即時溝通，以及具備自動轉錄和多語言支援的虛擬會議工具。此外，強大的資料分析與報告模組提供績效監控和主動介入的可行洞見。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教育科技"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:01.824Z",
+      "insight": "老師和學校管理人員可以使用這個AI教務管理與教學輔助平台來簡化教務工作、自動化排課和出席記錄、智能化評量和評分，讓教學更加高效。"
+    },
+    {
+      "id": "tipo-M668503",
+      "title": "用於綜合管理及支援學習遠距教育系統\nDistance education system used for integrated management and supporting learning",
+      "patentNumber": "M668503",
+      "filingDate": "2024-11-15",
+      "publicationDate": "2025-04-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M668503",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "蘇冠融"
+      ],
+      "abstract": "本創作涉及一種用於綜合管理及支援學習遠距教育系統，系統包括：至少一個伺服器以及複數個終端設備，其與伺服器通訊並數據交換，包括：多功能整合模組，其設置為在一操作介面提供教學資料及互動支持功能，其中，教學資料及互動支持功能包括視訊教學、教材展示、作業管理及訊息通知的至少其中之一；行為監控模組，其設置為監控複數個終端設備的第一終端設備在課程期間的操作行為；智能化學力分析模組，其設置為接收並分析與第一終端設備相關連的測驗或作業結果；以及雲端行政管理模組，其設置為管理與複數個終端設備的第一終端設備相關連的第一行政事務以及與複數個終端設備的第二終端設備相關連的第二行政事務；其中，複數個終端設備的第一終端設備與第二終端設備設置為允許在操作介面上響應該教學資料及互動支持功能。透過本創作的系統，教師和學生能在同一操作介面整合遠距教學、行為監控、學力分析及行政管理之功能，無需在多個應用程式或視窗間切換，提升教與學的便利性。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:04.874Z",
+      "insight": "教師和學生可以使用這個遠距教育系統來進行線上的教學和學習，系統可以提供教學資料、互動支持、行為監控、學力分析和行政管理等功能，讓遠距教育更加方便和有效。"
+    },
+    {
+      "id": "tipo-M667042",
+      "title": "互動式教學資源共享系統\nINTERACTIVE TEACHING RESOURCE SHARING SYSTEM",
+      "patentNumber": "M667042",
+      "filingDate": "2024-11-28",
+      "publicationDate": "2025-02-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M667042",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "李安軒"
+      ],
+      "abstract": "本新型揭露一種互動式教學資源共享系統，係運作於一電子裝置，包含：一人機介面，係用以顯示一使用者操作畫面及接收一使用者輸入指令，一登入模組，資訊連接該人機介面，係用以處理一使用者註冊及登入，一教材編輯模組，資訊連接該登入模組，包含一教學內容元件及一練習題型元件，分別係用以供教師角色編輯教學內容及建立練習題目，一資源共享模組，資訊連接該教材編輯模組，係用以管理教學內容及練習題目之權限，一學習追蹤模組，係用以記錄學生角色之學習歷程及錯題資訊，一通訊模組，係用以傳送通訊訊息，以及一儲存模組，係用以儲存系統相關資訊，藉此實現高效教學資源共享及學習記錄管理。\nThe utility model discloses an interactive teaching resource sharing system operating on an electronic device, comprising: a human-machine interface for displaying a user operation screen and receiving user input commands, a login module informationally connected to the human-machine interface for processing user registration and login, a teaching material editing module informationally connected to the login module including a teaching content component and an exercise type component for teachers to edit teaching content and create exercises respectively, a resource sharing module informationally connected to the teaching material editing module for managing permissions of teaching content and exercises, a learning tracking module for recording students' learning progress and wrong answers, a communication module for transmitting messages, and a storage module for storing system-related information, thereby achieving efficient teaching resource sharing and learning record management.",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學平台"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:04.874Z",
+      "insight": "老師和學生可以使用這個系統共享教學資源、編輯教材、追蹤學習進度，讓教學更加高效。"
+    },
+    {
+      "id": "tipo-M666053",
+      "title": "智能教學系統\nSmart teaching system",
+      "patentNumber": "M666053",
+      "filingDate": "2024-10-18",
+      "publicationDate": "2025-02-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M666053",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "陳柏安"
+      ],
+      "abstract": "本創作揭露一種智能教學系統，其主要由一學生端資訊裝置，分別與一伺服器、一教學平台完成資訊連結後，於一直播教學模組中輸入一問題指令，使一第一模型可對其分析後生成一初步回答結果，再輸入至一第二模型進行檢索增強，以取得一檢索結果，同時將兩者結果融合，以生成一最優回答結果，藉此優化模型回答的準確率；較佳地，本創作更能以一弱點分析模組分析學生成績、學習歷程後，生成一優劣分析結果，再以一個性化學習模組生成一學習建議報告，以強化針對性學習、及學習效率。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:01.824Z",
+      "insight": "學生可以使用這個智能教學系統來獲得即時的問題解答和個性化的學習建議，讓他們更好地理解課程內容和改進學習成績。"
+    },
+    {
+      "id": "tipo-I871945",
+      "title": "ＡＩ教育學習系統及其方法",
+      "patentNumber": "I871945",
+      "filingDate": "2024-03-29",
+      "publicationDate": "2025-02-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I871945",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蕭勻",
+        "楊雯琪"
+      ],
+      "abstract": "本發明為有關一種AI教育學習系統及其方法，主要由指揮機器人從主題儲存件處取得主題任務，並根據主題任務由資訊機器人從載體儲存裝置處取得任務載體、任務配件及移動指令，以讓擁護機器人根據移動指令在任務載體上移動，接著由檢查機器人根據檢查資料庫比對任務載體及任務配件是否正確，再由分析機器人根據分析資料庫判斷移動路徑是否正確，若檢查結果或分析結果不正確，則由協調機器人針對不正確之部分進行標示，供使用者重新選擇。藉此，將AI的機器學習動作基礎拆分至六個機器人，讓學生操作每個機器人進行分工合作，以簡單有效的將AI認知教育結合於遊戲中。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:13.598Z",
+      "insight": "老師可以使用這個AI教育學習系統來教導學生AI的基礎知識，讓學生透過操作機器人來學習和理解AI的概念。"
+    },
+    {
+      "id": "tipo-I863567",
+      "title": "以學習者為中心的全景智慧全人教育平台\nINTEGRATED PLATFORM OF HOLISTIC EDUCATION",
+      "patentNumber": "I863567",
+      "filingDate": "2023-09-15",
+      "publicationDate": "2024-11-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I863567",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "陳金順",
+        "林清煌",
+        "莊旺川",
+        "林佩津",
+        "鄭翊君",
+        "魏今秀",
+        "楊淳涵"
+      ],
+      "abstract": "一種以學習者為中心的全景智慧全人教育平台，包含：課程資訊介面單元，包括作業與評估模組，及能力與認證模組，該作業與評估模組供學習者操作連結至作業撰寫上傳系統以開始撰寫作業，該能力與認證模組追蹤老師是否已進行評核；綜合照護介面單元，包括抓取特殊病人之資料之特殊紀錄模組，其可被該學習者操作以新增具關聯於特殊病人之標籤之紀錄；及教學指標介面單元，包括累積疾病照護數模組、作業完成率模組，及能力完成率模組，該作業完成率模組呈現該學習者每月的作業完成率，該能力完成率模組呈現該學習者歷年的能力完成率。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:04.874Z",
+      "insight": "這個平台讓學生可以自主學習、提交作業、追蹤自己的學習進度和能力成長，同時也讓老師可以評估學生的表現。"
+    },
+    {
+      "id": "tipo-M659836",
+      "title": "線上音樂教學系統\nOnline music teaching system",
+      "patentNumber": "M659836",
+      "filingDate": "2024-01-09",
+      "publicationDate": "2024-09-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M659836",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "吳育綸",
+        "謝公碩"
+      ],
+      "abstract": "本創作提供一種線上音樂教學系統，其包含學員端以及教師端。學員端包含感測裝置、第一影像擷取裝置、第一運算處理裝置及第一顯示裝置，當學員演奏樂器時，感測裝置感測樂器產生的音頻。教師端包含第二影像擷取裝置、第二運算處理裝置及第二顯示裝置，第二運算處理裝置執行線上教學程式以建立網路教學平台，學員端連線至網路教學平台，同時於第一顯示裝置及第二顯示裝置呈現即時影像及教學影像。第一運算處理裝置判斷音頻是否符合預設音準，當音頻不符合預設音準時，於第二顯示裝置產生錯誤提示。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:04.874Z",
+      "insight": "學生可以在家裡或任何地方通過網路和老師進行線上音樂課，老師可以即時給予反饋和指導，幫助學生提高演奏技巧。"
+    },
+    {
+      "id": "tipo-M656839",
+      "title": "ＡＩ教育學習系統\nAI education learning system",
+      "patentNumber": "M656839",
+      "filingDate": "2024-03-29",
+      "publicationDate": "2024-06-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M656839",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "蕭勻",
+        "楊雯琪"
+      ],
+      "abstract": "本新型為有關一種AI教育學習系統，主要由指揮機器人從主題儲存件處取得主題任務，並根據主題任務由資訊機器人從載體儲存裝置處取得任務載體、任務配件及移動指令，以讓擁護機器人根據移動指令在任務載體上移動，接著由檢查機器人根據檢查資料庫比對任務載體及任務配件是否正確，再由分析機器人根據分析資料庫判斷移動路徑是否正確，若檢查結果或分析結果不正確，則由協調機器人針對不正確之部分進行標示，供使用者重新選擇。藉此，將AI的機器學習動作基礎拆分至六個機器人，讓學生操作每個機器人進行分工合作，以簡單有效的將AI認知教育結合於遊戲中。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "消滅\n\n\n\n消滅",
+      "scrapedAt": "2026-04-01T09:40:13.598Z",
+      "insight": "在一個教育遊戲中，學生可以操作六個機器人，分別負責不同的任務，讓學生在遊戲中學習AI的基礎知識，例如機器學習和問題解決。"
+    },
+    {
+      "id": "tipo-I839283",
+      "title": "類比控制實驗教學模組\nANALOG CONTROL EXPERIMENT TEACHING MODULE",
+      "patentNumber": "I839283",
+      "filingDate": "2023-08-02",
+      "publicationDate": "2024-04-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I839283",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "謝承道",
+        "鄒重光"
+      ],
+      "abstract": "本發明係有關於一種類比控制實驗教學模組，其主要係在使用上能讓學習者便於學習可程式控制器中的數位信號和類比信號的轉化問題，且其模組化箱型設計，能令各箱體上下輕易進行堆疊，以方便進行儲存，具有體積小、能便於搬運攜行之功效，使得在教學上不受場地限制，並由於零件輕巧耐用、依操作說明可組裝容易，能鼓勵學生動手安裝實作，及於操作方便簡潔，界面顯示直觀明瞭，具有較強的功能及穩定的性能，更在整體製作成本上極為低廉，使得其在在成本控制方面效果十分明顯，而在其整體施行使用上更增實用功效特性者。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學平台"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准\n\n\n\n核准",
+      "scrapedAt": "2026-04-01T09:40:04.874Z",
+      "insight": "學生可以使用這個實驗教學模組來學習類比控制和數位信號的轉化，模組的設計方便攜帶和儲存，讓學生可以在任何地方進行實驗和學習。"
+    }
+  ],
+  "updatedAt": "2026-04-01T09:42:00.917Z",
+  "sources": {
+    "tipo": 28
+  },
+  "months": [
+    "2026-03",
+    "2026-02",
+    "2026-01",
+    "2025-12",
+    "2025-11",
+    "2025-10",
+    "2025-09",
+    "2025-07",
+    "2025-05",
+    "2025-04",
+    "2025-02",
+    "2024-11",
+    "2024-09",
+    "2024-06",
+    "2024-04"
+  ],
+  "total": 28
+}
