@@ -1,0 +1,617 @@
+{
+  "updatedAt": "2026-04-02T03:40:22.475Z",
+  "sources": [
+    {
+      "id": "grand-view",
+      "name": "Grand View Research",
+      "url": "https://www.grandviewresearch.com/industry-analysis/education-technology-market",
+      "scope": "global",
+      "forecast": {
+        "from": 2025,
+        "to": 2030
+      },
+      "marketSize": {
+        "year": 2024,
+        "value": 163.49,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2030,
+        "value": 348.41
+      },
+      "cagr": 13.3,
+      "segments": {
+        "byType": {
+          "Hardware": 39,
+          "Software": null,
+          "Content": null
+        },
+        "bySector": {
+          "K-12": 39.4,
+          "Higher Education": null,
+          "Preschool": null
+        },
+        "byEndUse": {
+          "Commercial": 66,
+          "Consumer": null
+        },
+        "byDeployment": {
+          "On-premises": null,
+          "Cloud": null
+        }
+      },
+      "regions": {
+        "North America": 35.62,
+        "Asia Pacific": null,
+        "Europe": null
+      },
+      "access": "paid",
+      "tags": [
+        "global",
+        "comprehensive"
+      ],
+      "scrapedAt": "2026-04-02T03:39:51.561Z"
+    },
+    {
+      "id": "markets-and-markets",
+      "name": "MarketsandMarkets",
+      "url": "https://www.marketsandmarkets.com/Market-Reports/educational-technology-ed-tech-market-1066.html",
+      "scope": "global",
+      "forecast": {
+        "from": 2025,
+        "to": 2030
+      },
+      "marketSize": {
+        "year": 2025,
+        "value": 197.3,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2030,
+        "value": 353.1
+      },
+      "cagr": 12.3,
+      "segments": {},
+      "regions": {},
+      "access": "paid",
+      "tags": [
+        "global"
+      ],
+      "scrapedAt": "2026-04-02T03:39:53.506Z"
+    },
+    {
+      "id": "mordor",
+      "name": "Mordor Intelligence",
+      "url": "https://www.mordorintelligence.com/industry-reports/digital-education-market",
+      "scope": "global",
+      "forecast": {
+        "from": 2026,
+        "to": 2031
+      },
+      "marketSize": {
+        "year": 2026,
+        "value": 30.36,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2031,
+        "value": 98.58
+      },
+      "cagr": 26.57,
+      "note": "Digital Education (narrower scope, excludes hardware)",
+      "segments": {
+        "byType": {
+          "LMS": 33.36,
+          "AI Adaptive": null,
+          "Mobile": null,
+          "VR/AR": null
+        },
+        "byLearning": {
+          "Self-paced": 40.15,
+          "Blended": null,
+          "Instructor-led": null
+        },
+        "byCourse": {
+          "STEM": 37.42,
+          "Language": null,
+          "Business": null
+        },
+        "byRevenue": {
+          "Subscription": 50.88,
+          "Freemium": null,
+          "Per-course": null
+        }
+      },
+      "regions": {
+        "North America": 31.28,
+        "Asia Pacific": null,
+        "Europe": null
+      },
+      "access": "paid",
+      "tags": [
+        "global",
+        "digital-education"
+      ],
+      "scrapedAt": "2026-04-02T03:39:54.890Z"
+    },
+    {
+      "id": "research-nester",
+      "name": "Research Nester",
+      "url": "https://www.researchnester.com/tw/reports/education-technology-market/3403",
+      "scope": "global",
+      "forecast": {
+        "from": 2026,
+        "to": 2035
+      },
+      "marketSize": {
+        "year": 2025,
+        "value": 18.71,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2035,
+        "value": 72.46
+      },
+      "cagr": 14.5,
+      "segments": {
+        "byType": {
+          "Hardware": 41.5,
+          "Software": null,
+          "Content": null
+        },
+        "bySector": {
+          "K-12": 42.3,
+          "Higher Education": null,
+          "Corporate": null
+        },
+        "byDeployment": {
+          "On-premises": 70.1,
+          "Cloud": null
+        }
+      },
+      "regions": {
+        "North America": 34.5,
+        "Asia Pacific": null
+      },
+      "regionCagr": {
+        "Asia Pacific": 12.9
+      },
+      "topPlayers": [
+        {
+          "name": "Pearson PLC",
+          "share": 11.7
+        },
+        {
+          "name": "Blackboard Inc.",
+          "share": 10.3
+        },
+        {
+          "name": "Instructure Inc.",
+          "share": 7.6
+        },
+        {
+          "name": "Byju's",
+          "share": 7.3
+        },
+        {
+          "name": "Chegg Inc.",
+          "share": 6.9
+        }
+      ],
+      "access": "paid",
+      "tags": [
+        "global",
+        "comprehensive"
+      ],
+      "scrapedAt": "2026-04-02T03:39:56.679Z"
+    },
+    {
+      "id": "fortune-bi",
+      "name": "Fortune Business Insights",
+      "url": "https://www.fortunebusinessinsights.com/edtech-market-111377",
+      "scope": "global",
+      "forecast": {
+        "from": 2026,
+        "to": 2034
+      },
+      "marketSize": {
+        "year": 2025,
+        "value": 189.15,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2034,
+        "value": 588.72
+      },
+      "cagr": 13.45,
+      "segments": {},
+      "regions": {},
+      "access": "paid",
+      "tags": [
+        "global"
+      ],
+      "scrapedAt": "2026-04-02T03:39:58.888Z"
+    },
+    {
+      "id": "technavio",
+      "name": "Technavio",
+      "url": "https://www.technavio.com/report/edtech-market-industry-analysis",
+      "scope": "global",
+      "forecast": {
+        "from": 2024,
+        "to": 2029
+      },
+      "marketSize": {
+        "year": null,
+        "value": null,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2029,
+        "value": null
+      },
+      "incrementalGrowth": 170.8,
+      "cagr": 15.9,
+      "segments": {},
+      "regions": {
+        "North America": 37
+      },
+      "access": "free",
+      "tags": [
+        "global"
+      ],
+      "scrapedAt": "2026-04-02T03:40:20.974Z"
+    },
+    {
+      "id": "imarc-global",
+      "name": "IMARC Group",
+      "url": "https://www.imarcgroup.com/edtech-market",
+      "scope": "global",
+      "forecast": {
+        "from": 2026,
+        "to": 2034
+      },
+      "marketSize": {
+        "year": 2025,
+        "value": 279.8,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2034,
+        "value": 760
+      },
+      "cagr": 11.39,
+      "segments": {
+        "bySector": {
+          "K-12": 45.2
+        },
+        "byType": {
+          "Hardware": 46.4
+        }
+      },
+      "regions": {
+        "North America": 38.7
+      },
+      "access": "paid",
+      "tags": [
+        "global"
+      ],
+      "scrapedAt": "2026-04-02T03:40:02.431Z"
+    },
+    {
+      "id": "imarc-taiwan",
+      "name": "IMARC Group (Taiwan)",
+      "url": "https://www.imarcgroup.com/taiwan-edtech-market",
+      "scope": "taiwan",
+      "forecast": {
+        "from": 2026,
+        "to": 2034
+      },
+      "marketSize": {
+        "year": 2025,
+        "value": 1.9748,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2034,
+        "value": 5.158
+      },
+      "cagr": 10.92,
+      "segments": {
+        "byType": {
+          "Hardware": null,
+          "Software": null,
+          "Content": null
+        },
+        "bySector": {
+          "K-12": null,
+          "Higher Education": null,
+          "Preschool": null
+        },
+        "byDeployment": {
+          "Cloud": null,
+          "On-premises": null
+        }
+      },
+      "regions": {},
+      "access": "paid",
+      "tags": [
+        "taiwan",
+        "country-specific"
+      ],
+      "scrapedAt": "2026-04-02T03:40:05.369Z"
+    },
+    {
+      "id": "precedence",
+      "name": "Precedence Research",
+      "url": "https://www.precedenceresearch.com/educational-technology-market",
+      "scope": "global",
+      "forecast": {
+        "from": 2025,
+        "to": 2034
+      },
+      "marketSize": {
+        "year": 2025,
+        "value": 185.36,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2034,
+        "value": 572.08
+      },
+      "cagr": 13.34,
+      "segments": {},
+      "regions": {
+        "North America": 40
+      },
+      "access": "paid",
+      "tags": [
+        "global"
+      ],
+      "scrapedAt": "2026-04-02T03:40:08.188Z"
+    },
+    {
+      "id": "allied",
+      "name": "Allied Market Research",
+      "url": "https://www.alliedmarketresearch.com/edtech-market-A323685",
+      "scope": "global",
+      "forecast": {
+        "from": 2024,
+        "to": 2034
+      },
+      "marketSize": {
+        "year": 2023,
+        "value": 139.5,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2034,
+        "value": 518.9
+      },
+      "cagr": 12.9,
+      "segments": {},
+      "regions": {
+        "Asia Pacific": 75
+      },
+      "access": "paid",
+      "tags": [
+        "global"
+      ],
+      "scrapedAt": "2026-04-02T03:40:11.336Z"
+    },
+    {
+      "id": "straits",
+      "name": "Straits Research",
+      "url": "https://straitsresearch.com/report/education-technology-market",
+      "scope": "global",
+      "forecast": {
+        "from": 2024,
+        "to": 2032
+      },
+      "marketSize": {
+        "year": 2023,
+        "value": 144.64,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2032,
+        "value": 598.82
+      },
+      "cagr": 17.1,
+      "segments": {},
+      "regions": {},
+      "access": "paid",
+      "tags": [
+        "global"
+      ],
+      "scrapedAt": "2026-04-02T03:40:14.335Z"
+    },
+    {
+      "id": "mrf",
+      "name": "Market Research Future",
+      "url": "https://www.marketresearchfuture.com/reports/edtech-market-16213",
+      "scope": "global",
+      "forecast": {
+        "from": 2025,
+        "to": 2035
+      },
+      "marketSize": {
+        "year": 2025,
+        "value": 192.91,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2035,
+        "value": 815.16
+      },
+      "cagr": 15.5,
+      "segments": {},
+      "regions": {},
+      "access": "paid",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "arizton",
+      "name": "Arizton",
+      "url": "https://www.arizton.com/market-reports/edtech-market",
+      "scope": "global",
+      "forecast": {
+        "from": 2023,
+        "to": 2029
+      },
+      "marketSize": {
+        "year": 2023,
+        "value": 334.29,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2029,
+        "value": 738.6
+      },
+      "cagr": 14.13,
+      "segments": {},
+      "regions": {},
+      "access": "paid",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "globaldata",
+      "name": "GlobalData",
+      "url": "https://www.globaldata.com/store/report/edtech-overview-market-analysis/",
+      "scope": "global",
+      "forecast": {
+        "from": 2019,
+        "to": 2024
+      },
+      "marketSize": {
+        "year": 2024,
+        "value": 310.8,
+        "unit": "B"
+      },
+      "projected": {
+        "year": null,
+        "value": null
+      },
+      "cagr": 19.4,
+      "segments": {},
+      "regions": {},
+      "access": "paid",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "market-us-apac",
+      "name": "Market.us (Asia Pacific)",
+      "url": "https://market.us/report/asia-pacific-edtech-market/",
+      "scope": "asia-pacific",
+      "forecast": {
+        "from": 2024,
+        "to": 2034
+      },
+      "marketSize": {
+        "year": 2024,
+        "value": 59.8,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2034,
+        "value": 285.1
+      },
+      "cagr": 16.9,
+      "segments": {},
+      "regions": {},
+      "access": "paid",
+      "tags": [
+        "asia-pacific",
+        "regional"
+      ]
+    },
+    {
+      "id": "holoniq-outlook-2025",
+      "name": "HolonIQ",
+      "url": "https://www.holoniq.com/notes/2025-global-education-outlook",
+      "scope": "global",
+      "forecast": {
+        "from": 2024,
+        "to": 2030
+      },
+      "marketSize": {
+        "year": 2025,
+        "value": 404,
+        "unit": "B"
+      },
+      "projected": {
+        "year": 2030,
+        "value": null
+      },
+      "cagr": 16.3,
+      "note": "Global education market ~$10T by 2030; EdTech VC was $1.8B in 2024",
+      "segments": {},
+      "regions": {},
+      "access": "free-summary",
+      "tags": [
+        "global",
+        "vc-funding",
+        "edtech-specialist"
+      ]
+    },
+    {
+      "id": "tipo-smart-learning",
+      "name": "數位產業署（智慧學習產值調查）",
+      "url": "https://www.epark.org.tw/result_page.php?id=20180914093820",
+      "scope": "taiwan",
+      "forecast": {
+        "from": null,
+        "to": null
+      },
+      "marketSize": {
+        "year": null,
+        "value": null,
+        "unit": "B"
+      },
+      "projected": {
+        "year": null,
+        "value": null
+      },
+      "cagr": null,
+      "note": "107-111年度智慧學習產業產值調查報告，含數位學習子產業，PDF 下載",
+      "segments": {},
+      "regions": {},
+      "access": "free",
+      "tags": [
+        "taiwan",
+        "government",
+        "smart-learning"
+      ]
+    }
+  ],
+  "categories": {
+    "byScope": [
+      "global",
+      "asia-pacific",
+      "taiwan"
+    ],
+    "byType": [
+      "Hardware",
+      "Software",
+      "Content",
+      "LMS",
+      "AI Adaptive"
+    ],
+    "bySector": [
+      "K-12",
+      "Higher Education",
+      "Corporate",
+      "Preschool"
+    ],
+    "byDeployment": [
+      "Cloud",
+      "On-premises"
+    ]
+  }
+}

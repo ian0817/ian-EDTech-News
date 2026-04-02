@@ -197,6 +197,94 @@ app.get('/api/conferences/refresh', async (req, res) => {
   }
 });
 
+// Market data API
+const { getMarketData, refreshMarketData } = require('./lib/market');
+app.get('/api/market', async (req, res) => {
+  try {
+    const data = await getMarketData();
+    res.json(data);
+  } catch (err) {
+    res.json({ sources: [], error: err.message });
+  }
+});
+
+app.get('/api/market/refresh', async (req, res) => {
+  if (req.query.token !== process.env.VERCEL_TOKEN) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    const data = await refreshMarketData();
+    res.json({ ok: true, total: data.sources?.length, updatedAt: data.updatedAt });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
+  }
+});
+
+app.get('/api/cron/market', async (req, res) => {
+  const isVercelCron = req.headers['authorization'] === `Bearer ${process.env.CRON_SECRET}`;
+  const isTokenAuth = req.query.token === process.env.VERCEL_TOKEN;
+  if (!isVercelCron && !isTokenAuth) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    const cached = await getMarketData();
+    if (cached && cached.updatedAt) {
+      const age = Date.now() - new Date(cached.updatedAt).getTime();
+      if (age < 6 * 24 * 60 * 60 * 1000) {
+        return res.json({ ok: true, skipped: true, reason: 'Cache still fresh' });
+      }
+    }
+    const data = await refreshMarketData();
+    res.json({ ok: true, total: data.sources?.length });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+// Market editorial (LLM-generated overview, cached in memory)
+let marketEditorialCache = null;
+let marketEditorialAt = 0;
+const MARKET_EDITORIAL_TTL = 24 * 60 * 60 * 1000; // 24h
+
+app.get('/api/market/editorial', async (req, res) => {
+  if (marketEditorialCache && Date.now() - marketEditorialAt < MARKET_EDITORIAL_TTL) {
+    return res.json({ ok: true, editorial: marketEditorialCache });
+  }
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) return res.json({ ok: false, error: 'No API key' });
+
+  try {
+    const { callGroq } = require('./lib/groq');
+    const marketDataNow = await getMarketData();
+    const sources = marketDataNow.sources || [];
+    const summary = sources
+      .filter(s => s.cagr)
+      .map(s => `${s.name} (${s.scope}): base $${s.marketSize?.value || '?'}B (${s.marketSize?.year || '?'}) → $${s.projected?.value || '?'}B (${s.projected?.year || '?'}), CAGR ${s.cagr}%`)
+      .join('\n');
+
+    const result = await callGroq(
+      '你是教育科技產業分析師。根據以下多家研調機構的市場數據，撰寫一篇約500字的繁體中文「EdTech 產值總評」。\n' +
+      '要求：1) 標題一行 2) 正文分段，涵蓋全球趨勢、區域差異（亞太/台灣）、成長動力、值得注意的分歧點（各機構數據差異的原因）、對台灣教育科技業者的啟示 3) 語氣專業但易讀 4) 所有金額請同時標示新台幣和美元，格式為「約NT$X兆（US$YB）」，匯率以1美元=32新台幣計算 5) 輸出格式：第一行是標題，其餘是正文',
+      summary,
+      { temperature: 0.4, maxTokens: 1200 }
+    );
+
+    const lines = result.split('\n');
+    const title = lines[0].replace(/^#+\s*/, '').replace(/^【.*?】/, '').trim();
+    const body = lines.slice(1).join('\n').trim();
+
+    marketEditorialCache = {
+      title,
+      body,
+      generatedAt: new Date().toLocaleDateString('zh-TW'),
+    };
+    marketEditorialAt = Date.now();
+    res.json({ ok: true, editorial: marketEditorialCache });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
+  }
+});
+
 // Patents API
 app.get('/api/patents', async (req, res) => {
   try {

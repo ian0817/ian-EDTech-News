@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>EdTech 產值分析 — ian's EdTech News</title>
+  <meta name="description" content="教育科技全球產值研究分析，彙整各研調機構市場報告數據。">
+  <link rel="canonical" href="https://edtech-news.vercel.app/market.html">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0a; color: #e0e0e0; min-height: 100vh;
+    }
+    .header {
+      background: #111; border-bottom: 1px solid #222;
+      padding: 16px 24px; display: flex; align-items: center; gap: 16px;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .header h1 { font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap; }
+    .header h1 span { color: #4f9cf7; }
+    .header h1 a { color: inherit; text-decoration: none; }
+    .nav { display: flex; gap: 6px; margin-left: auto; flex-shrink: 0; align-items: center; }
+    .nav a {
+      padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 600;
+      color: #aaa; text-decoration: none; transition: all .2s;
+    }
+    .nav a:hover { color: #fff; background: #1a1a1a; }
+    .nav a.active { color: #4f9cf7; background: #1a2a3a; }
+
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+    /* Section titles */
+    .section-title {
+      font-size: 16px; font-weight: 700; color: #fff;
+      margin: 32px 0 16px; padding-bottom: 8px;
+      border-bottom: 1px solid #222;
+    }
+    .section-title:first-child { margin-top: 0; }
+    .section-subtitle { font-size: 12px; color: #666; font-weight: 400; margin-left: 8px; }
+
+    /* Filter bar */
+    .filter-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
+    .filter-label { font-size: 11px; color: #555; margin-right: 2px; white-space: nowrap; }
+    .filter-label:not(:first-child) { margin-left: 10px; padding-left: 10px; border-left: 1px solid #2a2a2a; }
+    .ftag {
+      padding: 4px 12px; border-radius: 14px; font-size: 12px; font-weight: 600;
+      border: 1px solid #2a2a2a; background: #1a1a1a; color: #aaa;
+      cursor: pointer; transition: all .2s; user-select: none;
+    }
+    .ftag:hover { border-color: #4f9cf7; color: #fff; }
+    .ftag.active { background: #1a2a3a; border-color: #4f9cf7; color: #4f9cf7; }
+
+    /* Summary cards */
+    .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .summary-card {
+      background: #1e1e1e; border: 1px solid #333; border-radius: 10px; padding: 16px;
+      text-align: center;
+    }
+    .summary-card .label { font-size: 11px; color: #888; margin-bottom: 4px; }
+    .summary-card .value { font-size: 28px; font-weight: 800; color: #4f9cf7; }
+    .summary-card .sub { font-size: 11px; color: #555; margin-top: 4px; }
+
+    /* Charts */
+    .charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .chart-box {
+      background: #1e1e1e; border: 1px solid #333; border-radius: 10px; padding: 16px;
+    }
+    .chart-box canvas { max-height: 300px; }
+    .chart-title { font-size: 13px; font-weight: 600; color: #ccc; margin-bottom: 12px; }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; margin-bottom: 24px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th {
+      background: #1a1a1a; color: #888; font-weight: 600; text-align: left;
+      padding: 10px 12px; border-bottom: 1px solid #333; white-space: nowrap;
+      position: sticky; top: 0;
+    }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { color: #4f9cf7; }
+    th .sort-arrow { font-size: 10px; margin-left: 4px; }
+    td {
+      padding: 10px 12px; border-bottom: 1px solid #1a1a1a;
+      vertical-align: top;
+    }
+    tr:hover td { background: #151515; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    td a { color: #4f9cf7; text-decoration: none; }
+    td a:hover { text-decoration: underline; }
+    .scope-badge {
+      padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600;
+      display: inline-block;
+    }
+    .scope-badge.global { background: #1a2a3a; color: #4f9cf7; }
+    .scope-badge.asia-pacific { background: #2a1a2a; color: #c77dba; }
+    .scope-badge.taiwan { background: #2a2a1a; color: #f7d74f; }
+    .access-badge {
+      padding: 1px 6px; border-radius: 3px; font-size: 10px;
+    }
+    .access-badge.free { background: #1a2a1a; color: #7fbe7f; }
+    .access-badge.paid { background: #2a1a1a; color: #be7f7f; }
+
+    /* Segment detail cards */
+    .segment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .segment-card {
+      background: #1e1e1e; border: 1px solid #333; border-radius: 10px; padding: 16px;
+    }
+    .segment-card-title { font-size: 13px; font-weight: 600; color: #ccc; margin-bottom: 10px; }
+    .segment-bar {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 12px;
+    }
+    .segment-bar .bar-label { min-width: 100px; color: #aaa; }
+    .segment-bar .bar-track {
+      flex: 1; height: 8px; background: #252525; border-radius: 4px; overflow: hidden;
+    }
+    .segment-bar .bar-fill { height: 100%; border-radius: 4px; }
+    .segment-bar .bar-value { min-width: 40px; text-align: right; color: #ccc; font-weight: 600; }
+
+    .note-text { font-size: 11px; color: #555; font-style: italic; margin-top: 4px; }
+
+    /* Editorial / 總評論 */
+    .editorial-card {
+      background: #1e1e1e; border: 1px solid #333; border-radius: 12px;
+      padding: 28px; position: relative; overflow: hidden; margin-bottom: 28px;
+    }
+    .editorial-card:hover { border-color: #4f9cf7; }
+    .editorial-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #4f9cf7, #9c4ff7, #f7854f);
+    }
+    .editorial-label {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 700; color: #4f9cf7;
+      text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px;
+    }
+    .editorial-label .dot {
+      width: 6px; height: 6px; background: #4f9cf7; border-radius: 50%;
+    }
+    .editorial-title { font-size: 20px; font-weight: 800; color: #fff; line-height: 1.4; margin-bottom: 16px; }
+    .editorial-body { font-size: 15px; color: #bbb; line-height: 1.8; white-space: pre-line; }
+    .editorial-meta {
+      display: flex; align-items: center; gap: 12px; margin-top: 18px;
+      padding-top: 14px; border-top: 1px solid #1a1a1a;
+    }
+    .editorial-time { font-size: 12px; color: #555; margin-left: auto; }
+    .editorial-loading { text-align: center; padding: 20px; color: #555; font-size: 13px; }
+
+    /* Currency toggle */
+    .currency-toggle {
+      display: inline-flex; border: 1px solid #333; border-radius: 6px; overflow: hidden; margin-left: 12px;
+    }
+    .currency-btn {
+      padding: 3px 10px; font-size: 11px; font-weight: 600; cursor: pointer;
+      background: #1a1a1a; color: #888; border: none; transition: all .2s;
+    }
+    .currency-btn.active { background: #1a2a3a; color: #4f9cf7; }
+
+    .footer {
+      text-align: center; padding: 24px; margin-top: 40px;
+      border-top: 1px solid #222; color: #555; font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .charts-row { grid-template-columns: 1fr; }
+      .header { flex-wrap: wrap; }
+      .nav { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="/">ian's <span>EdTech</span></a></h1>
+    <nav class="nav">
+      <a href="/">新聞</a>
+      <a href="/calendar.html">考試行事曆</a>
+      <a href="/conferences.html">學術活動</a>
+      <a href="/learn.html">新靈感</a>
+      <a href="/patents.html">專利追蹤</a>
+      <a href="/market.html" class="active">產值分析</a>
+    </nav>
+  </div>
+
+  <div class="content">
+    <!-- 總評論 -->
+    <div id="editorialSection">
+      <div class="editorial-loading">總評論載入中...</div>
+    </div>
+
+    <div class="section-title">
+      EdTech 全球產值總覽<span class="section-subtitle">各研調機構數據比較</span>
+      <span class="currency-toggle" id="currencyToggle">
+        <button class="currency-btn active" onclick="setCurrency('usd')">USD</button>
+        <button class="currency-btn" onclick="setCurrency('twd')">NTD</button>
+      </span>
+    </div>
+
+    <div id="summaryCards" class="summary-cards"></div>
+
+    <div class="filter-bar" id="filterBar"></div>
+
+    <div class="charts-row">
+      <div class="chart-box">
+        <div class="chart-title" id="chartSizeTitle">市場規模預測比較 (USD Billion)</div>
+        <canvas id="chartSize"></canvas>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">年複合成長率 CAGR (%)</div>
+        <canvas id="chartCagr"></canvas>
+      </div>
+    </div>
+
+    <div class="section-title">研調機構報告一覽</div>
+    <div class="table-wrap">
+      <table id="mainTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-sort="name">研調機構 <span class="sort-arrow"></span></th>
+            <th>涵蓋範圍</th>
+            <th class="sortable" data-sort="baseSize">基準年市值 <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="projected">預測市值 <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="cagr">CAGR <span class="sort-arrow"></span></th>
+            <th>預測期間</th>
+            <th>取用</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="section-title">市場分類分析<span class="section-subtitle">各機構細分數據</span></div>
+    <div class="segment-grid" id="segmentGrid"></div>
+
+    <div class="section-title">區域市場佔比</div>
+    <div class="charts-row">
+      <div class="chart-box">
+        <div class="chart-title">各機構 — 北美市場佔比 (%)</div>
+        <canvas id="chartRegion"></canvas>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">台灣 EdTech 市場 (IMARC)</div>
+        <canvas id="chartTaiwan"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">新創小任 2026 · 資料來源為各研調機構公開摘要，完整報告需洽原始來源 · <span id="appVersion"></span></div>
+
+  <script>
+    let allSources = [];
+    let activeScope = 'all';
+    let activeYear = 'all';
+    let currency = 'usd';
+    const USD_TO_NTD = 32;
+    let sortKey = 'cagr';
+    let sortDir = -1;
+
+    async function init() {
+      const res = await fetch('/api/market').then(r => r.json()).catch(() => ({ sources: [] }));
+      allSources = res.sources || [];
+      buildFilters();
+      render();
+      loadEditorial();
+    }
+
+    function setCurrency(c) {
+      currency = c;
+      document.querySelectorAll('.currency-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent === (c === 'usd' ? 'USD' : 'NTD'));
+      });
+      render();
+    }
+
+    function fmtMoney(usdB) {
+      if (!usdB) return '—';
+      if (currency === 'twd') {
+        const ntdB = usdB * USD_TO_NTD;
+        if (ntdB >= 1000) return `NT$${(ntdB / 1000).toFixed(1)}兆`;
+        return `NT$${ntdB.toFixed(0)}B`;
+      }
+      return `$${usdB}B`;
+    }
+
+    // Convert value for charts (returns number)
+    function toChartVal(usdB) {
+      if (!usdB) return 0;
+      return currency === 'twd' ? usdB * USD_TO_NTD : usdB;
+    }
+
+    function chartUnit() {
+      return currency === 'twd' ? 'NT$ Billion' : 'USD Billion';
+    }
+
+    function chartTickFmt(v) {
+      if (currency === 'twd') {
+        return v >= 1000 ? 'NT$' + (v / 1000).toFixed(1) + '兆' : 'NT$' + v + 'B';
+      }
+      return '$' + v + 'B';
+    }
+
+    function chartTooltipFmt(v) {
+      if (currency === 'twd') {
+        const ntd = v;
+        return ntd >= 1000 ? `NT$${(ntd / 1000).toFixed(1)}兆` : `NT$${ntd.toFixed(1)}B`;
+      }
+      return `$${v}B`;
+    }
+
+    function buildFilters() {
+      const scopes = [
+        { key: 'all', label: '全部' },
+        { key: 'global', label: '全球' },
+        { key: 'asia-pacific', label: '亞太' },
+        { key: 'taiwan', label: '台灣' },
+      ];
+      let html = '<span class="filter-label">涵蓋範圍</span>';
+      for (const s of scopes) {
+        const cls = activeScope === s.key ? 'ftag active' : 'ftag';
+        html += `<span class="${cls}" onclick="setScope('${s.key}')">${s.label}</span>`;
+      }
+
+      // 年度篩選 — 根據報告的基準年或預測起始年
+      const years = new Set();
+      allSources.forEach(s => {
+        if (s.marketSize?.year) years.add(s.marketSize.year);
+        if (s.forecast?.from) years.add(s.forecast.from);
+      });
+      const sortedYears = [...years].sort((a, b) => b - a);
+      if (sortedYears.length > 1) {
+        html += '<span class="filter-label">年度</span>';
+        html += `<span class="${activeYear === 'all' ? 'ftag active' : 'ftag'}" onclick="setYear('all')">全部</span>`;
+        for (const y of sortedYears) {
+          const cls = activeYear === String(y) ? 'ftag active' : 'ftag';
+          html += `<span class="${cls}" onclick="setYear('${y}')">${y}</span>`;
+        }
+      }
+
+      document.getElementById('filterBar').innerHTML = html;
+    }
+
+    function setScope(scope) {
+      activeScope = scope;
+      buildFilters();
+      render();
+    }
+
+    function setYear(year) {
+      activeYear = year;
+      buildFilters();
+      render();
+    }
+
+    function filtered() {
+      return allSources.filter(s => {
+        if (activeScope !== 'all' && s.scope !== activeScope) return false;
+        if (activeYear !== 'all') {
+          const y = parseInt(activeYear);
+          const matchBase = s.marketSize?.year === y;
+          const matchForecast = s.forecast?.from === y;
+          if (!matchBase && !matchForecast) return false;
+        }
+        return true;
+      });
+    }
+
+    function render() {
+      const data = filtered();
+      renderSummary(data);
+      renderTable(data);
+      renderCharts(data);
+      renderSegments(data);
+    }
+
+    function renderSummary(data) {
+      const withSize = data.filter(s => s.marketSize?.value);
+      const withCagr = data.filter(s => s.cagr);
+      const sizes = withSize.map(s => s.marketSize.value);
+      const cagrs = withCagr.map(s => s.cagr);
+
+      const avgSize = sizes.length ? (sizes.reduce((a, b) => a + b, 0) / sizes.length) : 0;
+      const avgCagr = cagrs.length ? (cagrs.reduce((a, b) => a + b, 0) / cagrs.length) : 0;
+      const minCagr = cagrs.length ? Math.min(...cagrs) : 0;
+      const maxCagr = cagrs.length ? Math.max(...cagrs) : 0;
+
+      const maxProj = data.filter(s=>s.projected?.value).map(s=>s.projected.value);
+      document.getElementById('summaryCards').innerHTML = `
+        <div class="summary-card">
+          <div class="label">資料來源數</div>
+          <div class="value">${data.length}</div>
+          <div class="sub">研調機構</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">平均基準年市場規模</div>
+          <div class="value">${fmtMoney(Math.round(avgSize))}</div>
+          <div class="sub">${withSize.length} 筆有數據</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">CAGR 範圍</div>
+          <div class="value">${minCagr.toFixed(1)}–${maxCagr.toFixed(1)}%</div>
+          <div class="sub">平均 ${avgCagr.toFixed(1)}%</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">最高預測市值</div>
+          <div class="value">${maxProj.length ? fmtMoney(Math.max(...maxProj)) : '—'}</div>
+          <div class="sub">各機構最大預測</div>
+        </div>`;
+    }
+
+    function renderTable(data) {
+      const sorted = [...data].sort((a, b) => {
+        let va, vb;
+        if (sortKey === 'name') { va = a.name; vb = b.name; return sortDir * va.localeCompare(vb); }
+        if (sortKey === 'baseSize') { va = a.marketSize?.value || 0; vb = b.marketSize?.value || 0; }
+        if (sortKey === 'projected') { va = a.projected?.value || 0; vb = b.projected?.value || 0; }
+        if (sortKey === 'cagr') { va = a.cagr || 0; vb = b.cagr || 0; }
+        return sortDir * (va - vb);
+      });
+
+      document.getElementById('tableBody').innerHTML = sorted.map(s => {
+        const scopeCls = s.scope || 'global';
+        const scopeLabel = { global: '全球', 'asia-pacific': '亞太', taiwan: '台灣' }[scopeCls] || scopeCls;
+        const accessCls = s.access === 'free' || s.access === 'free-summary' ? 'free' : 'paid';
+        const accessLabel = s.access === 'free' ? '免費' : s.access === 'free-summary' ? '摘要免費' : '付費';
+        const baseSize = s.marketSize?.value ? `${fmtMoney(s.marketSize.value)} (${s.marketSize.year || '—'})` : '—';
+        const proj = s.projected?.value ? `${fmtMoney(s.projected.value)} (${s.projected.year || '—'})` : '—';
+        const period = s.forecast?.from && s.forecast?.to ? `${s.forecast.from}–${s.forecast.to}` : '—';
+        const note = s.note ? `<div class="note-text">${esc(s.note)}</div>` : '';
+
+        return `<tr>
+          <td><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>${note}</td>
+          <td><span class="scope-badge ${scopeCls}">${scopeLabel}</span></td>
+          <td class="num">${baseSize}</td>
+          <td class="num">${proj}</td>
+          <td class="num">${s.cagr ? s.cagr + '%' : '—'}</td>
+          <td>${period}</td>
+          <td><span class="access-badge ${accessCls}">${accessLabel}</span></td>
+        </tr>`;
+      }).join('');
+
+      // Update sort arrows
+      document.querySelectorAll('th.sortable').forEach(th => {
+        const arrow = th.querySelector('.sort-arrow');
+        if (th.dataset.sort === sortKey) {
+          arrow.textContent = sortDir > 0 ? ' \u25B2' : ' \u25BC';
+        } else {
+          arrow.textContent = '';
+        }
+      });
+    }
+
+    // Sort click
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (sortKey === key) sortDir *= -1;
+        else { sortKey = key; sortDir = -1; }
+        render();
+      });
+    });
+
+    let chartSizeInstance, chartCagrInstance, chartRegionInstance, chartTaiwanInstance;
+
+    function renderCharts(data) {
+      // Update chart title
+      document.getElementById('chartSizeTitle').textContent = `市場規模預測比較 (${chartUnit()})`;
+
+      // Market size bar chart
+      const sizeData = data.filter(s => s.marketSize?.value && s.projected?.value)
+        .sort((a, b) => (b.projected?.value || 0) - (a.projected?.value || 0));
+
+      if (chartSizeInstance) chartSizeInstance.destroy();
+      chartSizeInstance = new Chart(document.getElementById('chartSize'), {
+        type: 'bar',
+        data: {
+          labels: sizeData.map(s => s.name.length > 18 ? s.name.substring(0, 18) + '..' : s.name),
+          datasets: [
+            {
+              label: '基準年',
+              data: sizeData.map(s => toChartVal(s.marketSize.value)),
+              backgroundColor: 'rgba(79, 156, 247, 0.6)',
+              borderRadius: 4,
+            },
+            {
+              label: '預測值',
+              data: sizeData.map(s => toChartVal(s.projected.value)),
+              backgroundColor: 'rgba(79, 247, 156, 0.6)',
+              borderRadius: 4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { labels: { color: '#aaa', font: { size: 11 } } },
+            tooltip: {
+              callbacks: {
+                label: ctx => `${ctx.dataset.label}: ${chartTooltipFmt(ctx.raw)}`
+              }
+            }
+          },
+          scales: {
+            x: { ticks: { color: '#666', font: { size: 10 } }, grid: { color: '#1a1a1a' } },
+            y: { ticks: { color: '#666', callback: v => chartTickFmt(v) }, grid: { color: '#1a1a1a' } }
+          }
+        }
+      });
+
+      // CAGR horizontal bar
+      const cagrData = data.filter(s => s.cagr).sort((a, b) => b.cagr - a.cagr);
+      if (chartCagrInstance) chartCagrInstance.destroy();
+      chartCagrInstance = new Chart(document.getElementById('chartCagr'), {
+        type: 'bar',
+        data: {
+          labels: cagrData.map(s => s.name.length > 20 ? s.name.substring(0, 20) + '..' : s.name),
+          datasets: [{
+            data: cagrData.map(s => s.cagr),
+            backgroundColor: cagrData.map(s =>
+              s.cagr > 20 ? 'rgba(247, 156, 79, 0.7)' :
+              s.cagr > 15 ? 'rgba(247, 215, 79, 0.7)' :
+              'rgba(79, 156, 247, 0.7)'
+            ),
+            borderRadius: 4,
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { label: ctx => `CAGR: ${ctx.raw}%` } }
+          },
+          scales: {
+            x: { ticks: { color: '#666', callback: v => v + '%' }, grid: { color: '#1a1a1a' } },
+            y: { ticks: { color: '#aaa', font: { size: 10 } }, grid: { display: false } }
+          }
+        }
+      });
+
+      // Region chart - North America share
+      const regionData = data.filter(s => s.regions?.['North America']);
+      if (chartRegionInstance) chartRegionInstance.destroy();
+      chartRegionInstance = new Chart(document.getElementById('chartRegion'), {
+        type: 'bar',
+        data: {
+          labels: regionData.map(s => s.name.length > 18 ? s.name.substring(0, 18) + '..' : s.name),
+          datasets: [{
+            label: '北美佔比',
+            data: regionData.map(s => s.regions['North America']),
+            backgroundColor: 'rgba(156, 156, 247, 0.7)',
+            borderRadius: 4,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { label: ctx => `北美: ${ctx.raw}%` } }
+          },
+          scales: {
+            x: { ticks: { color: '#666', font: { size: 10 } }, grid: { color: '#1a1a1a' } },
+            y: { ticks: { color: '#666', callback: v => v + '%' }, grid: { color: '#1a1a1a' }, max: 50 }
+          }
+        }
+      });
+
+      // Taiwan chart
+      const twSource = allSources.find(s => s.id === 'imarc-taiwan');
+      if (chartTaiwanInstance) chartTaiwanInstance.destroy();
+      if (twSource && twSource.marketSize?.value) {
+        const twBase = toChartVal(twSource.marketSize.value);
+        const twProj = toChartVal(twSource.projected.value);
+        chartTaiwanInstance = new Chart(document.getElementById('chartTaiwan'), {
+          type: 'doughnut',
+          data: {
+            labels: [`2025: ${fmtMoney(twSource.marketSize.value)}`, `2034: ${fmtMoney(twSource.projected.value)} (預測)`],
+            datasets: [{
+              data: [twBase, twProj - twBase],
+              backgroundColor: ['rgba(247, 215, 79, 0.8)', 'rgba(247, 215, 79, 0.25)'],
+              borderColor: ['#f7d74f', '#3a3a1a'],
+              borderWidth: 1,
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { labels: { color: '#aaa', font: { size: 11 } } },
+              tooltip: { callbacks: { label: ctx => chartTooltipFmt(ctx.raw) } }
+            }
+          }
+        });
+      }
+    }
+
+    function renderSegments(data) {
+      const segSources = data.filter(s => s.segments && Object.keys(s.segments).length > 0);
+      if (!segSources.length) {
+        document.getElementById('segmentGrid').innerHTML = '<div class="note-text">目前篩選條件下無細分數據</div>';
+        return;
+      }
+
+      const colors = {
+        'Hardware': '#4f9cf7', 'Software': '#4fce7f', 'Content': '#f7d74f',
+        'K-12': '#c77dba', 'Higher Education': '#4f9cf7', 'Corporate': '#f7a04f',
+        'Preschool': '#7fbe7f', 'On-premises': '#9c9cf7', 'Cloud': '#4fce7f',
+        'Commercial': '#4f9cf7', 'Consumer': '#f7d74f',
+        'LMS': '#4f9cf7', 'AI Adaptive': '#f7a04f', 'Self-paced': '#4fce7f',
+        'Blended': '#c77dba', 'STEM': '#4f9cf7', 'Language': '#f7d74f',
+        'Subscription': '#4fce7f', 'Freemium': '#f7a04f',
+      };
+
+      let html = '';
+      for (const s of segSources) {
+        for (const [segKey, segData] of Object.entries(s.segments)) {
+          const entries = Object.entries(segData).filter(([, v]) => v !== null);
+          if (!entries.length) continue;
+          const label = {
+            byType: '按類型', bySector: '按產業', byDeployment: '按部署方式',
+            byEndUse: '按使用端', byLearning: '按學習模式', byCourse: '按課程類型',
+            byRevenue: '按營收模式',
+          }[segKey] || segKey;
+
+          html += `<div class="segment-card">
+            <div class="segment-card-title">${esc(s.name)} — ${label}</div>`;
+          for (const [name, value] of entries) {
+            const color = colors[name] || '#4f9cf7';
+            html += `<div class="segment-bar">
+              <span class="bar-label">${esc(name)}</span>
+              <div class="bar-track"><div class="bar-fill" style="width:${value}%;background:${color}"></div></div>
+              <span class="bar-value">${value}%</span>
+            </div>`;
+          }
+          html += '</div>';
+        }
+      }
+      document.getElementById('segmentGrid').innerHTML = html;
+    }
+
+    async function loadEditorial() {
+      const el = document.getElementById('editorialSection');
+      try {
+        const res = await fetch('/api/market/editorial').then(r => r.json());
+        if (res.ok && res.editorial) {
+          const e = res.editorial;
+          el.innerHTML = `
+            <div class="editorial-card">
+              <div class="editorial-label"><span class="dot"></span>產值總評</div>
+              <div class="editorial-title">${esc(e.title)}</div>
+              <div class="editorial-body">${esc(e.body)}</div>
+              <div class="editorial-meta">
+                <span style="font-size:12px;color:#666">AI 分析 · 資料來源：${allSources.length} 家研調機構</span>
+                <span class="editorial-time">${esc(e.generatedAt || '')}</span>
+              </div>
+            </div>`;
+        } else {
+          el.innerHTML = '';
+        }
+      } catch {
+        el.innerHTML = '';
+      }
+    }
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s || '';
+      return d.innerHTML;
+    }
+
+    init();
+  </script>
+  <script>fetch('/api/version').then(r=>r.json()).then(d=>{document.getElementById('appVersion').textContent='v'+d.version}).catch(()=>{})</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
