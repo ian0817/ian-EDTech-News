@@ -35,3 +35,19 @@
 **說明：**
 - 台東大學研究發展處（NTTU）為原有來源，使用者確認此次不需重複新增
 - `refreshConferences()` 改為 `Promise.allSettled` 同時跑四個 scraper，`sources` 欄位新增 `ccu`、`cacet` 計數
+
+### 追加（同日）— TIPO 爬蟲架構重建
+
+**新發現的根本原因：**
+1. TIPO session INFO token 硬編碼過期 → 爬蟲回傳 session timeout，0 筆
+2. Vercel IP 被 TIPO Cloudflare 封鎖（403）→ Vercel Cron 永遠無法爬 TIPO
+
+**修正：**
+- `lib/patents.js`：加 Step 0 `getTIPOSession()` 先 GET 首頁取得有效 INFO token
+- `lib/patents.js`：新增關鍵字（元宇宙教育、人工智慧教學/學習、自適應學習、考題生成）
+- `server.js`：新增 `/api/patents/import-bundled`（本機爬完 deploy 後呼叫，寫 bundled cache → Blob）
+- `server.js`：移除 patents Cron endpoint（Vercel 永遠連不到 TIPO）
+- `vercel.json`：移除 patents cron schedule
+- `scripts/refresh-patents.sh`：本機一鍵更新腳本（爬取→commit→deploy→sync Blob）
+
+**結果：** 99 筆專利，月份更新至 2026-05
