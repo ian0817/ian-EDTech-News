@@ -17,6 +17,8 @@
 **說明：**
 - 四/五月無新專利是 TIPO 資料問題（申請到公告有數月延遲），非系統 bug
 - Cron 每週一 12:00 UTC 自動執行，現在可正常在 timeout 內完成
+- `functions` key 與 `builds` 互斥（PM-028），maxDuration 須改放 `builds[].config` 內
+- Vercel 優先讀 Blob，手動更新須打 `/api/patents/refresh?token=` 才能寫入 Blob 生效，光 redeploy 無效
 
 ## 2026-04-20
 
