@@ -22,7 +22,7 @@ const exhibitionData = require('./data/exhibitions.json');
 const { fetchTrends } = require('./lib/trends');
 const { generateCard, readHistory: readMicroHistory } = require('./lib/microlearn');
 const { generateSummary, getSummaries, cronGenerateSummaries } = require('./lib/conference-summary');
-const { getPatents, refreshPatents } = require('./lib/patents');
+const { getPatents, refreshPatents, readCache } = require('./lib/patents');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -317,8 +317,8 @@ app.get('/api/cron/patents', async (req, res) => {
     return res.status(401).json({ ok: false, error: 'Unauthorized' });
   }
   try {
-    // Self-limiting: skip if cache is less than 6 days old
-    const cached = await getPatents();
+    // Self-limiting: read cache directly to avoid triggering auto-refresh inside getPatents()
+    const cached = await readCache();
     if (cached && cached.updatedAt) {
       const age = Date.now() - new Date(cached.updatedAt).getTime();
       if (age < 6 * 24 * 60 * 60 * 1000) {
