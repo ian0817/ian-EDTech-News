@@ -309,6 +309,22 @@ app.get('/api/patents/refresh', async (req, res) => {
   }
 });
 
+// Import bundled cache → Blob (use after local refresh + deploy when TIPO is Cloudflare-blocked on Vercel)
+app.get('/api/patents/import-bundled', async (req, res) => {
+  const token = req.query.token;
+  if (token !== process.env.VERCEL_TOKEN) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  try {
+    const { blobPut } = require('./lib/blob');
+    const bundled = require('./data/patents-cache.json');
+    await blobPut('patents-cache.json', bundled);
+    res.json({ ok: true, total: bundled.total, updatedAt: bundled.updatedAt });
+  } catch (err) {
+    res.json({ ok: false, error: err.message });
+  }
+});
+
 // Cron: auto-refresh patents weekly
 app.get('/api/cron/patents', async (req, res) => {
   const isVercelCron = req.headers['authorization'] === `Bearer ${process.env.CRON_SECRET}`;
@@ -333,32 +349,6 @@ app.get('/api/cron/patents', async (req, res) => {
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });
   }
-});
-
-// Debug: test TIPO connectivity (temp)
-app.get('/api/debug/tipo', async (req, res) => {
-  const https = require('https');
-  const result = await new Promise((resolve) => {
-    const req2 = https.request({
-      hostname: 'tiponet.tipo.gov.tw',
-      path: '/twpat3/twpatc/twpatkm?@@1674640309',
-      method: 'GET',
-      timeout: 10000,
-      headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'text/html' },
-    }, (r) => {
-      const chunks = [];
-      r.on('data', c => chunks.push(c));
-      r.on('end', () => {
-        const html = Buffer.concat(chunks).toString('utf-8');
-        const infoMatch = html.match(/name=INFO\s+value=([0-9a-fA-F]+)/);
-        resolve({ status: r.statusCode, htmlLen: html.length, info: infoMatch?.[1] || null, sample: html.slice(0, 200) });
-      });
-    });
-    req2.on('error', e => resolve({ error: e.message }));
-    req2.on('timeout', () => { req2.destroy(); resolve({ error: 'timeout' }); });
-    req2.end();
-  });
-  res.json(result);
 });
 
 // Exhibitions API

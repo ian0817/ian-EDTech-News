@@ -20,10 +20,6 @@
       "schedule": "0 17 * * *"
     },
     {
-      "path": "/api/cron/patents",
-      "schedule": "0 12 * * 1"
-    },
-    {
       "path": "/api/cron/market",
       "schedule": "0 14 * * 1"
     }
