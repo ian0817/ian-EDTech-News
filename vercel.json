@@ -1,16 +1,11 @@
 {
   "builds": [
-    { "src": "server.js", "use": "@vercel/node", "config": { "includeFiles": ["data/**"] } }
+    { "src": "server.js", "use": "@vercel/node", "config": { "includeFiles": ["data/**"], "maxDuration": 300 } }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server.js" },
     { "src": "/(.*)", "dest": "server.js" }
   ],
-  "functions": {
-    "server.js": {
-      "maxDuration": 300
-    }
-  },
   "crons": [
     {
       "path": "/api/cron/editorial",
