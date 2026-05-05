@@ -185,35 +185,74 @@
     .detail-label { color: #666; min-width: 70px; flex-shrink: 0; }
     .detail-value { color: #ccc; }
     .detail-section-label {
-      font-size: 11px; font-weight: 700; letter-spacing: .06em;
-      color: #555; text-transform: uppercase; margin: 20px 0 8px;
+      font-size: 10px; font-weight: 700; letter-spacing: .1em;
+      color: #444; text-transform: uppercase; margin: 22px 0 8px;
+      display: flex; align-items: center; gap: 8px;
     }
+    .detail-section-label::after {
+      content: ''; flex: 1; height: 1px; background: #2a2a2a;
+    }
+    /* 做什麼 / 為什麼重要 */
+    .detail-what {
+      background: #151515; border-radius: 8px; border: 1px solid #2a2a2a;
+      padding: 14px 16px;
+    }
+    .detail-what-lead {
+      font-size: 14px; color: #fff; font-weight: 600; line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .detail-what-bullets {
+      font-size: 13px; color: #bbb; line-height: 1.9; white-space: pre-line;
+    }
+    .detail-why {
+      margin-top: 10px; padding: 12px 16px;
+      background: #12181e; border-radius: 8px;
+      border-left: 3px solid #4f9cf7;
+    }
+    .detail-why-title { font-size: 13px; color: #4f9cf7; font-weight: 700; margin-bottom: 4px; }
+    .detail-why-body  { font-size: 13px; color: #bbb; line-height: 1.75; }
+    /* 技術領先功能 */
+    .detail-features { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .feature-tag {
+      padding: 5px 12px; border-radius: 20px;
+      font-size: 12px; font-weight: 600; color: #4fce7f;
+      background: #0e1e14; border: 1px solid #1e4030;
+    }
+    /* 系統架構圖 */
+    .detail-arch {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 12px; color: #aaa; line-height: 1.9;
+      white-space: pre-wrap; background: #0e0e0e;
+      padding: 14px 16px; border-radius: 8px;
+      border: 1px solid #2a2a2a; margin-top: 8px;
+    }
+    /* 摘要 */
     .detail-abstract {
-      font-size: 13px; color: #bbb; line-height: 1.9;
+      font-size: 13px; color: #888; line-height: 1.9;
       white-space: pre-wrap;
-      padding: 14px 16px; background: #151515; border-radius: 8px;
-      border: 1px solid #2a2a2a;
+      padding: 14px 16px; background: #111; border-radius: 8px;
+      border: 1px solid #222; margin-top: 8px;
     }
-    .detail-report {
-      display: grid; gap: 10px; margin-top: 8px;
-    }
-    .report-card {
+    /* 市場INSIGHT訊號 */
+    .detail-signals { display: grid; gap: 10px; margin-top: 8px; }
+    .signal-card {
       padding: 12px 14px; border-radius: 8px; border: 1px solid #2a2a2a;
     }
-    .report-card.competitor { border-left: 3px solid #e07b54; background: #1c1712; }
-    .report-card.maturity   { border-left: 3px solid #4f9cf7; background: #111a24; }
-    .report-card.trend      { border-left: 3px solid #4fce7f; background: #111c14; }
-    .report-card.moat       { border-left: 3px solid #b8a46c; background: #1a1a10; }
-    .report-card-title {
-      font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 6px;
+    .signal-card:nth-child(1) { border-left: 3px solid #e07b54; background: #1c1712; }
+    .signal-card:nth-child(2) { border-left: 3px solid #9c7cf7; background: #151228; }
+    .signal-card:nth-child(3) { border-left: 3px solid #4fce7f; background: #0e1a12; }
+    .signal-card:nth-child(4) { border-left: 3px solid #b8a46c; background: #1a1a10; }
+    .signal-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+    .signal-tag {
+      font-size: 9px; font-weight: 800; letter-spacing: .1em;
+      padding: 2px 6px; border-radius: 3px;
     }
-    .report-card.competitor .report-card-title { color: #e07b54; }
-    .report-card.maturity   .report-card-title { color: #4f9cf7; }
-    .report-card.trend      .report-card-title { color: #4fce7f; }
-    .report-card.moat       .report-card-title { color: #b8a46c; }
-    .report-card-body {
-      font-size: 13px; color: #ccc; line-height: 1.75;
-    }
+    .signal-card:nth-child(1) .signal-tag { color: #e07b54; background: #2a1a10; }
+    .signal-card:nth-child(2) .signal-tag { color: #9c7cf7; background: #1e1a30; }
+    .signal-card:nth-child(3) .signal-tag { color: #4fce7f; background: #0e2018; }
+    .signal-card:nth-child(4) .signal-tag { color: #b8a46c; background: #1e1a10; }
+    .signal-title { font-size: 13px; font-weight: 700; color: #ddd; }
+    .signal-body  { font-size: 13px; color: #aaa; line-height: 1.75; }
     .detail-classifications {
       display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 12px;
     }
@@ -466,21 +505,67 @@
         '</div>';
     }
 
-    function renderReport(insight) {
-      if (!insight || typeof insight !== 'object') return '';
-      const card = (cls, title, body) =>
-        `<div class="report-card ${cls}">
-          <div class="report-card-title">${title}</div>
-          <div class="report-card-body">${esc(body)}</div>
+    function renderFullReport(r) {
+      if (!r) return '';
+      let html = '';
+
+      // 做什麼
+      if (r.what) {
+        const lines = r.what.split('\n');
+        const lead = lines[0].replace(/^•\s*/, '');
+        const bullets = lines.slice(1).join('\n');
+        html += `<div class="detail-section-label">做什麼</div>
+          <div class="detail-what">
+            <div class="detail-what-lead">${esc(lead)}</div>
+            ${bullets ? '<div class="detail-what-bullets">' + esc(bullets) + '</div>' : ''}
+          </div>`;
+      }
+
+      // 為什麼重要
+      if (r.why) {
+        const colonIdx = r.why.indexOf('。\n');
+        let whyTitle = '', whyBody = r.why;
+        if (colonIdx > -1) { whyTitle = r.why.substring(0, colonIdx + 1); whyBody = r.why.substring(colonIdx + 2); }
+        else if (r.why.includes('標題：')) {
+          whyTitle = r.why.replace(/標題：(.+?)[\n。][\s\S]*/, '$1');
+          whyBody = r.why.replace(/標題：.+?\n說明：\s*/, '');
+        }
+        html += `<div class="detail-why">
+          <div class="detail-why-title">${esc(whyTitle || r.why.substring(0, 30))}</div>
+          <div class="detail-why-body">${esc(whyBody)}</div>
         </div>`;
-      return `
-        <div class="detail-section-label">情資報告</div>
-        <div class="detail-report">
-          ${card('competitor', '競爭者 ／ 市場訊號', insight.competitor || '')}
-          ${card('maturity',   '技術成熟度', insight.maturity || '')}
-          ${card('trend',      '商業趨勢', insight.trend || '')}
-          ${card('moat',       '護城河分析', insight.moat || '')}
-        </div>`;
+      }
+
+      // 技術領先功能
+      if (r.features && r.features.length) {
+        html += `<div class="detail-section-label">技術領先功能</div>
+          <div class="detail-features">
+            ${r.features.map(f => `<span class="feature-tag">${esc(f)}</span>`).join('')}
+          </div>`;
+      }
+
+      // 系統架構圖
+      if (r.arch) {
+        html += `<div class="detail-section-label">系統架構圖（依專利說明書）</div>
+          <div class="detail-arch">${esc(r.arch)}</div>`;
+      }
+
+      // 市場INSIGHT訊號
+      if (r.signals && r.signals.length) {
+        html += `<div class="detail-section-label">市場 Insight 訊號</div>
+          <div class="detail-signals">
+            ${r.signals.map(s => `
+              <div class="signal-card">
+                <div class="signal-header">
+                  <span class="signal-tag">${esc(s.tag || '')}</span>
+                  <span class="signal-title">${esc(s.title || '')}</span>
+                </div>
+                <div class="signal-body">${esc(s.body || '')}</div>
+              </div>`).join('')}
+          </div>`;
+      }
+
+      return html;
     }
 
     function openDetail(patentId) {
@@ -488,6 +573,7 @@
       if (!p) return;
 
       const inventors = (p.inventors || []).join('、') || '未列出';
+      const hasReport = p.report && p.report.signals;
       document.getElementById('detailDialog').innerHTML = `
         <div class="detail-dialog-title">${esc(p.title)}</div>
         <div class="detail-row"><span class="detail-label">專利號碼</span><span class="detail-value">${esc(p.patentNumber)}</span></div>
@@ -496,9 +582,7 @@
         <div class="detail-row"><span class="detail-label">申請日</span><span class="detail-value">${esc(p.filingDate || '未知')}</span></div>
         <div class="detail-row"><span class="detail-label">發明人</span><span class="detail-value">${esc(inventors)}</span></div>
         <div class="detail-row"><span class="detail-label">狀態</span><span class="detail-value">${esc(p.status || '未知')}</span></div>
-        <div class="detail-row"><span class="detail-label">來源</span><span class="detail-value">台灣智慧財產局 (TIPO)</span></div>
-        ${p.abstract ? '<div class="detail-section-label">專利摘要</div><div class="detail-abstract">' + esc(p.abstract) + '</div>' : ''}
-        ${renderReport(p.insight)}
+        ${hasReport ? renderFullReport(p.report) : (p.abstract ? '<div class="detail-section-label">專利摘要</div><div class="detail-abstract">' + esc(p.abstract) + '</div>' : '')}
         <div class="detail-footer">
           <a class="detail-link" href="${esc(p.url)}" target="_blank" rel="noopener">前往專利局 ↗</a>
           <button class="detail-close" onclick="closeDetail()">關閉</button>
