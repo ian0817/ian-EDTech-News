@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-05-05
+
+### patents.html — 修正簡介內容重複顯示
+
+**問題：** 卡片已顯示 `abstract`，點開「詳細資料」dialog 又再顯示一次，造成重複。
+
+**修正：** 移除卡片中的 `abstractHtml`，摘要只在 detail dialog 呈現；卡片只保留 `insight` 作為預覽。
+
 ## 2026-05-04
 
 ### 專利追蹤 — Cron 逾時修復 + 手動更新

@@ -414,11 +414,6 @@
         ? '<div class="patent-insight">' + esc(p.insight) + '</div>'
         : '';
 
-      // 摘要 (2-line clamp)
-      const abstractHtml = p.abstract
-        ? '<div class="patent-abstract">' + esc(p.abstract) + '</div>'
-        : '';
-
       return `
         <div class="patent-card">
           ${dateBox}
@@ -426,7 +421,6 @@
             <div class="patent-title"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></div>
             ${inventorHtml}
             ${insightHtml}
-            ${abstractHtml}
             <div class="patent-meta">
               ${typeBadge}
               ${numberBadge}
