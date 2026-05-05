@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-05-05 (feat-2)
+
+### patents.html — 完整情資報告 UI（對標簡報分析架構）
+
+**新增：**
+- Dialog 全面升級，結構對標 2026 五月專利情資.pptx：
+  - **做什麼** — 一句核心說明 + 要點列表
+  - **為什麼重要** — 藍色標題 + 市場意義說明
+  - **技術領先功能** — 綠色標籤膠囊
+  - **系統架構圖（依專利說明書）** — monospace 文字流程圖
+  - **市場 Insight 訊號** — 4 張色碼卡片（橘/紫/綠/金），各含 TAG、標題、說明
+- `scripts/generate-all-analysis.js`：完整情資 bulk 生成腳本，自動跳過已生成筆數
+
+**說明：**
+- Groq free tier 限制：llama-3.3-70b 每日 100k token，llama-3.1-8b 每分鐘 6k token
+- 需 16s delay 以符合 TPM 限制，96 筆分兩批跑完（約 30 分鐘）
+
 ## 2026-05-05 (feat)
 
 ### patents.html — 加入四維情資報告 + 完整摘要顯示
