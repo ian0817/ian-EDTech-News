@@ -317,7 +317,7 @@ app.get('/api/patents/import-bundled', async (req, res) => {
   }
   try {
     const { blobPut } = require('./lib/blob');
-    const bundled = require('./data/patents-cache.json');
+    const bundled = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, 'data/patents-cache.json'), 'utf-8'));
     await blobPut('patents-cache.json', bundled);
     res.json({ ok: true, total: bundled.total, updatedAt: bundled.updatedAt });
   } catch (err) {

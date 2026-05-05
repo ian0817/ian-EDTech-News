@@ -1,6 +1,19 @@
 # Changelog
 
-## 2026-05-05
+## 2026-05-05 (feat)
+
+### patents.html — 加入四維情資報告 + 完整摘要顯示
+
+**新增：**
+- Dialog 新增「專利摘要」section（帶 label 的深色框，完整顯示）
+- Dialog 新增「情資報告」四卡片區塊：競爭者/市場訊號（橘）、技術成熟度（藍）、商業趨勢（綠）、護城河分析（金）
+- `lib/patents.js`：`generateInsights` 改為四維 JSON 格式，每筆 insight 存為 `{competitor, maturity, trend, moat}` 物件
+- `scripts/generate-all-insights.js`：一次性為全部既有專利 bulk 生成情資，96/96 成功
+
+**說明：**
+- Blob 更新需呼叫兩次 `/api/patents/import-bundled`（首次 Vercel 可能 hit module cache 舊資料）
+
+## 2026-05-05 (fix)
 
 ### patents.html — 修正簡介內容重複顯示
 
