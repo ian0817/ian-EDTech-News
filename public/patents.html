@@ -171,7 +171,7 @@
     .detail-dialog {
       background: #1e1e1e; border: 1px solid #333;
       border-radius: 12px; padding: 28px;
-      max-width: 650px; width: 90%; max-height: 80vh;
+      max-width: 760px; width: 92%; max-height: 85vh;
       overflow-y: auto; position: relative;
     }
     .detail-dialog-title {
@@ -184,11 +184,35 @@
     }
     .detail-label { color: #666; min-width: 70px; flex-shrink: 0; }
     .detail-value { color: #ccc; }
+    .detail-section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .06em;
+      color: #555; text-transform: uppercase; margin: 20px 0 8px;
+    }
     .detail-abstract {
-      font-size: 14px; color: #ccc; line-height: 1.8;
-      white-space: pre-wrap; margin: 16px 0;
-      padding: 12px; background: #151515; border-radius: 8px;
+      font-size: 13px; color: #bbb; line-height: 1.9;
+      white-space: pre-wrap;
+      padding: 14px 16px; background: #151515; border-radius: 8px;
       border: 1px solid #2a2a2a;
+    }
+    .detail-report {
+      display: grid; gap: 10px; margin-top: 8px;
+    }
+    .report-card {
+      padding: 12px 14px; border-radius: 8px; border: 1px solid #2a2a2a;
+    }
+    .report-card.competitor { border-left: 3px solid #e07b54; background: #1c1712; }
+    .report-card.maturity   { border-left: 3px solid #4f9cf7; background: #111a24; }
+    .report-card.trend      { border-left: 3px solid #4fce7f; background: #111c14; }
+    .report-card.moat       { border-left: 3px solid #b8a46c; background: #1a1a10; }
+    .report-card-title {
+      font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 6px;
+    }
+    .report-card.competitor .report-card-title { color: #e07b54; }
+    .report-card.maturity   .report-card-title { color: #4f9cf7; }
+    .report-card.trend      .report-card-title { color: #4fce7f; }
+    .report-card.moat       .report-card-title { color: #b8a46c; }
+    .report-card-body {
+      font-size: 13px; color: #ccc; line-height: 1.75;
     }
     .detail-classifications {
       display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 12px;
@@ -442,6 +466,23 @@
         '</div>';
     }
 
+    function renderReport(insight) {
+      if (!insight || typeof insight !== 'object') return '';
+      const card = (cls, title, body) =>
+        `<div class="report-card ${cls}">
+          <div class="report-card-title">${title}</div>
+          <div class="report-card-body">${esc(body)}</div>
+        </div>`;
+      return `
+        <div class="detail-section-label">情資報告</div>
+        <div class="detail-report">
+          ${card('competitor', '競爭者 ／ 市場訊號', insight.competitor || '')}
+          ${card('maturity',   '技術成熟度', insight.maturity || '')}
+          ${card('trend',      '商業趨勢', insight.trend || '')}
+          ${card('moat',       '護城河分析', insight.moat || '')}
+        </div>`;
+    }
+
     function openDetail(patentId) {
       const p = allPatents.find(x => x.id === patentId);
       if (!p) return;
@@ -456,8 +497,8 @@
         <div class="detail-row"><span class="detail-label">發明人</span><span class="detail-value">${esc(inventors)}</span></div>
         <div class="detail-row"><span class="detail-label">狀態</span><span class="detail-value">${esc(p.status || '未知')}</span></div>
         <div class="detail-row"><span class="detail-label">來源</span><span class="detail-value">台灣智慧財產局 (TIPO)</span></div>
-        ${p.insight ? '<div style="margin:12px 0;padding:8px 12px;background:#1a1a10;border-left:2px solid #b8a46c;border-radius:0 4px 4px 0;color:#b8a46c;font-size:13px;line-height:1.6">' + esc(p.insight) + '</div>' : ''}
-        ${p.abstract ? '<div class="detail-abstract">' + esc(p.abstract) + '</div>' : ''}
+        ${p.abstract ? '<div class="detail-section-label">專利摘要</div><div class="detail-abstract">' + esc(p.abstract) + '</div>' : ''}
+        ${renderReport(p.insight)}
         <div class="detail-footer">
           <a class="detail-link" href="${esc(p.url)}" target="_blank" rel="noopener">前往專利局 ↗</a>
           <button class="detail-close" onclick="closeDetail()">關閉</button>
