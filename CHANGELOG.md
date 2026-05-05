@@ -8,6 +8,17 @@
 
 **修正：** 移除卡片中的 `abstractHtml`，摘要只在 detail dialog 呈現；卡片只保留 `insight` 作為預覽。
 
+### patents.js + cache — 修正 dialog 摘要重複 12 次
+
+**問題：** 點開「詳細資料」後，摘要文字重複顯示 12 次（Playwright 驗證發現）。
+
+**根因：** `lib/patents.js` 的 `td.sumtd2_AB` 未加 `.first()`，TIPO 展開視圖同一 `<tr>` 有多個同名 cell，cheerio `.text()` 串接全部，導致 abstract 重複 N 次寫入 cache。與 PM-031（status/inventors 同根因）相同，當時漏修 abstract。
+
+**修正：**
+- `lib/patents.js`：`row.find('td.sumtd2_AB').first().text()` 防止未來再發生
+- `data/patents-cache.json`：直接修復既有 91 筆重複資料（BOM 分割去重）
+- Blob sync：`/api/patents/import-bundled` 重新同步至 Vercel Blob
+
 ## 2026-05-04
 
 ### 專利追蹤 — Cron 逾時修復 + 手動更新
