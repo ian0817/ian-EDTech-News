@@ -472,9 +472,12 @@
         ? '<div class="patent-inventor-line">發明人：' + esc(inventors.join('、')) + '</div>'
         : '';
 
-      // Insight (白話應用情境)
-      const insightHtml = p.insight
-        ? '<div class="patent-insight">' + esc(p.insight) + '</div>'
+      // 卡片預覽：優先用 report.what 第一句，否則用 insight 字串（舊格式）
+      const previewText = p.report && p.report.what
+        ? p.report.what.split('\n')[0].replace(/^•\s*/, '')
+        : (typeof p.insight === 'string' ? p.insight : '');
+      const insightHtml = previewText
+        ? '<div class="patent-insight">' + esc(previewText) + '</div>'
         : '';
 
       return `
