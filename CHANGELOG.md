@@ -51,3 +51,13 @@
 - `scripts/refresh-patents.sh`：本機一鍵更新腳本（爬取→commit→deploy→sync Blob）
 
 **結果：** 99 筆專利，月份更新至 2026-05
+
+### 追加（同日）— 發明人/狀態重複修正
+
+**問題：** 展開欄位後 `td.sumtd2_IN`、`td.sumtd2_LS` 在同一 `<tr>` 內有多個 cell，cheerio `.text()` 串接全部導致重複顯示
+
+**修正：**
+- `status`：改用 `.first().text().split('\n')[0]` 只取第一個非空值
+- `inventors`：加 `[...new Set(...)]` 去重
+
+**結果：** 95 筆，發明人/狀態各只顯示一次，四月五月資料正確
