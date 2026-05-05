@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-05-05 (fix-2)
+
+### patents.html — 修正卡片顯示 [object Object] + section label 白色
+
+**問題：** 專利卡片顯示「[object Object]」，因 `insight` 欄位由字串改物件後卡片渲染未更新。
+
+**修正：**
+- 卡片預覽改用 `report.what` 第一句（新格式），fallback 舊字串 `insight`
+- 分析 section label 字色改為白色（`#fff`）
+
 ## 2026-05-05 (feat-2)
 
 ### patents.html — 完整情資報告 UI（對標簡報分析架構）
