@@ -22,7 +22,7 @@ git add data/patents-cache.json
 git commit -m "chore: 更新專利 cache $(date +%Y-%m-%d)" --no-verify 2>/dev/null || echo "(no changes to commit)"
 git push
 
-npx vercel --prod --yes 2>&1 | tail -3
+vercel --token "$VERCEL_TOKEN" --prod --yes 2>&1 | tail -3
 
 echo "[$(date)] 同步 Blob..."
 sleep 5
