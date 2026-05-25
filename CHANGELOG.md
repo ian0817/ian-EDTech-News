@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-05-25 (fix)
+
+### lib/patents.js — 修正 TIPO 爬蟲缺分頁 + 新增 vercel.json cron
+
+**問題：**
+- `fetchTIPOExpanded` 每個關鍵字只抓第一頁（10 筆），導致 99 筆後無法成長
+- TIPO 對「數位學習」有 422 筆，但只抓到前 10 筆
+- `vercel.json` 缺少 `/api/cron/patents` 排程，Vercel 從未自動更新
+
+**修正：**
+- `fetchTIPOExpanded(keyword, existingIds)` 加分頁：以 `JPAGE` + `BUTTON: 'GO'` 翻頁
+- 每個關鍵字最多抓 5 頁（50 筆），若整頁全是 cache 已有資料則提早停止
+- `fetchTIPO` 呼叫端傳入 `existingIds` 讓分頁提早終止邏輯正確運作
+- `vercel.json` 新增 `"/api/cron/patents"` 每週二 10:00 自動執行
+
 ## 2026-05-05 (fix-2)
 
 ### patents.html — 修正卡片顯示 [object Object] + section label 白色
