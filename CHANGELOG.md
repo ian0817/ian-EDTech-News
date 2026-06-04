@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-06-04 (fix)
+
+### 專利爬蟲改由 GitHub Actions 排程
+
+**問題：**
+- Vercel IP 自 2026-04-20 起被 TIPO Cloudflare 封鎖（403），Vercel Cron 爬取永遠失敗
+- 2026-05-25 誤將 `/api/cron/patents` 加回 vercel.json，導致每週假性更新 updatedAt 但實際無新資料，下次 cron 因 age < 6d 直接 skip，形成無限迴圈
+- `refreshPatents()` 在 0 筆結果時仍無條件呼叫 `writeCache()`，偽造 updatedAt
+
+**修正：**
+- 新增 `.github/workflows/refresh-patents.yml`：每週一 02:00 UTC 以 GitHub IP 爬 TIPO，commit cache → Vercel 部署 → sync Blob；支援 `workflow_dispatch` 手動觸發
+- `lib/patents.js`：`refreshPatents()` 在 `newItems.length === 0 && existing.length > 0` 時直接 return cached，不觸發 `writeCache()`
+- `vercel.json`：移除 `/api/cron/patents` cron 條目
+
+**需要設定的 GitHub Secrets：**
+- `VERCEL_TOKEN`
+- `GROQ_API_KEY`
+
 ## 2026-05-25 (fix)
 
 ### lib/patents.js — 修正 TIPO 爬蟲缺分頁 + 新增 vercel.json cron
