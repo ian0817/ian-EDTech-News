@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-06-08 (fix)
+
+### 本機 LaunchAgent 排程修復（每日 09:00）
+
+**問題：**
+- GitHub Actions IP 被 TIPO Cloudflare WAF 封鎖，session init 失敗（34 個關鍵字全部 error）
+- 爬蟲完全無法從 GitHub Actions 連接 tiponet.tipo.gov.tw
+
+**根本原因：**
+- TIPO 的 Cloudflare WAF 封鎖 GitHub Actions IP range，和之前封鎖 Vercel 的原因相同
+- `getPage` 不送 Accept-Encoding，TIPO 回傳明文（無壓縮問題）
+- `lib/patents.js` 的表單欄位（`_5_5_T` 等）本身是正確的，無需修改
+
+**修復：**
+- 新增 `~/Library/LaunchAgents/com.edtech.refresh-patents.plist`，每日 09:00 從本機執行 `refresh-patents.sh`
+- 本機 IP 不在 TIPO Cloudflare 封鎖名單，爬蟲可正常執行
+- 驗證：手動觸發成功，找到 1 筆新專利（M682873 護理學習電子裝置），total 330→331
+
+**六月專利現況（2026-06-08）：**
+- 六月一日公告批次：0 筆 EdTech 相關（14 個教育關鍵字全部無符合條件）
+- TIPO 每週公告，下批 6/8 已納入本次爬取
+
 ## 2026-06-04 (fix)
 
 ### 專利爬蟲改由 GitHub Actions 排程
