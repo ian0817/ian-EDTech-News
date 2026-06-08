@@ -1,6 +1,30 @@
 {
   "patents": [
     {
+      "id": "tipo-M682873",
+      "title": "護理學習電子裝置",
+      "patentNumber": "M682873",
+      "filingDate": "2025-12-09",
+      "publicationDate": "2026-05-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M682873",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "涂明香",
+        "蔡幸娟"
+      ],
+      "abstract": "本揭露係一種護理學習電子裝置包含基本資料管理模組用以接收並儲存使用者之個人資料，臨床照護影音模組用以提供臨床照護影音內容，遊戲互動學習模組用以基於臨床照護影音內容產生互動遊戲內容，基於臨床照護影音內容產生課後評量模組，其具有評量題目供使用者作答，以及社群交流模組用以提供使用者於護理學習電子裝置進行使用後加以回饋。",
+      "classifications": [],
+      "matchedKeywords": [
+        "數位學習"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-04T09:10:48.026Z"
+    },
+    {
       "id": "tipo-I925146",
       "title": "企業客製化之個人關注領域學習系統及其方法\nPERSONAL FOCUS FIELD LEARNING SYSTEM FOR ENTERPRISE CUSTOMIZATION AND METHOD THEREOF",
       "patentNumber": "I925146",
@@ -52,6 +76,29 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:37:38.125Z"
+    },
+    {
+      "id": "tipo-I924237",
+      "title": "線上虛擬教室的教學互動方法及其系統",
+      "patentNumber": "I924237",
+      "filingDate": "2024-11-15",
+      "publicationDate": "2026-05-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I924237",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蘇冠融"
+      ],
+      "abstract": "本發明提供一種線上虛擬教室系統的教學互動方法，該包括以下步驟：請求接收步驟，伺服器與複數個終端設備通訊連接，伺服器接收來自複數個終端設備的功能請求，其中，複數個終端設備包括與老師相關的至少一第一終端設備以及與學生相關的複數個第二終端設備；管理步驟，伺服器根據來自複數個第二終端設備的登入請求，偵測並確定參與課堂的學生數量，於第一終端設備上顯示參與者頭像；發言討論步驟，透過第二終端設備發送發言請求，發言請求通過該伺服器於第一終端設備的操作介面上顯示，第一終端設備配置以根據該發言請求選擇並允許複數個第二終端設備的其中之一進行發言；以及獎勵步驟，在發言討論過程中，根據學生的參與表現，第一終端設備配置以透過其操作介面向第二終端設備發放獎勵，並顯示於第二終端設備的操作介面上。本發明亦提供一種線上虛擬教室系統，藉由本發明，提升線上教學的互動性和參與度，確保課堂管理有序進行，並能即時處理設備問題，保障教學過程的順暢運行。透過動態管理和多媒體展示，本發明增強了虛擬教室中的教學體驗。",
+      "classifications": [],
+      "matchedKeywords": [
+        "課堂互動"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-04T09:14:08.444Z"
     },
     {
       "id": "tipo-I924559",
@@ -5124,6 +5171,32 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:54:40.915Z"
+    },
+    {
+      "id": "tipo-I805181",
+      "title": "用於蝕刻製程的補償方法、補償系統及深度學習系統\nA COMPENSATION METHOD AND SYSTEM USING FOR AN ETCHING PROCESS, AND DEEP LEARNING SYSTEM",
+      "patentNumber": "I805181",
+      "filingDate": "2022-01-10",
+      "publicationDate": "2023-06-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I805181",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "鄒嘉駿",
+        "徐敏堂",
+        "王怡樺",
+        "李偉聖"
+      ],
+      "abstract": "本發明提出一種用於蝕刻製程的補償方法，包括：拍攝經一蝕刻製程的一工件，以獲得一蝕刻影像；根據該蝕刻影像量測該工件，以獲得該工件的一線路量測資訊；根據該線路量測資訊，計算一蝕刻補償資訊；依據該蝕刻補償資訊產生欲成像的一曝光影像；以及傳送欲成像的該曝光影像至一曝光裝置，以更新該蝕刻製程的曝光底片。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-08T06:04:25.896Z"
     },
     {
       "id": "tipo-M642333",
@@ -11722,9 +11795,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-05-25T03:57:23.194Z",
+  "updatedAt": "2026-06-08T06:07:54.676Z",
   "sources": {
-    "tipo": 229
+    "tipo": 1
   },
   "months": [
     "2026-05",
@@ -11879,5 +11952,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 328
+  "total": 331
 }
