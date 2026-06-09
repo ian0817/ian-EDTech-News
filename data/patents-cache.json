@@ -5102,6 +5102,34 @@
       }
     },
     {
+      "id": "tipo-M644850",
+      "title": "全靜脈營養調配的混合式教學系統\nHybrid teaching system for total parenteral nutrition preparation",
+      "patentNumber": "M644850",
+      "filingDate": "2023-03-08",
+      "publicationDate": "2023-08-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M644850",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "項怡平",
+        "鄭玉琳",
+        "張秀玲",
+        "洪永潤",
+        "趙念芸",
+        "郭人華"
+      ],
+      "abstract": "本創作揭示一種全靜脈營養調配的混合式教學系統，用以改善全靜脈營養調配執行業務藥師所面臨之困境，該系統包括互動介面、教學模組及行政管理模組，其中，該教學模組用以執行並顯示多媒體教學資料於互動介面上，包括技術操作資料、專業知識資料及互動遊戲，該行政管理模組用以執行並顯示行政流程地圖或儀器目錄地圖於該互動介面上；該系統整合教學內容便於執行業務藥師查詢調配業務內容或教育訓練，並結合了遊戲式教學增加課程學習趣味，同時加深學習印象；此外，該系統更整合行政作業管理用於藥劑部或臨床設施等例行性管理，以減少行政處理的時間，令執行業務藥師將更多時間聚焦於臨床操作，以提升病患病患預後品質。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-09T01:02:08.085Z"
+    },
+    {
       "id": "tipo-I811026",
       "title": "自主數位學習評量系統及方法\nAUTONOMOUS DIGITAL LEARNING ASSESSMENT SYSTEM AND METHOD",
       "patentNumber": "I811026",
@@ -5171,6 +5199,31 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:54:40.915Z"
+    },
+    {
+      "id": "tipo-I805868",
+      "title": "使用以深度學習為基礎之缺陷偵測及分類方案用於像素位準影像量化\nUSING DEEP LEARNING BASED DEFECT DETECTION AND CLASSIFICATION SCHEMES FOR PIXEL LEVEL IMAGE QUANTIFICATION",
+      "patentNumber": "I805868",
+      "filingDate": "2019-11-15",
+      "publicationDate": "2023-06-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I805868",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "帕薩吉 哈利",
+        "米那什桑多藍 席娃布拉撒什",
+        "班薩爾 塔納伊"
+      ],
+      "abstract": "一影像中之可能缺陷之一熱圖可表示為對應於各像素之缺陷概率指數之一矩陣。該影像可自從一掃描電子顯微鏡或其他檢測工具之一偵測器接收之資料產生。可量化該影像中之超過該矩陣中之一對應臨限值之像素之一數目。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-09T01:02:21.750Z"
     },
     {
       "id": "tipo-I805181",
@@ -5818,6 +5871,30 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:51:47.364Z"
+    },
+    {
+      "id": "tipo-I770534",
+      "title": "自動機器學習系統效能調優方法、裝置、設備及介質\nAUTOMATIC MACHINE LEARNING SYSTEM PERFORMANCE TUNING METHOD, DEVICE, ELECTRONIC DEVICE AND STORAGE MEDIUM",
+      "patentNumber": "I770534",
+      "filingDate": "2020-06-19",
+      "publicationDate": "2022-07-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I770534",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "劉政岳",
+        "呂宜鴻"
+      ],
+      "abstract": "一種自動機器學習系統效能調優方法、裝置、設備及介質，應用於與自動機器學習系統連接的效能調優裝置，包括獲取自動機器學習系統的預設應用程式介面及系統資源，在自動機器學習系統對一候選深度學習訓練模型進行預訓練時，根據預設應用程式介面獲取其對應的效能指標量測值，根據效能指標量測值及系統資源確定分發策略和/或資源配置策略，根據分發策略和/或資源配置策略對所述候選深度學習訓練模型進行計算資源配置，以使得候選深度學習訓練模型基於所述計算資源配置進行訓練。實現計算資源的動態分配，提高訓練性能。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-09T01:02:21.754Z"
     },
     {
       "id": "tipo-M629358",
@@ -11795,9 +11872,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-08T06:07:54.676Z",
+  "updatedAt": "2026-06-09T01:05:51.701Z",
   "sources": {
-    "tipo": 1
+    "tipo": 3
   },
   "months": [
     "2026-05",
@@ -11952,5 +12029,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 331
+  "total": 334
 }
