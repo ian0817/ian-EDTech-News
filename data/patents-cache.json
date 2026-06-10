@@ -5130,6 +5130,31 @@
       "scrapedAt": "2026-06-09T01:02:08.085Z"
     },
     {
+      "id": "tipo-I810490",
+      "title": "基於虛擬實境的情境式學習系統與運作方法\nVIRTUAL-REALITY BASED SITUATED LEARNING SYSTEM AND METHOD FOR OPERATING THE SAME",
+      "patentNumber": "I810490",
+      "filingDate": "2020-10-06",
+      "publicationDate": "2023-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I810490",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "鄭俊琪",
+        "劉冠麟",
+        "陳佑宗"
+      ],
+      "abstract": "一種基於虛擬實境的情境式學習系統與運作方法，情境式學習系統通過數據介面單元連線一或多個虛擬實境終端裝置，並藉此接收各虛擬實境終端裝置產生的信息，設有一資料庫，用於儲存多種學習模式下的虛擬實境資料、學員資料、教師資料、各虛擬實境終端裝置的註冊資料以及管理者資料，設有一虛擬實境引擎，能根據各學員選擇、教師依據學員程度的設定或自動判斷的學習內容而演算產生一虛擬實境場景的內容，之後載入至學員操作的虛擬實境終端裝置，並開始接收學員的學習回饋資料。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-10T01:02:16.990Z"
+    },
+    {
       "id": "tipo-I811026",
       "title": "自主數位學習評量系統及方法\nAUTONOMOUS DIGITAL LEARNING ASSESSMENT SYSTEM AND METHOD",
       "patentNumber": "I811026",
@@ -9775,6 +9800,29 @@
       "scrapedAt": "2026-05-25T03:52:43.189Z"
     },
     {
+      "id": "tipo-I546781",
+      "title": "教學回饋與複習系統與方法\nSYTEM AND METHOD OF LEARNING FEEDBACK AND LESSON PRACTICE",
+      "patentNumber": "I546781",
+      "filingDate": "2014-03-07",
+      "publicationDate": "2016-08-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I546781",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "翁如玉"
+      ],
+      "abstract": "一種教學回饋與複習系統與方法，其中方法提供學員一個有效取得複習資料的方案，實施例包括可自一對照表取得學員的編號以及對應的試題編號，接著比對試題編號，由一影音資料庫取得對應答錯試題編號的分段錄製的影音解答，之後能夠根據學員登錄的遞送方式進行個別遞送影音解答。其中分段錄製的影音解答係取自在教學過程中根據各試題的教學內容分段錄製的影音資料，但也可於學員答錯試題時，根據答錯試題所錄製的影音資料，這些影音資料將連結各試題編號、各學員編號與時間資訊。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-10T01:02:04.052Z"
+    },
+    {
       "id": "tipo-I541755",
       "title": "線上題庫評量平台及方法",
       "patentNumber": "I541755",
@@ -11872,9 +11920,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-09T01:05:51.701Z",
+  "updatedAt": "2026-06-10T01:05:41.592Z",
   "sources": {
-    "tipo": 3
+    "tipo": 2
   },
   "months": [
     "2026-05",
@@ -11974,6 +12022,7 @@
     "2017-04",
     "2017-01",
     "2016-12",
+    "2016-08",
     "2016-07",
     "2016-05",
     "2016-04",
@@ -12029,5 +12078,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 334
+  "total": 336
 }
