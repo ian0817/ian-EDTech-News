@@ -1,6 +1,55 @@
 {
   "patents": [
     {
+      "id": "tipo-I928950",
+      "title": "語言學習系統以及語言學習方法\nLANGUAGE LEARNING SYSTEM AND METHOD THEREOF",
+      "patentNumber": "I928950",
+      "filingDate": "2025-11-24",
+      "publicationDate": "2026-06-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I928950",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "吳信龍",
+        "呂冠廷",
+        "曹禕中",
+        "呂詠儒"
+      ],
+      "abstract": "語言學習系統包括語音訊號收集單元、聲調辨識模組、自動語音辨識模組、拼音修正模組、中文句子轉換模組以及比對模組。語音訊號收集單元收集語音訊號波形。聲調辨識模組辨識語音訊號波形中每一單字的聲調。自動語音辨識模組辨識語音訊號波形中的每一拼音字母以及每一單字的拼音，形成一字元拼音字串以及一單字拼音字串。拼音修正模組修正字元拼音字串以及單字拼音字串產生修正後拼音字串。中文句子轉換模組轉換修正後拼音字串為中文句子。比對模組比對每一單字聲調以及中文句子中每一單字聲調，標註聲調以及拼音的不同處。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-11T01:02:22.719Z"
+    },
+    {
+      "id": "tipo-I928672",
+      "title": "集成學習系統及方法\nSYSTEM AND METHOD FOR ENSEMBLE LEARNING",
+      "patentNumber": "I928672",
+      "filingDate": "2025-03-17",
+      "publicationDate": "2026-06-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I928672",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "陳質岩"
+      ],
+      "abstract": "提供一種集成學習系統，包含複數從運算裝置及一主運算裝置。每一從運算裝置配置以使用一弱分類器取得一分類結果。主運算裝置配置以自從運算裝置接收分類結果，及基於分類結果輸出最終分類結果。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-11T01:02:22.727Z"
+    },
+    {
       "id": "tipo-M682873",
       "title": "護理學習電子裝置",
       "patentNumber": "M682873",
@@ -11920,11 +11969,12 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-10T01:05:41.592Z",
+  "updatedAt": "2026-06-11T01:05:53.158Z",
   "sources": {
     "tipo": 2
   },
   "months": [
+    "2026-06",
     "2026-05",
     "2026-04",
     "2026-03",
@@ -12078,5 +12128,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 336
+  "total": 338
 }
