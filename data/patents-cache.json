@@ -6079,6 +6079,31 @@
       }
     },
     {
+      "id": "tipo-M628346",
+      "title": "具有人工智慧學習分析功能之車輛事故肇事文本產生系統\nVehicle accident text generation system with artificial intelligence learning and analysis function",
+      "patentNumber": "M628346",
+      "filingDate": "2022-03-07",
+      "publicationDate": "2022-06-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M628346",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "林俊彥",
+        "邱浩恩",
+        "陳韋穎"
+      ],
+      "abstract": "本新型提供一種具有人工智慧學習分析功能之車輛事故肇事文本產生系統，包含碰撞感測模組、定位模組、時序模組、車輛資料模組、文本通用模組、攝像模組以及人工智慧分析模組。碰撞感測模組感測車輛是否發生碰撞。定位模組產生車輛的位置資訊。時序模組產生時間資訊。車輛資料模組儲存車輛的駕駛員資訊。文本通用模組產生文本格式。攝像模組包含影像擷取單元、影像辨識單元及影像處理單元。影像擷取單元產生道路物件資訊。影像辨識單元產生物件辨識資訊。影像處理單元產生物件狀態資訊。人工智慧分析模組接收及分析上述各項資訊及文本格式，並於車輛發生碰撞時，根據各項資訊及文本格式產生車禍事故文本資訊。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習分析"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-12T01:03:54.906Z"
+    },
+    {
       "id": "tipo-I767197",
       "title": "提供語音互動教學的方法及伺服器\nMETHOD AND SERVER FOR PROVIDING INTERACTIVE VOICE TUTORIAL",
       "patentNumber": "I767197",
@@ -11969,9 +11994,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-11T01:05:53.158Z",
+  "updatedAt": "2026-06-12T01:05:47.348Z",
   "sources": {
-    "tipo": 2
+    "tipo": 1
   },
   "months": [
     "2026-06",
@@ -12128,5 +12153,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 338
+  "total": 339
 }
