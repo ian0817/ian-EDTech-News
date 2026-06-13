@@ -2844,6 +2844,29 @@
       }
     },
     {
+      "id": "tipo-I887553",
+      "title": "伺服器裝置、線上學習系統、程式及記憶媒體\nSERVER DEVICE, ON-LINE LEARNING SYSTEM, PROGRAM, AND STORAGE MEDIUM",
+      "patentNumber": "I887553",
+      "filingDate": "2022-06-30",
+      "publicationDate": "2025-06-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I887553",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "菊池参"
+      ],
+      "abstract": "本發明之伺服器裝置具備：登錄資料記憶部，其記憶與官方證明書所記載之資訊對應之使用者登錄資料；臨時資料記憶部，其臨時記憶官方證明書資料；及對照處理部，其進行記憶於上述登錄資料記憶部之使用者登錄資料、與記憶於上述臨時資料記憶部之官方證明書資料之對照；且上述臨時資料記憶部於上述對照處理部中之對照後，不保持用於該對照之官方證明書資料。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-13T01:02:17.323Z"
+    },
+    {
       "id": "tipo-M671805",
       "title": "眼動教學系統\nEYE MOVEMENT TEACHING SYSTEM",
       "patentNumber": "M671805",
@@ -5547,6 +5570,29 @@
       "scrapedAt": "2026-05-25T03:54:28.856Z"
     },
     {
+      "id": "tipo-I789626",
+      "title": "情境引導化的適性語言學習系統及方法\nSITUATION-BASED AND ADAPTIVE LANGUAGE LEARNING SYSTEM AND METHOD THEREOF",
+      "patentNumber": "I789626",
+      "filingDate": "2020-09-04",
+      "publicationDate": "2023-01-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I789626",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "陳鵬文"
+      ],
+      "abstract": "本發明公開一種情境引導化的適性語言學習系統及方法。系統包含伺服器以及物體識別裝置。伺服器具有資料庫，資料庫儲存資料，資料包含多個物體分別的多個物體狀態資料以及其分別相關聯的多個情境學習資料，物體狀態資料包含物體所在的位置。電子裝置連接物體識別裝置，請求物體識別裝置提供物體的資料。物體識別裝置設置於物體所在的一空間內，通過互聯網連接伺服器，傳輸從伺服器取得的物體的資料至電子裝置。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-13T01:02:17.334Z"
+    },
+    {
       "id": "tipo-I789234",
       "title": "學習效果評測系統\nSYSTEM FOR EVALUATING LEARNING EFFECT",
       "patentNumber": "I789234",
@@ -7102,6 +7148,30 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:51:47.364Z"
+    },
+    {
+      "id": "tipo-I727395",
+      "title": "語言發音學習系統及方法\nLANGUAGE PRONUNCIATION LEARNING SYSTEM AND METHOD",
+      "patentNumber": "I727395",
+      "filingDate": "2019-08-15",
+      "publicationDate": "2021-05-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I727395",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "陳盈伶",
+        "賴金輪"
+      ],
+      "abstract": "本發明公開一種語言發音學習系統及方法。資料庫模組儲存不同的多個標準聲音資訊，以及以標準臉型分別發出多個標準聲音資訊的多個口腔結構資訊。標準臉型建模模組依據發出標準聲音資訊的口腔結構資訊，以建立標準臉型發音模型。影像擷取建模模組擷取使用者的臉部的多個特徵，比對多個特徵與口腔結構資訊，以調整標準臉型發音模型為個人臉型發音模型。處理模組提供使用者欲發出的標準聲音資訊的個人臉型發音模型，以及影像擷取建模模組所擷取的使用者的臉部影像，以供使用者練習發音。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-13T01:02:17.334Z"
     },
     {
       "id": "tipo-M611409",
@@ -9629,6 +9699,29 @@
       }
     },
     {
+      "id": "tipo-I596581",
+      "title": "句子圖像化輔助多國語言學習的系統及其方法\nSENTENCE PATTERNING AUXILIARY SYSTEM AND METHOD FOR MULTI-LANGUAGE LEARNING",
+      "patentNumber": "I596581",
+      "filingDate": "2016-07-11",
+      "publicationDate": "2017-08-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I596581",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "范珮瑄"
+      ],
+      "abstract": "本發明為一種句子圖像化輔助多國語言學習的系統及其方法，藉由將非生活用詞、具有多義性或學術性的教學目標單字，內嵌在句子或文章中，並予以圖像化，以圖片方式烘托整個句子或文章，以及教學目標單字的字義。這種方式特別能幫助使用者釐清抽象之非生活用詞、具有多義性之單字或學術單字等抽象意涵單字。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-13T01:02:17.334Z"
+    },
+    {
       "id": "tipo-I596585",
       "title": "綜合線上題庫派卷測驗的學習行事曆教學系統",
       "patentNumber": "I596585",
@@ -10783,6 +10876,31 @@
       ],
       "status": "消滅",
       "scrapedAt": "2026-05-25T03:51:47.364Z"
+    },
+    {
+      "id": "tipo-I446280",
+      "title": "基於自主生物學的學習工具\nAUTONOMOUS BIOLOGICALLY BASED LEARNING TOOL",
+      "patentNumber": "I446280",
+      "filingDate": "2009-03-06",
+      "publicationDate": "2014-07-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I446280",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "杉島健治",
+        "巴特爾　蘇克奇　珍巴哈尹",
+        "卡奇爾　沙尹夫"
+      ],
+      "abstract": "本發明提供基於自主生物學的學習工具系統、以及由該工具系統用來學習與分析的方法。該基於自主生物學的學習工具系統包含(一)一或多種工具系統，實施一組特定的任務或流程，並產生相關於特徵化多種流程與伴隨之工具效能的資產之資產與資料；(二)接收並格式化該資料的互動管理器；(三)基於生物學習原理的自主學習系統。該自主學習系統包括透過網路通訊的記憶平台與處理平台。該網路從工具系統以及透過互動管理器而從外部角色接收資料。記憶平台與處理平台都包含可被遞迴地定義的功能構件與記憶體。同樣地，一或多個工具可採用由下往上的方式來遞迴地部署，其中個別的自主工具係連同其他(不同的或相同的)自主工具一起組裝以形成自主群組工具，而自主群組工具又可接著與其他群組工具一起組裝來形成集團自主工具系統。伴隨個別、群組、集團工具自主學習系統內產生與積聚的知識可加進語意網路內，該語意網路則可根據前後關係而被用來學習以及驅動工具目標。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-13T01:02:17.334Z"
     },
     {
       "id": "tipo-M479483",
@@ -11994,9 +12112,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-12T01:05:47.348Z",
+  "updatedAt": "2026-06-13T01:05:43.871Z",
   "sources": {
-    "tipo": 1
+    "tipo": 5
   },
   "months": [
     "2026-06",
@@ -12116,6 +12234,7 @@
     "2014-10",
     "2014-09",
     "2014-08",
+    "2014-07",
     "2014-06",
     "2014-04",
     "2014-03",
@@ -12153,5 +12272,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 339
+  "total": 344
 }
