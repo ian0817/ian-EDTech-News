@@ -706,6 +706,31 @@
       }
     },
     {
+      "id": "tipo-I918218",
+      "title": "基於AI學習觀察的虛擬人演化系統及其方法\nVIRTUAL HUMAN EVOLUTION SYSTEM BASED ON AI LEARNING OBSERVATION AND METHOD THEREOF",
+      "patentNumber": "I918218",
+      "filingDate": "2024-11-05",
+      "publicationDate": "2026-03-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I918218",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "邱全成",
+        "顏大衛",
+        "姜秋龍"
+      ],
+      "abstract": "一種基於AI學習觀察的虛擬人演化系統及其方法，透過在虛擬人物觸發對談事件時，持續錄製語音以生成完整對談語音，並且通過語音轉文字技術將完整語音轉換為完整對談訊息，再將完整對談訊息作為新訓練資料以輸入至預先訓練完成的語言模型，以便對語言模型進行重新訓練，以及將完整對談訊息輸入至個性分析模型以獲得真人個性資料，並且根據真人個性資料動態調整虛擬人物的虛擬個性資料，藉以達到提高虛擬人物的互動契合性之技術功效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "AI學習"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-15T01:40:29.865Z"
+    },
+    {
       "id": "tipo-I918112",
       "title": "學校錄取預測系統與學校錄取預測方法\nSCHOOL ADMISSION PREDICTION SYSTEM AND METHOD",
       "patentNumber": "I918112",
@@ -914,6 +939,30 @@
           }
         ]
       }
+    },
+    {
+      "id": "tipo-I916253",
+      "title": "大數據自適應智慧交通控制系統",
+      "patentNumber": "I916253",
+      "filingDate": "2025-04-25",
+      "publicationDate": "2026-02-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I916253",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "陳國修",
+        "顏湘芸"
+      ],
+      "abstract": "本發明為涉及一種大數據自適應智慧交通控制系統，藉由一線上地圖連結單元隨時擷取一線上地圖之交通即時資訊，並將交通即時資訊儲存於一資料庫，並產生一交通歷史資訊，此時除透過一人工智慧整合單元接收來自至少一路口偵測器之偵測資訊外，更由一半監督式深度學習訓練模組整合交通歷史資訊及一儲存單元內的交通建議資訊而予以訓練出一人工智慧號誌控制模型，再透過一深度強化學習動態號誌模組接收交通即時資訊及偵測資訊以供人工智慧號誌控制模型進行學習並更新，再由一交通號誌控制單元根據人工智慧號誌控制模型所提供之一控制指令，以對一路口交通號誌進行控制，達到優化路口順暢度之優勢。",
+      "classifications": [],
+      "matchedKeywords": [
+        "AI學習"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-15T01:40:29.870Z"
     },
     {
       "id": "tipo-M680368",
@@ -12112,9 +12161,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-13T01:05:43.871Z",
+  "updatedAt": "2026-06-15T01:40:30.710Z",
   "sources": {
-    "tipo": 5
+    "tipo": 2
   },
   "months": [
     "2026-06",
@@ -12272,5 +12321,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 344
+  "total": 346
 }
