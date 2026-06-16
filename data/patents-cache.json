@@ -9855,6 +9855,30 @@
       }
     },
     {
+      "id": "tipo-I591501",
+      "title": "書籍內容數位化互動系統及方法",
+      "patentNumber": "I591501",
+      "filingDate": "2016-10-19",
+      "publicationDate": "2017-07-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I591501",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "李昆璟",
+        "連育仁"
+      ],
+      "abstract": "本發明有關於一種書籍內容數位化互動系統及方法，其係將經數位化之書籍或文本儲存於系統中，再透過使用者的外部行動裝置對實體書籍或文本拍照經特定應用程式上傳，系統辨識拍攝的實體書籍或文本頁面內容，並據以提供預設所對應的多種練習，給予使用者進行練習機會的方法，而使用者對該些練習作答之結果亦可被反饋置系統且進一步受評分，本發明係一種為實體文本增添數位附加價值，且提供老師有效數位輔助教學的系統與方法。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學輔助"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-16T01:03:03.632Z"
+    },
+    {
       "id": "tipo-201724055",
       "title": "遙控操作電子書的教學方法及其智慧型裝置\nTeaching method for remotely controlling operation of e-books and smart device thereof",
       "patentNumber": "201724055",
@@ -12161,9 +12185,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-15T01:40:30.710Z",
+  "updatedAt": "2026-06-16T01:06:08.627Z",
   "sources": {
-    "tipo": 2
+    "tipo": 1
   },
   "months": [
     "2026-06",
@@ -12321,5 +12345,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 346
+  "total": 347
 }
