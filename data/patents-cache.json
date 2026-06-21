@@ -1,6 +1,78 @@
 {
   "patents": [
     {
+      "id": "tipo-M684319",
+      "title": "教育訓練管理系統",
+      "patentNumber": "M684319",
+      "filingDate": "2026-01-06",
+      "publicationDate": "2026-06-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M684319",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "許妙渝"
+      ],
+      "abstract": "本創作係一種教育訓練管理系統，其包含控制機構、培訓計畫管理機構、課程與報名管理機構、線上測驗機構以及培訓成效追蹤與回饋循環機構。藉此，可作為企業內部部署環境及跨模組資料整合之教育訓練管理系統，藉以支援完整之教育訓練循環，並可視化呈現教育訓練管理之各式資料，以生成跨模組投資回報率分析與決策建議，而達到完整體規劃以及有效管理員工教育訓練之功效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "線上測驗"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-21T01:24:32.145Z"
+    },
+    {
+      "id": "tipo-M684536",
+      "title": "結合部分生成式影像與引導式人為彩繪之混合式繪畫創作與教學系統",
+      "patentNumber": "M684536",
+      "filingDate": "2026-03-23",
+      "publicationDate": "2026-06-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M684536",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "羅慧兒"
+      ],
+      "abstract": "本創作揭露一種結合部分生成式影像與引導式人為彩繪之混合式繪畫創作與教學系統。該系統透過生成模型依據使用者輸入產生未完全完成之繪畫影像，並保留部分可供使用者進行彩繪之區域，同時生成對應之彩繪指示資訊。使用者依該指示完成畫作後，可透過系統進行影像上傳與分析回饋，並可進一步由教師介入提供修正建議及實際代筆指導。此外，本創作創作亦可記錄創作過程並生成對應之區塊鏈憑證，以確保創作之不可否認性與權利歸屬。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-21T02:25:48.254Z"
+    },
+    {
+      "id": "tipo-I929592",
+      "title": "語言互動學習系統及方法\nLANGUAGE INTERACTION LEARNING SYSTEM AND METHOD",
+      "patentNumber": "I929592",
+      "filingDate": "2024-11-11",
+      "publicationDate": "2026-06-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I929592",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "曾培榮",
+        "鄭博閎",
+        "陳姿妤",
+        "潘柏瑋"
+      ],
+      "abstract": "一種語言互動學習系統，包含一麥克風單元、一揚聲單元、一顯示單元、一儲存單元及一控制單元。該儲存單元儲存一語言資料庫、複數學習畫面及複數預定回答，每一該學習畫面界定一提問區域。該控制單元具有一語音識別模組、一文字生成模組及一語音合成模組，該語音合成模組輸出對應於該提問區域的信號至該揚聲單元，該語音識別模組將該麥克風單元之輸入轉為一回答文字訊息，該文字生成模組判斷該回答文字訊息是否符合該提問區域對應的該預定回答，若否，該文字生成模組根據該回答文字訊息讀取該語言資料庫而產生一引導對話，並輸出為語音。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-21T02:26:01.242Z"
+    },
+    {
       "id": "tipo-I928950",
       "title": "語言學習系統以及語言學習方法\nLANGUAGE LEARNING SYSTEM AND METHOD THEREOF",
       "patentNumber": "I928950",
@@ -12185,9 +12257,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-16T01:06:08.627Z",
+  "updatedAt": "2026-06-21T06:29:25.493Z",
   "sources": {
-    "tipo": 1
+    "tipo": 3
   },
   "months": [
     "2026-06",
@@ -12345,5 +12417,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 347
+  "total": 350
 }
