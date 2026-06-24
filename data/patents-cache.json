@@ -10617,6 +10617,30 @@
       "scrapedAt": "2026-05-25T03:52:31.401Z"
     },
     {
+      "id": "tipo-I494891",
+      "title": "雲端課程市集教學系統\nCOURSE MARKET LEARNING SYSTEM IN INTERNET CLOUD",
+      "patentNumber": "I494891",
+      "filingDate": "2013-06-19",
+      "publicationDate": "2015-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I494891",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "曾森彥",
+        "吳剛志"
+      ],
+      "abstract": "本發明為一種雲端課程市集教學系統，其包括一雲端課程市集儲存模組以及一雲端課程市集學習管理系統，其中雲端課程市集儲存模組包括至少一企業私有課程儲存單元及一公開套裝課程儲存單元，雲端課程市集學習管理系統包括一控制中心模組及至少一互動平台模組。藉由雲端課程市集教學系統的設置，企業客戶不但可直接使用公開套裝課程儲存單元的資源，也可在企業私有課程儲存單元中自行建置內部的訓練資源，並可有即時內容增修、儲存、傳遞或使用的彈性，更可以達到全球建置、規模經濟、及以量制價降低建置與使用成本之功效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-06-24T01:00:14.951Z"
+    },
+    {
       "id": "tipo-201528229",
       "title": "用於可適性知識評鑑及學習之系統及方法\nSYSTEM AND METHOD FOR ADAPTIVE KNOWLEDGE ASSESSMENT AND LEARNING",
       "patentNumber": "201528229",
@@ -12358,9 +12382,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-23T01:05:30.204Z",
+  "updatedAt": "2026-06-24T01:05:30.690Z",
   "sources": {
-    "tipo": 4
+    "tipo": 1
   },
   "months": [
     "2026-06",
@@ -12519,5 +12543,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 354
+  "total": 355
 }
