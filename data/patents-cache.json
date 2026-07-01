@@ -1,6 +1,54 @@
 {
   "patents": [
     {
+      "id": "tipo-M684993",
+      "title": "多態樣單字學習平台\nMULTIMODAL VOCABULARY LEARNING PLATFORM",
+      "patentNumber": "M684993",
+      "filingDate": "2026-04-16",
+      "publicationDate": "2026-07-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M684993",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "王冠程"
+      ],
+      "abstract": "本創作提供一種高學習效率及高單字理解性與應用性的多態樣單字學習平台，包含：一單字列表介面，包含複數個單字，該單字包含複數個學習模式選項；一拼音練習區，訊號連結該單字列表介面，該拼音練習區提供一空白拼音區並隱藏該空白拼音區對應的該單字；一影像學習介面，訊號連結該單字列表介面，該影像學習介面顯示對應該單字的一影像，並同時顯示對應該影像的一字幕；及一字源解析介面，訊號連結該單字列表介面，該字源解析介面提供對應該單字的一字源資訊。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-01T01:00:59.143Z"
+    },
+    {
+      "id": "tipo-I931114",
+      "title": "多模態智能單字卡學習系統\nMULTIMODAL INTELLIGENT SINGLE-WORD CARD LEARNING SYSTEM",
+      "patentNumber": "I931114",
+      "filingDate": "2025-06-20",
+      "publicationDate": "2026-07-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I931114",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "林峰正",
+        "葉星豪",
+        "張景泰"
+      ],
+      "abstract": "一種多模態智能單字卡學習系統，其整合視覺語言模型、自然語言處理與智慧分析技術，能夠自動解析圖像與文字資料，轉換為具有互動性的單字學習卡片；本發明包括輸入模組、預處理模組、智能分析模組、知識生成模組與輸出模組，各模組依序執行圖文資料接收、影像正規化、語意分析、知識抽取與內容生成，並最終輸出個人化學習建議與單字卡內容；學習者可上傳多種格式資料，本發明將依據其學習歷程與答題行為，調整學習策略並提供間隔複習建議，提升學習效率與記憶保留。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-01T01:03:08.918Z"
+    },
+    {
       "id": "tipo-M684319",
       "title": "教育訓練管理系統",
       "patentNumber": "M684319",
@@ -122,6 +170,33 @@
       "scrapedAt": "2026-06-11T01:02:22.727Z"
     },
     {
+      "id": "tipo-M683208",
+      "title": "自我導向學習互動式雲端平台",
+      "patentNumber": "M683208",
+      "filingDate": "2025-12-08",
+      "publicationDate": "2026-05-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M683208",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "涂明香",
+        "林梅香",
+        "蔡榮美",
+        "李玉霞",
+        "張力允"
+      ],
+      "abstract": "本創作是一種自我導向學習互動式雲端平台，包含有；一資料庫；其內設置有一註冊資料模組、一遊戲模組以及一專業知識資料模組位於該資料庫內；一互動討論單元；一伺服端處理單元，該伺服端處理單元電性連結至該資料庫以及該互動討論單元；一用戶端處理單元，該用戶端處理單元可接收來自該伺服端處理單元的資料庫以及互動討論單元的資料。使用者可以透過一行動裝置登入該用戶端處理單元，以達成隨時隨地自主學習，以更靈活、更方便的方式進行持續學習，提升學習興趣與成效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-01T01:03:08.919Z"
+    },
+    {
       "id": "tipo-M682873",
       "title": "護理學習電子裝置",
       "patentNumber": "M682873",
@@ -197,6 +272,32 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:37:38.125Z"
+    },
+    {
+      "id": "tipo-202618582",
+      "title": "教育整合系統及其使用方法\nEDUCATION INTEGRATION SYSTEM AND METHOD FOR USING",
+      "patentNumber": "202618582",
+      "filingDate": "2024-10-28",
+      "publicationDate": "2026-05-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^202618582",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "譚慶鼎",
+        "黃美鑾",
+        "黃詩婷",
+        "黃思云"
+      ],
+      "abstract": "一種教育整合系統，包括通訊模組、資訊儲存模組、資訊處理模組及資訊管控模組。上述通訊模組用以接收及傳輸資訊。上述資訊儲存模組用以儲存病患資訊及疾病衛教資訊。上述資訊處理模組使用一生成式人工智慧模型或一自然語言模型根據上述使用者要求資訊或上述使用者語音資訊進行分析，並生成與上述使用者要求資訊或上述使用者語音資訊的相應的一回應資訊或一語音回應資訊。上述資訊管控模組用以根據一內容控管條件以過濾上述回應資訊或上述語音回應資訊。\nA education integration system includes a communication module, an information storage module, an information processing module, and an information control module. The communication module is configured to receive and transmit information. The information storage module is configured to store patient information and disease education information. The information processing module utilizes a generative artificial intelligence model or a natural language model to analyze the user request information or the user voice information, and generates a corresponding response information or voice response information related to the user request information or the user voice information. The information control module is configured to filter the response information or the voice response information based on a content control condition.",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學評量"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核駁",
+      "scrapedAt": "2026-07-01T01:05:47.620Z"
     },
     {
       "id": "tipo-I924237",
@@ -12382,11 +12483,12 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-06-24T01:05:30.690Z",
+  "updatedAt": "2026-07-01T01:07:37.758Z",
   "sources": {
-    "tipo": 1
+    "tipo": 4
   },
   "months": [
+    "2026-07",
     "2026-06",
     "2026-05",
     "2026-04",
@@ -12543,5 +12645,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 355
+  "total": 359
 }
