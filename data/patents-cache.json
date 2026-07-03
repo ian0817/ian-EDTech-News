@@ -10695,6 +10695,33 @@
       "scrapedAt": "2026-05-25T03:52:54.847Z"
     },
     {
+      "id": "tipo-I501208",
+      "title": "用於教育發展之浸入式和互動式之電腦實施系統、媒體及方法\nIMMERSIVE AND INTERACTIVE COMPUTER-IMPLEMENTED SYSTEM, MEDIA, AND METHOD FOR EDUCATION DEVELOPMENT",
+      "patentNumber": "I501208",
+      "filingDate": "2011-11-15",
+      "publicationDate": "2015-09-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I501208",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "道雷　道格",
+        "麥克卡弗瑞　威廉",
+        "尤斯特　史堤芬尼",
+        "哈德瑞　大衛",
+        "柏斯　李"
+      ],
+      "abstract": "針對1至10歲兒童的電腦實施系統，包含使得數位處理設備提供至少三個適合兒童之科目的視聽內容的手段，其中每個科目包含數個學習層級；使得數位處理設備可提供數個與每個科目相關之活動的手段；其中數個活動朝一或多個科目中的教育目標教授；其中數個活動實質上不含一或多個不朝著科目中教育目標教授的活動；使得數位處理設備可監測兒童在每個科目中之進度的手段；使得數位處理設備可獎勵兒童完成活動的手段；及使得數位處理設備可創建代表兒童虛擬化身的手段。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-03T01:03:15.785Z"
+    },
+    {
       "id": "tipo-M509389",
       "title": "線上題庫評量平台\nOnline exam questions database evaluation platform",
       "patentNumber": "M509389",
@@ -12529,9 +12556,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-02T01:07:04.950Z",
+  "updatedAt": "2026-07-03T01:07:53.494Z",
   "sources": {
-    "tipo": 2
+    "tipo": 1
   },
   "months": [
     "2026-07",
@@ -12692,5 +12719,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 361
+  "total": 362
 }
