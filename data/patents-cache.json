@@ -10696,6 +10696,31 @@
       }
     },
     {
+      "id": "tipo-I503802",
+      "title": "網路教學資源互動系統",
+      "patentNumber": "I503802",
+      "filingDate": "2013-04-30",
+      "publicationDate": "2015-10-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I503802",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "尤弘志",
+        "黃俊傑",
+        "曾茂榮"
+      ],
+      "abstract": "本創作之網路教學資源互動系統，主要於系統端之至少一伺服器主機內預載有一會員資料庫、一教材資料庫、一管理模組，以及一啟用介面；其中，啟用介面係至少建立有一學習選項、一教導選項、一頻道選項、一創作選項、一組群選項。使用者可使用其用戶端連結裝置透過網際網路連接伺服器主機，且登入啟用介面即可視其權限，啟用系統所提供之學習、教導、發佈教材、創作、組群討論等功能。俾有助於使用者透過網際網路快速取得學習教材及知識，且將學習教材及知識之內容整理成為筆記或提供組群學習的學習資源。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-08T01:00:50.620Z"
+    },
+    {
       "id": "tipo-M509957",
       "title": "試卷批改系統\nON-LINE TESTING SYSTEM FOR CORRECTING ANSWER",
       "patentNumber": "M509957",
@@ -12605,9 +12630,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-04T07:12:41.901Z",
+  "updatedAt": "2026-07-08T01:06:30.969Z",
   "sources": {
-    "tipo": 2
+    "tipo": 1
   },
   "months": [
     "2026-07",
@@ -12769,5 +12794,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 364
+  "total": 365
 }
