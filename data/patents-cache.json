@@ -1,6 +1,60 @@
 {
   "patents": [
     {
+      "id": "tipo-M685344",
+      "title": "整合多元智慧型教學系統",
+      "patentNumber": "M685344",
+      "filingDate": "2026-04-24",
+      "publicationDate": "2026-07-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M685344",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "張淑萍",
+        "馬均榕",
+        "林芊君",
+        "張佑丞",
+        "翁郁琇",
+        "江雅娟",
+        "游聖心",
+        "蔡昕融"
+      ],
+      "abstract": "一種整合多元智慧型教學系統，其包括一第一教室系統、一第二教室系統以及一中繼裝置。第一教室系統具有一第一控制裝置以及與第一控制裝置訊號連接的至少一第一教師端電子白板裝置及第一影音擷取裝置。第二教室系統具有一第二控制裝置以及與第二控制裝置訊號連接的至少一第二教師端電子白板裝置及第二影音擷取裝置。由第一影音擷取裝置擷取的影像及聲音經由中繼裝置傳送至第二控制裝置且由第二教師端電子白板裝置顯示及播放且/或第二影音擷取裝置擷取的影像及聲音經由中繼裝置傳送至第一控制裝置且由該第一教師端電子白板裝置顯示及播放。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-14T01:02:33.364Z"
+    },
+    {
+      "id": "tipo-I932323",
+      "title": "虛擬教室教學裝置及其教學方法\nVIRTUAL CLASSROOM TEACHING DEVICE AND TEACHING METHOD THEREOF",
+      "patentNumber": "I932323",
+      "filingDate": "2025-07-10",
+      "publicationDate": "2026-07-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I932323",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "陳建雄",
+        "程秋華"
+      ],
+      "abstract": "本發明提供一種虛擬教室教學裝置及其教學方法，其裝置說明如下。教材格式辨識模組可供輸入複數個數位教材並自動辨識及轉換該些數位教材之格式，以對應產生具有相同檔案格式且可拆解之複數個模組化教案單元。模組化重組引擎模組可依據學習者之學習行為與學習成效，進行該些模組化教案單元之順序調整、補強與最佳化推薦。虛擬教師控制模組可用以驅動一虛擬教師影像與學習者進行互動與教學回應，且此虛擬教師影像具有語音識別、語意理解與非語言指令辨識之功能。回饋偵測與行為分析模組可用以收集此學習者之即時學習狀態數據係並根據此即時學習狀態數據作為推播推薦依據。",
+      "classifications": [],
+      "matchedKeywords": [
+        "互動教學"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-14T01:03:00.290Z"
+    },
+    {
       "id": "tipo-M684993",
       "title": "多態樣單字學習平台\nMULTIMODAL VOCABULARY LEARNING PLATFORM",
       "patentNumber": "M684993",
@@ -6964,6 +7018,33 @@
       }
     },
     {
+      "id": "tipo-I746381",
+      "title": "利用深度學習分析眼振感測資料的方法及眼振感測分析系統",
+      "patentNumber": "I746381",
+      "filingDate": "2021-02-25",
+      "publicationDate": "2021-11-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I746381",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "吳靖農",
+        "羅盛典",
+        "范佐搖",
+        "陳嶽鵬",
+        "郭昶甫"
+      ],
+      "abstract": "一種利用深度學習分析眼振感測資料的方法，包含：使用多個參考患者的多個取樣參考眼振感測資料、多個取樣誘導模板資料及多個標註資料，以對比式學習訓練神經網絡模型以產生第一分析模型；根據參考患者的多個參考中樞異常機率統計數值及標註資料，使用分類演算法訓練分類模型以產生第二分析模型；根據每一取樣待分析眼振感測資料及對應的取樣誘導模板資料，使用第一分析模型產生待分析中樞異常機率；根據多個待分析中樞異常機率統計數值，使用第二分析模型產生指示目標患者中樞正常或異常的分類結果。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習分析"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-07-14T01:04:23.664Z"
+    },
+    {
       "id": "tipo-I745995",
       "title": "教學輔助系統",
       "patentNumber": "I745995",
@@ -10333,6 +10414,59 @@
       "scrapedAt": "2026-05-25T03:52:43.189Z"
     },
     {
+      "id": "tipo-M532075",
+      "title": "多元記憶力學習系統\nMultiple memory learning system",
+      "patentNumber": "M532075",
+      "filingDate": "2016-07-18",
+      "publicationDate": "2016-11-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M532075",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "吳婷婷",
+        "黃臆名",
+        "趙芷瑋",
+        "陳嶧興"
+      ],
+      "abstract": "本創作有關於一種多元記憶力學習系統，其包括有一處理模組，係包含有一紀錄單元、一計時單元以及一學習題庫單元；一顯示模組，係包含有至少一個操作介面；一配對模組，透過顯示模組將學習題庫單元之題目與答案作相對應之配對；一判斷模組，係提供判斷配對模組之配對結果為正確或錯誤且由一計數單元統計次數；以及一複習模組，包含一標記單元，以提供學習題庫單元之總結複習；藉此，由互動學習記憶方式以提升學習者的記憶力。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-07-14T01:02:48.342Z"
+    },
+    {
+      "id": "tipo-I557598",
+      "title": "腦波及手勢控制之回饋學習系統及其方法\nFEEDBACK LEARNING SYSTEM AND METHOD THEREOF BASED ON BRAINWAVE AND GESTURE CONTROLS",
+      "patentNumber": "I557598",
+      "filingDate": "2015-05-26",
+      "publicationDate": "2016-11-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I557598",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "林佩蓉",
+        "陳永詮",
+        "巫紹佑",
+        "林坤炳",
+        "廖崇硯"
+      ],
+      "abstract": "本發明係揭露一種腦波及手勢控制之回饋學習系統及其方法，此系統包含投影片播放裝置、腦波量測裝置、手勢偵測裝置以及雲端伺服裝置。投影片播放裝置可用以播放教學投影片。腦波量測裝置可用以持續量測觀看教學投影片之使用者之腦波讀數並傳送此腦波讀數。手勢偵測裝置可用以偵測觀看教學投影片之使用者之手勢以產生控制訊息或回饋訊息，並透過控制訊息控制教學投影片之播放以及記錄並傳送此回饋訊息，雲端伺服裝置可根據腦波讀數以及回饋訊息以產生統整資訊。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-07-14T01:02:48.342Z"
+    },
+    {
       "id": "tipo-I546781",
       "title": "教學回饋與複習系統與方法\nSYTEM AND METHOD OF LEARNING FEEDBACK AND LESSON PRACTICE",
       "patentNumber": "I546781",
@@ -12630,9 +12764,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-08T01:06:30.969Z",
+  "updatedAt": "2026-07-14T01:06:13.639Z",
   "sources": {
-    "tipo": 1
+    "tipo": 5
   },
   "months": [
     "2026-07",
@@ -12735,6 +12869,7 @@
     "2017-04",
     "2017-01",
     "2016-12",
+    "2016-11",
     "2016-08",
     "2016-07",
     "2016-05",
@@ -12794,5 +12929,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 365
+  "total": 370
 }
