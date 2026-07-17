@@ -6209,6 +6209,31 @@
       "scrapedAt": "2026-05-25T03:51:47.364Z"
     },
     {
+      "id": "tipo-I778900",
+      "title": "手術術式標記與教學系統及其方法\nMARKING AND TEACHING OF SURGICAL PROCEDURE SYSTEM AND METHOD THEREOF",
+      "patentNumber": "I778900",
+      "filingDate": "2021-12-28",
+      "publicationDate": "2022-09-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I778900",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "李宇倢",
+        "沈易達",
+        "蔣新曼"
+      ],
+      "abstract": "一種手術術式標記與教學系統及其方法，當使用者介面的手術圖像選取區中待標記手術圖像名稱被選取時，使用者介面的手術圖像標記區顯示對應的待標記手術圖像，使用者介面的手術標記選取區中手術標記區塊被選取時，於手術圖像標記區進行手術標記區域的圈選以建立手術特徵標記，由教學介面對已標記的手術圖像與待標記手術圖像相互映射，以提供與待標記手術圖像對應的手術術式教學，藉此可以達成透過標記參考手術圖像以輔助待標記手術圖像進行標記圈選進而提供手術術式教學的技術功效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-17T01:02:25.081Z"
+    },
+    {
       "id": "tipo-M631873",
       "title": "主題式線上互動教學系統\nThematic online interactive teaching system",
       "patentNumber": "M631873",
@@ -12764,9 +12789,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-14T01:06:13.639Z",
+  "updatedAt": "2026-07-17T01:06:10.556Z",
   "sources": {
-    "tipo": 5
+    "tipo": 1
   },
   "months": [
     "2026-07",
@@ -12929,5 +12954,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 370
+  "total": 371
 }
