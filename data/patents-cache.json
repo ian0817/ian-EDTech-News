@@ -4725,6 +4725,30 @@
       "scrapedAt": "2026-05-25T03:53:33.375Z"
     },
     {
+      "id": "tipo-I852581",
+      "title": "具備高可信度音頻質量檢測的語言學習系統\nSPEAKING TRAINING SYSTEM WITH RELIABLE DESIGN FOR GOODNESS OF PRONUNCIATION",
+      "patentNumber": "I852581",
+      "filingDate": "2023-05-24",
+      "publicationDate": "2024-08-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I852581",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "郭晶晶",
+        "劉 恕"
+      ],
+      "abstract": "高可信度音頻質量檢測技術，在一數據處理服務器上運行一數據預處理系統、以及一音頻質量檢測系統。該數據預處理系統包括一標註系統、以及一音頻預處理系統，用以根據一文本、以及用戶朗讀該文本的一音頻，分別產生一標註、以及一音頻數據。該音頻質量檢測系統是基於該標註、以及該音頻數據為該音頻打分。該標註系統包括一人工智慧模型，響應該文本包括多音單詞的狀況而產生該標註。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-18T03:19:08.471Z"
+    },
+    {
       "id": "tipo-I849429",
       "title": "虛擬實體雲端共學整合式教學系統及教學方法\nINTEGRATED VIRTUAL- PHYSICAL CLOUD CO-LEARNING TEACHING SYSTEM AND TEACHING METHOD",
       "patentNumber": "I849429",
@@ -12789,7 +12813,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-17T01:06:10.556Z",
+  "updatedAt": "2026-07-18T06:21:43.546Z",
   "sources": {
     "tipo": 1
   },
@@ -12954,5 +12978,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 371
+  "total": 372
 }
