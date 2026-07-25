@@ -2673,6 +2673,30 @@
       "scrapedAt": "2026-05-25T03:53:33.375Z"
     },
     {
+      "id": "tipo-I892076",
+      "title": "向量化立體模型機器學習方法與學習系統\nMACHINE-LEARNING METHOD FOR VECTORIZED THREE-DIMENSIONAL MODEL AND LEARNING SYSTEM THEREOF",
+      "patentNumber": "I892076",
+      "filingDate": "2023-02-02",
+      "publicationDate": "2025-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I892076",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "王定遠",
+        "劉維晉"
+      ],
+      "abstract": "一種向量化立體模型機器學習方法與學習系統，其中學習系統通過一電腦系統運行向量化立體模型機器學習方法，在方法中，先取得針對目標物件產生的工程設計圖或立體掃描檔案，立體掃描檔案包括對目標物件的每個部件依照姿態、風格以及/或角度取像得出的影像，經轉換工程設計圖或立體掃描檔案為可用以渲染影像的檔案後，可以一渲染程式渲染出多張多樣態仿真影像，大量的仿真影像形成一訓練集，提供機器學習演算法訓練一人工智能模型。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-25T03:51:08.544Z"
+    },
+    {
       "id": "tipo-202531135",
       "title": "學習卡片的生成方法及電子裝置\nSTUDY CARD GENERATION METHOD AND ELECTRONIC APPARATUS",
       "patentNumber": "202531135",
@@ -12836,7 +12860,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-22T01:06:45.684Z",
+  "updatedAt": "2026-07-25T07:55:29.510Z",
   "sources": {
     "tipo": 1
   },
@@ -13001,5 +13025,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 373
+  "total": 374
 }
