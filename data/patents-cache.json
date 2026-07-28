@@ -6282,6 +6282,29 @@
       "scrapedAt": "2026-07-17T01:02:25.081Z"
     },
     {
+      "id": "tipo-I777277",
+      "title": "用於人工智慧學習之處理方法及裝置、設備及存儲介質\nPROCESSING METHOD AND DEVICE FOR ARTIFICIAL INTELLIGENCE LEARNING, ELECTRONIC DEVICE, AND STORAGE UNIT",
+      "patentNumber": "I777277",
+      "filingDate": "2020-10-20",
+      "publicationDate": "2022-09-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I777277",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "顏健武"
+      ],
+      "abstract": "一種用於人工智慧學習之處理方法，包括：將模型構建為包括多個第一節點之有向圖，所述模型包括多個任務，多個所述第一節點代表之任務由中央處理器及圖形處理器執行；確定所述第一節點中由所述圖形處理器執行之任務對應之第二節點構成之第二節點子圖；確定所述第二節點子圖中之有向無環子圖；合併包括至少兩個第二節點之有向無環子圖中之所述至少兩個第二節點代表之任務為一個任務。本案還提供一種裝置、設備及存儲介質，可合併循序執行，不會回頭，不會迴圈執行之由所述圖形處理器執行之任務，來減少所述中央處理器需要處理之中斷。",
+      "classifications": [],
+      "matchedKeywords": [
+        "人工智慧學習"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-28T01:06:11.750Z"
+    },
+    {
       "id": "tipo-M631873",
       "title": "主題式線上互動教學系統\nThematic online interactive teaching system",
       "patentNumber": "M631873",
@@ -12860,7 +12883,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-25T07:55:29.510Z",
+  "updatedAt": "2026-07-28T01:07:00.142Z",
   "sources": {
     "tipo": 1
   },
@@ -13025,5 +13048,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 374
+  "total": 375
 }
