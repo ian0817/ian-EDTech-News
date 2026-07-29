@@ -4698,6 +4698,31 @@
       }
     },
     {
+      "id": "tipo-I853134",
+      "title": "基於深度學習的自適應超取樣樣本選擇\nDEEP LEARNING BASED SELECTION OF SAMPLES FOR ADAPTIVE SUPERSAMPLING",
+      "patentNumber": "I853134",
+      "filingDate": "2020-12-22",
+      "publicationDate": "2024-08-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I853134",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "波爾 丹尼爾",
+        "馬歇 卡爾",
+        "潘尼爾 賽瓦庫瑪"
+      ],
+      "abstract": "本發明揭露一種促進基於深度學習的自適應超取樣之樣本選擇的設備。該設備包含一個或多個處理元件以：接收訓練資料，該訓練資料包含複數輸入磚及該等輸入磚之對應的複數超取樣值，其中各該輸入磚包含複數個像素；以及基於該訓練資料訓練機器學習模型，以識別已顯像之像素磚的超取樣等級。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-29T01:02:58.451Z"
+    },
+    {
       "id": "tipo-M659663",
       "title": "電動大客車保養維修技術VR教學系統\nVR education system for electric bus maintenance and repair technology",
       "patentNumber": "M659663",
@@ -12883,7 +12908,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-28T01:07:00.142Z",
+  "updatedAt": "2026-07-29T01:06:53.577Z",
   "sources": {
     "tipo": 1
   },
@@ -13048,5 +13073,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 375
+  "total": 376
 }
