@@ -6112,6 +6112,29 @@
       "scrapedAt": "2026-05-25T03:51:58.900Z"
     },
     {
+      "id": "tipo-M633431",
+      "title": "擴增實境的吞嚥教學系統\nAugmented reality swallowing teaching system",
+      "patentNumber": "M633431",
+      "filingDate": "2022-06-17",
+      "publicationDate": "2022-10-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M633431",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "陳妙言"
+      ],
+      "abstract": "本創作提供一種擴增實境的吞嚥教學系統，包括：一行動裝置；一伺服器，資訊連接於該行動裝置，並預儲存一吞嚥教材APP模組；一下載QR-Code，藉由該行動裝置掃描後，該吞嚥教材APP模組下載於該行動裝置；複數個教材模組，其係彼此不同，且包含於該吞嚥教材APP模組中；以及複數個教材QR-Code，其係彼此不同，藉由該行動裝置分別掃描，使該複數個教材模組分別對應產生一AR教學影像及一教學影片其中之一，其藉由該行動裝置顯示出來。本創作能更逼真及有效的教學，充份滿足了護理人員急需吞嚥專業知識的需要，以解決病患鼻胃管灌食不適的問題。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-07-31T01:02:31.737Z"
+    },
+    {
       "id": "tipo-I781822",
       "title": "鄉土教育遊戲學習系統\nLOCAL EDUCATIONAL GAMING AND LEARNING SYSTEM",
       "patentNumber": "I781822",
@@ -12908,7 +12931,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-29T01:06:53.577Z",
+  "updatedAt": "2026-07-31T01:06:51.456Z",
   "sources": {
     "tipo": 1
   },
@@ -13073,5 +13096,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 376
+  "total": 377
 }
