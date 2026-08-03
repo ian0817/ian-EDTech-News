@@ -1,6 +1,99 @@
 {
   "patents": [
     {
+      "id": "tipo-M685936",
+      "title": "智慧語言測驗學習系統及其平台",
+      "patentNumber": "M685936",
+      "filingDate": "2026-03-31",
+      "publicationDate": "2026-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M685936",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "王冠程"
+      ],
+      "abstract": "本新型揭示一種智慧語言測驗學習系統及其平台，其中，該智慧語言測驗學習系統包含學習測驗架構及教學架構，透過與學習測驗架構進行互動式的學習測驗以及動態的測驗結果分析，令學習者快速掌握學習進度；該學習測驗架構還導入智能化的控管模組，為學習者配置適當的學習計畫；該智慧語言測驗學習系統可以切換至教學架構，教學者藉由出題模組生成測驗內容，或藉由課程模組取得課程內容，隨時掌握教學進度。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:00:56.184Z"
+    },
+    {
+      "id": "tipo-M685944",
+      "title": "具角色語境生成機制的互動式教學系統",
+      "patentNumber": "M685944",
+      "filingDate": "2026-04-01",
+      "publicationDate": "2026-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M685944",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "曹家倫"
+      ],
+      "abstract": "本創作公開一種互動式教學系統，包括儲存裝置、處理器、顯示單元及輸入裝置。儲存裝置儲存有關於每一教學科目之真實知識素材以及每一角色人物所屬之語境風格特徵。處理器依據輸入裝置所選定的教學科目及角色人物，分別擷取對應的真實知識素材以及語境風格特徵，並依據選定角色人物之語境風格特徵，對於擷取出的真實知識素材執行一對話形式的轉換處理，以生成一具備特定角色語境之對話教學內容。藉此，系統在與使用者進行對話互動過程中，能將教學資訊轉化為具特定角色風格之對話式內容，以提升教學的趣味性與學習沉浸感。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:02:27.477Z"
+    },
+    {
+      "id": "tipo-M686156",
+      "title": "語文檢定學習輔助系統及其平台\nLANGUAGE PROFICIENCY TEST LEARNING ASSISTANCE SYSTEM AND PLATFORM THEREOF",
+      "patentNumber": "M686156",
+      "filingDate": "2026-05-27",
+      "publicationDate": "2026-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M686156",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "王冠程"
+      ],
+      "abstract": "本創作提供一種語文檢定學習輔助系統，包含： 一分級模組，獲取一語文程度；一學習模組，訊號連接該分級模組，根據該語文程度提供對應的一學習區塊及對應該學習區塊的一輸入區塊，其中，該學習區塊包含：一文法訓練區、一閱讀訓練區、一寫作訓練區及一口說訓練區；及一評量模組，訊號連接該學習模組，根據輸入該輸入區塊的一練習內容即時提供對應的一評量資訊，藉此，整合多科目的學習資源並提供互動平台，系統化學習規劃，給予即時學習反饋，使學習者得以有效掌握學習狀態變化，提升整體學習效率。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習輔助"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:03:43.764Z"
+    },
+    {
+      "id": "tipo-I931973",
+      "title": "監督式學習的咳嗽聲音正確性判斷系統及其方法\nSUPERVISED LEARNING COUGH SOUND ACCURACY DETERMINATION SYSTEM AND METHOD THEREOF",
+      "patentNumber": "I931973",
+      "filingDate": "2025-01-02",
+      "publicationDate": "2026-07-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I931973",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "朱修儁",
+        "蔡鎮良"
+      ],
+      "abstract": "本發明為一種監督式學習的咳嗽聲音正確性判斷系統及其方法，該監督式學習的咳嗽聲音正確性判斷系統包含音頻收集裝置、轉檔裝置、深度學習裝置、人工智慧判讀裝置與資料庫；其中，轉檔裝置訊號連接音頻收集裝置；深度學習裝置訊號連接轉檔裝置；人工智慧判讀裝置訊號連接深度學習裝置；資料庫訊號連接音頻收集裝置、轉檔裝置、深度學習裝置與人工智慧判讀裝置。本發明以咳嗽辨識和呼吸健康衛教服務的提升，並提供一個有效的呼吸健康預防及延緩失能方案，以讓民眾學習與自我訓練管道，減少醫療需求。",
+      "classifications": [],
+      "matchedKeywords": [
+        "自適應學習"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:06:10.626Z"
+    },
+    {
       "id": "tipo-M685344",
       "title": "整合多元智慧型教學系統",
       "patentNumber": "M685344",
@@ -55,6 +148,106 @@
       "scrapedAt": "2026-07-14T01:03:00.290Z"
     },
     {
+      "id": "tipo-M685013",
+      "title": "多種語言學習裝置",
+      "patentNumber": "M685013",
+      "filingDate": "2026-04-21",
+      "publicationDate": "2026-07-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M685013",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "江足滿",
+        "鄒昱霖",
+        "鄒松鶴"
+      ],
+      "abstract": "本創作揭露一種多種語言學習裝置，為一種以各種語言的文字與音效將故事播放給使用者觀看與聆聽的多種語言學習裝置；本創作包括輸入單元、處理單元、控制單元、語音輸出單元與影像輸出單元；藉此，本創作藉由輸入單元掃描文字內容或接收使用者聲音，以將故事保存於儲存模組，使用者藉由控制單元對故事進行語言設定與敘述視角的設定，再藉由語音輸出單元與影像輸出單元讓故事以聲音或影像方式播放，確實達到讓使用者學習語言的同時，還可以因每次故事的敘述視角不同，而保有著對故事的新鮮感，有效提升使用者持續學習語言的興趣等優勢。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:00:56.193Z"
+    },
+    {
+      "id": "tipo-M684843",
+      "title": "智能批改解題與學習歷程分析系統",
+      "patentNumber": "M684843",
+      "filingDate": "2026-03-16",
+      "publicationDate": "2026-07-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M684843",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "陳秉嘉",
+        "譚登貴",
+        "林明陽"
+      ],
+      "abstract": "本新型提出了一種智能批改解題與學習歷程分析系統，其包含資料庫模組、影像處理模組、題目處理模組、智能解析模組、批改紀錄模組與分析與輔助模組。影像處理模組會自動切片識別題卷影像中所有的題目與手寫答案。智能解析模組使用資料庫模組中的題庫來解題，對於冷門題目或新題型也可取得大語言模型平台的解答，確保解答來源的正確性。批改紀錄模組智能化批改答題，提供使用者能分辨錯題的原因。分析與輔助模組統計答題成效，以視覺化的方式回傳使用者 。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習輔助"
+      ],
+      "categories": [
+        "學習",
+        "考試評測"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:03:43.764Z"
+    },
+    {
+      "id": "tipo-I930935",
+      "title": "早產兒開放性動脈導管的深度學習之心臟超音波影像辨識系統\nA DEEP LEARNING-BASED ECHOCARDIOGRAPHIC IMAGE RECOGNITION SYSTEM FOR PATENT DUCTUS ARTERIOSUS IN PRETERM INFANTS",
+      "patentNumber": "I930935",
+      "filingDate": "2025-03-10",
+      "publicationDate": "2026-07-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I930935",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蔡鈺鼎",
+        "黃立誠",
+        "林明志"
+      ],
+      "abstract": "本發明提供一種基於深度學習物件偵測技術之心臟超音波影像辨識系統，協助醫療人員評估早產兒之血流動力學狀態；透過輸入由心臟超音波影像所取得之心臟血流動力學相關參數，並利用物件偵測模型參數推導出心臟實際的物理量，以評估早產兒心臟生理狀態，輔助醫療人員評估早產兒心臟功能；本發明可有效標準化參數提取的結果，更精準地掌握患者的心血管狀態；透過降低人為因素的影響將有助於提高診斷的準確性，進而提升早產兒的醫療照護品質。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習分析"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:04:34.358Z"
+    },
+    {
+      "id": "tipo-I930622",
+      "title": "影像行為分析及互動系統\nIMAGE BEHAVIOR ANALYZING AND INTERACTION SYSTEM",
+      "patentNumber": "I930622",
+      "filingDate": "2024-08-02",
+      "publicationDate": "2026-07-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I930622",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "洪培修",
+        "戴美珍"
+      ],
+      "abstract": "一種影像行為分析及互動系統包含攝影裝置、影像辨識裝置、智慧分析裝置及語音互動裝置。攝影裝置用以擷取場景影像。影像辨識裝置用以分析場景影像而獲取至少一目標影像的人體骨架影像。智慧分析裝置接收各人體骨架影像並用以：依據人體骨架影像的動作習性識別身分資訊；於判斷人體骨架影像符合相應的身分資訊的至少一動作指令時，產生相應的動作任務；分析人體骨架影像的動作特徵，以記錄分析結果，或根據分析結果產生事件任務。語音互動裝置響應於需求語音、動作任務或事件任務輸出回應語音，以於確認到救援需求時，發送通知至救援端。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習分析"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:04:34.358Z"
+    },
+    {
       "id": "tipo-M684993",
       "title": "多態樣單字學習平台\nMULTIMODAL VOCABULARY LEARNING PLATFORM",
       "patentNumber": "M684993",
@@ -101,6 +294,60 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-07-01T01:03:08.918Z"
+    },
+    {
+      "id": "tipo-M684440",
+      "title": "全年齡學習整合平台",
+      "patentNumber": "M684440",
+      "filingDate": "2026-02-25",
+      "publicationDate": "2026-06-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M684440",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "林淑芳",
+        "蔡宜庭",
+        "黃若非",
+        "陳欣宜",
+        "林義証"
+      ],
+      "abstract": "一種全年齡學習整合平台，其係運作於一電子裝置內，該電子裝置連接一網路伺服器，以供複數個用戶端存取，並包含一課程學習模組、一虛擬空間模組、一競賽資源模組、一生涯規劃模組、一學習陪伴模組、一社群模組及一語言模組，藉此，透過上述模組，本創作係能整合多元學習來源、協助各該用戶端探索興趣並精準找到適合資源的平台，透過建立一個集中化、智慧化的學習資源整合平台，使各年齡層的學習者都能更容易地發掘興趣與規劃技能發展的路徑，並取得學習建議、課程資訊與相關資源，從而提升自主學習的效率與可及性。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:00:56.193Z"
+    },
+    {
+      "id": "tipo-I929121",
+      "title": "用於多感測器圖像擷取裝置的變換矩陣學習的方法、設備和非暫時性電腦可讀取媒體\nMETHOD, DEVICE AND NON-TRANSITORY COMPUTER-READABLE MEDIUM FOR TRANSFORM MATRIX LEARNING FOR MULTI-SENSOR IMAGE CAPTURE DEVICES",
+      "patentNumber": "I929121",
+      "filingDate": "2022-03-04",
+      "publicationDate": "2026-06-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I929121",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "劉　時中",
+        "黃金城",
+        "劉　偉良",
+        "任　建峰",
+        "帕尼拉吉文卡特石　薩赫爾瑪達納亞卡納哈里"
+      ],
+      "abstract": "可以藉由修改輸入圖像訊框以匹配序列中的另一圖像訊框來減少或消除圖像訊框序列中的偽影，例如藉由在幾何上扭曲以產生具有與具有該圖像訊框的訊框序列中的另一訊框匹配的視場的經校正的圖像訊框。扭曲可以是基於從關於多感測器設備的資料產生的模型來執行的。可以基於來自第一圖像感測器和第二圖像感測器的用於處於不同深度的場景的圖像擷取來對圖像訊框之間的視差進行模型化。該模型可以用於預測用於所擷取的圖像的視差值，並且那些預測視差值用於減少由於圖像感測器切換而產生的偽影。預測視差值可以用在導致錯誤的實際視差值的圖像條件中。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-03T01:02:45.015Z"
     },
     {
       "id": "tipo-M684319",
@@ -222,6 +469,52 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-06-11T01:02:22.727Z"
+    },
+    {
+      "id": "tipo-202622882",
+      "title": "用於綜合管理及支援學習遠距教育系統",
+      "patentNumber": "202622882",
+      "filingDate": "2024-11-15",
+      "publicationDate": "2026-06-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^202622882",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蘇冠融"
+      ],
+      "abstract": "本發明涉及一種用於綜合管理及支援學習遠距教育系統，系統包括：至少一個伺服器以及複數個終端設備，其與伺服器通訊並數據交換，包括：多功能整合模組，其設置為在一操作介面提供教學資料及互動支持功能，其中，教學資料及互動支持功能包括視訊教學、教材展示、作業管理及訊息通知的至少其中之一；行為監控模組，其設置為監控複數個終端設備的第一終端設備在課程期間的操作行為；智能化學力分析模組，其設置為接收並分析與第一終端設備相關連的測驗或作業結果；以及雲端行政管理模組，其設置為管理與複數個終端設備的第一終端設備相關連的第一行政事務以及與複數個終端設備的第二終端設備相關連的第二行政事務；其中，複數個終端設備的第一終端設備與第二終端設備設置為允許在操作介面上響應該教學資料及互動支持功能。透過本發明的系統，教師和學生能在同一操作介面整合遠距教學、行為監控、學力分析及行政管理之功能，無需在多個應用程式或視窗間切換，提升教與學的便利性。",
+      "classifications": [],
+      "matchedKeywords": [
+        "自動批改"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "未審查/公開",
+      "scrapedAt": "2026-08-03T01:01:43.636Z"
+    },
+    {
+      "id": "tipo-202622922",
+      "title": "線上虛擬教室的教學互動方法及其系統",
+      "patentNumber": "202622922",
+      "filingDate": "2024-11-15",
+      "publicationDate": "2026-06-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^202622922",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蘇冠融"
+      ],
+      "abstract": "本發明提供一種線上虛擬教室系統的教學互動方法， 該包括以下步驟：請求接收步驟，伺服器與複數個終端設備通訊連接，伺服器接收來自複數個終端設備的功能請求，其中，複數個終端設備包括與老師相關的至少一第一終端設備以及與學生相關的複數個第二終端設備；管理步驟，伺服器根據來自複數個第二終端設備的登入請求，偵測並確定參與課堂的學生數量，於第一終端設備上顯示參與者頭像；發言討論步驟，透過第二終端設備發送發言請求，發言請求通過該伺服器於第一終端設備的操作介面上顯示，第一終端設備配置以根據該發言請求選擇並允許複數個第二終端裝置的其中之一進行發言；以及獎勵步驟，在發言討論過程中，根據學生的參與表現，第一終端設備配置以透過其操作介面向第二終端設備發放獎勵，並顯示於第二終端設備的操作介面上。本發明亦提供一種線上虛擬教室系統，藉由本發明，提升線上教學的互動性和參與度，確保課堂管理有序進行，並能即時處理設備問題，保障教學過程的順暢運行。透過動態管理和多媒體展示，本發明增強了虛擬教室中的教學體驗。",
+      "classifications": [],
+      "matchedKeywords": [
+        "課堂互動"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "未審查/公開",
+      "scrapedAt": "2026-08-03T01:04:15.621Z"
     },
     {
       "id": "tipo-M683208",
@@ -12931,11 +13224,12 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-07-31T01:06:51.456Z",
+  "updatedAt": "2026-08-03T01:06:33.188Z",
   "sources": {
-    "tipo": 1
+    "tipo": 12
   },
   "months": [
+    "2026-08",
     "2026-07",
     "2026-06",
     "2026-05",
@@ -13096,5 +13390,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 377
+  "total": 389
 }
