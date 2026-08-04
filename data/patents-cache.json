@@ -12920,6 +12920,33 @@
       }
     },
     {
+      "id": "tipo-I286718",
+      "title": "用以整合知識管理系統及數位學習系統之知識框架整合系統及方法\nKNOWLEDGE FRAMEWORK SYSTEM AND METHOD FOR INTEGRATING A KNOWLEDGE MANAGEMENT SYSTEM WITH AN E-LEARNING SYSTEM",
+      "patentNumber": "I286718",
+      "filingDate": "2006-07-17",
+      "publicationDate": "2007-09-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I286718",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "林銓鋃",
+        "黃秀鳳",
+        "陳弘章",
+        "賴冠霖"
+      ],
+      "abstract": "一種知識框架整合系統，其用以整合一知識管理系統及一數位學習系統。該知識管理系統包含一知識管理平台及一知識資料庫，且該數位學習系統包含一數位學習平台及一學習資料庫。該知識框架系統包含一整合搜尋引擎及一動態推薦模組。該整合搜尋引擎係用以整合搜尋該知識管理系統及該數位學習系統。當該知識管理平台被使用時，該動態推薦模組係用以推薦該學習資料庫中的相關學習資料，且當該數位學習平台被使用時，該動態推薦模組係用以推薦該知識資料庫的相關知識資料。\nA knowledge framework system is used for integrating a knowledge management system with an e-learning system. The knowledge management system includes a knowledge management platform and a knowledge database, and the e-learning system includes an e-learning platform and a learning database. The knowledge framework system includes an integrally searching engine and a dynamic recommending module. The integrally searching engine is used for integrally searching the knowledge management system and the e-learning system. The dynamic recommending module is used for recommending the correlative learning data in the learning database when the knowledge management platform is used, and the dynamic recommending module is used for recommending the correlative knowledge data in the knowledge database when the e-learning platform is used.",
+      "classifications": [],
+      "matchedKeywords": [
+        "數位學習",
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-08-04T01:00:19.788Z"
+    },
+    {
       "id": "tipo-I281134",
       "title": "配合實體平面書籍之即時遠距輔助教學方法及系統以及電腦可讀取儲存媒體\nReal-time distant teaching aided method and system bundled with physical plane book and computer-readable storage media",
       "patentNumber": "I281134",
@@ -13224,9 +13251,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-08-03T01:06:33.188Z",
+  "updatedAt": "2026-08-04T01:07:07.181Z",
   "sources": {
-    "tipo": 12
+    "tipo": 1
   },
   "months": [
     "2026-08",
@@ -13379,6 +13406,7 @@
     "2008-04",
     "2008-02",
     "2007-10",
+    "2007-09",
     "2007-05",
     "2006-09",
     "2006-08",
@@ -13390,5 +13418,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 389
+  "total": 390
 }
