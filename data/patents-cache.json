@@ -5650,6 +5650,33 @@
       "scrapedAt": "2026-05-25T03:51:58.900Z"
     },
     {
+      "id": "tipo-I822547",
+      "title": "使用頸動脈超聲特徵的機器學習分析來預測復發性中風之系統\nSYSTEM OF APPLYING MACHINE LEARNING TO CAROTID SONOGRAPHIC FEATURES FOR RECURRENT STROKE",
+      "patentNumber": "I822547",
+      "filingDate": "2023-01-04",
+      "publicationDate": "2023-11-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I822547",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "林詩怡",
+        "蔡崇豪",
+        "高嘉鴻",
+        "葉依純",
+        "羅健文"
+      ],
+      "abstract": "一種使用頸動脈超聲特徵的機器學習分析來預測復發性中風之系統包含：一前處理模組以及一再中風預測模型模組，前處理模組接收結構化數據，以獲得經前處理的結構化數據；以及一再中風預測模型模組，以機器學習來對該經前處理的結構化數據，再中風預測模型模組是以k層摺疊交叉驗證法來訓練及評估模型的準確性，k為大於1之整數，再中風預測模型模組首先將經前處理的結構化數據分成k個數據組，而在k次迭代的每一迭代中，k個數據組當中一個數據組被用作驗證集，其餘的k-1個數據組被用作訓練集，據以將該訓練集被輸入到一再中風預測模型進行訓練，並對該驗證集進行模型評估，因而得到k個曲線下面積數值及k個模型，據此選出一表現最優的模型作為最終模型。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習分析"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-06T01:05:19.508Z"
+    },
+    {
       "id": "tipo-I822275",
       "title": "線上學習系統以及建立學習事件與驗證學習成效的方法\nONLINE LEARNING SYSTEM AND METHOD FOR ESTABLISHING LEARNING EVENT AND VERIFYING LEARNING EFFECTIVENESS THEREOF",
       "patentNumber": "I822275",
@@ -5837,6 +5864,32 @@
           }
         ]
       }
+    },
+    {
+      "id": "tipo-I811387",
+      "title": "用於光譜監測的機器學習系統的訓練光譜產生\nTRAINING SPECTRUM GENERATION FOR MACHINE LEARNING SYSTEM FOR SPECTROGRAPHIC MONITORING",
+      "patentNumber": "I811387",
+      "filingDate": "2019-06-24",
+      "publicationDate": "2023-08-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I811387",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "傑瑞安 班傑明",
+        "魏斯威爾 尼可拉斯",
+        "錢 隽",
+        "歐斯特海德 湯瑪士Ｈ"
+      ],
+      "abstract": "一種產生用於訓練神經網路的訓練光譜的方法，該方法包括以下步驟：從一或更多個試樣基板量測第一複數個訓練光譜；針對該複數個訓練光譜中的每個訓練光譜量測表徵值以產生複數個表徵值，其中每個訓練光譜具有相關聯的表徵值；在一或更多個虛設基板的處理期間量測複數個虛設光譜；及藉由組合該第一複數個訓練光譜與該複數個虛設光譜來產生第二複數個訓練光譜，在該第二複數個訓練光譜中存在比該第一複數個訓練光譜中大的光譜數量；該第二複數個訓練光譜中的每個訓練光譜具有相關聯的表徵值。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-06T01:03:17.836Z"
     },
     {
       "id": "tipo-M644850",
@@ -13251,9 +13304,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-08-04T01:07:07.181Z",
+  "updatedAt": "2026-08-06T01:07:26.240Z",
   "sources": {
-    "tipo": 1
+    "tipo": 2
   },
   "months": [
     "2026-08",
@@ -13418,5 +13471,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 390
+  "total": 392
 }
