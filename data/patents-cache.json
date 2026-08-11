@@ -1,6 +1,77 @@
 {
   "patents": [
     {
+      "id": "tipo-M686349",
+      "title": "線上課程系統\nONLINE COURSE SYSTEM",
+      "patentNumber": "M686349",
+      "filingDate": "2026-04-08",
+      "publicationDate": "2026-08-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M686349",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "蕭明城"
+      ],
+      "abstract": "一種線上課程系統，其於主機中配置用以儲存複數個課程資訊的第一資料庫模組、用以儲存複數個學員資訊的第二資料庫模組以及與該第一資料庫模組及該第二資料庫模組通訊連接的處理模組，以使該處理模組將該課程資訊及該學員資訊之間的資料進行整合處理，使如照服從業人員的學員可簡易完成線上課程並取得所需的學分。",
+      "classifications": [],
+      "matchedKeywords": [
+        "數位學習"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-11T01:00:16.381Z"
+    },
+    {
+      "id": "tipo-M686260",
+      "title": "應用擴增實境之照護學習系統",
+      "patentNumber": "M686260",
+      "filingDate": "2026-02-10",
+      "publicationDate": "2026-08-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M686260",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "郝德慧",
+        "孫美花"
+      ],
+      "abstract": "一種應用擴增實境之照護學習系統包含一伺服器及一通訊連接該伺服器的電子裝置。該伺服器用以儲存多筆相關於臨床照護知識的照護學習資料，其中，該電子裝置傳送一學習資料請求至該伺服器，該學習資料請求相關於該等照護學習資料中之一欲學習資料，在該伺服器接收到該學習資料請求後，該伺服器將該欲學習資料傳送至該電子裝置，在該電子裝置接收到該欲學習資料後，該電子裝置以一擴增實境方式呈現該欲學習資料，藉此，以擴增實境發展照護教學素材，進而促進教學互動品質及學習成效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-11T01:02:24.689Z"
+    },
+    {
+      "id": "tipo-I936037",
+      "title": "工作行程導向的數位語言學習系統及其方法",
+      "patentNumber": "I936037",
+      "filingDate": "2025-11-26",
+      "publicationDate": "2026-08-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I936037",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "張怡芸",
+        "許勝雄"
+      ],
+      "abstract": "本發明揭露一種工作行程導向的數位語言學習系統及其方法，其中，該方法係第一使用者藉由作息單元進行設定作息表與標註注意事項，作息單元將作息表與標註注意事項轉換為第二使用者所使用的語言，語言學習單元依據作息表，以產生與工作內容相關的學習句子，作息單元於各階段工作開始前，將工作內容通知發送給或提醒第二使用者，工作內容通知包含工作內容與學習句子。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-11T01:02:24.891Z"
+    },
+    {
       "id": "tipo-M685936",
       "title": "智慧語言測驗學習系統及其平台",
       "patentNumber": "M685936",
@@ -13304,9 +13375,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-08-06T01:07:26.240Z",
+  "updatedAt": "2026-08-11T01:05:18.064Z",
   "sources": {
-    "tipo": 2
+    "tipo": 3
   },
   "months": [
     "2026-08",
@@ -13471,5 +13542,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 392
+  "total": 395
 }
