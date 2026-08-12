@@ -1,6 +1,32 @@
 {
   "patents": [
     {
+      "id": "tipo-I935172",
+      "title": "機器學習輔助的自我調整天線調諧\nMACHINE LEARNING-ASSISTED ADAPTIVE ANTENNA TUNING",
+      "patentNumber": "I935172",
+      "filingDate": "2022-08-25",
+      "publicationDate": "2026-08-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I935172",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "卡爾佐拉里　迪亞哥",
+        "溫斯婁　大衛樓維斯",
+        "赫佛　吉赫米",
+        "波蘿　約翰"
+      ],
+      "abstract": "本案內容的某些態樣提供了用於自我調整地調諧電子設備中的無線資料傳輸系統的技術，包括：接收設備的無線資料傳輸系統的一或多個操作特性；使用無線資料傳輸系統組態模型，基於該一或多個操作特性來決定目標無線資料傳輸系統組態；及在該無線資料傳輸系統中實現該目標無線資料傳輸系統組態。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習輔助"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-12T01:03:19.039Z"
+    },
+    {
       "id": "tipo-M686349",
       "title": "線上課程系統\nONLINE COURSE SYSTEM",
       "patentNumber": "M686349",
@@ -6476,6 +6502,31 @@
       "scrapedAt": "2026-05-25T03:54:28.856Z"
     },
     {
+      "id": "tipo-I786929",
+      "title": "智慧音樂教學系統與智慧音樂教學方法",
+      "patentNumber": "I786929",
+      "filingDate": "2021-11-04",
+      "publicationDate": "2022-12-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I786929",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "李玲玉",
+        "黃裕哲",
+        "朱鴻棋"
+      ],
+      "abstract": "一種智慧音樂教學系統，包含複數智慧音樂盒及一控制單元。每一智慧音樂盒包括一發聲元件、一力感測器、一傳輸模組，及一控制器。於一彈奏模式時，該控制器根據該力感測器之一力感測訊號控制該發聲元件輸出聲音，於一播放模式時，該控制器根據一控制訊號控制該發聲元件輸出聲音。該控制單元控制該等智慧音樂盒以一設定次序播放於各自之該彈奏模式中所輸出之該聲音訊號。藉此，可將該等智慧音樂盒於該彈奏模式所輸出之聲音進行整合而再次播放，能提供學童各種樂音的合奏體驗，並可大幅降低教學成本而有助於普及兒童音樂教育。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-08-12T01:02:14.394Z"
+    },
+    {
       "id": "tipo-I787025",
       "title": "多人同步遠距虛擬實境教學系統及其實施方法\nMULTI-PERSON SYNCHRONIZATION VR DISTANCE LEARNING SYSTEM AND IMPLEMENTATION METHOD THEREOF",
       "patentNumber": "I787025",
@@ -11051,6 +11102,33 @@
       "scrapedAt": "2026-06-10T01:02:04.052Z"
     },
     {
+      "id": "tipo-I545534",
+      "title": "一種１２導程心電圖線上學習系統\nE-LEARNING SYSTEM FOR 12-LEAD ECG",
+      "patentNumber": "I545534",
+      "filingDate": "2011-03-18",
+      "publicationDate": "2016-08-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I545534",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "謝瑞建",
+        "余國強",
+        "劉臻芸",
+        "楊仲棋",
+        "張百棧"
+      ],
+      "abstract": "本發明係關於一種12導程心電圖線上學習系統，其包含：一外掛程式瀏覽器之處理伺服器，接收一心電圖相關資料，且用於去除伴隨該心電圖的雜訊及係利用微軟銀光(Silverlight)瀏覽器操作介面之水平、垂直、斜率或清潔工具來觀測資料；一學習資料庫，用於儲存該心電圖相關資料於該學習資料庫內；一學習網路伺服器，用於將該心電圖相關資料透過網路通訊存取；一社群網站，供使用者藉由該社群網站登入學習網路伺服器；以及一NodeXL社會網路分析工具軟體結合EXCEL2007軟體來分析該使用者自行下載個案的討論情形之資料。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-12T01:00:43.010Z"
+    },
+    {
       "id": "tipo-I543126",
       "title": "衛星定位即時學習系統",
       "patentNumber": "I543126",
@@ -13375,7 +13453,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-08-11T01:05:18.064Z",
+  "updatedAt": "2026-08-12T01:06:03.483Z",
   "sources": {
     "tipo": 3
   },
@@ -13542,5 +13620,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 395
+  "total": 398
 }
