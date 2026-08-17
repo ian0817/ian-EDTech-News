@@ -7680,6 +7680,29 @@
       "scrapedAt": "2026-05-25T03:54:28.856Z"
     },
     {
+      "id": "tipo-I745155",
+      "title": "圖形化機械手臂學習系統及其學習方法",
+      "patentNumber": "I745155",
+      "filingDate": "2020-11-10",
+      "publicationDate": "2021-11-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I745155",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "楊文棋"
+      ],
+      "abstract": "一種圖形化機械手臂學習系統及其學習方法，其系統包含有一手臂設備、一伺服設備及至少一人機介面設備，其中伺服設備至少包含有一處理單元、一儲存單元及一通訊介面，而與處理單元連接之儲存單元內至少儲存有一圖形化流程編輯介面模組，用以將編譯手臂設備動作腳本之編輯指令與動作指令的程式碼設定成一相對應的圖標，藉此，利用伺服設備之圖形化流程編輯介面模組的圖標〔icon〕來生成手臂設備之專用指令，並經轉譯成手臂設備之原生指令，並透過簡易圖形化介面，能人性化簡單快速的操作，且不需專業技術，降低人力成本及學習設定時間。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-17T01:02:34.838Z"
+    },
+    {
       "id": "tipo-M619068",
       "title": "可攜式醫學教學裝置及醫學教學平台\nPORTABLE MEDICAL EDUCATION DEVICE AND MEDICAL EDUCATION PLATFORM",
       "patentNumber": "M619068",
@@ -13453,9 +13476,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-08-12T01:06:03.483Z",
+  "updatedAt": "2026-08-17T01:06:12.300Z",
   "sources": {
-    "tipo": 3
+    "tipo": 1
   },
   "months": [
     "2026-08",
@@ -13620,5 +13643,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 398
+  "total": 399
 }
