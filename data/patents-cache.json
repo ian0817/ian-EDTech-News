@@ -4845,6 +4845,30 @@
       }
     },
     {
+      "id": "tipo-I856667",
+      "title": "具備多讀音糾錯的語言學習系統\nSPEAKING TRAINING SYSTEM WITH EXTRA PRONUNCIATION CORRECTION",
+      "patentNumber": "I856667",
+      "filingDate": "2023-05-24",
+      "publicationDate": "2024-09-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I856667",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "郭晶晶",
+        "劉 恕"
+      ],
+      "abstract": "具備多讀音糾錯的語言學習系統，以運行在一數據處理服務器上的一音頻質量檢測系統，偵測用戶朗讀一文本的一音頻之多讀音，以提示用戶進行糾正。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-19T01:02:15.543Z"
+    },
+    {
       "id": "tipo-I856383",
       "title": "數據脫敏方法、聯邦學習方法及系統\nDATA DESENSITIZATION METHOD, AND FEDERAL LEARNING METHOD AND SYSTEM",
       "patentNumber": "I856383",
@@ -13476,7 +13500,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-08-17T01:06:12.300Z",
+  "updatedAt": "2026-08-19T01:05:35.759Z",
   "sources": {
     "tipo": 1
   },
@@ -13643,5 +13667,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 399
+  "total": 400
 }
