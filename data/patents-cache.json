@@ -2649,6 +2649,32 @@
       }
     },
     {
+      "id": "tipo-M675302",
+      "title": "穴位互動學習系統\nInteractive acupoint learning system",
+      "patentNumber": "M675302",
+      "filingDate": "2025-04-07",
+      "publicationDate": "2025-10-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M675302",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "吳迎春",
+        "張茜茹",
+        "郭柏毅",
+        "黃彥蓉"
+      ],
+      "abstract": "一種穴位互動學習系統，包括第一輸入設備端，係連結於平台端；一第二輸入設備端，係連結於平台端；一第三輸入設備端，係連結於平台端；一平台端，係連結於第一輸入設備端、第二輸入設備端、第三輸入設備端及複數設備端；以及複數設備端，係連結於平台端，以達到學習穴位位置之效果。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-08-27T01:02:14.779Z"
+    },
+    {
       "id": "tipo-202538707",
       "title": "ＡＩ教育學習系統及其方法\nAI-based educational learning system and method thereof",
       "patentNumber": "202538707",
@@ -13500,7 +13526,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-08-19T01:05:35.759Z",
+  "updatedAt": "2026-08-27T01:05:30.203Z",
   "sources": {
     "tipo": 1
   },
@@ -13667,5 +13693,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 400
+  "total": 401
 }
