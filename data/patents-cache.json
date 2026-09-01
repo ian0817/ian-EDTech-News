@@ -1,6 +1,32 @@
 {
   "patents": [
     {
+      "id": "tipo-M687065",
+      "title": "文化資產智慧管理維護與科普教學系統",
+      "patentNumber": "M687065",
+      "filingDate": "2026-05-14",
+      "publicationDate": "2026-09-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M687065",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "周中祺",
+        "黃曉菁",
+        "王柏崴",
+        "陳易臻"
+      ],
+      "abstract": "本創作提供一種文化資產智慧管理維護與科普教學系統，其包含感測模組、物聯網、資料管理模組、評估及動作模組及一教學模組。感測模組包含設置於古蹟的複數個感測器。感測器感測所在位置的參數產生感測訊號。物聯網的節點分別連接至各模組。資料管理模組包含儲存複數個參考古蹟資料的資料庫，並儲存複數個感測訊號，以成為或更新古蹟資料。評估及動作模組包含感測分析裝置及複數個防災裝置並具備結合科普教育教學模組。防災裝置設置於古蹟。感測分析裝置依據複數個參考古蹟資料判斷複數個感測訊號的至少一個符合預定條件時，控制相應的防災裝置執行防災動作。教學模組涵蓋火災科學、古蹟構件科學、生物防治科學等科普教育教學功能，提供使用者基礎教學功能。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-01T01:02:01.438Z"
+    },
+    {
       "id": "tipo-I935172",
       "title": "機器學習輔助的自我調整天線調諧\nMACHINE LEARNING-ASSISTED ADAPTIVE ANTENNA TUNING",
       "patentNumber": "I935172",
@@ -98,6 +124,76 @@
       "scrapedAt": "2026-08-11T01:02:24.891Z"
     },
     {
+      "id": "tipo-M686169",
+      "title": "空間積木互動式教學遊戲書",
+      "patentNumber": "M686169",
+      "filingDate": "2026-05-29",
+      "publicationDate": "2026-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M686169",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "吳錦惠"
+      ],
+      "abstract": "本創作關於一種空間積木互動式教學遊戲書，包含：一書本，至少設有一頁面，該頁面上印製有各種不同故事情節之內容及圖畫，該頁面係具有適當的一厚度，藉以於該頁面上形成有複數第一插槽，該第一插槽係為各種不同幾何形狀所構成；複數積木，設置成各種不同幾何形狀之塊體，並且可供對應插入於該第一插槽中，該等積木表面對應設置至少一固定件，利用二該積木之該等固定件互相固定，藉以使該等積木組合各種不同的物件造型。藉以可供孩童透過拼湊與拆解等方式，以練習邏輯思考能力。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-01T01:02:01.438Z"
+    },
+    {
+      "id": "tipo-M685881",
+      "title": "互動式以及具有心理要素驅動機制的學習遊戲內容動態生成系統",
+      "patentNumber": "M685881",
+      "filingDate": "2026-03-04",
+      "publicationDate": "2026-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M685881",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "陶建宇"
+      ],
+      "abstract": "一種互動式學習遊戲內容動態生成系統，可快速生成互動式學習遊戲內容，此系統透過多元內容輸入介面接收非結構化資料並轉換為文字內容，再由自然語言處理引擎對於文字內容進行語意結構化處理，以識別文字內容中的敘事要素並建構其對應的結構化知識圖譜。系統依此知識圖譜自動生成具互動性的視覺化遊戲內容，並蒐集使用者於遊戲過程中的行為資料，以建立使用者心理模型。進一步透過動態調整子系統，根據此心理模型即時調整視覺化遊戲內容的難度與學習路徑，以提升學習成效與互動體驗。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-01T01:02:15.577Z"
+    },
+    {
+      "id": "tipo-I933861",
+      "title": "使用Ｐ幀譯碼系統的學習Ｂ幀譯碼\nLEARNED B-FRAME CODING USING P-FRAME CODING SYSTEM",
+      "patentNumber": "I933861",
+      "filingDate": "2022-01-28",
+      "publicationDate": "2026-08-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I933861",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "普雷扎　瑞薩",
+        "柯恩　塔可　賽巴斯汀"
+      ],
+      "abstract": "本文描述了用於處理視頻資料的技術，例如通過使用單向譯碼系統和內插參考幀來執行學習的雙向譯碼。例如，處理可以包括：獲得第一參考幀和第二參考幀。該處理可以包括：至少部分地通過在第一參考幀和第二參考幀之間執行插值來生成第三參考幀。該處理可以包括：例如通過估計輸入幀和第三參考幀之間的運動，基於第三參考幀對輸入幀執行單向幀間預測，並至少部分地通過基於估計的運動，變形第三參考幀一個或多個像素來生成變形幀。該處理可以包括：基於變形幀和預測殘差來生成表示輸入幀的重建幀，重建幀包括雙向預測幀。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-01T01:02:15.577Z"
+    },
+    {
       "id": "tipo-M685936",
       "title": "智慧語言測驗學習系統及其平台",
       "patentNumber": "M685936",
@@ -165,6 +261,80 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-08-03T01:03:43.764Z"
+    },
+    {
+      "id": "tipo-I933136",
+      "title": "以人工智慧外語學習自身訓練系統及其方法\nFOREIGN LANGUAGE LEARNING SELF-TRAINING SYSTEM AND METHOD THEREOF USING ARTIFICIAL INTELLIGENCE",
+      "patentNumber": "I933136",
+      "filingDate": "2024-10-29",
+      "publicationDate": "2026-07-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I933136",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蔡韋德",
+        "陳奕全"
+      ],
+      "abstract": "一種以人工智慧外語學習自身訓練方法包含：由一用戶學習者選擇指定至少一語音模型；提供至少一用戶自聲基礎語音資料，且該用戶自聲基礎語音資料由該用戶學習者進行錄製；經由該語音模型利用該用戶自聲基礎語音資料以一人工智慧語音處理模組模擬產生至少一已模擬用戶自聲外語資料；及利用該已模擬用戶自聲外語資料對應結合一預定外語學習資料，以產生至少一模擬用戶自聲練習外語資料，且該用戶學習者反覆將該模擬用戶自聲練習外語資料用於一外語練習作業。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-01T01:00:37.693Z"
+    },
+    {
+      "id": "tipo-I933706",
+      "title": "教學資料建置系統以及教學資料建置方法\nINSTRUCYIONAL DATA GENERATION SYSTEM AND INSTRUCYIONAL DATA GENERATION METHOD",
+      "patentNumber": "I933706",
+      "filingDate": "2025-10-07",
+      "publicationDate": "2026-07-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I933706",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "阮明達",
+        "張曉珍",
+        "王榮陞",
+        "周世俊"
+      ],
+      "abstract": "本發明揭露一種教學資料建置系統以及教學資料建置方法。教學資料建置系統包含一儲存裝置以及一處理器，儲存裝置儲存一教學特徵分析模組以及一動作分析模組。處理器通訊連接於儲存裝置，處理器經配置以將一影片輸入至教學特徵分析模組以及動作分析模組。教學特徵分析模組經配置以分析影片以生成一文字資料以及一教學特徵資料。動作分析模組經配置以分析影片，當影片包含動作的完整階段時，動作分析模組生成一教學動作資料。處理器經配置將文字資料、教學特徵資料及教學動作資料儲存於儲存裝置中做為對應於影片之一識別資料的教學資料。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-01T01:02:01.438Z"
+    },
+    {
+      "id": "tipo-I933339",
+      "title": "用於主動學習的電腦系統及其方法\nCOMPUTER SYSTEM FOR ACTIVE LEARNING AND METHOD THEREOF",
+      "patentNumber": "I933339",
+      "filingDate": "2025-02-19",
+      "publicationDate": "2026-07-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I933339",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "王則鈞",
+        "林軒達"
+      ],
+      "abstract": "提供一種電腦實施的主動學習方法。該方法包含以下步驟：使用代理模型基於從原始資料池取得的原始資料子集，估計原始資料池的效用分布；基於效用分布判斷篩選條件；根據篩選條件執行資料篩選程序；以及使用訓練資料池訓練目標模型。資料篩選程序包含以下步驟：使用代理模型計算關聯於原始資料池中原始影像的效用分數；根據篩選條件選擇性地將原始影像提供給先知，以取得該原始影像對應的選定影像；以及將選定影像納入訓練資料池。提供給先知的原始影像，其關連的效用分數符合篩選條件。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-01T01:02:15.578Z"
     },
     {
       "id": "tipo-I931973",
@@ -13526,11 +13696,12 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-08-27T01:05:30.203Z",
+  "updatedAt": "2026-09-01T01:05:38.059Z",
   "sources": {
-    "tipo": 1
+    "tipo": 7
   },
   "months": [
+    "2026-09",
     "2026-08",
     "2026-07",
     "2026-06",
@@ -13693,5 +13864,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 401
+  "total": 408
 }
