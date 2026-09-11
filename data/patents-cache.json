@@ -1,6 +1,108 @@
 {
   "patents": [
     {
+      "id": "tipo-M687589",
+      "title": "應用於商用廚房環境之數位食譜學習系統",
+      "patentNumber": "M687589",
+      "filingDate": "2026-06-29",
+      "publicationDate": "2026-09-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M687589",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "許孟鈞",
+        "謝名家",
+        "葉玟瑾"
+      ],
+      "abstract": "本揭露為一種應用於商用廚房環境之數位食譜學習系統。包含處理單元對多模態食譜資料執行融合程序以生成結構化時間軸；派發單元依負載狀態執行多訂單動態分派並將結構化時間軸指派至工作站；顯示單元輸出製備指引；感知單元擷取即時感知事件；動態推進單元依即時感知事件更新執行進度。藉由上述，本揭露將隱性烹飪操作轉換為機器可讀參數，確保跨分店間的料理風味一致性，並且能有效縮短新進廚師訓練週期。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-11T01:02:08.684Z"
+    },
+    {
+      "id": "tipo-I939321",
+      "title": "字型學習系統\nHANDWRITING LEARNING SYSTEM",
+      "patentNumber": "I939321",
+      "filingDate": "2026-01-16",
+      "publicationDate": "2026-09-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I939321",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "劉豐榮",
+        "許旗成",
+        "謝博璿",
+        "劉承恩",
+        "邱楷宸"
+      ],
+      "abstract": "本創作提供一種字型學習系統，用以解決習知字型學習方式不完善的問題。該系統包含：一資料庫模組儲存單字的筆畫的第一路徑時序、第一路徑座標及第一路徑壓力值；一顯示模組播放其中一單字；一書寫模組供使用者書寫一文字，以產生一壓力軌跡數據；一書寫分析模組分析該壓力軌跡數據，以取得該文字的筆畫的第二路徑時序、第二路徑座標及第二路徑壓力值；及一書寫評價模組將第二路徑時序、第二路徑座標及第二路徑壓力值與第一路徑時序、第一路徑座標及第一路徑壓力值比對，以產生一書寫評價。本創作可達成提升字型學習精準度的功效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-11T01:02:08.695Z"
+    },
+    {
+      "id": "tipo-I939036",
+      "title": "互動學習系統及運作方法\nINTERACTIVE LEARNING SYSTEM AND OPERATION METHOD",
+      "patentNumber": "I939036",
+      "filingDate": "2025-05-29",
+      "publicationDate": "2026-09-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I939036",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "林明義",
+        "謝昇憲",
+        "王力宸",
+        "李宇軒",
+        "陳孟群"
+      ],
+      "abstract": "本發明公開一種互動學習系統及運作方法，互動學習系統包括中央伺服器、嵌入式處理單元、影像投放裝置、音訊輸出裝置及影像擷取裝置。中央伺服器經配置以生成及儲存互動式繪本影像及聲音訊號，其中互動式繪本影像對應聲音訊號。影像投放裝置將互動式繪本影像投影至顯示面。音訊輸出裝置經配置以播放聲音訊號，嵌入式處理單元根據互動式繪本影像相對應控制音訊輸出裝置播放聲音訊號。影像擷取裝置經配置以接收使用者的手勢訊號，將手勢訊號傳送至嵌入式處理單元，嵌入式處理單元根據手勢訊號動態調整互動式繪本影像的內容及聲音訊號。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-11T01:02:08.695Z"
+    },
+    {
+      "id": "tipo-M687620",
+      "title": "女性經期教學教具",
+      "patentNumber": "M687620",
+      "filingDate": "2026-07-06",
+      "publicationDate": "2026-09-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M687620",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "許佩琪"
+      ],
+      "abstract": "本創作係關於一種女性經期教學教具，包含：一女性生殖器模型主體及一教學輔助件，該女性生殖器模型主體呈剖開型態，包含一子宮模型部、一陰道模型部及一握持座部，該子宮模型部與陰道模型部內部形成連通之腔室，透過握持座部之操作切換，使模型主體得於平放以容置黏稠物，並於直立時導引黏稠物排出，進而動態模擬經血排出過程，配合教學輔助件之選配，供使用者進行衛生用品鋪設及更換之實務演練，有效解決習知靜態教具無法進行動態演示之缺失，並消弭學習者對實際生理現象之認知落差。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學輔助"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-11T01:02:39.135Z"
+    },
+    {
       "id": "tipo-M687065",
       "title": "文化資產智慧管理維護與科普教學系統",
       "patentNumber": "M687065",
@@ -13747,9 +13849,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-09-10T01:05:24.492Z",
+  "updatedAt": "2026-09-11T01:05:19.092Z",
   "sources": {
-    "tipo": 2
+    "tipo": 4
   },
   "months": [
     "2026-09",
@@ -13915,5 +14017,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 410
+  "total": 414
 }
