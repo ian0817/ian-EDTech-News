@@ -10113,6 +10113,55 @@
       "scrapedAt": "2026-05-25T03:54:28.856Z"
     },
     {
+      "id": "tipo-I682332",
+      "title": "用於識別絕育狀態影像的深度學習方法及其識別裝置",
+      "patentNumber": "I682332",
+      "filingDate": "2018-07-18",
+      "publicationDate": "2020-01-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I682332",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "賴永齡",
+        "莊定學"
+      ],
+      "abstract": "一種用於識別絕育狀態影像的深度學習方法，用於建立一辨識應用程式，該辨識應用程式供一識別裝置用於辨識至少一動物影像，而識別出已結紮的動物影像，該深度學習方法通過一深度學習系統執行以下步驟：輸入一張以上的訓練影像，然後，於該訓練影像標示出至少包含生殖器官的一感興趣區域，再通過一深度神經網路單元由該等訓練影像學習已結紮之生殖器官的特徵，而設計並修正該辨識應用程式，接著，輸入一張以上的測試影像，並通過該辨識應用程式辨識該測試影像，最後，在該辨識應用程式無法識別出呈現已結紮後之生殖器官的測試影像時，使呈現動物已結紮後之生殖器官的測試影像成為訓練影像，一直到該辨識應用程式的正確率介於90%~100%。藉此，有效提升判斷動物是否結紮的效率與正確率。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-09-12T02:02:25.709Z"
+    },
+    {
+      "id": "tipo-I679548",
+      "title": "虛擬助理的自動學習方法及系統\nMETHOD AND SYSTEM FOR AUTOMATED LEARNING OF A VIRTUAL ASSISTANT",
+      "patentNumber": "I679548",
+      "filingDate": "2018-05-09",
+      "publicationDate": "2019-12-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I679548",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "周忠信",
+        "吳兆麟",
+        "許旭正"
+      ],
+      "abstract": "一種虛擬助理的自動學習方法，包含接收音訊輸入並辨識音訊以形成語料資料；利用自然語言處理模型分析語料資料，以產生與語料資料對應的語言特徵資訊；依據職能情境資訊對語言特徵資訊進行職能情境分析，判斷該些意圖的其中之一對應的操作；如果職能情境分析無法判斷該些意圖的其中之一對應的操作，則針對語料資料進行分詞處理；根據分詞處理後的結果，判斷是否存在新詞彙或新語料資料；如果存在新詞彙，根據新詞彙的意義更新自然語言處理模型，如果存在新語料資料，根據新語料資料的意圖更新職能情境分析。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-12T02:02:25.709Z"
+    },
+    {
       "id": "tipo-M587069",
       "title": "天體互動學習裝置\nINTERACTIVE LEARNING DEVICE OF ASTRONOMICAL OBJECT",
       "patentNumber": "M587069",
@@ -10247,6 +10296,30 @@
           }
         ]
       }
+    },
+    {
+      "id": "tipo-M584703",
+      "title": "具有多分鏡教學流程的互動教學系統及電子裝置\nINTERACTIVE TEACHING SYSTEM HAVING TEACHING PROCESSES WITH MULTIPLE STORYBOARDS AND ELECTRONIC DEVICE",
+      "patentNumber": "M584703",
+      "filingDate": "2019-04-08",
+      "publicationDate": "2019-10-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M584703",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "鍾梁權"
+      ],
+      "abstract": "本創作提出一種具有多分鏡教學流程的互動教學系統及電子裝置。具有多分鏡教學流程的互動教學系統包括：伺服器；以及電子裝置，耦接到伺服器。電子裝置傳送帳號及密碼到伺服器來登入伺服器。伺服器傳送第一教學畫面到電子裝置，且電子裝置顯示第一教學畫面。電子裝置接收點擊訊號，點擊第一教學畫面上的物件。伺服器根據物件傳送第二教學畫面到電子裝置，且電子裝置顯示第二教學畫面。\nAn interactive teaching system having teaching processes with multiple storyboards and an electronic device are provided. The interactive teaching system having teaching processes with multiple storyboards includes a server and an electronic device coupled to the server. The electronic device transmits an account and a password to the server to login the server. The server transmits a first teaching screen to the electronic device, and the electronic device displays the first teaching screen. The electronic device receives a click signal to click an object on the first teaching screen. The server transmits a second teaching screen to the electronic device according to the object, and the electronic device displays the second screen.",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統",
+        "互動教學"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-12T02:02:13.412Z"
     },
     {
       "id": "tipo-I674553",
@@ -13849,9 +13922,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-09-11T01:05:19.092Z",
+  "updatedAt": "2026-09-12T02:05:34.133Z",
   "sources": {
-    "tipo": 4
+    "tipo": 3
   },
   "months": [
     "2026-09",
@@ -14017,5 +14090,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 414
+  "total": 417
 }
