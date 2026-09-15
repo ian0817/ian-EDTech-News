@@ -8055,6 +8055,31 @@
       "scrapedAt": "2026-05-25T03:51:58.900Z"
     },
     {
+      "id": "tipo-I742312",
+      "title": "機器學習系統、機器學習方法及其非暫態電腦可讀媒體\nMACHINE LEARNING SYSTEM, MACHINE LEARNING METHOD AND NON-TRANSITORY COMPUTER READABLE MEDIUM FOR OPERATING THE SAME",
+      "patentNumber": "I742312",
+      "filingDate": "2018-09-28",
+      "publicationDate": "2021-10-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I742312",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "張智威",
+        "周俊男",
+        "余俊賢"
+      ],
+      "abstract": "一機器學習系統包含一記憶體以及一處理器。該處理器用以存取並執行該記憶體儲存的至少一指令以：輸入一原始資料至一神經網路的一第一分區，其中該第一分區至少包含該神經網路中的一激勵函數，該激勵函數用以轉換該原始資料為非可逆的一元資料，其中該元資料被用以傳輸至該神經網路的一第二分區以產生對應於該原始資料的一學習結果。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-15T01:02:11.952Z"
+    },
+    {
       "id": "tipo-I739343",
       "title": "用於機器學習輔助光學近接誤差校正之訓練方法及相關電腦程式產品\nTRAINING METHOD FOR MACHINE LEARNING ASSISTED OPTICAL PROXIMITY ERROR CORRECTION AND RELATED COMPUTER PROGRAM PRODUCT",
       "patentNumber": "I739343",
@@ -13922,9 +13947,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-09-12T02:05:34.133Z",
+  "updatedAt": "2026-09-15T01:05:26.545Z",
   "sources": {
-    "tipo": 3
+    "tipo": 1
   },
   "months": [
     "2026-09",
@@ -13985,6 +14010,7 @@
     "2022-01",
     "2021-12",
     "2021-11",
+    "2021-10",
     "2021-09",
     "2021-08",
     "2021-07",
@@ -14090,5 +14116,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 417
+  "total": 418
 }
