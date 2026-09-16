@@ -1,6 +1,29 @@
 {
   "patents": [
     {
+      "id": "tipo-202638354",
+      "title": "教材隨需製作自動化教學系統及其製作方法\nON-DEMAND TEACHING MATERIAL CREATION AUTOMATION TEACHING SYSTEM AND ITS PRODUCTION METHOD",
+      "patentNumber": "202638354",
+      "filingDate": "2025-03-06",
+      "publicationDate": "2026-09-16",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^202638354",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "蔡輝振"
+      ],
+      "abstract": "本發明「教材隨需製作自動化教學系統及其製作方法」，至少包含有：一操作介面、一教材資料庫、一教師系統、一版型選擇模組、一語文轉換模組、一教材選擇模組、一資料增修模組、一封面編輯模組、一檔案格式轉換模組、一電子書閱讀平台、一購書金流系統、一實體書製作裝置，以及一教學系統、一出題系統、一考試系統、一閱卷系統、一顯示幕、一學員系統等所構成。配合其〝製作方法〞，可使教材隨需之篇章，依使用者的語文需求，呈現多國語文功能，並自動製作成電子書，以供學員線上閱讀、購買、出版，與隨需印製(POD)等功能者，減少對紙張的需求者；也自動提供教師Power Point教學及語音播放、出題、考試，與閱卷者，以減輕教師負擔及提供學員課後輔導等功能者，並促使〝地球村〞的概念早日實現，也為〝無紙化〞世紀貢獻一份心力。\nThe invention, titled \"On-Demand Teaching Material Creation Automation Teaching System and Its Production Method,\" consists of at least the following components: an operating interface, an educational material database, a teacher system, a template selection module, a language conversion module, a teaching material selection module, a data modification module, a cover editing module, a file format conversion module, an e-book reading platform, a book purchasing and payment system, a physical book production device, a teaching system, a question generation system, an examination system, a grading system, a display screen, and a learner system. Using its \"production method,\" the system allows the on-demand generation of teaching material chapters, which can be presented in multiple languages according to the user's language preferences, and automatically produced into e-books for online reading, purchasing, publishing, and on-demand printing (POD), thereby reducing the need for paper. Additionally, it automatically provides teachers with PowerPoint presentations, voice playback, question generation, examinations, and grading, reducing teachers' workload and offering students after-class tutoring. This also helps promote the realization of the \"global village\" concept and contributes to the \"paperless\" future.",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "未審查/公開",
+      "scrapedAt": "2026-09-16T01:02:11.582Z"
+    },
+    {
       "id": "tipo-M687589",
       "title": "應用於商用廚房環境之數位食譜學習系統",
       "patentNumber": "M687589",
@@ -13947,7 +13970,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-09-15T01:05:26.545Z",
+  "updatedAt": "2026-09-16T01:06:41.047Z",
   "sources": {
     "tipo": 1
   },
@@ -14116,5 +14139,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 418
+  "total": 419
 }
