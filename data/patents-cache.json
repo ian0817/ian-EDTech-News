@@ -1,6 +1,29 @@
 {
   "patents": [
     {
+      "id": "tipo-M687728",
+      "title": "音樂拍速教學系統",
+      "patentNumber": "M687728",
+      "filingDate": "2026-04-17",
+      "publicationDate": "2026-09-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M687728",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "杜姝嫻"
+      ],
+      "abstract": "一種音樂拍速教學系統，包括：播放裝置、顯示裝置、輸入裝置、儲存裝置以及處理器。播放裝置用以播放編輯完成的節奏組合。顯示裝置顯示操作介面，操作介面具有五線譜，並且五線譜包含音符。處理器耦接播放裝置、顯示裝置、輸入裝置及儲存裝置，輸入裝置在操作介面輸入點擊、拖曳動作或輸入數值產生操作指令，且處理器根據操作指令，存取並執行模組，模組包括：音符顯示模組以及節奏播放模組。節奏播放模組，讀取小節中的音符之排列組合形成節奏組合，使播放裝置產生對應節奏組合的節拍聲。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-21T01:01:55.683Z"
+    },
+    {
       "id": "tipo-202638354",
       "title": "教材隨需製作自動化教學系統及其製作方法\nON-DEMAND TEACHING MATERIAL CREATION AUTOMATION TEACHING SYSTEM AND ITS PRODUCTION METHOD",
       "patentNumber": "202638354",
@@ -13970,7 +13993,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-09-16T01:06:41.047Z",
+  "updatedAt": "2026-09-21T01:05:12.733Z",
   "sources": {
     "tipo": 1
   },
@@ -14139,5 +14162,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 419
+  "total": 420
 }
