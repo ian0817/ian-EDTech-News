@@ -2782,6 +2782,34 @@
       "scrapedAt": "2026-05-25T03:53:33.375Z"
     },
     {
+      "id": "tipo-I906511",
+      "title": "深度學習裝置及系統\nDEEP LEARNING DEVICE AND SYSTEM",
+      "patentNumber": "I906511",
+      "filingDate": "2022-04-29",
+      "publicationDate": "2025-12-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I906511",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "金永宰",
+        "柳凱元",
+        "李智雄",
+        "李俊行",
+        "姜景薰",
+        "李盈學"
+      ],
+      "abstract": "本發明提供一種深度學習裝置及包含其的系統。深度學習裝置包括處理電路系統，所述處理電路系統經組態以：使用異常偵測模型判定接收到的影像是否異常；合併自異常偵測模型獲取的至少一些向量；將藉由主成分分析（PCA）產生的主成分輸入至概率近似模型以偵測接收到的影像的資料中是否出現外分佈（OOD）；儲存判定的結果；以及當出現OOD的資料的速率大於或等於臨限值時，使用目標標記獲取模型獲取出現OOD的至少一些資料作為目標標記，其中異常偵測模型使用目標標記判定接收到的影像是否異常。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-30T01:02:16.311Z"
+    },
+    {
       "id": "tipo-M676840",
       "title": "社區情境教學系統\nCommunity-based situational learning system",
       "patentNumber": "M676840",
@@ -6115,6 +6143,29 @@
       "scrapedAt": "2026-05-25T03:51:58.900Z"
     },
     {
+      "id": "tipo-I824174",
+      "title": "模擬機車考照教學方法及系統與模擬機車考照方法及系統",
+      "patentNumber": "I824174",
+      "filingDate": "2020-08-28",
+      "publicationDate": "2023-12-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I824174",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "曾芷凡"
+      ],
+      "abstract": "一種模擬機車考照教學方法及系統與模擬機車考照方法及系統，使用者能於模擬機車考照場景中進行模擬機車考照以模擬實際機車考照內容，使用者能透過提示訊息明確了解對應機車考照項目應進行的預定操控動作，並透過模擬結果及模擬考照結果了解實際操控動作與預定操控動作是否相符，且使用者於模擬機車考照場景中進行模擬機車考照操作，能改善使用者駕駛實際機車練習有排放廢氣、耗費能源及受場地或是天氣的限制等問題，進而能有效提升學習的效率。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-30T01:02:03.927Z"
+    },
+    {
       "id": "tipo-I822547",
       "title": "使用頸動脈超聲特徵的機器學習分析來預測復發性中風之系統\nSYSTEM OF APPLYING MACHINE LEARNING TO CAROTID SONOGRAPHIC FEATURES FOR RECURRENT STROKE",
       "patentNumber": "I822547",
@@ -8099,6 +8150,29 @@
       ],
       "status": "消滅",
       "scrapedAt": "2026-05-25T03:51:58.900Z"
+    },
+    {
+      "id": "tipo-I743968",
+      "title": "機車駕駛教學方法及系統",
+      "patentNumber": "I743968",
+      "filingDate": "2020-08-28",
+      "publicationDate": "2021-10-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I743968",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "曾芷凡"
+      ],
+      "abstract": "一種機車駕駛教學方法及系統，機車駕駛教學系統包含頭戴式影音裝置、騎乘裝置、多軸運動平台及處理單元，頭戴式影音裝置用以顯示道路突發狀況場景；騎乘裝置供使用者操控以於道路突發狀況場景中進行虛擬的機車駕駛操作，騎乘裝置根據使用者操控騎乘裝置所產生之實際操控動作而輸出對應實際操控動作的操控訊息；多軸運動平台用以帶動騎乘裝置作動；處理單元能接收操控訊息並根據操控訊息判斷實際操控動作與預定操控動作是否相符並控制頭戴式影音裝置顯示第一模擬結果或第二模擬結果以及多軸運動平台執行第一響應動作或第二響應動作。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-09-30T01:02:03.934Z"
     },
     {
       "id": "tipo-I742312",
@@ -13993,9 +14067,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-09-21T01:05:12.733Z",
+  "updatedAt": "2026-09-30T01:05:29.223Z",
   "sources": {
-    "tipo": 1
+    "tipo": 3
   },
   "months": [
     "2026-09",
@@ -14162,5 +14236,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 420
+  "total": 423
 }
