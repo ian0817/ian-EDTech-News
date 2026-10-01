@@ -1,6 +1,53 @@
 {
   "patents": [
     {
+      "id": "tipo-M688133",
+      "title": "情境式問題導向互動教學系統",
+      "patentNumber": "M688133",
+      "filingDate": "2026-06-01",
+      "publicationDate": "2026-10-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M688133",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "林彥霆"
+      ],
+      "abstract": "本創作係一種情境式問題導向互動教學系統，其包括後台系統及數學習者設備，該後台系統設有控制運算模組、記憶模組、資料存儲模組、第一網路傳輸接收模組、輸入模組及顯示模組，而該數學習者設備分別設有第二網路傳輸接收模組，其中該控制運算模組分別與記憶模組、資料存儲模組、第一網路傳輸接收模組、輸入模組及顯示模組電性連接，透過教學者以輸入模組及顯示模組，進行課程內容分類查詢與選擇，或問題回應與理論分析之選擇，該控制運算模組及記憶模組將教學者選擇之課程內容分類，於資料存儲模組進行比對判斷，並將判斷結果與欲傳遞資料透過第一網路傳輸接收模組，將資料透過第二網路傳輸接收模組傳遞至學習者，以達教學內容之雙向交流與即時掌握學習吸收效果之功效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統",
+        "互動教學"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-01T01:02:07.999Z"
+    },
+    {
+      "id": "tipo-M688289",
+      "title": "語言單字學習系統",
+      "patentNumber": "M688289",
+      "filingDate": "2026-07-16",
+      "publicationDate": "2026-10-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M688289",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "林錦宏"
+      ],
+      "abstract": "一種語言單字學習系統，包括：控制模組、記憶模組、輸入裝置、圖片模組及顯示模組，控制模組分別與記憶模組、輸入裝置、圖片模組及顯示模組耦接。控制模組包括中央處理單元，記憶模組有第一文字資訊單元及第二文字資訊單元，第一文字資訊對應第二文字資訊；圖片模組有學習圖片資訊單元，第二文字資訊對應學習圖片資訊；中央處理單元將第一文字列顯示資訊、第二文字列顯示資訊及學習圖片顯示資訊分別顯示於顯示模組的第一文字列顯示區域、第二文字列顯示區域及學習圖片顯示區域。旨在由本國語言之讀音與圖像記憶的方式高效地學習外國語言。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-01T01:02:20.469Z"
+    },
+    {
       "id": "tipo-M687728",
       "title": "音樂拍速教學系統",
       "patentNumber": "M687728",
@@ -45,6 +92,56 @@
       ],
       "status": "未審查/公開",
       "scrapedAt": "2026-09-16T01:02:11.582Z"
+    },
+    {
+      "id": "tipo-M687494",
+      "title": "整合學習之動態職涯導引系統\nDYNAMIC CAREER GUIDANCE SYSTEM INTEGRATED WITH LEARNING",
+      "patentNumber": "M687494",
+      "filingDate": "2026-06-05",
+      "publicationDate": "2026-09-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M687494",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "呂宜欣"
+      ],
+      "abstract": "一種整合學習之動態職涯導引系統包括使用端與處理器。處理器接收員工基本資料與期望職務資料，並包括資格時效監測模組、職涯分析規劃模組與學習資源媒合模組。資格時效監測模組發送屆期憑證資料。職涯分析規劃模組分析出目標職務需求資料與職能差異資料，並生成個人發展藍圖。學習資源媒合模組串聯內部訓練系統與外部訓練系統，並依據目標職務需求資料與職能差異資料，計算出多個候選課程的推薦分數，並將符合篩選條件的至少一目標課程寫入個人發展藍圖中，以動態建構出具時序引導性的學習計畫，且將學習計畫動態推播至使用端。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-01T01:00:43.862Z"
+    },
+    {
+      "id": "tipo-I938388",
+      "title": "用於無線區域網路（ＷＬＡＮ）中之透過無線聯合學習（ＦＬＯＷ）的方法及站台\nMETHODS AND STATION FOR FEDERATED LEARNING OVER WIRELESS (FLOW) IN WIRELESS LOCAL AREA NETWORKS (WLAN)",
+      "patentNumber": "I938388",
+      "filingDate": "2022-10-05",
+      "publicationDate": "2026-09-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I938388",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "王　曉飛",
+        "林　日南",
+        "樓　漢卿",
+        "薩德　默罕默德",
+        "楊　陸"
+      ],
+      "abstract": "可在一無線網路中實施一聯合學習(FL)及/或一分散式機器學習(ML)模型共用程序。一存取點(AP)、站台(STA)、或類似者可提供指示一FL或ML程序係在使用中的一FL發布訊息。接收該發布訊息的一STA可提供指示其參與FL模型共用的一FL/ML支援框。該STA可包含可在該STA上執行的一本地FL模型。該STA可基於該FL發布訊息中的資訊更新其本地FL模型。該STA可基於接收自該網路中的其他STA的資訊更新其本地FL模型。該FL發布訊息可包含一排程，且該STA可經組態以根據該排程訓練其本地FL模型。該共用模型程序可在一無線區域網路中實施。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-01T01:02:20.469Z"
     },
     {
       "id": "tipo-M687589",
@@ -149,6 +246,54 @@
       "scrapedAt": "2026-09-11T01:02:39.135Z"
     },
     {
+      "id": "tipo-M687181",
+      "title": "智能語言評測系統及其平台",
+      "patentNumber": "M687181",
+      "filingDate": "2026-06-10",
+      "publicationDate": "2026-09-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M687181",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "王冠程"
+      ],
+      "abstract": "本創作提供一種智能語言評測系統及其平台，其中前述系統包括學習歷程獲取模組，用以收集使用者的語言測驗歷史資料；分析模組，用以根據語言測驗歷史資料產生一語言能力分級；題型配置模組，用以根據語言能力分級產生複數題型的配置比例；及生成模組，用以根據語言能力分級及複數題型的配置比例，產生測驗試題。優勢在於，智能語言評測系統及其平台根據使用者的歷史學習軌跡，自動生成個人化學習內容，以提供循序漸進的學習互動並提升語言學習效率。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-01T01:00:43.868Z"
+    },
+    {
+      "id": "tipo-I937995",
+      "title": "因果貢獻節點分析系統應用於水平聯邦學習\nCAUSAL CONTRIBUTION NODE ANALYSIS SYSTEM APPLIED TO HORIZONTAL FEDERATED LEARNING",
+      "patentNumber": "I937995",
+      "filingDate": "2025-08-08",
+      "publicationDate": "2026-09-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I937995",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "林伯儒",
+        "孫唯中",
+        "杜奕瑾"
+      ],
+      "abstract": "本發明揭示一種因果貢獻節點分析系統應用於水平聯邦學習，該系統結合模型表現評估與因果推論機制，能在不共享原始資料之前提下，公平且可追溯地評估多方參與者所提供資料對最終模型之貢獻。本系統主要包括三大模組群：確認資料集模組群、確認貢獻規則模組群及提供分潤建議模組群，並進一步設計多項模組，涵蓋資料選取、資料治理、傾向分數建模、影響函數分析、Shapley值運算與貢獻加權等。系統可辨識稀有或策略性資料之邊際貢獻，並考量參與方的資料治理成本與運算投入，生成最終分潤建議。透過本發明可促進聯邦學習環境中多方協作、確保資料權益，並有利於應用於智慧合約等自動分潤系統。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-01T01:02:20.469Z"
+    },
+    {
       "id": "tipo-M687065",
       "title": "文化資產智慧管理維護與科普教學系統",
       "patentNumber": "M687065",
@@ -173,6 +318,58 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-09-01T01:02:01.438Z"
+    },
+    {
+      "id": "tipo-I936863",
+      "title": "一種學習兼遊戲訓練用的筷子套組",
+      "patentNumber": "I936863",
+      "filingDate": "2025-06-06",
+      "publicationDate": "2026-08-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I936863",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "吳增榮"
+      ],
+      "abstract": "一種學習兼遊戲訓練用的筷子套組，該筷子包含一定筷及一動筷，該定筷的後端供固定於使用者手部的虎口與拇指之間，且該定筷前端則抵靠於無名指第一關節前凹部，該動筷靠近其後端約1/3處設有一擋止凸起，該擋止凸起的下緣包含一斜夾壓部，該斜夾壓部供使用者拇指抵壓以形成該動筷相對於該定筷樞轉運動的轉軸，使用者可藉由食指及中指抵壓在該動筷上來操作該動筷，此設計引導使用者掌握正確的握筷姿勢及施力方式；其中該輔助用具包含數個尺寸由大至小的套環，能供使用者在寓教於樂的過程中，促進對筷子文化的理解、學習與傳承。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-01T01:00:43.868Z"
+    },
+    {
+      "id": "tipo-M686757",
+      "title": "閩南語教學教具",
+      "patentNumber": "M686757",
+      "filingDate": "2026-05-20",
+      "publicationDate": "2026-08-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M686757",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "游婉琳",
+        "陳宜暄",
+        "陳暐哲",
+        "江少程",
+        "李筠緹",
+        "林書筠",
+        "陳育婕"
+      ],
+      "abstract": "本創作揭露一種閩南語教學教具，為一種讓使用者利用繪製有文字與圖像之卡牌結合擴增實境之功能而達到學習閩南語之目的的閩南語教學教具；本創作包括複數張卡牌與讀取模組；藉此，本創作藉由複數張卡牌與讀取模組的硬體設計，讓對閩南語有興趣之學習者經由團體遊戲而利用繪製有國語文、閩南語漢字、台羅拼音與圖案的卡牌練習閩南語之讀音，再藉由擴增實境生成影片，確實達到有效結合卡牌與擴增實境之功能而提供更多的語言學習資源與加強閩南語在日常生活中的使用情境與運用而更加推廣閩南語的重要性等優勢。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-01T01:02:20.469Z"
     },
     {
       "id": "tipo-I935172",
@@ -14067,11 +14264,12 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-09-30T01:05:29.223Z",
+  "updatedAt": "2026-10-01T01:05:41.655Z",
   "sources": {
-    "tipo": 3
+    "tipo": 8
   },
   "months": [
+    "2026-10",
     "2026-09",
     "2026-08",
     "2026-07",
@@ -14236,5 +14434,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 423
+  "total": 431
 }
