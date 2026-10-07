@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-07 (data)
+
+### 產值分析資料更新（data/market-data.json）
+
+- 修正 Research Nester 小數點錯誤：18.71B/72.46B 更正為 187.1B/724.6B
+- Grand View（改為 2025→2033）、Precedence（改為 2035）、Arizton（改為 2025→2031）更新為最新版本
+- 補齊各來源份額、區域 CAGR，對跨來源差距大於 2 倍者在 note 註明口徑
+- 新增 `companies`（上市公司市值與私募估值，含日期與出處）、`unicornSummary`、`meta`、`localFigures`
+- 僅資料更新，未改程式與 market.html
+
 ## 2026-06-08 (fix)
 
 ### 本機 LaunchAgent 排程修復（每日 09:00）
