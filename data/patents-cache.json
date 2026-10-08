@@ -3007,6 +3007,30 @@
       "scrapedAt": "2026-09-30T01:02:16.311Z"
     },
     {
+      "id": "tipo-I903225",
+      "title": "用於半導體處理監視的機器學習系統\nMACHINE LEARNING SYSTEMS FOR MONITORING OF SEMICONDUCTOR PROCESSING",
+      "patentNumber": "I903225",
+      "filingDate": "2019-03-12",
+      "publicationDate": "2025-11-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I903225",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "葉尼　葛拉漢",
+        "傑瑞安　班傑明"
+      ],
+      "abstract": "操作拋光系統的方法包括以下步驟：使用機器學習演算法訓練複數個模型以生成複數個訓練模型(每個訓練模型經配置成基於來自半導體處理系統的原位監視系統的監視信號來決定基板層的特徵值)、存儲複數個訓練模型、接收指示要處理的基板的特徵的資料、基於資料來選擇複數個訓練模型中的一者，及將所選擇的訓練模型傳遞給處理系統。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-08T01:02:16.576Z"
+    },
+    {
       "id": "tipo-M676840",
       "title": "社區情境教學系統\nCommunity-based situational learning system",
       "patentNumber": "M676840",
@@ -6363,6 +6387,29 @@
       "scrapedAt": "2026-09-30T01:02:03.927Z"
     },
     {
+      "id": "tipo-I823123",
+      "title": "學習裝置以及學習方法",
+      "patentNumber": "I823123",
+      "filingDate": "2021-07-28",
+      "publicationDate": "2023-11-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I823123",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "峯澤彰"
+      ],
+      "abstract": "學習裝置(100)，包括：學習用影像取得部(110)，取得表示學習用影像的學習用影像資訊；1次元學習影像產生部(120)，1次元化複數學習用影像資訊分別表示的學習用影像，產生對應複數學習用影像資訊的複數1次元學習影像信號；矩陣產生部(130)，產生互相並列排列複數1次元學習影像信號的矩陣；特異值分解部(140)，關於矩陣，透過實行特異值分解，算出右特異向量及特異值；學習完成模型產生部(150)，產生以右特異向量及特異值為基礎的學習完成模型且以表示1次元化拍攝推論對象物體得到的影像-推論對象影像的影像之1次元推論對象影像信號作為說明變數輸出推論結果的學習完成模型；以及學習完成模型輸出部(160)，輸出學習完成模型作為學習完成模型資訊。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-08T01:02:16.585Z"
+    },
+    {
       "id": "tipo-I822547",
       "title": "使用頸動脈超聲特徵的機器學習分析來預測復發性中風之系統\nSYSTEM OF APPLYING MACHINE LEARNING TO CAROTID SONOGRAPHIC FEATURES FOR RECURRENT STROKE",
       "patentNumber": "I822547",
@@ -6462,6 +6509,30 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:51:58.900Z"
+    },
+    {
+      "id": "tipo-I817992",
+      "title": "用於半導體處理監視的機器學習系統\nMACHINE LEARNING SYSTEMS FOR MONITORING OF SEMICONDUCTOR PROCESSING",
+      "patentNumber": "I817992",
+      "filingDate": "2019-03-12",
+      "publicationDate": "2023-10-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I817992",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "葉尼 葛拉漢",
+        "傑瑞安 班傑明"
+      ],
+      "abstract": "操作拋光系統的方法包括以下步驟：使用機器學習演算法訓練複數個模型以生成複數個訓練模型(每個訓練模型經配置成基於來自半導體處理系統的原位監視系統的監視信號來決定基板層的特徵值)、存儲複數個訓練模型、接收指示要處理的基板的特徵的資料、基於資料來選擇複數個訓練模型中的一者，及將所選擇的訓練模型傳遞給處理系統。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-08T01:02:16.585Z"
     },
     {
       "id": "tipo-I818790",
@@ -14264,9 +14335,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-10-01T01:05:41.655Z",
+  "updatedAt": "2026-10-08T01:05:31.783Z",
   "sources": {
-    "tipo": 8
+    "tipo": 3
   },
   "months": [
     "2026-10",
@@ -14434,5 +14505,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 431
+  "total": 434
 }
