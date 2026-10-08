@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T03:40:22.475Z",
+  "updatedAt": "2026-10-07T00:00:00.000Z",
   "sources": [
     {
       "id": "grand-view",
@@ -7,32 +7,32 @@
       "url": "https://www.grandviewresearch.com/industry-analysis/education-technology-market",
       "scope": "global",
       "forecast": {
-        "from": 2025,
-        "to": 2030
+        "from": 2026,
+        "to": 2033
       },
       "marketSize": {
-        "year": 2024,
-        "value": 163.49,
+        "year": 2025,
+        "value": 187.01,
         "unit": "B"
       },
       "projected": {
-        "year": 2030,
-        "value": 348.41
+        "year": 2033,
+        "value": 437.54
       },
-      "cagr": 13.3,
+      "cagr": 10.8,
       "segments": {
         "byType": {
-          "Hardware": 39,
+          "Hardware": null,
           "Software": null,
           "Content": null
         },
         "bySector": {
-          "K-12": 39.4,
+          "K-12": null,
           "Higher Education": null,
           "Preschool": null
         },
         "byEndUse": {
-          "Commercial": 66,
+          "Commercial": null,
           "Consumer": null
         },
         "byDeployment": {
@@ -41,7 +41,7 @@
         }
       },
       "regions": {
-        "North America": 35.62,
+        "North America": 36.1,
         "Asia Pacific": null,
         "Europe": null
       },
@@ -50,7 +50,8 @@
         "global",
         "comprehensive"
       ],
-      "scrapedAt": "2026-04-02T03:39:51.561Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "新版報告（基準年 2025，預測 2026–2033）。2026 年估值 213.2B；雲端部署為成長最快（CAGR 15.9%，2026–2033）。舊版（2024 基準，Hardware 39%、K-12 39.4%、Commercial 66%）份額屬舊版本，新版未能核對故改為 null。"
     },
     {
       "id": "markets-and-markets",
@@ -77,7 +78,8 @@
       "tags": [
         "global"
       ],
-      "scrapedAt": "2026-04-02T03:39:53.506Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "口徑為 Edtech and Smart Classrooms（含智慧教室）；數值與官方摘要一致，亞太為預期成長最快區域。細分份額未能取得。"
     },
     {
       "id": "mordor",
@@ -98,7 +100,7 @@
         "value": 98.58
       },
       "cagr": 26.57,
-      "note": "Digital Education (narrower scope, excludes hardware)",
+      "note": "口徑為 Digital Education（較窄，數位教育服務與平台，不含硬體），2026 年 30.36B（2025 年 23.98B）。與其他全球 EdTech 來源（約 185–200B）差距約 6 倍，屬口徑差異，不可直接比較。份額為 2025 年數據：LMS 33.36%、自學式 40.15%、北美 31.28%；混合式學習 CAGR 16.10%、AI 自適應學習 CAGR 22.05%。",
       "segments": {
         "byType": {
           "LMS": 33.36,
@@ -132,7 +134,10 @@
         "global",
         "digital-education"
       ],
-      "scrapedAt": "2026-04-02T03:39:54.890Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "regionCagr": {
+        "Asia Pacific": 14.74
+      }
     },
     {
       "id": "research-nester",
@@ -145,12 +150,12 @@
       },
       "marketSize": {
         "year": 2025,
-        "value": 18.71,
+        "value": 187.1,
         "unit": "B"
       },
       "projected": {
         "year": 2035,
-        "value": 72.46
+        "value": 724.6
       },
       "cagr": 14.5,
       "segments": {
@@ -203,7 +208,8 @@
         "global",
         "comprehensive"
       ],
-      "scrapedAt": "2026-04-02T03:39:56.679Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "修正小數點錯誤：舊值 18.71B/72.46B 為抓取錯誤，官方為 2025 年 187.1B、2035 年 724.6B，2026 年 214.2B（報告發布日 2025-10-03）。北美 34.5% 與 On-premises 70.1% 為預測期（至 2035）份額。Hardware 41.5%、K-12 42.3%、主要企業份額沿用上次抓取，本次未能於摘要中再次核對。"
     },
     {
       "id": "fortune-bi",
@@ -224,13 +230,21 @@
         "value": 588.72
       },
       "cagr": 13.45,
-      "segments": {},
-      "regions": {},
+      "segments": {
+        "byDeployment": {
+          "Cloud": 64,
+          "On-premises": null
+        }
+      },
+      "regions": {
+        "Asia Pacific": 34
+      },
       "access": "paid",
       "tags": [
         "global"
       ],
-      "scrapedAt": "2026-04-02T03:39:58.888Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "2026 年 214.58B。亞太 34% 與雲端 64% 為 2025 年份額。"
     },
     {
       "id": "technavio",
@@ -254,13 +268,14 @@
       "cagr": 15.9,
       "segments": {},
       "regions": {
-        "North America": 37
+        "North America": 37.5
       },
       "access": "free",
       "tags": [
         "global"
       ],
-      "scrapedAt": "2026-04-02T03:40:20.974Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "未公開基準年絕對值，只有預測期新增 170.8B（2024–2029，CAGR 15.9%），故 marketSize/projected 維持 null。北美 37.5% 為對預測期成長的貢獻占比，並非市占。"
     },
     {
       "id": "imarc-global",
@@ -287,6 +302,9 @@
         },
         "byType": {
           "Hardware": 46.4
+        },
+        "byDeployment": {
+          "On-premises": 60.2
         }
       },
       "regions": {
@@ -296,7 +314,8 @@
       "tags": [
         "global"
       ],
-      "scrapedAt": "2026-04-02T03:40:02.431Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "2025 年份額：K-12 45.2%、Hardware 46.4%、On-premises 60.2%、北美 38.7%。279.8B 高於多數來源（約 1.5 倍，未達 2 倍），推測因硬體占比高、口徑含硬體。"
     },
     {
       "id": "imarc-taiwan",
@@ -339,7 +358,8 @@
         "taiwan",
         "country-specific"
       ],
-      "scrapedAt": "2026-04-02T03:40:05.369Z"
+      "scrapedAt": "2026-04-02T03:40:05.369Z",
+      "note": "本次未能重新核對 2026–2034 版。搜尋僅取得 2025–2033 舊版：2024 年 1.766B、2033 年 4.837B、CAGR 11.85%。目前數值沿用上次抓取，scrapedAt 未更新。"
     },
     {
       "id": "precedence",
@@ -347,8 +367,8 @@
       "url": "https://www.precedenceresearch.com/educational-technology-market",
       "scope": "global",
       "forecast": {
-        "from": 2025,
-        "to": 2034
+        "from": 2026,
+        "to": 2035
       },
       "marketSize": {
         "year": 2025,
@@ -356,11 +376,18 @@
         "unit": "B"
       },
       "projected": {
-        "year": 2034,
-        "value": 572.08
+        "year": 2035,
+        "value": 634.13
       },
-      "cagr": 13.34,
-      "segments": {},
+      "cagr": 13.09,
+      "segments": {
+        "byType": {
+          "Software": 45
+        },
+        "bySector": {
+          "K-12": 50
+        }
+      },
       "regions": {
         "North America": 40
       },
@@ -368,7 +395,8 @@
       "tags": [
         "global"
       ],
-      "scrapedAt": "2026-04-02T03:40:08.188Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "新版預測至 2035（舊版 2034 為 572.08B）。2026 年 210.08B。2025 年份額：Software 45%、K-12 學校 50%、北美 40%；AI in Education 技術占 30%。"
     },
     {
       "id": "allied",
@@ -397,7 +425,8 @@
       "tags": [
         "global"
       ],
-      "scrapedAt": "2026-04-02T03:40:11.336Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "估值為 2023 基準的舊版。亞太 75% 為 2022 年份額，與 Fortune BI（亞太 34%，2025）、Mordor（北美 31.28%）差距很大，口徑不同，不建議與其他來源直接比較。"
     },
     {
       "id": "straits",
@@ -424,7 +453,8 @@
       "tags": [
         "global"
       ],
-      "scrapedAt": "2026-04-02T03:40:14.335Z"
+      "scrapedAt": "2026-10-07T00:00:00.000Z",
+      "note": "官方摘要仍為 2023 基準（144.64B→598.82B，2024–2032）。另有 2025–2033 專業報告版本，數值未能取得。"
     },
     {
       "id": "mrf",
@@ -450,7 +480,9 @@
       "access": "paid",
       "tags": [
         "global"
-      ]
+      ],
+      "note": "2024 年 167.02B。預測期 2025–2035。細分份額未能取得。",
+      "scrapedAt": "2026-10-07T00:00:00.000Z"
     },
     {
       "id": "arizton",
@@ -458,25 +490,27 @@
       "url": "https://www.arizton.com/market-reports/edtech-market",
       "scope": "global",
       "forecast": {
-        "from": 2023,
-        "to": 2029
+        "from": 2026,
+        "to": 2031
       },
       "marketSize": {
-        "year": 2023,
-        "value": 334.29,
+        "year": 2025,
+        "value": 416.1,
         "unit": "B"
       },
       "projected": {
-        "year": 2029,
-        "value": 738.6
+        "year": 2031,
+        "value": 877.84
       },
-      "cagr": 14.13,
+      "cagr": 13.25,
       "segments": {},
       "regions": {},
       "access": "paid",
       "tags": [
         "global"
-      ]
+      ],
+      "note": "新版（新聞稿 2026-06-24，預測 2026–2031），取代舊版 2023 基準 334.29B→738.6B。416.1B 約為其他全球 EdTech 來源（約 185–200B）的 2.2 倍，口徑偏廣（涵蓋 111 家企業、含訂閱制與企業培訓），不可直接比較。",
+      "scrapedAt": "2026-10-07T00:00:00.000Z"
     },
     {
       "id": "globaldata",
@@ -497,12 +531,18 @@
         "value": null
       },
       "cagr": 19.4,
-      "segments": {},
+      "segments": {
+        "bySector": {
+          "Higher Education": 40.8
+        }
+      },
       "regions": {},
       "access": "paid",
       "tags": [
         "global"
-      ]
+      ],
+      "note": "2024 年營收 310.8B，2019–2024 CAGR 19.4%；2024 年成長 11.2%。高等教育為最大區塊，126.9B，占 40.8%。",
+      "scrapedAt": "2026-10-07T00:00:00.000Z"
     },
     {
       "id": "market-us-apac",
@@ -529,7 +569,9 @@
       "tags": [
         "asia-pacific",
         "regional"
-      ]
+      ],
+      "note": "亞太區域報告。2024 年 59.8B，2025 年 68.92B，2034 年 285.1B。",
+      "scrapedAt": "2026-10-07T00:00:00.000Z"
     },
     {
       "id": "holoniq-outlook-2025",
@@ -550,7 +592,7 @@
         "value": null
       },
       "cagr": 16.3,
-      "note": "Global education market ~$10T by 2030; EdTech VC was $1.8B in 2024",
+      "note": "注意口徑：404B 與 CAGR 16.3% 出自 HolonIQ 舊版預測「全球教育科技 2025 年達 404B」，非 2025 Outlook。2025 Global Education Outlook 數據為：全球教育市場 2030 年近 10T（CAGR 4.4%）；EdTech 創投 2024 年 1.8B（2014 年以來最低）。另有報導指 2025 年 EdTech 創投約 2.6B（較 2024 年增約 11%），該數字未能於 HolonIQ 頁面核對。404B 約為其他來源 2.1 倍。",
       "segments": {},
       "regions": {},
       "access": "free-summary",
@@ -558,7 +600,8 @@
         "global",
         "vc-funding",
         "edtech-specialist"
-      ]
+      ],
+      "scrapedAt": "2026-10-07T00:00:00.000Z"
     },
     {
       "id": "tipo-smart-learning",
@@ -579,7 +622,7 @@
         "value": null
       },
       "cagr": null,
-      "note": "107-111年度智慧學習產業產值調查報告，含數位學習子產業，PDF 下載",
+      "note": "台灣官方調查採新臺幣計價，為避免匯率假設，marketSize 維持 null，數字放在 localFigures。112、113年度調查未能找到公開數字。內容端與系統端為不同口徑項目，不可相加成總產值。數字經媒體轉述資策會報告（inside.com.tw），非直接開啟 PDF 核對。",
       "segments": {},
       "regions": {},
       "access": "free",
@@ -587,7 +630,50 @@
         "taiwan",
         "government",
         "smart-learning"
-      ]
+      ],
+      "localFigures": [
+        {
+          "label": "數位化學習（內容端）",
+          "year": 2022,
+          "value": 510.6,
+          "unit": "億 NTD",
+          "yoy": 51.4,
+          "basis": "111年臺灣智慧學習產業產值調查（資策會數位教育研究所）"
+        },
+        {
+          "label": "軟體系統（系統端）",
+          "year": 2022,
+          "value": 378.8,
+          "unit": "億 NTD",
+          "yoy": 19.7,
+          "basis": "同上"
+        },
+        {
+          "label": "整合性平臺",
+          "year": 2022,
+          "value": 161.2,
+          "unit": "億 NTD",
+          "yoy": null,
+          "basis": "同上，軟體系統子項"
+        },
+        {
+          "label": "工具系統",
+          "year": 2022,
+          "value": 217.6,
+          "unit": "億 NTD",
+          "yoy": null,
+          "basis": "同上，軟體系統子項"
+        },
+        {
+          "label": "教學內容",
+          "year": 2021,
+          "value": 381.6,
+          "unit": "億 NTD",
+          "yoy": null,
+          "basis": "經濟部工業局110年智慧學習調查報告"
+        }
+      ],
+      "scrapedAt": "2026-10-07T00:00:00.000Z"
     }
   ],
   "categories": {
@@ -612,6 +698,143 @@
     "byDeployment": [
       "Cloud",
       "On-premises"
+    ]
+  },
+  "companies": [
+    {
+      "name": "Duolingo",
+      "ticker": "NASDAQ: DUOL",
+      "status": "public",
+      "value": 6.75,
+      "unit": "B USD",
+      "metric": "市值",
+      "asOf": "2026-10-02",
+      "note": "收盤價 144.27 美元；一年內市值下跌約 51.5%",
+      "url": "https://stockanalysis.com/stocks/duol/market-cap/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Coursera（合併 Udemy 後）",
+      "ticker": "NYSE: COUR",
+      "status": "public",
+      "value": 1.4,
+      "unit": "B USD",
+      "metric": "市值",
+      "asOf": "2026-10-05",
+      "note": "與 Udemy 全股票合併於 2026-05-11 完成，宣布時合併後公司估值約 2.5B；股價 5.19 美元",
+      "url": "https://www.highereddive.com/news/coursera-to-acquire-udemy-to-create-25b-mooc-giant/808212/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Chegg",
+      "ticker": "NYSE: CHGG",
+      "status": "public",
+      "value": 0.08471,
+      "unit": "B USD",
+      "metric": "市值",
+      "asOf": "2026-09-14",
+      "note": "約 84.7M 美元；AI 工具衝擊下大幅縮水",
+      "url": "https://stockanalysis.com/stocks/chgg/market-cap/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Pearson",
+      "ticker": "LSE: PSON / NYSE: PSO",
+      "status": "public",
+      "value": 9.72,
+      "unit": "B USD",
+      "metric": "市值",
+      "asOf": "2026-10-02",
+      "note": "倫敦市值 7.41B 英鎊（2026-10-06）；美元數字為 NYSE ADR 口徑",
+      "url": "https://companiesmarketcap.com/pearson/marketcap/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Instructure",
+      "ticker": null,
+      "status": "private (KKR/Dragoneer)",
+      "value": 4.8,
+      "unit": "B USD",
+      "metric": "私有化交易價",
+      "asOf": "2024-11-13",
+      "note": "每股 23.60 美元現金收購，已下市；之後無公開估值，此為交易價",
+      "url": "https://pehub.com/kkr-and-dragoneer-complete-4-8bn-take-private-acquisition-of-edtech-firm-instructure",
+      "confidence": "high"
+    },
+    {
+      "name": "PowerSchool",
+      "ticker": null,
+      "status": "private (Bain Capital)",
+      "value": 5.6,
+      "unit": "B USD",
+      "metric": "私有化交易企業價值",
+      "asOf": "2024-10",
+      "note": "每股 22.80 美元現金收購；之後無公開估值，此為交易價",
+      "url": "https://pulse2.com/bain-capital-completes-powerschool-acquisition-in-5-6-billion-deal",
+      "confidence": "high"
+    },
+    {
+      "name": "PhysicsWallah",
+      "ticker": "NSE/BSE",
+      "status": "public",
+      "value": 40922.2,
+      "unit": "億 INR（crore）",
+      "metric": "上市首日市值",
+      "asOf": "2025-11-18",
+      "note": "發行價 109 盧比，上市價 145 盧比（溢價 33%）；目前市值未查到，未換算美元",
+      "url": "https://entrackr.com/news/physicswallah-lists-at-rs-145-with-33-premium-on-stock-exchange-10784210",
+      "confidence": "medium"
+    },
+    {
+      "name": "Speak",
+      "ticker": null,
+      "status": "private",
+      "value": 1.2,
+      "unit": "B USD",
+      "metric": "私募估值",
+      "asOf": "2026-01",
+      "note": "2026 年 1 月募資 150M 美元，估值 1.2B；2024-12 為 1B",
+      "url": "https://dealroom.co/unicorns/edtech/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Byju's",
+      "ticker": null,
+      "status": "insolvent",
+      "value": null,
+      "unit": "B USD",
+      "metric": "私募估值",
+      "asOf": "2024-10",
+      "note": "2022-03 高峰估值約 22B，之後進入破產程序（印度 CIRP，美國子公司 Chapter 11），估值無意義",
+      "url": "https://en.wikipedia.org/wiki/Byju%27s",
+      "confidence": "medium"
+    }
+  ],
+  "unicornSummary": {
+    "source": "Dealroom",
+    "url": "https://dealroom.co/unicorns/edtech/",
+    "asOf": "2026-09",
+    "count": 87,
+    "combinedValue": 196.8,
+    "unit": "B USD",
+    "note": "另一份摘要為 2026-07 數據：86 家、191.4B；最高估值為猿輔導約 16B、Grammarly 約 13B、作業幫約 10B（可能為歷史峰值估值，未逐一核對）",
+    "confidence": "medium"
+  },
+  "meta": {
+    "verificationMethod": "2026-10 以官方報告頁摘要（搜尋結果）核對；報告全文頁因環境網路限制無法直接開啟。",
+    "unitConvention": "marketSize/projected/companies.value 皆為 USD Billion（B），例外已在 unit 欄註明",
+    "global2025Reference": {
+      "median": 189.15,
+      "range": [
+        185.36,
+        197.3
+      ],
+      "note": "中位數取自 Grand View、MarketsandMarkets、Research Nester、Fortune BI、Precedence、MRF 的 2025 年全球 EdTech 估值；超過 2 倍差距者（Arizton、HolonIQ、Mordor）已於各自 note 註明口徑"
+    },
+    "gaps": [
+      "主要企業市占僅 Research Nester 一筆；其他來源摘要未公開",
+      "台灣數位產業署 112、113 年度產值調查未找到公開數字",
+      "IMARC 台灣 2026–2034 版未能重新核對"
     ]
   }
 }
