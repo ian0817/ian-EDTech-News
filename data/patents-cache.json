@@ -6459,6 +6459,30 @@
       "scrapedAt": "2026-10-08T01:02:16.585Z"
     },
     {
+      "id": "tipo-I822291",
+      "title": "用於藉由一資料集進行離線強化學習之電腦實施方法、電腦程式產品及電腦處理系統\nCOMPUTER-IMPLEMENTED METHODS, COMPUTER PROGRAM PRODUCTS, AND COMPUTER PROCESSING SYSTEMS FOR OFFLINE REINFORCEMENT LEARNING WITH A DATASET",
+      "patentNumber": "I822291",
+      "filingDate": "2022-09-01",
+      "publicationDate": "2023-11-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I822291",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "和地瞭良",
+        "恐神貴行"
+      ],
+      "abstract": "本發明提供一種用於藉由一資料集進行離線強化學習之電腦實施方法。該方法包括訓練一類神經網路，該類神經網路輸入一狀態動作對且針對一獎勵及一或多個安全約束中之各者分別輸出一各別Q函數。該類神經網路具有由一特徵映射函數表示之一線性輸出層及剩餘非線性層。該訓練包括藉由根據一離線強化演算法基於該資料集而建構Q函數來獲得該特徵映射函數。該訓練進一步包括使用該特徵映射函數來調諧該獎勵與該一或多個安全約束之間的一權重，其中在該獲得步驟及該調諧步驟期間，一Q函數之一估計係藉由自該Q函數之一期望值減去一不確定性而提供。該不確定性為將該狀態動作對映射至一錯誤大小之一函數。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-15T01:02:12.692Z"
+    },
+    {
       "id": "tipo-I822547",
       "title": "使用頸動脈超聲特徵的機器學習分析來預測復發性中風之系統\nSYSTEM OF APPLYING MACHINE LEARNING TO CAROTID SONOGRAPHIC FEATURES FOR RECURRENT STROKE",
       "patentNumber": "I822547",
@@ -14407,7 +14431,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-10-13T01:05:37.815Z",
+  "updatedAt": "2026-10-15T01:05:30.537Z",
   "sources": {
     "tipo": 1
   },
@@ -14578,5 +14602,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 437
+  "total": 438
 }
