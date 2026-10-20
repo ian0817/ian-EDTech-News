@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-20 (feat)
+
+### 學術活動新增暨南大學教育系「校外研討會訊息」來源
+
+**原因：** 學術活動頁自 2026-04 起無新資料，用戶指出暨大教育政策與行政學系有持續轉知最新研討會。
+
+**變更：**
+- `lib/conferences.js`：新增 `scrapeNCNU`（epa.ncnu.edu.tw/p/403-1065-829-{n}.php，最多 4 頁，沿用 EdTech 關鍵字過濾與 early-stop），納入 `refreshConferences`
+- `public/conferences.html`、`public/index.html`：來源標籤改用對照表（原本非 NSTC 一律顯示「臺東大學」，CCU 也被誤標）
+- `lib/conferences.js`：NSTC/NTTU/CCU/NCNU 的 early-stop 改以「未見過的 id」判斷，原本以「符合關鍵字的新項目」判斷，第一頁若全是非教育類就會提早結束，NTTU 因此一直抓不到新資料
+- 本機重爬（保留舊快取疊加）：NSTC +6、NTTU +9、CCU +13、NCNU +30，總計 83 筆
+
+**影響範圍：** 學術活動清單、首頁行事曆事件。未部署。
+
 ## 2026-06-08 (fix)
 
 ### 本機 LaunchAgent 排程修復（每日 09:00）

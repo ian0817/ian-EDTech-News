@@ -335,7 +335,7 @@
             city: '',
             url: c.url,
             description: '',
-            source: c.source === 'NSTC' ? '國科會' : '臺東大學',
+            source: ({ NSTC: '國科會', NTTU: '臺東大學', CCU: '中正大學', NCNU: '暨南大學', CACET: 'CACET' })[c.source] || c.source,
           });
         }
       }
