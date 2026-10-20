@@ -328,7 +328,8 @@
             id: c.id,
             type: 'conference',
             title: c.title,
-            date: c.date || '',
+            date: c.eventDate || c.date || '',
+            postOnly: !c.eventDate,
             endDate: '',
             country: 'TW',
             countryName: '台灣',
@@ -433,12 +434,18 @@
         return true;
       });
 
+      // 只有公告日、抓不到舉辦日的研討會：公告後 60 天內仍視為近期
+      const recentCutoff = new Date(now.getTime() - 60 * 86400000);
+      const isUpcoming = item => item.postOnly
+        ? item.date && new Date(item.date) >= recentCutoff
+        : item.date && new Date(item.endDate || item.date) >= now;
+
       const upcoming = filtered
-        .filter(item => item.date && new Date(item.endDate || item.date) >= now)
+        .filter(isUpcoming)
         .sort((a, b) => a.date.localeCompare(b.date));
 
       const past = filtered
-        .filter(item => !item.date || new Date(item.endDate || item.date) < now)
+        .filter(item => !isUpcoming(item))
         .sort((a, b) => {
           if (!a.date) return 1; if (!b.date) return -1;
           return b.date.localeCompare(a.date);
@@ -484,7 +491,7 @@
         : '<div class="conf-date-box no-date"><div class="day">日期<br>未定</div></div>';
 
       const effectiveDate = item.date || '';
-      const countdown = effectiveDate ? makeCountdown(effectiveDate, now) : '';
+      const countdown = effectiveDate && !item.postOnly ? makeCountdown(effectiveDate, now) : '';
 
       const flag = FLAG[item.country] || '🌐';
       const typeBadge = item.type === 'exhibition'
@@ -502,7 +509,7 @@
         : '';
 
       const sourceHtml = item.source
-        ? '<span class="conf-date-range">' + esc(item.source) + '</span>'
+        ? '<span class="conf-date-range">' + esc(item.source) + (item.postOnly ? ' · 公告日（舉辦日請見內文）' : '') + '</span>'
         : '';
 
       // Summary button: only show for past activities from 2026+ that have a summary

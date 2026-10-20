@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-20 (fix)
+
+### 學術活動頁「即將到來」一直是空的
+
+**根因：** 爬蟲存的 `date` 是公告日，不是研討會舉辦日；頁面用它判斷即將到來/已結束，新公告全被歸到「已結束」。
+
+**修正：**
+- `lib/conferences.js`：新增 `extractEventDate` / `enrichEventDates`，從公告頁抓舉辦日存成 `eventDate`（排除截稿/報名/更新等上下文，支援民國年；抓不到存 `''`；每次 refresh 補最近 60 天、最多 40 筆）
+- `public/conferences.html`：優先用 `eventDate`；沒有舉辦日者以公告日計、60 天內仍列為近期，並標示「公告日」、不顯示倒數
+- `public/index.html`：行事曆事件改用 `eventDate`
+- 本機結果：即將到來 17 場（原本 0）
+
 ## 2026-10-20 (feat)
 
 ### 學術活動新增暨南大學教育系「校外研討會訊息」來源

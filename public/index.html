@@ -1007,7 +1007,7 @@
           confData.conferences.forEach(c => {
             events.push({
               name: c.title,
-              date: c.date,
+              date: c.eventDate || c.date,
               endDate: null,
               source: ({ NSTC: '國科會', NTTU: '臺東大學', CCU: '中正大學', NCNU: '暨南大學', CACET: 'CACET' })[c.source] || c.source,
               url: c.url,
