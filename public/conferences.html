@@ -434,15 +434,12 @@
         return true;
       });
 
-      // 舉辦日已抓到 → 以舉辦日判斷；抓不到者（網站由 JS 渲染等）以公告日計，30 天內仍列為近期並排在最後
-      const recentCutoff = new Date(now.getTime() - 30 * 86400000);
-      const isUpcoming = item => item.postOnly
-        ? item.date && new Date(item.date) >= recentCutoff
-        : item.date && new Date(item.endDate || item.date) >= now;
+      // 以公告內文抓到的舉辦日判斷；抓不到舉辦日者（網站由 JS 渲染等）無法確認是否過期，不列入即將到來
+      const isUpcoming = item => !item.postOnly && item.date && new Date(item.endDate || item.date) >= now;
 
       const upcoming = filtered
         .filter(isUpcoming)
-        .sort((a, b) => (a.postOnly - b.postOnly) || (a.postOnly ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date)));
+        .sort((a, b) => a.date.localeCompare(b.date));
 
       const past = filtered
         .filter(item => !isUpcoming(item))
