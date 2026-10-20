@@ -434,18 +434,21 @@
         return true;
       });
 
-      // 只有公告日、抓不到舉辦日的研討會：公告後 60 天內仍視為近期
-      const recentCutoff = new Date(now.getTime() - 60 * 86400000);
-      const isUpcoming = item => item.postOnly
-        ? item.date && new Date(item.date) >= recentCutoff
-        : item.date && new Date(item.endDate || item.date) >= now;
+      // 已確認舉辦日且尚未結束 → 即將到來；只有公告日、抓不到舉辦日者另列「近期公告」，不混入
+      const recentCutoff = new Date(now.getTime() - 30 * 86400000);
+      const isUpcoming = item => !item.postOnly && item.date && new Date(item.endDate || item.date) >= now;
+      const isRecentUnknown = item => item.postOnly && item.date && new Date(item.date) >= recentCutoff;
 
       const upcoming = filtered
         .filter(isUpcoming)
         .sort((a, b) => a.date.localeCompare(b.date));
 
+      const recentUnknown = filtered
+        .filter(isRecentUnknown)
+        .sort((a, b) => b.date.localeCompare(a.date));
+
       const past = filtered
-        .filter(item => !isUpcoming(item))
+        .filter(item => !isUpcoming(item) && !isRecentUnknown(item))
         .sort((a, b) => {
           if (!a.date) return 1; if (!b.date) return -1;
           return b.date.localeCompare(a.date);
@@ -462,6 +465,11 @@
         html += '<div class="empty-msg">目前沒有符合篩選的即將到來活動</div>';
       } else {
         html += upcoming.map(item => renderCard(item, now, false)).join('');
+      }
+
+      if (recentUnknown.length) {
+        html += '<div class="section-title"><span class="dot"></span>近期公告（舉辦日未確認，請見公告內文）</div>';
+        html += recentUnknown.map(item => renderCard(item, now, false)).join('');
       }
 
       if (past.length) {
