@@ -1,6 +1,79 @@
 {
   "patents": [
     {
+      "id": "tipo-M688962",
+      "title": "專屬智能學習助理系統",
+      "patentNumber": "M688962",
+      "filingDate": "2026-08-03",
+      "publicationDate": "2026-10-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M688962",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "黃煜勝"
+      ],
+      "abstract": "一種專屬智能學習助理系統，包括一學習平台及一實體機器人，該學習平台包括一使用者登入介面、一課程裝置、一學習歷程裝置及一互動式虛擬機器人，該課程學習者自該使用者登入介面登入後可進入該課程裝置進行課程學習與考卷考試，於該學習平台內的學習歷程與紀錄皆會儲存至該學習歷程裝置中，並生成包含有考卷解題、排課、學習補救、學習診斷等學習計畫，該互動式虛擬機器人可根據該學習歷程裝置中的學習計畫，與課程學習者於該學習平台內進行互動式學習，而該實體機器人與該互動式虛擬機器人記憶同步，與課程學習者於該學習平台外進行互動式學習。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-21T01:00:43.275Z"
+    },
+    {
+      "id": "tipo-I943790",
+      "title": "在虛擬實境中提升自主學習與高層次思考能力之系統及方法\nA SYSTEM AND METHOD FOR ENHANCING SELF-REGULATED LEARNING AND HIGHER-ORDER THINKING SKILLS IN A VIRTUAL REALITY ENVIRONMENT",
+      "patentNumber": "I943790",
+      "filingDate": "2025-12-30",
+      "publicationDate": "2026-10-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I943790",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "黃悅民",
+        "王韋盛"
+      ],
+      "abstract": "本發明係有關於一種在虛擬實境中提升自主學習與高層次思考能力之系統及方法，其主要係令學習輔助模組安裝於虛擬實境學習系統中，令學習輔助模組分別設有相連結的反饋輔助單元、提示輔助單元及引導輔助單元，反饋輔助單元係會對使用者之操作或作答的正確或錯誤進行反饋，提示輔助單元係在使用者於學習環境中停滯超過預設時間未進行操作或與學習材料互動時，在學習材料中即會有醒目的引導顯示，以幫助使用者專注於學習材料上，引導輔助單元則會提供一個進程面板，以提供使用者了解當前學習進度；藉此，以在虛擬實境學習環境中提供學習輔助機制給使用者，幫助使用者避免感到過度困難或壓力，並能在較短的時間內，具有顯著的學習進步，讓低成就學生在學習指標上有顯著提升，而在其整體施行使用上更增實用功效特性者。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-21T01:02:26.801Z"
+    },
+    {
+      "id": "tipo-I943704",
+      "title": "多模態機器學習系統及方法\nMULTIMODAL MACHINE LEARNING SYSTEM AND METHOD",
+      "patentNumber": "I943704",
+      "filingDate": "2025-10-13",
+      "publicationDate": "2026-10-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I943704",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "胡春美",
+        "許昭萍",
+        "張毓廷",
+        "吳丹霓"
+      ],
+      "abstract": "一種多模態機器學習系統，用以產生多模態輸入資料組。多模態機器學習系統包括編碼器層及融合層。編碼器層包含至少一單模態分析模型，用以對至少一全光譜圖像的複數個資料點進行分析，以產生至少一全光譜圖像的決策值。融合層用以將該至少一全光譜圖像的決策值與至少一非光譜資料進行融合而產生多模態輸入資料組，其中該至少一非光譜資料組包含至少一臨床資料。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-21T01:02:26.801Z"
+    },
+    {
       "id": "tipo-M688446",
       "title": "結合ＣＩＣＡＲＥ模式之數位微學習系統",
       "patentNumber": "M688446",
@@ -14431,9 +14504,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-10-15T01:05:30.537Z",
+  "updatedAt": "2026-10-21T01:05:50.821Z",
   "sources": {
-    "tipo": 1
+    "tipo": 3
   },
   "months": [
     "2026-10",
@@ -14602,5 +14675,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 438
+  "total": 441
 }
