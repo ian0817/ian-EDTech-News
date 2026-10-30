@@ -6606,6 +6606,31 @@
       "scrapedAt": "2026-05-25T03:51:58.900Z"
     },
     {
+      "id": "tipo-M647767",
+      "title": "虛擬藥物辨識學習系統\nVirtual drug identification learning system",
+      "patentNumber": "M647767",
+      "filingDate": "2023-05-25",
+      "publicationDate": "2023-11-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M647767",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "吳秉峰",
+        "鄭奕帝",
+        "謝右文"
+      ],
+      "abstract": "一種虛擬藥物辨識學習系統，一虛擬實境裝置提供操作者於一虛擬實境中學習，一藥物模型資料庫建置於一伺服器中，藥物模型資料庫建置有各種藥物之物理特徵及化學特徵，一學習系統具有一系統操作說明單元、一藥物辨識學習單元、一藥物考核單元及一問卷回饋單元，系統操作說明單元對操作者介紹虛擬實境中多個操作介面的用途及使用方式，在操作者對一藥物模型進行不同視角觀察時，藥物辨識學習單元逐一顯示藥物模型的物理特徵、化學特徵及所選藥物模型的說明資訊，藥物考核單元於虛擬實境中顯示文字題目供操作者作答，問卷回饋單元顯示一虛擬問卷，供操作者輸入操作心得，藉由在藥物辨識教學中導入虛擬擬真技術，加深對藥品的認知與記憶程度，以達到提升自主學習動機之功效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-10-30T01:02:24.323Z"
+    },
+    {
       "id": "tipo-I821014",
       "title": "高爾夫球教學方法及高爾夫球教學系統\nGOLF TEACHING METHOD AND GOLF TEACHING SYSTEM",
       "patentNumber": "I821014",
@@ -14504,9 +14529,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-10-21T01:05:50.821Z",
+  "updatedAt": "2026-10-30T01:05:51.614Z",
   "sources": {
-    "tipo": 3
+    "tipo": 1
   },
   "months": [
     "2026-10",
@@ -14675,5 +14700,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 441
+  "total": 442
 }
