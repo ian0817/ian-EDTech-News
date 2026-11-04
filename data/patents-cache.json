@@ -7268,6 +7268,29 @@
       "scrapedAt": "2026-05-25T03:54:58.084Z"
     },
     {
+      "id": "tipo-M637593",
+      "title": "線上備課教學系統與其顯示裝置\nOnline lesson preparation teaching system and display device thereof",
+      "patentNumber": "M637593",
+      "filingDate": "2022-10-05",
+      "publicationDate": "2023-02-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M637593",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "朱振鰲"
+      ],
+      "abstract": "本創作提供一種線上備課教學系統，其包括一資料庫以及一處理器。資料庫儲存有至少一個多媒體檔案。處理器訊號連接資料庫與用來顯示一教學檔案的一顯示裝置。當處理器接收並響應於使用者的第一操作指令時，處理器會在教學檔案定義一功能鍵，該功能鍵能從資料庫呼叫出至少一個多媒體檔案。本創作可以將備課內容與多媒體輔助教材建立關聯性連接，藉此將教學時所需的多個素材整合於教學檔案的頁面上，進而簡化使用者的操作步驟。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-04T01:02:11.919Z"
+    },
+    {
       "id": "tipo-I793025",
       "title": "直播教學系統\nLIVE TEACHING SYSTEM",
       "patentNumber": "I793025",
@@ -14625,9 +14648,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-11-01T02:50:02.112Z",
+  "updatedAt": "2026-11-04T01:05:42.366Z",
   "sources": {
-    "tipo": 4
+    "tipo": 1
   },
   "months": [
     "2026-11",
@@ -14797,5 +14820,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 446
+  "total": 447
 }
