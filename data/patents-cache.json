@@ -10840,6 +10840,31 @@
       "scrapedAt": "2026-09-12T02:02:25.709Z"
     },
     {
+      "id": "tipo-I679620",
+      "title": "動態劇情導向的數位語言教學的方法及系統",
+      "patentNumber": "I679620",
+      "filingDate": "2018-07-24",
+      "publicationDate": "2019-12-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I679620",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "林宜敬",
+        "張怡芸",
+        "張嘉珮"
+      ],
+      "abstract": "本發明係有關於動態劇情導向的數位語言教學的方法及系統，係應用在教學內容提供端、編輯端及學習端。編輯端可以在提供端所提供的教學編輯單元編輯教學劇本，教學劇本中包括複數個基本教學情節及複數個情節變動條件，提供端根據教學劇本產生數位教學課程，而學習端可以選擇及執行數位教學課程，且提供端可以判斷學習端的語音評量回覆資訊是否符合情節變動條件，而決定教學劇本應該接續到哪一個基本教學情節，使得學習端感受到如同真人教學下，按照學習成果由教學內容提供端提供相應的學習內容。",
+      "classifications": [],
+      "matchedKeywords": [
+        "數位學習"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-06T01:00:13.538Z"
+    },
+    {
       "id": "tipo-I679548",
       "title": "虛擬助理的自動學習方法及系統\nMETHOD AND SYSTEM FOR AUTOMATED LEARNING OF A VIRTUAL ASSISTANT",
       "patentNumber": "I679548",
@@ -14648,7 +14673,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-11-04T01:05:42.366Z",
+  "updatedAt": "2026-11-06T01:05:26.508Z",
   "sources": {
     "tipo": 1
   },
@@ -14820,5 +14845,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 447
+  "total": 448
 }
