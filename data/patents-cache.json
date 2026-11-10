@@ -7527,6 +7527,31 @@
       "scrapedAt": "2026-05-25T03:54:06.304Z"
     },
     {
+      "id": "tipo-I783355",
+      "title": "深度學習模型的分布式訓練方法以及裝置\nDISTRIBUTED TRAINING METHOD AND APPARATUS OF DEEP LEARNING MODEL",
+      "patentNumber": "I783355",
+      "filingDate": "2021-01-26",
+      "publicationDate": "2022-11-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I783355",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "喬蕭雅",
+        "劉國寶",
+        "周雍愷"
+      ],
+      "abstract": "本發明公開了一種深度學習模型的分布式訓練方法以及裝置，具體實現方案為：方法包括：獲取深度學習平臺發送的訓練任務對應的訓練狀態數據；根據訓練任務對應的集群資源需求生成彈性伸縮策略；採用彈性伸縮策略動態調整訓練任務對應的訓練節點的數量；根據訓練狀態數據和調整後的訓練節點，執行訓練任務。提高了訓練任務對應的集群資源需求的適應性，提高了GPU或CPU資源利用率，能夠確保在任何時候加入或删除訓練節點的情況下，利用調整後的訓練節點都能夠正確並高效的執行訓練任務。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習平台"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-10T01:00:39.747Z"
+    },
+    {
       "id": "tipo-I783528",
       "title": "可攜式醫學教學裝置及醫學教學方法\nPORTABLE MEDICAL EDUCATION DEVICE AND MEDICAL EDUCATION METHODS",
       "patentNumber": "I783528",
@@ -9916,6 +9941,31 @@
       ],
       "status": "未審查/公開",
       "scrapedAt": "2026-05-25T03:54:16.039Z"
+    },
+    {
+      "id": "tipo-I709869",
+      "title": "用以在考試中安全發布內容之方法及系統\nMETHOD AND SYSTEM FOR SECURELY DISTRIBUTING CONTENT IN AN EXAMINATION",
+      "patentNumber": "I709869",
+      "filingDate": "2019-03-18",
+      "publicationDate": "2020-11-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I709869",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "夏哈　維瑞爾 Ｐ",
+        "西塔雅　瑞西",
+        "蘇克拉　夏比特"
+      ],
+      "abstract": "用以產生及發布內容諸如試卷之現存程序中，有多數階段需要人為干預其導致大範圍之紙張遺漏與弊端。除此以外，此類程序為了發布內容需要大量人力與高成本。已提供一種用以在一考試中安全發布內容之方法及系統。本系統提供一綠色紙張裝置其保持內容僅在一界定期間內才可接取且不能經由任何媒介複製或列印。本裝置可在監試者模式中充作主要紙張裝置使用以及在考試模式中充作接收紙張裝置使用。本系統亦包含一內容著作引擎其用以安全地產生或編寫內容。本內容係以一密碼保護式加密格式由內容著作引擎傳送至雲端伺服器及主要紙張裝置。",
+      "classifications": [],
+      "matchedKeywords": [
+        "數位學習"
+      ],
+      "categories": [
+        "考試評測"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-10T01:00:14.891Z"
     },
     {
       "id": "tipo-I709915",
@@ -14673,9 +14723,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-11-06T01:05:26.508Z",
+  "updatedAt": "2026-11-10T01:05:31.242Z",
   "sources": {
-    "tipo": 1
+    "tipo": 2
   },
   "months": [
     "2026-11",
@@ -14845,5 +14895,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 448
+  "total": 450
 }
