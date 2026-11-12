@@ -7243,6 +7243,31 @@
       "scrapedAt": "2026-05-25T03:51:35.929Z"
     },
     {
+      "id": "tipo-I795982",
+      "title": "智慧音樂教學系統與智慧音樂教學方法",
+      "patentNumber": "I795982",
+      "filingDate": "2021-11-04",
+      "publicationDate": "2023-03-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I795982",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "李玲玉",
+        "黃裕哲",
+        "朱鴻棋"
+      ],
+      "abstract": "一種智慧音樂教學系統，包含複數智慧音樂盒及一控制單元。每一智慧音樂盒包括一發聲件、一發光件、一力感測器、一傳輸模組及一控制器。該智慧音樂盒輸出相關於該力感測器之感測訊號的一回饋訊號，並根據一控制訊號控制該發聲件與該發光件輸出聲音與光其中至少之一。每一智慧音樂盒所輸出之聲音或光皆不同。該控制單元根據接收的該等回饋訊號判斷一建議學習模式，並根據該建議學習模式輸出該等控制訊號。藉由提供音樂與色彩之不同刺激的訓練，並根據學習成效自動調整訓練的學習模式，可以減少對教師的人力負荷，有助於普及幼兒音樂教學。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教學系統"
+      ],
+      "categories": [
+        "教學"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-11-12T01:02:04.662Z"
+    },
+    {
       "id": "tipo-I795093",
       "title": "遠距教學的測驗防弊系統及其方法\nCHEATING PREVENTION SYSTEM FOR DISTANCE TEACHING TEST AND METHOD THEREOF",
       "patentNumber": "I795093",
@@ -8292,6 +8317,31 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:52:31.401Z"
+    },
+    {
+      "id": "tipo-I756974",
+      "title": "機器學習系統及其資源配置方法\nMACHINE LEARNING SYSTEM AND RESOURCE ALLOCATION METHOD THEREOF",
+      "patentNumber": "I756974",
+      "filingDate": "2020-12-09",
+      "publicationDate": "2022-03-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I756974",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "陳世璋",
+        "朱逸勤",
+        "呂依芳"
+      ],
+      "abstract": "一種資源配置方法，適用於機器學習系統，且包含以機器學習系統的資源佔用量執行至少一第一實驗，其中每一第一實驗具有第一最低資源需求量，接收關聯於目標資料集的實驗需求，依據目標資料集決定第二實驗，並決定第二實驗的第二最低資源需求量，當機器學習系統的總資源量滿足第一最低資源需求量及第二最低資源需求量之和，且總資源量與資源佔用量之差滿足第二最低資源需求量時，配置第二最低資源需求量執行第二實驗，以及判斷機器學習系統具有閒置資源量，並選擇性地將閒置資源量配置給所述至少一第一實驗及該第二實驗中之至少一者。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-12T01:02:17.851Z"
     },
     {
       "id": "tipo-I756703",
@@ -11779,6 +11829,30 @@
       "scrapedAt": "2026-05-25T03:55:47.509Z"
     },
     {
+      "id": "tipo-I618038",
+      "title": "利用三維虛擬影像的學習方法及系統",
+      "patentNumber": "I618038",
+      "filingDate": "2017-06-02",
+      "publicationDate": "2018-03-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I618038",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "劉子鍵",
+        "陳昭伶"
+      ],
+      "abstract": "一種利用三維虛擬影像的學習方法，由一對應於一使用者的使用端及一中空且透明的框體來實施。該使用端具有一可供該框體放置的觸控顯示面，並經由所儲存的一相關於多個物件之學習的應用程式的執行，將所儲存的且相關於該等物件其中一個對應於該使用者的目標物件之學習影片資料顯示在該觸控顯示面上，以致一在視覺上含有該目標物件的三維虛擬影像被產生在該框體中，並在停止顯示後判定出該學習影片資料的一持續播放期間不短於一預定期間時，將所儲存的該使用者對應於該目標物件的該學習分數更新為一預定分數與該學習分數的總和。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-11-12T01:02:17.851Z"
+    },
+    {
       "id": "tipo-201807675",
       "title": "腦波分析輔助教學系統\nTEACHING SYSTEM WITH ASSISTANCE OF BRAINWAVE ANALYSIS",
       "patentNumber": "201807675",
@@ -11802,6 +11876,30 @@
       ],
       "status": "未審查/公開",
       "scrapedAt": "2026-05-25T03:53:08.310Z"
+    },
+    {
+      "id": "tipo-I612433",
+      "title": "整體式學習預測裝置與方法、以及非暫存電腦可讀的儲存媒介\nENSEMBLE LEARNING PREDICTION APARATUS AND METHOD, AND NON-TRANSITORY COMPUTER-READABLE STORAGE MEDIUM",
+      "patentNumber": "I612433",
+      "filingDate": "2016-11-17",
+      "publicationDate": "2018-01-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I612433",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "謝欣龍",
+        "闕壯華"
+      ],
+      "abstract": "本發明涉及一種整體式學習預測裝置，該裝置包含：損失模組，接收樣本資料，由樣本資料的第一預測結果與一實際結果來計算損失；多樣性模組，接收樣本資料，由該樣本資料在至少一假說的第二預測結果來計算出該至少一假說間的多樣性；樣本權重模組，與該多樣性模組相連接，由該第一預測結果與該實際結果計算該樣本資料的可修正值，並由該可修正值來給樣本權重值；以及整合權重模組，與該損失模組、該多樣性模組與該樣本權重模組相連接，由該損失、該多樣性與該樣本權重值建立目標函數，並藉由該目標函數訓練出整合權重值。其中，該整合權重值與過去多個時間點之整合權重值加以整合，計算出適應性整合權重值。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-12T01:02:17.851Z"
     },
     {
       "id": "tipo-I607420",
@@ -13481,6 +13579,31 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     },
     {
+      "id": "tipo-I431563",
+      "title": "語言學習系統、語言學習方法及其程式產品\nLANGUAGE LEARNING SYSTEM, LANGUAGE LEARNING METHOD, AND COMPUTER PRODUCT THEREOF",
+      "patentNumber": "I431563",
+      "filingDate": "2010-08-03",
+      "publicationDate": "2014-03-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I431563",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "張森嘉",
+        "廖憲正",
+        "陳江村"
+      ],
+      "abstract": "一種語言學習系統，其包括儲存模組、特徵萃取模組以及評量與診斷模組。儲存模組用以儲存訓練語料以及依據訓練語料所建立之評量決策樹。特徵萃取模組用以萃取語言學習者所發出之語音的語音特徵。評量與診斷模組用以識別語言學習者所發出之語音在此評量決策樹中對應的診斷路徑並且輸出對應的回饋資訊。基此，本語言學習系統能夠針對語言學習者所發出之字、詞或語句進行評量與回饋。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-12T01:02:17.851Z"
+    },
+    {
       "id": "tipo-201411578",
       "title": "字詞測驗出題系統及其方法\nWORD TESTING SYSTEM AND METHOD THEREOF",
       "patentNumber": "201411578",
@@ -14746,9 +14869,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-11-11T01:05:33.916Z",
+  "updatedAt": "2026-11-12T01:05:43.185Z",
   "sources": {
-    "tipo": 1
+    "tipo": 5
   },
   "months": [
     "2026-11",
@@ -14848,6 +14971,7 @@
     "2018-07",
     "2018-05",
     "2018-03",
+    "2018-01",
     "2017-12",
     "2017-11",
     "2017-10",
@@ -14918,5 +15042,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 451
+  "total": 456
 }
