@@ -10939,6 +10939,29 @@
       "scrapedAt": "2026-05-25T03:54:28.856Z"
     },
     {
+      "id": "tipo-I682354",
+      "title": "認知學習系統及其系統思考學習方法\nCOGNITIVE LEARNING SYSTEM AND METHOD FOR LEARNING SYSTEM THINKING USING THE SAME",
+      "patentNumber": "I682354",
+      "filingDate": "2019-02-25",
+      "publicationDate": "2020-01-11",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I682354",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "吳孝三"
+      ],
+      "abstract": "本發明提供一種認知學習系統及其系統思考學習方法，用以透過系統的輔助，實現思考教育中的換位思考以及後設思考，達到健全系統思考的目的。在一實施例中，透過可以追蹤參與者生理狀態的影像系統擷取參與者針對一主題所進行討論的過程，而錄製成一串流影像。然後提供一個操作介面讓引導者可以針對該串流影像設定暫停播放點，並於相應暫停播放點時顯示出相應的問題。參與者可以在事後透過另一終端裝置回放具有暫停播放點與相應問題的串流影像，並針對相關問題進行回覆。透過重複上述的程序可以讓參與者訓練換位思考與後設思考，達到核心素養中系統思考的訓練成效。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-13T01:02:09.499Z"
+    },
+    {
       "id": "tipo-I682332",
       "title": "用於識別絕育狀態影像的深度學習方法及其識別裝置",
       "patentNumber": "I682332",
@@ -14869,9 +14892,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-11-12T01:05:43.185Z",
+  "updatedAt": "2026-11-13T01:05:19.522Z",
   "sources": {
-    "tipo": 5
+    "tipo": 1
   },
   "months": [
     "2026-11",
@@ -15042,5 +15065,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 456
+  "total": 457
 }
