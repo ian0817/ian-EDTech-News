@@ -6582,6 +6582,31 @@
       "scrapedAt": "2026-05-25T03:54:40.915Z"
     },
     {
+      "id": "tipo-I826551",
+      "title": "密封施工的判定系統、判定程式、判定方法及學習系統",
+      "patentNumber": "I826551",
+      "filingDate": "2019-10-15",
+      "publicationDate": "2023-12-21",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I826551",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "西田隆仁",
+        "野野垣肇",
+        "山邊雅之"
+      ],
+      "abstract": "一種密封施工判定系統，是藉由已將墊片夾入且以螺栓及螺帽緊固之凸緣的面間距離來判定施工結果，前述密封施工判定系統具備：密封施工部，具備有將墊片夾入並以螺栓及螺帽進行緊固的凸緣；面間距離測量部，測量凸緣的面間距離；處理部，在從螺栓的鎖緊開始到鎖緊完成之複數個階段中，從面間距離測量部匯入面間距離的測量值，並運算這些測量值的最大值與最小值之差，且比較此差與判定基準來判定技能等級；及資訊提示部，提示在處理部處理的運算資訊或運算結果之任一者或全部。藉此，可謀求密封施工的狀態判定之容易化，並且謀求密封施工的信賴性或施工技能的提升。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-15T03:10:51.750Z"
+    },
+    {
       "id": "tipo-I827033",
       "title": "兼具遠距教學與現場教學雙重教學模式之主題式虛實整合共學協作互動教學方法",
       "patentNumber": "I827033",
@@ -10062,6 +10087,29 @@
       ],
       "status": "核准",
       "scrapedAt": "2026-05-25T03:51:58.900Z"
+    },
+    {
+      "id": "tipo-202040530",
+      "title": "線上學習輔助方法、系統、設備以及電腦可讀取記錄媒體\nControl method, system and equipment of learning companion robot and storage medium",
+      "patentNumber": "202040530",
+      "filingDate": "2019-09-04",
+      "publicationDate": "2020-11-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^202040530",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "楊正大"
+      ],
+      "abstract": "一種由一線上學習輔助系統實施的線上學習輔助方法，包含：當一線上課程開始時，與該線上課程所對應的一線上教室建立連接；在該線上課程進行的過程中即時地接收及播放一來自該線上教室的多媒體資料，並且即時地接收並傳送一相關於使用者的視訊資料至該線上教室；分析該多媒體資料中的教師以手勢或語音發出的指示，並於偵測到一特定指示時觸發一對應該特定指示的第一控制指令；根據該視訊資料進行一使用者狀態分析處理，並根據該使用者狀態分析處理的結果觸發一對應的第二控制指令。\nThe invention provides a control method, system and equipment of a learning companion robot and a storage medium. The method comprises the steps that when a course is started, connection is established with an online classroom corresponding to the course; during the course, a media data stream of the online classroom is received and played in real time, and video data of a user is collected in real time and sent to the online classroom; teacher gestures or voice instructions in the media data stream of the online classroom are analyzed, and a corresponding first control instruction according to the detected specific instructions is triggered; and the user state is analyzed according to the video data of the user, and a corresponding second control instruction is triggered according to the user state. According to the scheme, the learning companion function of the robot is combined with real-person teaching, so that an auxiliary learning function of a human-computer linkage effect is formed, the learning effect is improved, and the user experience is improved.",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習輔助"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "未審查/公開",
+      "scrapedAt": "2026-11-15T03:16:30.866Z"
     },
     {
       "id": "tipo-I709118",
@@ -14237,6 +14285,29 @@
       "scrapedAt": "2026-05-25T03:52:43.189Z"
     },
     {
+      "id": "tipo-M401184",
+      "title": "可多樣組合教育機器人之組合構件\nMay be varied assembly educate robot assembled structure Combination structure for a variety assembly educate robot",
+      "patentNumber": "M401184",
+      "filingDate": "2010-10-19",
+      "publicationDate": "2011-04-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^M401184",
+      "source": "TIPO",
+      "patentType": "新型",
+      "inventors": [
+        "陶克強"
+      ],
+      "abstract": "本創作是一種可多樣組合教育機器人之組合構件，其包含一組接板以及自組接板側端垂直延伸的側板，所述組接板形成多數個組接孔，所述的多數個組接孔散佈於組接板整個板體，所述側板上亦設有多數個側接孔，藉此，使該組合構件可供學生於練習組裝於機器人時，得以充分發揮組合創意，而以利用組合構件上散佈的多數個組接孔及多數個側接孔設計，提供構件間組合的多樣性選擇，組合成所設計的機器人，並能減少機器人組裝與作動時的構件間的相互干涉。",
+      "classifications": [],
+      "matchedKeywords": [
+        "教育機器人"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "消滅",
+      "scrapedAt": "2026-11-15T03:16:30.866Z"
+    },
+    {
       "id": "tipo-I329289",
       "title": "互動式教學方法、系統及記錄媒體",
       "patentNumber": "I329289",
@@ -14892,9 +14963,9 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-11-13T01:05:19.522Z",
+  "updatedAt": "2026-11-15T04:50:42.609Z",
   "sources": {
-    "tipo": 1
+    "tipo": 3
   },
   "months": [
     "2026-11",
@@ -15043,6 +15114,7 @@
     "2012-08",
     "2012-07",
     "2011-12",
+    "2011-04",
     "2010-08",
     "2010-06",
     "2010-03",
@@ -15065,5 +15137,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 457
+  "total": 460
 }
