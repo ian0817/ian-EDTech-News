@@ -11997,6 +11997,30 @@
       "scrapedAt": "2026-11-12T01:02:17.851Z"
     },
     {
+      "id": "tipo-I607421",
+      "title": "遊戲式教學暨學習系統\nGAME-BASED TEACHING AND LEARNING SYSTEM",
+      "patentNumber": "I607421",
+      "filingDate": "2016-10-17",
+      "publicationDate": "2017-12-01",
+      "url": "https://tiponet.tipo.gov.tw/twpat3/twpatc/twpatkm?@@0.0^I607421",
+      "source": "TIPO",
+      "patentType": "發明",
+      "inventors": [
+        "劉豐榮",
+        "盧家湄"
+      ],
+      "abstract": "本發明係有關於一種遊戲式教學暨學習系統，係主要使至少一教學端電子裝置及至少一學習端電子裝置與一教學暨學習整合平台通訊連結，於該教學暨學習整合平台其資料庫係設有遊戲式課程編輯模組及遊戲式課程學習模組，藉此，乃使教師依STEM之5E教學模式依序設置有投入參與、探索、解釋、精緻化及評鑑等遊戲關卡，並使學員於各遊戲關卡中進行學習與測驗，據此，以令學員於遊戲中將STEM教育概念融入學習內容，達到有效提升學員創新思考能力與統整知識解決問題能力等效益。",
+      "classifications": [],
+      "matchedKeywords": [
+        "學習系統"
+      ],
+      "categories": [
+        "學習"
+      ],
+      "status": "核准",
+      "scrapedAt": "2026-11-20T01:02:05.911Z"
+    },
+    {
       "id": "tipo-I607420",
       "title": "隨身學習電子裝置",
       "patentNumber": "I607420",
@@ -14987,7 +15011,7 @@
       "scrapedAt": "2026-05-25T03:53:08.310Z"
     }
   ],
-  "updatedAt": "2026-11-17T01:05:26.814Z",
+  "updatedAt": "2026-11-20T01:05:20.641Z",
   "sources": {
     "tipo": 1
   },
@@ -15161,5 +15185,5 @@
     "2001-10",
     "2000-11"
   ],
-  "total": 461
+  "total": 462
 }
